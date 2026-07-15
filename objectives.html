@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — Objectives</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn active" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+    <a class="nav-btn" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">Board Objectives Tracker</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">36 OBJECTIVES · CLICK TO COMPLETE</div>
+  </div>
+  <div class="obj-progress-wrap" style="margin-bottom:16px">
+    <div class="obj-progress-label">
+      <span>League-wide Objective Completion</span>
+      <span id="obj-pct-label">0 / 36 complete</span>
+    </div>
+    <div class="obj-progress-track"><div class="obj-progress-fill" id="obj-progress-fill" style="width:0%"></div></div>
+  </div>
+  <div class="board-grid" id="board-grid"></div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+const objStates = {};
+
+function catClass(cat) {
+  const m = { 'Finish':'cat-finish','Acquisition':'cat-acquisition','Rivalry':'cat-rivalry',
+    'Risk Management':'cat-risk','Operations':'cat-ops','Reputation':'cat-rep',
+    'Asset Management':'cat-asset','Market Influence':'cat-market' };
+  return m[cat] || 'cat-ops';
+}
+
+function buildBoardGrid() {
+  const byOwner = {};
+  OBJECTIVES.forEach(o => { if(!byOwner[o.owner]) byOwner[o.owner] = []; byOwner[o.owner].push(o); });
+
+  document.getElementById('board-grid').innerHTML = TEAMS.map(t => {
+    const objs = byOwner[t.owner] || [];
+    return `
+      <div class="board-col">
+        <div class="board-col-header">
+          <div><div class="board-owner">${t.owner}</div><div class="board-team">${t.team}</div></div>
+          <div class="board-ticker-tag">${t.ticker}</div>
+        </div>
+        <div class="board-objectives">
+          ${objs.map((o,i) => {
+            const key = `${t.owner}-${i}`;
+            return `
+              <div class="obj-card" id="obj-${key}" onclick="toggleObj('${key}')">
+                <div class="obj-top">
+                  <span class="obj-cat ${catClass(o.cat)}">${o.cat}</span>
+                  <span class="obj-priority">${o.priority}</span>
+                </div>
+                <div class="obj-text">${o.text}</div>
+                <div class="obj-check" id="check-${key}">✓</div>
+              </div>`;
+          }).join('')}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function toggleObj(key) {
+  objStates[key] = !objStates[key];
+  const card = document.getElementById(`obj-${key}`);
+  if (objStates[key]) { card.classList.add('done'); } else { card.classList.remove('done'); }
+  updateObjProgress();
+}
+
+function updateObjProgress() {
+  const total = OBJECTIVES.length;
+  const done = Object.values(objStates).filter(Boolean).length;
+  const pct = (done / total * 100).toFixed(0);
+  document.getElementById('obj-progress-fill').style.width = pct + '%';
+  document.getElementById('obj-pct-label').textContent = `${done} / ${total} complete`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildBoardGrid();
+});
+</script>
+</body>
+</html>

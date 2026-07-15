@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — Rosters</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn active" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+    <a class="nav-btn" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">Roster Position Matrix</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">5 DIMENSIONS</div>
+  </div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">Position Index Heatmap</div>
+      <div class="card-sub">Index 0–100 · darker = stronger positional grade</div>
+      <div id="pos-heatmap-wrap"></div>
+    </div>
+    <div class="chart-card">
+      <div class="card-title">League-wide Position Strength Averages</div>
+      <div class="card-sub">Average index per position across all 12 teams</div>
+      <canvas id="chart-pos-avg" height="280"></canvas>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-title">Team Radar — Roster Composition</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">QB · RB · WR · TE · PICK</div>
+  </div>
+  <div class="radar-grid" id="radar-grid"></div>
+
+  <div class="sec-head" id="sec-live-rosters">
+    <div class="sec-title">Live Rosters</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="live-roster-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="board-grid" id="live-roster-grid"></div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="sleeper.js"></script>
+<script src="common.js"></script>
+<script>
+function buildPosHeatmap() {
+  function cellColor(val) {
+    const t = val / 100;
+    if (val >= 80) return `rgba(0,230,118,${0.15 + t*0.35})`;
+    if (val >= 50) return `rgba(79,195,247,${0.1 + t*0.25})`;
+    if (val >= 25) return `rgba(255,200,64,${0.08 + t*0.2})`;
+    return `rgba(255,61,61,${0.1 + (1-t)*0.2})`;
+  }
+  function textColor(val) {
+    if (val >= 80) return 'var(--green)';
+    if (val >= 50) return 'var(--blue)';
+    if (val >= 25) return 'var(--gold)';
+    return 'var(--red)';
+  }
+  const sorted = [...TEAMS].sort((a,b) => (b.qb+b.rb+b.wr+b.te+b.pick)-(a.qb+a.rb+a.wr+a.te+a.pick));
+  document.getElementById('pos-heatmap-wrap').innerHTML = `
+    <table class="pos-heatmap">
+      <thead><tr><th>Owner</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>PICK</th><th>TOTAL</th></tr></thead>
+      <tbody>${sorted.map(t => {
+        const total = t.qb+t.rb+t.wr+t.te+t.pick;
+        return `<tr>
+          <td>${t.owner}</td>
+          <td style="background:${cellColor(t.qb)};color:${textColor(t.qb)}">${t.qb}</td>
+          <td style="background:${cellColor(t.rb)};color:${textColor(t.rb)}">${t.rb}</td>
+          <td style="background:${cellColor(t.wr)};color:${textColor(t.wr)}">${t.wr}</td>
+          <td style="background:${cellColor(t.te)};color:${textColor(t.te)}">${t.te}</td>
+          <td style="background:${cellColor(t.pick)};color:${textColor(t.pick)}">${t.pick}</td>
+          <td style="font-weight:700;color:var(--gold);font-family:var(--mono)">${total}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table>`;
+}
+
+function buildRadars() {
+  document.getElementById('radar-grid').innerHTML = TEAMS.map(t => `
+    <div class="radar-card">
+      <div class="radar-name">${t.ticker}</div>
+      <div class="radar-team">${t.owner} · ${t.team}</div>
+      <canvas id="radar-${t.ticker}" height="180"></canvas>
+    </div>`).join('');
+
+  TEAMS.forEach(t => {
+    const ctx = document.getElementById(`radar-${t.ticker}`).getContext('2d');
+    new Chart(ctx, {
+      type: 'radar',
+      data: { labels: ['QB','RB','WR','TE','PICK'], datasets: [{ data: [t.qb, t.rb, t.wr, t.te, t.pick],
+        borderColor: OWNER_COLORS[t.owner], backgroundColor: OWNER_COLORS[t.owner] + '20', borderWidth: 2, pointRadius: 3, pointBackgroundColor: OWNER_COLORS[t.owner] }] },
+      options: { animation:{duration:600}, plugins:{legend:{display:false}},
+        scales: { r: { min:0, max:100, grid:{color:'rgba(255,255,255,0.06)'}, angleLines:{color:'rgba(255,255,255,0.06)'}, ticks:{display:false,stepSize:25}, pointLabels:{color:'#5a7a96',font:{size:10,family:'IBM Plex Mono'}} } } }
+    });
+  });
+}
+
+function buildPosAvgChart() {
+  const positions = ['qb','rb','wr','te','pick'];
+  const posAvg = positions.map(p => Math.round(TEAMS.reduce((s,t) => s + t[p], 0) / TEAMS.length));
+  new Chart(document.getElementById('chart-pos-avg').getContext('2d'), {
+    type: 'bar',
+    data: { labels: ['QB','RB','WR','TE','PICK'], datasets: [{ data: posAvg, backgroundColor: ['#ffc840','#00e676','#4fc3f7','#ce93d8','#ff7043'], borderRadius: 6 }] },
+    options: { animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` Avg Index: ${ctx.raw}`}}},
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono'}}}, y:{min:0,max:100,grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96'}} } }
+  });
+}
+
+async function buildLiveRosters() {
+  const statusEl = document.getElementById('live-roster-status');
+  try {
+    const liveData = await loadLiveRosterData();
+    statusEl.textContent = 'LIVE FROM SLEEPER';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    document.getElementById('live-roster-grid').innerHTML = liveData.map(r => {
+      const team = TEAMS.find(t => t.owner === r.owner);
+      return `
+      <div class="board-col">
+        <div class="board-col-header">
+          <div><div class="board-owner">${r.owner}</div><div class="board-team">${team ? team.team : ''}</div></div>
+          <div class="board-ticker-tag">${team ? team.ticker : ''}</div>
+        </div>
+        <div class="board-objectives">
+          ${r.starters.map(p => `<div class="obj-card" style="cursor:default"><div class="obj-text"><strong>${p.pos}</strong> — ${p.name} ${p.team ? '('+p.team+')' : ''}</div></div>`).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    statusEl.style.borderColor = 'var(--red-dim)';
+    document.getElementById('live-roster-grid').innerHTML = `<div class="card" style="grid-column: 1 / -1; color: var(--muted); font-size: 12px;">Couldn't reach the Sleeper API right now (${e.message}). Refresh to try again.</div>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildPosHeatmap();
+  buildRadars();
+  buildPosAvgChart();
+  buildLiveRosters();
+});
+</script>
+</body>
+</html>

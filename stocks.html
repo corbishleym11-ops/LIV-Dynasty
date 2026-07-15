@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — Stocks</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn active" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+    <a class="nav-btn" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">Company Listings</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">12 LISTED</div>
+  </div>
+  <div class="stock-grid" id="stock-grid"></div>
+
+  <div class="sec-head">
+    <div class="sec-title">Market Overview</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">2025 → 2026</div>
+  </div>
+  <div class="g2">
+    <div class="chart-card">
+      <div class="card-title">Stock Price Movement — All Teams</div>
+      <div class="card-sub">2025 price vs 2026 price with net change waterfall</div>
+      <canvas id="chart-waterfall" height="300"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="card-title">Market Capitalisation Rankings</div>
+      <div class="card-sub">2026 market cap = contender score × dynasty index</div>
+      <canvas id="chart-marketcap" height="300"></canvas>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="chart-card">
+      <div class="card-title">Price Change % Distribution</div>
+      <div class="card-sub">Winners vs losers · sorted by % change</div>
+      <canvas id="chart-pctchange" height="260"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="card-title">2025 Win Total vs Stock Price</div>
+      <div class="card-sub">Does on-field success track asset value?</div>
+      <canvas id="chart-wins-dynasty" height="260"></canvas>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-title">Exchange Screener</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">FULL MARKET</div>
+  </div>
+  <div class="card g1">
+    <table class="screener-table" id="screener-table"></table>
+  </div>
+
+  <!-- LIVE TRANSACTIONS -->
+  <div class="sec-head">
+    <div class="sec-title">Recent Transactions</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="txn-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1">
+    <div id="txn-list" style="display:flex; flex-direction:column; gap:10px;"></div>
+  </div>
+
+  <!-- TRADED PICKS -->
+  <div class="sec-head">
+    <div class="sec-title">Traded Pick Ownership</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="picks-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1">
+    <table class="screener-table" id="picks-table"></table>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="sleeper.js"></script>
+<script src="common.js"></script>
+<script>
+function buildStockCards() {
+  const maxCap = Math.max(...TEAMS.map(t => t.cap));
+  const catMap = {
+    'Major Riser':'cat-major-rise','Biggest Riser':'cat-major-rise',
+    'Riser':'cat-rise','Flat':'cat-flat',
+    'Slight Faller':'cat-fall','Faller':'cat-fall',
+    'Major Faller':'cat-major-fall','Crash':'cat-major-fall','Biggest Faller':'cat-major-fall'
+  };
+  const riseClass = t => t.change >= 0 ? 'rise' : 'fall';
+  document.getElementById('stock-grid').innerHTML = TEAMS.map(t => `
+    <div class="stock-card ${riseClass(t)}">
+      <div class="sc-top">
+        <div class="sc-ticker">${t.ticker}</div>
+        <div class="sc-category ${catMap[t.cat]||'cat-flat'}">${t.cat.toUpperCase()}</div>
+      </div>
+      <div class="sc-company">${t.company}</div>
+      <div class="sc-team">${t.owner} · ${t.team}</div>
+      <div class="sc-prices">
+        <span class="sc-price-now ${t.change>=0?'up':'down'}">$${t.price26.toFixed(2)}</span>
+        <span class="sc-price-prev">prev $${t.price25.toFixed(2)}</span>
+      </div>
+      <div class="sc-change-row">
+        <span class="sc-delta ${t.change>=0?'up':'down'}">${t.change>=0?'+':''}$${t.change.toFixed(2)}</span>
+        <span class="sc-pct ${t.change>=0?'up':'down'}">${t.pct>=0?'+':''}${t.pct.toFixed(2)}%</span>
+      </div>
+      <div class="sc-market-cap">MKT CAP: $${t.cap.toLocaleString()}</div>
+      <div class="sc-trend-blurb">${t.trend}</div>
+      <div class="mini-bar"><div class="mini-bar-fill" style="width:${(t.cap/maxCap*100).toFixed(0)}%; background:${t.change>=0?'var(--green)':'var(--red)'}"></div></div>
+    </div>`).join('');
+}
+
+function buildScreener() {
+  const sorted = [...TEAMS].sort((a,b) => b.cap - a.cap);
+  const maxCap = sorted[0].cap;
+  document.getElementById('screener-table').innerHTML = `
+    <thead><tr>
+      <th>#</th><th>Symbol</th><th>Company</th><th>Owner</th><th>Team</th>
+      <th class="r">Price '25</th><th class="r">Price '26</th><th class="r">Change</th><th class="r">% Chg</th>
+      <th>Market Cap</th><th>Strength</th><th>Weakness</th>
+    </tr></thead>
+    <tbody>${sorted.map((t,i) => {
+      const rk = i < 3 ? `rank-${i+1}` : 'rank-n';
+      const pctColor = t.pct >= 0 ? 'var(--green)' : 'var(--red)';
+      const barW = (t.cap / maxCap * 100).toFixed(0);
+      const barColor = t.change >= 0 ? 'var(--green)' : 'var(--red)';
+      return `<tr>
+        <td><span class="rank-badge ${rk}">${i+1}</span></td>
+        <td><span class="sym-tag">${t.ticker}</span></td>
+        <td style="color:var(--muted); font-size:11px; max-width:160px">${t.company}</td>
+        <td class="owner-col">${t.owner}</td>
+        <td class="team-col" style="font-size:11px">${t.team}</td>
+        <td class="r" style="color:var(--muted)">$${t.price25.toFixed(2)}</td>
+        <td class="r" style="color:${pctColor}; font-weight:700">$${t.price26.toFixed(2)}</td>
+        <td class="r" style="color:${pctColor}">${t.change>=0?'+':''}$${t.change.toFixed(2)}</td>
+        <td class="r" style="color:${pctColor}">${t.pct>=0?'+':''}${t.pct.toFixed(2)}%</td>
+        <td><div class="bar-cell"><div class="inline-bar"><div class="inline-bar-fill" style="width:${barW}%; background:${barColor}"></div></div><span style="font-size:11px; white-space:nowrap">$${t.cap.toLocaleString()}</span></div></td>
+        <td style="color:var(--blue); font-size:11px">${t.strength}</td>
+        <td style="color:var(--red); font-size:11px; opacity:.8">${t.weakness}</td>
+      </tr>`;
+    }).join('')}</tbody>`;
+}
+
+function buildCharts() {
+  const sorted = [...TEAMS].sort((a,b) => b.change - a.change);
+  new Chart(document.getElementById('chart-waterfall').getContext('2d'), {
+    type: 'bar',
+    data: { labels: sorted.map(t => t.ticker), datasets: [
+      { label: '2025 Price', data: sorted.map(t => t.price25), backgroundColor: 'rgba(90,122,150,0.4)', borderRadius: 4 },
+      { label: '2026 Price', data: sorted.map(t => t.price26), backgroundColor: sorted.map(t => t.change >= 0 ? 'rgba(0,230,118,0.7)' : 'rgba(255,61,61,0.7)'), borderRadius: 4 }
+    ]},
+    options: { animation:{duration:700}, plugins:{ legend:{labels:{color:'#5a7a96',boxWidth:12}}, tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: $${ctx.raw.toFixed(2)}`}} },
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v}} } }
+  });
+
+  const capSorted = [...TEAMS].sort((a,b) => b.cap - a.cap);
+  new Chart(document.getElementById('chart-marketcap').getContext('2d'), {
+    type: 'bar',
+    data: { labels: capSorted.map(t => t.ticker), datasets: [{ data: capSorted.map(t => t.cap),
+      backgroundColor: capSorted.map((t,i) => i===0?'#ffc840': i===1?'#c0c8d8': i===2?'#c08040':'rgba(79,195,247,0.5)'), borderRadius: 5 }] },
+    options: { indexAxis:'y', animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' $'+ctx.raw.toLocaleString()}}},
+      scales: { x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v.toLocaleString()}}, y:{grid:{display:false},ticks:{color:'#e2eaf4',font:{family:'IBM Plex Mono',size:11}}} } }
+  });
+
+  const pctSorted = [...TEAMS].sort((a,b) => b.pct - a.pct);
+  new Chart(document.getElementById('chart-pctchange').getContext('2d'), {
+    type: 'bar',
+    data: { labels: pctSorted.map(t => t.ticker), datasets: [{ data: pctSorted.map(t => t.pct),
+      backgroundColor: pctSorted.map(t => t.pct >= 0 ? 'rgba(0,230,118,0.7)' : 'rgba(255,61,61,0.7)'), borderRadius: 4 }] },
+    options: { animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.raw>=0?'+':''}${ctx.raw.toFixed(2)}%`}}},
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>v+'%'}} } }
+  });
+
+  new Chart(document.getElementById('chart-wins-dynasty').getContext('2d'), {
+    type: 'scatter',
+    data: { datasets: SEASON_2025.map(s => {
+      const t = TEAMS.find(x => x.owner === s.owner);
+      return { label: s.owner, data: [{ x: s.wins, y: t ? t.price26 : 0 }], backgroundColor: OWNER_COLORS[s.owner] + 'cc', borderColor: OWNER_COLORS[s.owner], borderWidth: 2, pointRadius: 10, pointHoverRadius: 14 };
+    }) },
+    options: { animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.x}W · $${ctx.parsed.y.toFixed(2)}`}}},
+      scales: { x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96'},title:{display:true,text:'2025 Wins',color:'#5a7a96'}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v},title:{display:true,text:'2026 Stock Price',color:'#5a7a96'}} } },
+    plugins: [{ id:'ownerLabels', afterDraw(chart) {
+      const ctx = chart.ctx;
+      chart.data.datasets.forEach(ds => {
+        const pt = ds.data[0];
+        const px = chart.scales.x.getPixelForValue(pt.x);
+        const py = chart.scales.y.getPixelForValue(pt.y);
+        ctx.save(); ctx.font = '600 10px Inter'; ctx.fillStyle = ds.borderColor; ctx.textAlign = 'center';
+        ctx.fillText(ds.label, px, py - 14); ctx.restore();
+      });
+    }}]
+  });
+}
+
+async function buildTransactions() {
+  const statusEl = document.getElementById('txn-status');
+  try {
+    const state = await getNFLState();
+    const week = Math.max(1, state.week || 1);
+    const [txns, players] = await Promise.all([getTransactions(week), getPlayersMap()]);
+
+    if (!txns || txns.length === 0) {
+      statusEl.textContent = 'NO ACTIVITY YET';
+      document.getElementById('txn-list').innerHTML = `<div style="color:var(--muted); font-size:12px;">No trades or waiver moves recorded yet this week.</div>`;
+      return;
+    }
+
+    statusEl.textContent = 'LIVE FROM SLEEPER';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    const sorted = [...txns].sort((a,b) => (b.created||0) - (a.created||0));
+    document.getElementById('txn-list').innerHTML = sorted.slice(0, 20).map(t => {
+      const owners = (t.roster_ids || []).map(rid => ROSTER_TO_OWNER[rid]).filter(Boolean);
+      const ownerStr = owners.join(' ↔ ') || 'League';
+      const added = t.adds ? Object.keys(t.adds).map(id => players[id]?.name || id) : [];
+      const dropped = t.drops ? Object.keys(t.drops).map(id => players[id]?.name || id) : [];
+      const typeLabel = t.type === 'trade' ? 'TRADE' : t.type === 'waiver' ? 'WAIVER' : 'FREE AGENT';
+      const typeColor = t.type === 'trade' ? 'var(--purple)' : t.type === 'waiver' ? 'var(--blue)' : 'var(--muted)';
+      return `
+      <div style="display:flex; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.04);">
+        <span style="font-family:var(--mono); font-size:9px; font-weight:700; color:${typeColor}; border:1px solid ${typeColor}; border-radius:3px; padding:3px 7px; height:fit-content; white-space:nowrap;">${typeLabel}</span>
+        <div style="flex:1;">
+          <div style="font-size:12px; color:var(--text); font-weight:600;">${ownerStr}</div>
+          ${added.length ? `<div style="font-size:11px; color:var(--green);">+ ${added.join(', ')}</div>` : ''}
+          ${dropped.length ? `<div style="font-size:11px; color:var(--red);">− ${dropped.join(', ')}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    document.getElementById('txn-list').innerHTML = `<div style="color:var(--muted); font-size:12px;">Couldn't reach the Sleeper API right now (${e.message}).</div>`;
+  }
+}
+
+async function buildTradedPicks() {
+  const statusEl = document.getElementById('picks-status');
+  try {
+    const picks = await getTradedPicks();
+    if (!picks || picks.length === 0) {
+      statusEl.textContent = 'NO PICKS TRADED';
+      document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">No draft picks have changed hands yet.</td></tr></tbody>`;
+      return;
+    }
+    statusEl.textContent = 'LIVE FROM SLEEPER';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    const sorted = [...picks].sort((a,b) => a.season - b.season || a.round - b.round);
+    document.getElementById('picks-table').innerHTML = `
+      <thead><tr><th>Season</th><th>Round</th><th>Original Team</th><th>Now Owned By</th></tr></thead>
+      <tbody>${sorted.map(p => {
+        const original = ROSTER_TO_OWNER[p.roster_id] || '—';
+        const current = ROSTER_TO_OWNER[p.owner_id] || '—';
+        return `<tr>
+          <td style="font-family:var(--mono);">${p.season}</td>
+          <td style="font-family:var(--mono);">R${p.round}</td>
+          <td class="owner-col">${original}</td>
+          <td class="owner-col" style="color:var(--gold); font-weight:600;">${current}</td>
+        </tr>`;
+      }).join('')}</tbody>`;
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</td></tr></tbody>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildStockCards();
+  buildScreener();
+  buildCharts();
+  buildTransactions();
+  buildTradedPicks();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html, body { margin: 0; padding: 0; background: #080b0f; height: 100%; overflow: hidden; }
+a { color: #ffc840; }
+a:hover { color: #ffd97a; }
+</style>
+<script>window.OM_SCENES = '[{"name":"Cold Open","dur":2.5},{"name":"Your Host","dur":10,"caption":"Good evening. I\u2019m Vivienne Ashcroft \u2014 host of The Marquee, Thursdays. Tonight, allow me to introduce the loudest people I know."},{"name":"The Wire","dur":8.3,"caption":"First, the insiders. Marty Volkman and Dina Ravioli. Between them, they are always first \u2014 and occasionally correct."},{"name":"The Weekly Sit-Down","dur":9.9,"caption":"The weekly panel. Clara Hopkins keeps it on schedule. Big Dog, Chad Bellwether and Jay Kelpey ensure that she fails. Every single week."},{"name":"Market Movers","dur":7.1,"caption":"The markets desk. Vance Hollis and Matteo Honeydew. Under no circumstances should you take their advice."},{"name":"The Marquee","dur":10.8,"caption":"And the main stage \u2014 my desk. Terrence E. Odom. Dexter Vail. Bo Ruckman. The biggest nights deserve the biggest voices. Heaven help us all."},{"name":"Sign Off","dur":8,"caption":"The Marquee. Thursdays, eight PM. Do be on time."}]';</script>
+<script>window.OM_PLAYBACK = '{"mode":"times","count":1}';</script>
+<script>window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "captions": true,
+  "voice": true,
+  "motionEditor": true
+}/*EDITMODE-END*/;</script>
+</helmet>
+<div style="position: fixed; inset: 0; background: #080b0f; display: flex; align-items: center; justify-content: center;">
+  <x-import component-from-global-scope="LivNetworkIntro" from="./animations-v2.jsx ./tweaks-panel.jsx ./liv-intro.jsx" hint-size="100%,100%"></x-import>
+</div>
+</x-dc>
+</body>
+</html>

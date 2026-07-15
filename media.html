@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — Media Center</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn active" href="media.html">Media Center</a>
+    <a class="nav-btn" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">Media Center</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">12 PERSONALITIES</div>
+  </div>
+
+  <div class="media-hero">
+    <div>
+      <div class="media-hero-title">THE LIV NETWORK</div>
+      <div class="media-hero-sub">Breaking news, trade rumors, market hype, and weekly debate — the voices covering every trade, crash, and boardroom scandal across the exchange.</div>
+    </div>
+    <div class="media-hero-stats">
+      <div class="media-hero-stat"><div class="media-hero-stat-val">12</div><div class="media-hero-stat-label">On Air</div></div>
+      <div class="media-hero-stat"><div class="media-hero-stat-val">5</div><div class="media-hero-stat-label">Shows</div></div>
+      <div class="media-hero-stat"><div class="media-hero-stat-val">2</div><div class="media-hero-stat-label">Insiders</div></div>
+    </div>
+  </div>
+
+  <div class="shows-grid" id="shows-grid"></div>
+  <div class="media-filters" id="media-filters"></div>
+  <div class="media-grid" id="media-grid"></div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+function buildShows() {
+  document.getElementById('shows-grid').innerHTML = SHOWS.map(s => `
+    <div class="show-card">
+      <div class="show-card-title">${s.name}</div>
+      <div class="show-card-desc">${s.desc}</div>
+      <div class="show-cast-list">${s.cast.map(c => `<span class="show-cast-tag ${c.host?'host':''}">${c.host?'★ ':''}${c.n}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+function buildFilters() {
+  const filters = [
+    {key:'all', label:'All Personalities'},
+    {key:'insider', label:'The Wire'},
+    {key:'panel', label:'The Weekly Sit-Down'},
+    {key:'marquee', label:'The Marquee'},
+    {key:'trade', label:'Market Movers'},
+  ];
+  document.getElementById('media-filters').innerHTML = filters.map((f,i) => `
+    <button class="media-filter-btn ${i===0?'active':''}" data-filter="${f.key}" onclick="filterMedia('${f.key}', this)">${f.label}</button>
+  `).join('');
+}
+
+function filterMedia(key, btn) {
+  document.querySelectorAll('.media-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.media-card').forEach(card => {
+    card.style.display = (key === 'all' || card.dataset.show === key) ? '' : 'none';
+  });
+}
+
+function buildMediaGrid() {
+  const badgeClass = { insider:'show-insider', panel:'show-panel', marquee:'show-marquee', trade:'show-trade' };
+  document.getElementById('media-grid').innerHTML = MEDIA.map(m => `
+    <div class="media-card" data-show="${m.show}">
+      <div class="media-photo-wrap">
+        <img src="${m.photo}" alt="${m.name}">
+        <div class="media-photo-gradient"></div>
+        <span class="media-show-badge ${badgeClass[m.show]}">${m.showLabel}</span>
+        <div class="media-name-overlay"><div class="media-name">${m.name}</div><div class="media-role">${m.role}</div></div>
+      </div>
+      <div class="media-card-body"><div class="media-beat">${m.beat}</div></div>
+      <div class="media-quote">${m.quote}</div>
+    </div>`).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildShows();
+  buildFilters();
+  buildMediaGrid();
+});
+</script>
+</body>
+</html>

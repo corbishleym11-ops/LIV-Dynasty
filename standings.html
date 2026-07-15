@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — History</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+    <a class="nav-btn active" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">2025 Final Standings</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">ARCHIVE</div>
+  </div>
+  <div class="card g1">
+    <table class="standings-table" id="standings-2025"></table>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-title">2025 Points For vs Points Against</div>
+    <div class="sec-line"></div>
+  </div>
+  <div class="chart-card g1">
+    <canvas id="chart-pts" height="220"></canvas>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script>
+function buildStandings2025() {
+  const sorted25 = [...SEASON_2025].sort((a,b) => b.wins - a.wins);
+  document.getElementById('standings-2025').innerHTML = `
+    <thead><tr><th>#</th><th>Owner</th><th>W-L</th><th class="r">PF</th><th class="r">PA</th><th>Playoff</th><th class="r">Trades</th></tr></thead>
+    <tbody>${sorted25.map((s,i) => `<tr>
+        <td><span class="pos-dot ${s.playoff?'playoff-yes':'playoff-no'}">${i+1}</span></td>
+        <td style="font-weight:600;color:${OWNER_COLORS[s.owner]}">${s.owner}</td>
+        <td class="win-loss">${s.wins}-${s.losses}</td>
+        <td class="r" style="color:var(--green)">${s.pf.toLocaleString()}</td>
+        <td class="r" style="color:var(--red)">${s.pa.toLocaleString()}</td>
+        <td><span style="font-family:var(--mono);font-size:11px;color:${s.playoff?'var(--green)':'var(--red)'}">${s.playoff?'✓ YES':'✗ NO'}</span></td>
+        <td class="r" style="color:var(--muted)">${s.trades}</td>
+      </tr>`).join('')}</tbody>`;
+}
+
+function buildPtsChart() {
+  const ptSorted = [...SEASON_2025].sort((a,b) => b.pf - a.pf);
+  new Chart(document.getElementById('chart-pts').getContext('2d'), {
+    type: 'bar',
+    data: { labels: ptSorted.map(s => TEAMS.find(t=>t.owner===s.owner)?.ticker || s.owner), datasets: [
+      { label: 'Points For', data: ptSorted.map(s => s.pf), backgroundColor: 'rgba(0,230,118,0.65)', borderRadius: 4 },
+      { label: 'Points Against', data: ptSorted.map(s => s.pa), backgroundColor: 'rgba(255,61,61,0.5)', borderRadius: 4 }
+    ]},
+    options: { animation:{duration:700}, plugins:{legend:{labels:{color:'#5a7a96',boxWidth:12}},tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw.toLocaleString()}`}}},
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>v.toLocaleString()}} } }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildStandings2025();
+  buildPtsChart();
+});
+</script>
+</body>
+</html>
