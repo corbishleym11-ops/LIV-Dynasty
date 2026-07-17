@@ -1,29 +1,97 @@
 {
-  "generated_at": "2026-07-16T23:55:28.732130+00:00",
+  "generated_at": "2026-07-17T14:16:16.882128+00:00",
   "events_seen": [
-    "TRADE (Jul 15): Charles receives Bijan Robinson (RB, ATL). Shaq receives Brock Bowers (TE, LV), 2027 R1 pick.",
-    "WAIVER CLAIM (Jul 14): Kevin added Brock Bowers (TE, LV) for $12 FAAB (dropped Bijan Robinson (RB, ATL))."
+    "TRADE (Jul 10): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick.",
+    "WAIVER CLAIM (Jun 21): Drew added Colbie Young (WR, CIN) (dropped Joe Mixon (RB, FA)).",
+    "WAIVER CLAIM (Jun 08): Adam added Cyrus Allen (WR, KC) (dropped Phil Mafah (RB, DAL)).",
+    "WAIVER CLAIM (May 27): Charles added Chris Brooks (RB, GB) for $1 FAAB (dropped Austin Ekeler (RB, FA)).",
+    "WAIVER CLAIM (May 16): Charles added Matt Hibner (TE, BAL) (dropped Moliki Matavao (TE, NO)).",
+    "CUT (May 16): Charles released Zonovan Knight (RB, ARI).",
+    "WAIVER CLAIM (May 13): Shaq added Zavion Thomas (WR, CHI).",
+    "WAIVER CLAIM (May 12): Adam added John Michael Gyllenborg (TE, KC) (dropped Elijah Higgins (TE, ARI)).",
+    "CUT (May 11): Jake released Evan Hull (RB, HOU).",
+    "WAIVER CLAIM (May 11): Corbishley added Jam Miller (RB, NE)."
   ],
   "tweets": [
-    {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "Hearing Crownline and Monarch just moved real assets. Details shortly.",
-      "posted_at": "2026-07-16T23:15:28.732130+00:00",
-      "likes": 88,
-      "rt": 21,
-      "reply": 12
-    },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "The desk will have plenty to unpack Thursday. Bring coffee.",
-      "posted_at": "2026-07-16T20:35:28.732130+00:00",
-      "likes": 54,
+      "text": "Thursday's Exchange Report has a full desk for the first time since the rookie draft closed. Helix's momentum, the Deepwater board situation, and what Crownline's quiet offseason actually means for the championship picture. That's a lot of ground to cover \u2014 we'll start on time.",
+      "posted_at": "2026-07-17T12:41:16.882128+00:00",
+      "likes": 67,
+      "rt": 13,
+      "reply": 8
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Charles cut Zonovan Knight, added Chris Brooks for a dollar, and flipped his TE spot in the same window. Quietly ruthless offseason from Crownline. Regular season domination was not an accident and the board meeting after last year's playoff exit clearly lit a fire.",
+      "posted_at": "2026-07-17T09:06:16.882128+00:00",
+      "likes": 91,
+      "rt": 20,
+      "reply": 17
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Shaq's roster is the most interesting puzzle in the league right now. Monarch added Zavion Thomas last month, which is fine, but the RB shelf is still completely bare for a second straight offseason. At some point the WR wealth stops being an asset and starts being a distraction.",
+      "posted_at": "2026-07-17T05:36:16.882128+00:00",
+      "likes": 83,
+      "rt": 17,
+      "reply": 21
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Corbishley adds Jam Miller out of New England and nobody's talking about it. Depth-chart math: no real feature back blocking him, coaching staff that actually uses the position, and Apex needs every RB touch it can find with that QB situation still unresolved. That's not nothing.",
+      "posted_at": "2026-07-17T01:16:16.882128+00:00",
+      "likes": 55,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Drew dropped Joe Mixon for Colbie Young. I will not pretend that is a roster decision. That is a man standing in a burning building, opening a window, and calling it renovation.",
+      "posted_at": "2026-07-16T20:46:16.882128+00:00",
+      "likes": 109,
+      "rt": 26,
+      "reply": 35
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "Everyone treating the Mitchell deal like a revelation. I had Helix as a sleeper contender in the preseason. The model was always going to work \u2014 it just needed a real backfield to confirm it. The market is just catching up to what was already obvious.",
+      "posted_at": "2026-07-16T16:46:16.882128+00:00",
+      "likes": 61,
       "rt": 9,
-      "reply": 6
+      "reply": 22
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "DEEPWATER. Sixty-eight dollars. No direction. No flagship asset. No plan. That's not a stock, that's a waiting room. Mitchum needs to make a call \u2014 buy or sell \u2014 before the market makes it for him.",
+      "posted_at": "2026-07-16T12:36:16.882128+00:00",
+      "likes": 74,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "The Keaton Mitchell move to Helix is more significant than it looks on paper. Adam didn't just add a running back \u2014 he filled the one hole that kept his model from projecting a legitimate contender. Wingard takes the 2028 third and keeps stacking. Both sides got what they needed.",
+      "posted_at": "2026-07-16T07:56:16.882128+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 28
     }
   ]
 }
