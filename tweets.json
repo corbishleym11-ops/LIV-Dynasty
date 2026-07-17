@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-07-17T15:45:34.418744+00:00",
+  "generated_at": "2026-07-17T18:42:29.686256+00:00",
   "events_seen": [
+    "TRADE (Jul 17): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
     "TRADE (Jul 10): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick.",
     "WAIVER CLAIM (Jun 21): Drew added Colbie Young (WR, CIN) (dropped Joe Mixon (RB, FA)).",
     "WAIVER CLAIM (Jun 08): Adam added Cyrus Allen (WR, KC) (dropped Phil Mafah (RB, DAL)).",
@@ -9,99 +10,98 @@
     "CUT (May 16): Charles released Zonovan Knight (RB, ARI).",
     "WAIVER CLAIM (May 13): Shaq added Zavion Thomas (WR, CHI).",
     "WAIVER CLAIM (May 12): Adam added John Michael Gyllenborg (TE, KC) (dropped Elijah Higgins (TE, ARI)).",
-    "CUT (May 11): Jake released Evan Hull (RB, HOU).",
-    "WAIVER CLAIM (May 11): Corbishley added Jam Miller (RB, NE)."
+    "CUT (May 11): Jake released Evan Hull (RB, HOU)."
   ],
   "tweets": [
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "Sovereign Draft Reserve is sitting on a pile of 2027 and 2028 capital and the stock is somehow not moving. The market is punishing Wingard for refusing to convert picks into production \u2014 and honestly? The market is right. Picks don't score points. At some point the shelf life on 'trust the process' expires.",
-      "posted_at": "2026-07-17T15:27:34.418744+00:00",
-      "likes": 87,
-      "rt": 19,
-      "reply": 22
-    },
     {
       "key": "dina-ravioli",
       "name": "Dina Ravioli",
       "handle": "@DinaOnTheLine",
-      "text": "A few people have asked me about the Deepwater situation. I'm not hearing anything imminent on the trade front, but I am hearing that the people around Mitchum are increasingly frustrated. 'Board wants a buy/sell call' is the phrase I keep getting back. That's not nothing.",
-      "posted_at": "2026-07-17T14:10:34.418744+00:00",
-      "likes": 104,
-      "rt": 24,
-      "reply": 31
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Adam got Keaton Mitchell for a 2028 third-rounder and Wingard is out here acting like he won the trade. A THIRD. FROM 2028. Someone get me on a panel to discuss this because I have grievances.",
-      "posted_at": "2026-07-17T12:15:34.418744+00:00",
-      "likes": 71,
-      "rt": 12,
+      "text": "The Herbert-to-Helix deal is getting louder in hindsight. I've now spoken to three people who were aware talks were happening well before the transaction filed, and the consensus is that Adam gave up more than the headline suggests. Stroud alone was meaningful. The 2028 first on top of it is what makes this a real cost.",
+      "posted_at": "2026-07-17T18:24:29.686256+00:00",
+      "likes": 97,
+      "rt": 21,
       "reply": 28
     },
     {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "The Cyrus Allen add for Helix is getting zero attention and I think people are sleeping on it. Kansas City WR room, coaching staff that manufactures targets, and Adam already cleared the TE depth by grabbing Gyllenborg earlier in the window. He's been quietly building a full roster around that model. That's not waiver fishing \u2014 that's infrastructure.",
-      "posted_at": "2026-07-17T09:25:34.418744+00:00",
-      "likes": 63,
-      "rt": 11,
-      "reply": 14
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "Helix adding Herbert and STILL holding Gyllenborg and Allen and Mitchell \u2014 that roster is either a dynasty contender or an overcrowded bus with no driver. I genuinely do not know which. That uncertainty alone should move the stock and I'm watching very carefully.",
+      "posted_at": "2026-07-17T17:57:29.686256+00:00",
+      "likes": 83,
+      "rt": 17,
+      "reply": 22
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "I have been critical of Ryan. Publicly, repeatedly, on record. The $77.61 opening price was not an insult \u2014 it was the market doing its job. The market was wrong. I can say that. What I cannot say is that Ryan's process was sound, because it was not. He won anyway. Both things are true and I am deeply uncomfortable about it.",
-      "posted_at": "2026-07-17T05:55:34.418744+00:00",
-      "likes": 116,
-      "rt": 27,
-      "reply": 40
+      "text": "Fronge relocated to Havana. Zero pick liquidity. Took on Croskey-Merritt and Stroud and a future first in exchange for Herbert. Let me ask the room a simple question: what exactly is ForgeHammer building toward, and does Fronge know the answer?",
+      "posted_at": "2026-07-17T16:52:29.686256+00:00",
+      "likes": 104,
+      "rt": 24,
+      "reply": 35
     },
     {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "EchoPoint's RB room is elite and Jake still hasn't addressed TE \u2014 which in a TE premium league is like building a beautiful house and leaving the roof off. Great curb appeal. Structurally, you're one rainstorm from a disaster.",
-      "posted_at": "2026-07-17T02:15:34.418744+00:00",
-      "likes": 58,
-      "rt": 9,
-      "reply": 17
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Exchange Report is Thursday. Vivienne's already told me the Deepwater segment alone could run the whole hour if we let it. We won't. But it could.",
-      "posted_at": "2026-07-16T22:15:34.418744+00:00",
-      "likes": 74,
-      "rt": 8,
-      "reply": 12
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Colbie Young is actually a masterstroke by Drew and I'll tell you why: rebuilds require assets nobody else values yet. The fact that Atlas is at $44 is irrelevant. The market has always been afraid of innovation. Drew is innovating. Nobody panic.",
-      "posted_at": "2026-07-16T16:35:34.418744+00:00",
-      "likes": 44,
-      "rt": 6,
-      "reply": 33
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "Everyone is very excited about Helix right now and I understand it. I also said in the preseason that Adam's model-driven approach would eventually force him into an overpay to close the gap. A 2028 first plus Stroud for Herbert is the overpay. The turnaround is real. The price was too high. Both can be true.",
+      "posted_at": "2026-07-17T15:27:29.686256+00:00",
+      "likes": 71,
+      "rt": 13,
+      "reply": 19
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Charles added a TE, added a running back, cut dead weight, and did it all so quietly that most of the league didn't notice. That's what a 23-5 operation looks like in the offseason. Crownline doesn't make noise. They make moves.",
-      "posted_at": "2026-07-16T10:45:34.418744+00:00",
-      "likes": 93,
-      "rt": 21,
-      "reply": 15
+      "text": "ForgeHammer got Stroud, got Croskey-Merritt, got a 2028 first-rounder, and is operating out of Havana. I don't fully understand the business model but I respect the audacity of it. Fronge is doing Fronge things and somehow it is working out for Fronge.",
+      "posted_at": "2026-07-17T13:02:29.686256+00:00",
+      "likes": 88,
+      "rt": 18,
+      "reply": 14
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "People keep debating whether Herbert or Stroud is the better asset and missing what actually matters here: Helix is now a superflex squad with Herbert locked in as the guy and actual RB depth behind him with Mitchell. That roster construction is coherent in a way it wasn't three months ago. Give the model some credit.",
+      "posted_at": "2026-07-17T10:02:29.686256+00:00",
+      "likes": 66,
+      "rt": 11,
+      "reply": 9
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Wingard shipped out Keaton Mitchell for a 2028 third and is sitting on a mountain of future capital that the exchange is actively discounting. At some point the picks have to become players. Sovereign Draft Reserve is the most fascinating love-it-or-leave-it roster construction story in this league and we are not talking about it enough.",
+      "posted_at": "2026-07-17T05:42:29.686256+00:00",
+      "likes": 59,
+      "rt": 9,
+      "reply": 12
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Tomorrow's Exchange Report has the Herbert trade, the Deepwater situation, and whatever Vance has decided to scream about this week. Vivienne says we're keeping the Deepwater segment to eight minutes. I'll believe it when I see it.",
+      "posted_at": "2026-07-17T01:12:29.686256+00:00",
+      "likes": 74,
+      "rt": 14,
+      "reply": 17
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Croskey-Merritt goes to Havana, Herbert goes to the model guy, and a 2028 first disappears into the ether. I have watched this league for five minutes and I already know Wingard is going to turn that third-rounder into something unhinged. I need a segment on this immediately.",
+      "posted_at": "2026-07-16T19:42:29.686256+00:00",
+      "likes": 52,
+      "rt": 8,
+      "reply": 21
     }
   ]
 }
