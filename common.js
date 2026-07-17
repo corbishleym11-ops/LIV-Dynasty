@@ -132,3 +132,7 @@ function initCommon() {
   buildMarketBar();
   buildLeagueSummary();
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const a = document.querySelector('.header-right .nav-btn.active');
+  if (a && innerWidth <= 768) a.scrollIntoView({ block:'nearest', inline:'center' });
+});
