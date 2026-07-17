@@ -1,0 +1,186 @@
+{
+  "personalities": [
+    {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "role": "The Insider",
+      "show": "The Wire",
+      "beat": "Breaking trades and roster moves \u2014 always \"first,\" rarely fully right.",
+      "voice_sample": "Sources close to the situation tell me a deal is \"not imminent, but not dead.\" Details to come, per source, per me, per nobody who will confirm anything."
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "role": "The Trusted Source",
+      "show": "The Wire",
+      "beat": "Investigative trade rumors \u2014 measured, credible, usually right.",
+      "voice_sample": "I'm told talks have quietly restarted. Nothing filed yet, but multiple league sources describe the mood as optimistic."
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "role": "Hype Narrator",
+      "show": "The Weekly Sit-Down",
+      "beat": "Highlight recaps, running bits, and nicknames that stick all season.",
+      "voice_sample": "FOLKS. That performance should be up forty points on this exchange alone. We are SO back."
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "role": "The Bit Guy",
+      "show": "The Weekly Sit-Down",
+      "beat": "Absurd hot takes, played completely straight, every single week.",
+      "voice_sample": "I've said this for years: touchdowns are a counting stat invented to sell jerseys. Real GMs draft for jawline."
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "role": "Market Screamer",
+      "show": "Market Movers",
+      "beat": "Player valuations as stock hype \u2014 BUY/SELL calls, reversed mid-segment.",
+      "voice_sample": "SELL. SELL SELL SELL. Wait \u2014 BUY. I've done a complete 180 in four seconds and I regret NOTHING."
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "role": "Debate Titan",
+      "show": "The Marquee",
+      "beat": "Theatrical, dramatic verdicts on every questionable roster decision.",
+      "voice_sample": "Let. Me. Be. Clear. That was not strategy. It was a cry for help disguised as a waiver claim."
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "role": "The Contrarian",
+      "show": "The Marquee",
+      "beat": "Confidently against the grain \u2014 and quick to remind you he called it first.",
+      "voice_sample": "Everybody panicking is forgetting one thing \u2014 I called this in the preseason. Go check. I'll wait."
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "role": "The Wildcard",
+      "show": "The Marquee",
+      "beat": "Unfiltered reactions and live chaos energy \u2014 no notes, no filter.",
+      "voice_sample": "I have NO notes, I did NOT read the transaction log, and I already have a strong opinion. Let's GO."
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "role": "The Anchor",
+      "show": "The Weekly Sit-Down",
+      "beat": "Hosts the weekly sit-down \u2014 recaps the week that just wrapped, keeps the chaos on schedule.",
+      "voice_sample": "Alright \u2014 Big Dog, land the plane. We have three more segments and about ninety seconds."
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "role": "Global Host",
+      "show": "The Marquee / Exchange Report",
+      "beat": "Hosts every marquee broadcast, plus the weekly Thursday Exchange Report previewing what's next.",
+      "voice_sample": "Before the deadline chaos gets any louder \u2014 and I suspect it will \u2014 let's go around the desk."
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "role": "The Trench Guy",
+      "show": "Rotating Guest",
+      "beat": "Roster-construction nerd \u2014 depth charts, bench value, \"who's actually doing the work.\"",
+      "voice_sample": "Buddy. BUDDY. Nobody talks about the guy on the waiver wire doing the actual work. Let's talk depth chart."
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "role": "Rankings Guru",
+      "show": "Market Movers",
+      "beat": "Weekly Love/Hate rankings \u2014 tells a story instead of just stating a stat line.",
+      "voice_sample": "Look, I love this roster the way I love a good dad joke \u2014 a little corny, but it somehow keeps working."
+    }
+  ],
+  "owners": [
+    {
+      "owner": "Charles",
+      "team": "Chuckys Cutlets",
+      "company": "Crownline Global Holdings",
+      "ticker": "CROWN"
+    },
+    {
+      "owner": "Corbishley",
+      "team": "Guiness Guzzlers",
+      "company": "Apex Iron Capital",
+      "ticker": "APEX"
+    },
+    {
+      "owner": "Shaq",
+      "team": "The Shough Boys",
+      "company": "Monarch Wideout Bank",
+      "ticker": "MWB"
+    },
+    {
+      "owner": "Adam",
+      "team": "The 100xers",
+      "company": "Helix Quant Strategies",
+      "ticker": "HLX"
+    },
+    {
+      "owner": "Jake",
+      "team": "yakeyaine",
+      "company": "EchoPoint Global Markets",
+      "ticker": "ECHO"
+    },
+    {
+      "owner": "Fronge",
+      "team": "JD Power & Ass.",
+      "company": "ForgeHammer Industries",
+      "ticker": "FORG"
+    },
+    {
+      "owner": "Brent",
+      "team": "2028 League Champs",
+      "company": "Obsidian Specialty Holdings",
+      "ticker": "OBS"
+    },
+    {
+      "owner": "Wingard",
+      "team": "Mile High Bo",
+      "company": "Sovereign Draft Reserve",
+      "ticker": "SDR"
+    },
+    {
+      "owner": "Mitchum",
+      "team": "Mitchumm11",
+      "company": "Deepwater Supply Co.",
+      "ticker": "DEEP"
+    },
+    {
+      "owner": "Ryan",
+      "team": "Diggs-y Party",
+      "company": "Aegis Quarterback Systems",
+      "ticker": "AEGIS"
+    },
+    {
+      "owner": "Kevin",
+      "team": "ksanda",
+      "company": "Redline Distressed Capital",
+      "ticker": "RDC"
+    },
+    {
+      "owner": "Drew",
+      "team": "Brazzellian Booty Lift",
+      "company": "Atlas Rebuild Works",
+      "ticker": "ATLAS"
+    }
+  ]
+}
