@@ -94,14 +94,21 @@ function buildLeagueSummary() {
   document.getElementById('kpi-strip').innerHTML = `
     <div style="grid-column:1/-1; display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:8px;">
       <div style="grid-column:1/-1; font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--muted); text-transform:uppercase;">Exchange Glossary — Owner · Ticker · Company · Team</div>
-      ${[...TEAMS].sort((a,b) => a.owner.localeCompare(b.owner)).map(t => `
+      ${[...TEAMS].sort((a,b) => a.owner.localeCompare(b.owner)).map(t => {
+        const up = t.change >= 0;
+        return `
         <div onclick="location.href='team.html?owner=${encodeURIComponent(t.owner)}'" style="display:flex; align-items:center; gap:10px; min-width:0; background:var(--card); border:1px solid ${OWNER_COLORS[t.owner] || 'var(--gold)'}55; border-radius:4px; padding:8px 12px; cursor:pointer; transition:border-color .15s, background .15s;" onmouseover="this.style.borderColor='${OWNER_COLORS[t.owner] || 'var(--gold)'}'; this.style.background='var(--card2, #151c24)';" onmouseout="this.style.borderColor='${OWNER_COLORS[t.owner] || 'var(--gold)'}55'; this.style.background='var(--card)';">
           <span class="sym-tag" style="flex-shrink:0;">${t.ticker}</span>
           <div style="min-width:0;">
             <div style="font-size:12px; font-weight:600; color:${OWNER_COLORS[t.owner] || 'var(--text)'}">${t.owner}</div>
             <div style="font-size:10px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${t.company} · ${t.team}</div>
           </div>
-        </div>`).join('')}
+          <div style="margin-left:auto; flex-shrink:0; text-align:right;">
+            <div style="font-family:var(--mono); font-size:12px; font-weight:700; color:${up ? 'var(--green)' : 'var(--red)'}">$${t.price26.toFixed(2)}</div>
+            <div style="font-family:var(--mono); font-size:9px; color:${up ? 'var(--green)' : 'var(--red)'}">${up ? '▲' : '▼'} ${Math.abs(t.pct).toFixed(1)}%</div>
+          </div>
+        </div>`;
+      }).join('')}
     </div>`;
 
   const riserList = risers.sort((a,b) => b.pct - a.pct)
