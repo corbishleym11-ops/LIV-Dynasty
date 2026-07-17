@@ -35,6 +35,43 @@ async function getTransactions(round) {
   return sleeperFetch(`https://api.sleeper.app/v1/league/${SLEEPER_LEAGUE_ID}/transactions/${round}`);
 }
 
+async function getLeagueInfo(leagueId) {
+  return sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId || SLEEPER_LEAGUE_ID}`);
+}
+
+// Full trade history across the league's whole life (walks previous_league_id
+// back through past seasons). ~18 fetches per season on a cold load, so the
+// result is cached in localStorage for an hour.
+async function getAllTrades() {
+  const CACHE_KEY = 'liv_trades_cache_v1';
+  const CACHE_TIME_KEY = 'liv_trades_cache_time_v1';
+  const cached = localStorage.getItem(CACHE_KEY);
+  const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
+  if (cached && cachedTime && (Date.now() - parseInt(cachedTime, 10) < 60 * 60 * 1000)) {
+    try { return JSON.parse(cached); } catch (e) { /* refetch */ }
+  }
+  const trades = [];
+  let leagueId = SLEEPER_LEAGUE_ID;
+  let hops = 0;
+  while (leagueId && hops < 5) {           // safety: at most 5 seasons back
+    const info = await getLeagueInfo(leagueId);
+    const rounds = Array.from({ length: 18 }, (_, i) => i + 1);
+    const lists = await Promise.all(rounds.map(r =>
+      sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId}/transactions/${r}`).catch(() => [])));
+    lists.flat().forEach(t => {
+      if (t && t.type === 'trade' && t.status === 'complete') trades.push({ ...t, season: info.season });
+    });
+    leagueId = info.previous_league_id;
+    hops++;
+  }
+  trades.sort((a, b) => b.created - a.created);
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(trades));
+    localStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
+  } catch (e) { /* storage unavailable */ }
+  return trades;
+}
+
 async function getTradedPicks() {
   return sleeperFetch(`https://api.sleeper.app/v1/league/${SLEEPER_LEAGUE_ID}/traded_picks`);
 }

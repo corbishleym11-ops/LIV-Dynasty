@@ -7,6 +7,19 @@
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#080b0f">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#080b0f"/>
+    <line x1="360" y1="180" x2="360" y2="640" stroke="#1e2a36" stroke-width="4"/>
+    <circle cx="360" cy="260" r="18" fill="#ffc840"/>
+    <circle cx="360" cy="410" r="18" fill="#00e676"/>
+    <circle cx="360" cy="560" r="18" fill="#4fc3f7"/>
+    <rect x="410" y="245" width="360" height="14" rx="7" fill="#3a4a5a"/>
+    <rect x="410" y="395" width="300" height="14" rx="7" fill="#3a4a5a"/>
+    <rect x="410" y="545" width="340" height="14" rx="7" fill="#3a4a5a"/>
+    <text x="600" y="120" font-family="monospace" font-size="52" font-weight="700" fill="#ffc840" text-anchor="middle" letter-spacing="6">LIV HISTORY</text>
+  </svg>
+</template>
 </head>
 <body>
 
@@ -40,6 +53,15 @@
 <div class="market-bar" id="market-bar"></div>
 
 <div class="main">
+
+  <div class="sec-head">
+    <div class="sec-title">League Timeline</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">PERMANENT CANON</div>
+  </div>
+  <div class="card g1">
+    <div id="timeline-list"></div>
+  </div>
 
   <div class="sec-head">
     <div class="sec-title">2025 Final Standings</div>
@@ -80,7 +102,7 @@ function buildStandings2025() {
     <thead><tr><th>#</th><th>Owner</th><th>W-L</th><th class="r">PF</th><th class="r">PA</th><th>Playoff</th><th class="r">Trades</th></tr></thead>
     <tbody>${sorted25.map((s,i) => `<tr>
         <td><span class="pos-dot ${s.playoff?'playoff-yes':'playoff-no'}">${i+1}</span></td>
-        <td style="font-weight:600;color:${OWNER_COLORS[s.owner]}">${s.owner}</td>
+        <td style="font-weight:600;color:${OWNER_COLORS[s.owner]}">${ownerLink(s.owner)}</td>
         <td class="win-loss">${s.wins}-${s.losses}</td>
         <td class="r" style="color:var(--green)">${s.pf.toLocaleString()}</td>
         <td class="r" style="color:var(--red)">${s.pa.toLocaleString()}</td>
@@ -102,8 +124,31 @@ function buildPtsChart() {
   });
 }
 
+function buildTimeline() {
+  const colors = { gold:'var(--gold)', green:'var(--green)', red:'var(--red)', blue:'var(--blue)', purple:'var(--purple)' };
+  document.getElementById('timeline-list').innerHTML = TIMELINE.map((e, i) => {
+    const c = colors[e.color] || 'var(--muted)';
+    return `
+    <div style="display:flex; gap:16px; position:relative;">
+      <div style="display:flex; flex-direction:column; align-items:center; width:14px; flex-shrink:0;">
+        <div style="width:10px; height:10px; border-radius:50%; background:${c}; border:2px solid var(--bg); box-shadow:0 0 0 1px ${c}; margin-top:4px;"></div>
+        ${i < TIMELINE.length - 1 ? `<div style="width:1px; flex:1; background:var(--border); margin:4px 0;"></div>` : ''}
+      </div>
+      <div style="padding-bottom:${i < TIMELINE.length - 1 ? 22 : 0}px; min-width:0;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--muted);">${e.date}</span>
+          <span style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:1px; color:${c}; border:1px solid ${c}; border-radius:3px; padding:2px 7px;">${e.tag}</span>
+        </div>
+        <div style="font-size:14px; font-weight:700; color:var(--text); margin:5px 0 3px;">${e.owner ? `<a href="${teamHref(e.owner)}" style="color:inherit; text-decoration:none;">${e.title}</a>` : e.title}</div>
+        <div style="font-size:12px; color:var(--muted); line-height:1.5; max-width:640px;">${e.text}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
+  buildTimeline();
   buildStandings2025();
   buildPtsChart();
 });

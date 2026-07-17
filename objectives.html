@@ -71,7 +71,24 @@
 <script src="data.js"></script>
 <script src="common.js"></script>
 <script>
-const objStates = {};
+const objStates = {};        // visitor's local tracking — persisted in localStorage
+let officialStates = {};     // league canon from objectives.json — locked, shown in gold
+
+function loadLocal() {
+  try { Object.assign(objStates, JSON.parse(localStorage.getItem('liv_obj_local') || '{}')); } catch (e) {}
+}
+function saveLocal() {
+  try { localStorage.setItem('liv_obj_local', JSON.stringify(objStates)); } catch (e) {}
+}
+async function loadOfficial() {
+  try {
+    const res = await fetch('objectives.json?cb=' + Math.floor(Date.now() / 300000));
+    if (!res.ok) return;
+    const data = await res.json();
+    Object.entries(data).forEach(([owner, idxs]) =>
+      (idxs || []).forEach(i => { officialStates[`${owner}-${i - 1}`] = true; })); // json uses the #N shown on each card
+  } catch (e) { /* no official file yet — local-only mode */ }
+}
 
 function catClass(cat) {
   const m = { 'Finish':'cat-finish','Acquisition':'cat-acquisition','Rivalry':'cat-rivalry',
@@ -86,23 +103,27 @@ function buildBoardGrid() {
 
   document.getElementById('board-grid').innerHTML = TEAMS.map(t => {
     const objs = byOwner[t.owner] || [];
+    const mv = MOVEMENT[t.owner] || {};
     return `
       <div class="board-col">
         <div class="board-col-header">
-          <div><div class="board-owner">${t.owner}</div><div class="board-team">${t.team}</div></div>
-          <div class="board-ticker-tag">${t.ticker}</div>
+          <div><div class="board-owner">${ownerLink(t.owner)}</div><div class="board-team">${t.team}</div></div>
+          <div style="text-align:right;">
+            <div class="board-ticker-tag">${t.ticker}</div>
+            <div style="font-family:var(--mono); font-size:10px; color:var(--muted); margin-top:4px;">CONF ${mv.conf ? `${mv.conf.now} ${deltaBadge(mv.conf.now, mv.conf.prev)}` : '—'}</div>
+          </div>
         </div>
         <div class="board-objectives">
           ${objs.map((o,i) => {
             const key = `${t.owner}-${i}`;
             return `
-              <div class="obj-card" id="obj-${key}" onclick="toggleObj('${key}')">
+              <div class="obj-card ${officialStates[key] ? 'done official' : objStates[key] ? 'done' : ''}" id="obj-${key}" onclick="toggleObj('${key}')" ${officialStates[key] ? `style="border-color:var(--gold-dim);"` : ''}>
                 <div class="obj-top">
                   <span class="obj-cat ${catClass(o.cat)}">${o.cat}</span>
-                  <span class="obj-priority">${o.priority}</span>
+                  <span class="obj-priority">#${i+1} · ${o.priority}</span>
                 </div>
                 <div class="obj-text">${o.text}</div>
-                <div class="obj-check" id="check-${key}">✓</div>
+                <div class="obj-check" id="check-${key}" ${officialStates[key] ? `style="color:var(--gold);"` : ''}>${officialStates[key] ? '★' : '✓'}</div>
               </div>`;
           }).join('')}
         </div>
@@ -111,7 +132,9 @@ function buildBoardGrid() {
 }
 
 function toggleObj(key) {
+  if (officialStates[key]) return; // league canon — locked (edit objectives.json to change)
   objStates[key] = !objStates[key];
+  saveLocal();
   const card = document.getElementById(`obj-${key}`);
   if (objStates[key]) { card.classList.add('done'); } else { card.classList.remove('done'); }
   updateObjProgress();
@@ -119,15 +142,21 @@ function toggleObj(key) {
 
 function updateObjProgress() {
   const total = OBJECTIVES.length;
-  const done = Object.values(objStates).filter(Boolean).length;
+  const officialCount = Object.keys(officialStates).length;
+  const localOnly = Object.keys(objStates).filter(k => objStates[k] && !officialStates[k]).length;
+  const done = officialCount + localOnly;
   const pct = (done / total * 100).toFixed(0);
   document.getElementById('obj-progress-fill').style.width = pct + '%';
-  document.getElementById('obj-pct-label').textContent = `${done} / ${total} complete`;
+  document.getElementById('obj-pct-label').textContent =
+    `${done} / ${total} complete` + (officialCount ? ` · ${officialCount} official ★` : '');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   initCommon();
+  loadLocal();
+  await loadOfficial();
   buildBoardGrid();
+  updateObjProgress();
 });
 </script>
 </body>

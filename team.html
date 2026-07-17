@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — Corporation</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+    <a class="nav-btn" href="standings.html">History</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <!-- CORP HEADER -->
+  <div id="corp-header"></div>
+
+  <!-- HEADLINE -->
+  <div id="corp-headline"></div>
+
+  <!-- STOCK CHART + KEY METRICS -->
+  <div class="g2" style="margin-top:18px;">
+    <div class="chart-card">
+      <div class="card-title">Stock Performance</div>
+      <div class="card-sub" id="stock-chart-sub" style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"></div>
+      <canvas id="chart-stock" height="240"></canvas>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:14px;">Corporate Scorecard</div>
+      <div id="scorecard"></div>
+    </div>
+  </div>
+
+  <!-- UNIT RANKINGS + RISK -->
+  <div class="g2">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:14px;">Roster Unit Rankings</div>
+      <div id="unit-ranks"></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-title" style="margin-bottom:10px;">Boardroom Risk</div>
+        <div id="risk-card"></div>
+      </div>
+      <div class="card">
+        <div class="card-title" style="margin-bottom:10px;">Next Matchup</div>
+        <div id="next-matchup" style="font-size:12px; color:var(--muted);">Loading from Sleeper…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLAGSHIP ASSETS -->
+  <div class="sec-head">
+    <div class="sec-title">Flagship Assets</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="assets-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1"><div id="flagship-list" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:10px;"></div></div>
+
+  <!-- TRANSACTIONS + OBJECTIVES -->
+  <div class="g2">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px;">Recent Transactions</div>
+      <div id="corp-txns" style="display:flex; flex-direction:column;"><span style="font-size:12px; color:var(--muted);">Loading from Sleeper…</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px;">Board Objectives</div>
+      <div id="corp-objectives" style="display:flex; flex-direction:column; gap:8px;"></div>
+    </div>
+  </div>
+
+  <!-- TRADE HISTORY -->
+  <div class="sec-head">
+    <div class="sec-title">Trades Completed</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="trades-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1"><div id="trade-history"></div></div>
+
+  <!-- SEASON TIMELINE -->
+  <div class="sec-head">
+    <div class="sec-title">Corporate Timeline</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">CANON</div>
+  </div>
+  <div class="card g1"><div id="corp-timeline"></div></div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="sleeper.js"></script>
+<script src="common.js"></script>
+<script>
+const OWNER = (() => {
+  const q = new URLSearchParams(location.search).get('owner');
+  return TEAMS.some(t => t.owner === q) ? q : TEAMS[0].owner;
+})();
+const T = TEAMS.find(t => t.owner === OWNER);
+const MV = MOVEMENT[OWNER];
+const COLOR = OWNER_COLORS[OWNER] || 'var(--gold)';
+const S25 = SEASON_2025.find(s => s.owner === OWNER);
+const P26 = PROJ_2026.find(p => p.owner === OWNER);
+const PWR = RANKINGS.find(r => r.owner === OWNER);
+
+function buildHeader() {
+  const idx = TEAMS.findIndex(t => t.owner === OWNER);
+  const prev = TEAMS[(idx + TEAMS.length - 1) % TEAMS.length].owner;
+  const next = TEAMS[(idx + 1) % TEAMS.length].owner;
+  const up = T.change >= 0;
+  document.getElementById('corp-header').innerHTML = `
+  <div class="card" style="border-color:${COLOR}40;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+      <div style="display:flex; gap:18px; align-items:center;">
+        <div style="width:74px; height:74px; border-radius:8px; background:${COLOR}14; border:1px solid ${COLOR}50; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; font-size:17px; letter-spacing:1px; color:${COLOR};">${T.ticker}</div>
+        <div>
+          <div style="font-size:24px; font-weight:700; color:var(--text); letter-spacing:-0.5px;">${T.company}</div>
+          <div style="font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:4px;">
+            <span style="color:${COLOR}; font-weight:600;">${OWNER}</span> · ${T.team} · HQ: ${MV.hq}
+          </div>
+          <div style="display:flex; gap:14px; margin-top:10px; font-family:var(--mono); font-size:13px; align-items:baseline;">
+            <span style="font-size:22px; font-weight:700; color:${up?'var(--green)':'var(--red)'};">$${T.price26.toFixed(2)}</span>
+            <span style="color:${up?'var(--green)':'var(--red)'};">${up?'▲':'▼'}${Math.abs(T.pct).toFixed(2)}%</span>
+            <span style="color:var(--muted); font-size:11px;">prev $${T.prevPrice.toFixed(2)}</span>
+            <span style="color:var(--muted); font-size:11px;">MKT CAP $${T.cap.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <a class="nav-btn" href="team.html?owner=${encodeURIComponent(prev)}">← ${prev}</a>
+        <a class="nav-btn" href="team.html?owner=${encodeURIComponent(next)}">${next} →</a>
+      </div>
+    </div>
+  </div>`;
+  document.getElementById('corp-headline').innerHTML = `
+  <div style="margin-top:14px; padding:12px 18px; background:var(--card); border:1px solid var(--border); border-left:3px solid ${COLOR}; border-radius:4px; display:flex; gap:12px; align-items:center;">
+    <span style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:2px; color:${COLOR}; flex-shrink:0;">CURRENT HEADLINE</span>
+    <span style="font-size:13px; font-style:italic; color:var(--text);">${MV.headline}</span>
+  </div>`;
+  document.title = `LIV Dynasty Exchange — ${T.company}`;
+}
+
+function buildScorecard() {
+  const rows = [
+    { label: '2025 Record', val: S25 ? `${S25.wins}-${S25.losses} · finished #${S25.finish}` : '—', d: '' },
+    { label: '2026 Projection', val: P26 ? `${P26.record} · #${P26.rank}` : '—', d: deltaBadge(MV.proj.now, MV.proj.prev, {lowerBetter:true}) },
+    { label: 'Stock Rank', val: `#${MV.stockRank.now}`, d: deltaBadge(MV.stockRank.now, MV.stockRank.prev, {lowerBetter:true}) },
+    { label: 'Power Rank', val: `#${MV.power.now}`, d: deltaBadge(MV.power.now, MV.power.prev, {lowerBetter:true}) },
+    { label: 'Playoff Probability', val: `${MV.playoff.now}%`, d: deltaBadge(MV.playoff.now, MV.playoff.prev) },
+    { label: 'Board Confidence', val: MV.conf.now, d: deltaBadge(MV.conf.now, MV.conf.prev) },
+    { label: 'Dynasty Asset Rank', val: `#${MV.asset.now}`, d: deltaBadge(MV.asset.now, MV.asset.prev, {lowerBetter:true}) },
+    { label: '2025 Trades Executed', val: S25 ? S25.trades : '—', d: '' },
+  ];
+  document.getElementById('scorecard').innerHTML = rows.map(r => `
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.04);">
+      <span style="font-size:12px; color:var(--muted);">${r.label}</span>
+      <span style="font-family:var(--mono); font-size:13px; font-weight:600; color:var(--text); display:flex; gap:8px; align-items:center;">${r.val} ${r.d}</span>
+    </div>`).join('');
+}
+
+function buildUnitRanks() {
+  const now = posRanksNow(OWNER);
+  const labels = { qb:'QB Division', rb:'RB Division', wr:'WR Division', te:'TE Division', pick:'Pick Portfolio' };
+  document.getElementById('unit-ranks').innerHTML = ['qb','rb','wr','te','pick'].map(p => `
+    <div style="display:flex; align-items:center; gap:12px; padding:7px 0;">
+      <span style="font-family:var(--mono); font-size:11px; color:var(--muted); width:110px; flex-shrink:0;">${labels[p]}</span>
+      <div style="flex:1; height:6px; background:rgba(255,255,255,.05); border-radius:3px; overflow:hidden;">
+        <div style="width:${T[p]}%; height:100%; background:${COLOR}; border-radius:3px;"></div>
+      </div>
+      <span style="font-family:var(--mono); font-size:12px; font-weight:700; color:var(--text); width:64px; text-align:right;">#${now[p]} ${posMove(OWNER, p)}</span>
+    </div>`).join('') + `
+    <div style="margin-top:10px; font-size:11px; color:var(--muted); font-family:var(--mono);">STRENGTH: <span style="color:var(--blue);">${T.strength}</span> · WEAKNESS: <span style="color:var(--red);">${T.weakness}</span></div>`;
+}
+
+function buildRisk() {
+  const cl = { Low:'var(--green)', Medium:'var(--gold)', High:'var(--red)', Severe:'var(--red)' }[MV.risk.level];
+  document.getElementById('risk-card').innerHTML = `
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+      <span style="font-family:var(--mono); font-size:10px; font-weight:700; letter-spacing:1px; color:${cl}; border:1px solid ${cl}; border-radius:3px; padding:3px 9px;">${MV.risk.level.toUpperCase()}${MV.risk.level==='Severe' ? ' ⚠' : ''}</span>
+    </div>
+    <div style="font-size:12px; color:var(--muted); line-height:1.55;">${MV.risk.text}</div>`;
+}
+
+function buildStockChart() {
+  const h = T.history;
+  const up = T.change >= 0;
+  const sinceList = ((h[h.length-1].p - h[0].p) / h[0].p) * 100;
+  document.getElementById('stock-chart-sub').innerHTML =
+    `<span style="font-family:var(--mono); font-size:16px; font-weight:700; color:${up?'var(--green)':'var(--red)'}">$${T.price26.toFixed(2)}</span>` +
+    `<span style="font-family:var(--mono); font-size:11px; color:${up?'var(--green)':'var(--red)'}">${up?'\u25b2':'\u25bc'} ${Math.abs(T.pct).toFixed(2)}%</span>` +
+    `<span style="font-size:10px; color:var(--muted);">52W H $${T.high52.toFixed(2)} \u00b7 L $${T.low52.toFixed(2)} \u00b7 since listing ${sinceList>=0?'+':''}${sinceList.toFixed(1)}%</span>`;
+  const ctx = document.getElementById('chart-stock').getContext('2d');
+  const grad = ctx.createLinearGradient(0, 0, 0, 240);
+  grad.addColorStop(0, up ? 'rgba(0,230,118,0.22)' : 'rgba(255,61,61,0.22)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels: h.map(x => x.d), datasets: [{ data: h.map(x => x.p),
+      borderColor: up ? '#00e676' : '#ff3d3d', backgroundColor: grad, fill: true,
+      borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: COLOR,
+      pointBorderColor: '#080b0f', pointBorderWidth: 2, tension: 0.3 }] },
+    options: { animation:{duration:700}, plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c2=>' $'+c2.raw.toFixed(2)}}},
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:10}}},
+                y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v.toFixed(0)}} } }
+  });
+}
+
+function buildObjectives() {
+  const objs = OBJECTIVES.filter(o => o.owner === OWNER);
+  document.getElementById('corp-objectives').innerHTML = objs.map(o => `
+    <div style="padding:10px 12px; background:rgba(255,255,255,.02); border:1px solid var(--border); border-radius:4px;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+        <span style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:1px; color:${COLOR};">${o.cat.toUpperCase()}</span>
+        <span style="font-family:var(--mono); font-size:9px; color:var(--muted);">${o.priority.toUpperCase()}</span>
+      </div>
+      <div style="font-size:12px; color:var(--text); line-height:1.45;">${o.text}</div>
+    </div>`).join('');
+}
+
+function buildCorpTimeline() {
+  const events = [];
+  if (S25) events.push({ date:'Dec 2025', tag: S25.finish === 1 ? 'CHAMPIONSHIP' : '2025 SEASON', color: S25.finish <= 3 ? 'var(--green)' : 'var(--muted)',
+    title:`Finished the 2025 season ${S25.wins}-${S25.losses} · #${S25.finish} overall`, text:`${S25.pf.toLocaleString()} points for, ${S25.pa.toLocaleString()} against, ${S25.trades} trade${S25.trades===1?'':'s'} executed. ${S25.playoff ? 'Qualified for the playoffs.' : 'Missed the playoffs.'}` });
+  TIMELINE.forEach(e => {
+    if (e.owner === OWNER || e.text.indexOf(T.company.split(' ')[0]) !== -1) {
+      const colors = { gold:'var(--gold)', green:'var(--green)', red:'var(--red)', blue:'var(--blue)', purple:'var(--purple)' };
+      events.push({ date:e.date, tag:e.tag, color:colors[e.color] || 'var(--muted)', title:e.title, text:e.text });
+    }
+  });
+  events.push({ date:'Jun 2026', tag:'VALUATION', color: T.change >= 0 ? 'var(--green)' : 'var(--red)',
+    title:`2026 preseason valuation: $${T.price26.toFixed(2)} (${T.pct>=0?'+':''}${T.pct.toFixed(1)}%)`, text: T.summary + '.' });
+  if (P26) events.push({ date:'Sep 2026', tag:'PROJECTION', color:'var(--blue)',
+    title:`Projected to finish #${P26.rank} at ${P26.record}`, text:`Playoff probability ${MV.playoff.now}% ${MV.playoff.now > MV.playoff.prev ? '(rising)' : MV.playoff.now < MV.playoff.prev ? '(falling)' : ''} · board confidence ${MV.conf.now}.` });
+
+  document.getElementById('corp-timeline').innerHTML = events.map((e, i) => `
+    <div style="display:flex; gap:16px;">
+      <div style="display:flex; flex-direction:column; align-items:center; width:14px; flex-shrink:0;">
+        <div style="width:10px; height:10px; border-radius:50%; background:${e.color}; border:2px solid var(--bg); box-shadow:0 0 0 1px ${e.color}; margin-top:4px;"></div>
+        ${i < events.length - 1 ? `<div style="width:1px; flex:1; background:var(--border); margin:4px 0;"></div>` : ''}
+      </div>
+      <div style="padding-bottom:${i < events.length - 1 ? 20 : 0}px; min-width:0;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span style="font-family:var(--mono); font-size:11px; color:var(--muted);">${e.date}</span>
+          <span style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:1px; color:${e.color}; border:1px solid ${e.color}; border-radius:3px; padding:2px 7px;">${e.tag}</span>
+        </div>
+        <div style="font-size:13px; font-weight:700; color:var(--text); margin:5px 0 3px;">${e.title}</div>
+        <div style="font-size:12px; color:var(--muted); line-height:1.5; max-width:640px;">${e.text}</div>
+      </div>
+    </div>`).join('');
+}
+
+async function buildLive() {
+  const rid = SLEEPER_MAP[OWNER];
+  // flagship assets
+  try {
+    const [rosters, players, state] = await Promise.all([getRosters(), getPlayersMap(), getNFLState()]);
+    const mine = rosters.find(r => r.roster_id === rid);
+    const st = document.getElementById('assets-status');
+    if (mine) {
+      const starters = (mine.starters || []).filter(id => id && id !== '0').map(id => players[id]).filter(Boolean);
+      const order = { QB:0, RB:1, WR:2, TE:3 };
+      const flag = starters.filter(p => order[p.pos] != null).sort((a,b) => order[a.pos] - order[b.pos]);
+      st.textContent = 'LIVE FROM SLEEPER';
+      st.style.color = 'var(--green)'; st.style.borderColor = 'var(--green-dim)';
+      document.getElementById('flagship-list').innerHTML = flag.map(p => `
+        <div style="display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.02); border:1px solid var(--border); border-radius:4px; padding:10px 12px;">
+          <span style="font-family:var(--mono); font-size:11px; font-weight:700; color:${COLOR}; width:28px;">${p.pos}</span>
+          <div style="min-width:0;">
+            <div style="font-size:13px; font-weight:600; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.name}</div>
+            <div style="font-family:var(--mono); font-size:10px; color:var(--muted);">${p.team || 'FA'}</div>
+          </div>
+        </div>`).join('');
+    } else {
+      st.textContent = 'ROSTER UNAVAILABLE';
+    }
+
+    // next matchup
+    const week = Math.max(1, state.week || 1);
+    try {
+      const matchups = await getMatchups(week);
+      const mine2 = matchups.find(m => m.roster_id === rid);
+      const opp = mine2 ? matchups.find(m => m.matchup_id === mine2.matchup_id && m.roster_id !== rid) : null;
+      if (opp) {
+        const oppOwner = ROSTER_TO_OWNER[opp.roster_id];
+        const oppT = TEAMS.find(t => t.owner === oppOwner);
+        document.getElementById('next-matchup').innerHTML = `
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="text-align:center; flex:1;">
+              <div class="sym-tag" style="font-size:15px;">${T.ticker}</div>
+              <div style="font-size:11px; color:var(--muted);">${OWNER}</div>
+            </div>
+            <div style="color:var(--dim); font-family:var(--mono); font-size:11px; padding:0 10px;">WK ${week}</div>
+            <div style="text-align:center; flex:1;">
+              <div class="sym-tag" style="font-size:15px;">${oppT ? oppT.ticker : oppOwner}</div>
+              <div style="font-size:11px; color:var(--muted);"><a href="${teamHref(oppOwner)}" style="color:inherit;">${oppOwner}</a></div>
+            </div>
+          </div>`;
+      } else {
+        document.getElementById('next-matchup').textContent = `No Week ${week} matchup scheduled yet.`;
+      }
+    } catch (e) { document.getElementById('next-matchup').textContent = 'Matchup data unavailable.'; }
+
+    // recent transactions involving this roster
+    try {
+      const rounds = [...new Set([week, week - 1, week - 2, 1])].filter(r => r >= 1);
+      const lists = await Promise.all(rounds.map(r => getTransactions(r).catch(() => [])));
+      const mineTx = lists.flat()
+        .filter(t => t && t.status === 'complete' && (t.roster_ids || []).includes(rid))
+        .sort((a, b) => b.created - a.created).slice(0, 8);
+      const el = document.getElementById('corp-txns');
+      if (!mineTx.length) { el.innerHTML = '<span style="font-size:12px; color:var(--muted);">No transactions on record this period. The board notes the silence.</span>'; }
+      else {
+        el.innerHTML = mineTx.map(t => {
+          const added = t.adds ? Object.entries(t.adds).filter(([,r]) => r === rid).map(([id]) => players[id]?.name || id) : [];
+          const dropped = t.drops ? Object.entries(t.drops).filter(([,r]) => r === rid).map(([id]) => players[id]?.name || id) : [];
+          const typeLabel = t.type === 'trade' ? 'TRADE' : t.type === 'waiver' ? 'WAIVER' : 'FREE AGENT';
+          const typeColor = t.type === 'trade' ? 'var(--purple)' : t.type === 'waiver' ? 'var(--blue)' : 'var(--muted)';
+          const partner = t.type === 'trade' ? (t.roster_ids || []).filter(r => r !== rid).map(r => ROSTER_TO_OWNER[r]).join(', ') : '';
+          return `
+          <div style="display:flex; gap:12px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.04);">
+            <span style="font-family:var(--mono); font-size:9px; font-weight:700; color:${typeColor}; border:1px solid ${typeColor}; border-radius:3px; padding:3px 7px; height:fit-content; white-space:nowrap;">${typeLabel}</span>
+            <div style="flex:1; min-width:0;">
+              ${partner ? `<div style="font-size:11px; color:var(--muted);">with <a href="team.html?owner=${encodeURIComponent(partner)}" style="color:var(--text);">${partner}</a></div>` : ''}
+              ${added.length ? `<div style="font-size:11px; color:var(--green);">+ ${added.join(', ')}</div>` : ''}
+              ${dropped.length ? `<div style="font-size:11px; color:var(--red);">− ${dropped.join(', ')}</div>` : ''}
+            </div>
+            <span style="font-family:var(--mono); font-size:10px; color:var(--dim); white-space:nowrap;">${relTimeCorp(t.created)}</span>
+          </div>`;
+        }).join('');
+      }
+    } catch (e) { document.getElementById('corp-txns').innerHTML = '<span style="font-size:12px; color:var(--muted);">Transaction data unavailable.</span>'; }
+  } catch (e) {
+    document.getElementById('assets-status').textContent = 'SLEEPER UNAVAILABLE';
+    document.getElementById('flagship-list').innerHTML = '<span style="font-size:12px; color:var(--muted);">Couldn\'t reach the Sleeper API right now.</span>';
+    document.getElementById('next-matchup').textContent = 'Sleeper unavailable.';
+    document.getElementById('corp-txns').innerHTML = '<span style="font-size:12px; color:var(--muted);">Sleeper unavailable.</span>';
+  }
+}
+
+function relTimeCorp(ms) {
+  const d = Date.now() - ms;
+  const h = Math.floor(d / 3600000), days = Math.floor(d / 86400000);
+  if (h < 24) return h + 'h ago';
+  return days + 'd ago';
+}
+
+async function buildTradeHistory() {
+  const statusEl = document.getElementById('trades-status');
+  const el = document.getElementById('trade-history');
+  try {
+    const [trades, players] = await Promise.all([getAllTrades(), getPlayersMap()]);
+    const rid = SLEEPER_MAP[OWNER];
+    const mine = trades.filter(t => (t.roster_ids || []).includes(rid));
+
+    statusEl.textContent = `${mine.length} COMPLETED · M&A LEDGER`;
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    if (!mine.length) {
+      el.innerHTML = `<span style="font-size:12px; color:var(--muted);">No completed trades on record. The desk has never picked up the phone — the board notes this is either discipline or paralysis.</span>`;
+      return;
+    }
+
+    const pname = id => players[id] ? `${players[id].name} (${players[id].pos})` : id;
+    const pickLabel = p => `${p.season} R${p.round} pick${p.roster_id !== p.owner_id && ROSTER_TO_OWNER[p.roster_id] ? ` (orig. ${ROSTER_TO_OWNER[p.roster_id]})` : ''}`;
+
+    el.innerHTML = mine.map(t => {
+      const received = [
+        ...Object.entries(t.adds || {}).filter(([, r]) => r === rid).map(([id]) => pname(id)),
+        ...(t.draft_picks || []).filter(p => p.owner_id === rid).map(pickLabel),
+        ...(t.waiver_budget || []).filter(w => w.receiver === rid).map(w => `$${w.amount} FAAB`),
+      ];
+      const sent = [
+        ...Object.entries(t.drops || {}).filter(([, r]) => r === rid).map(([id]) => pname(id)),
+        ...(t.draft_picks || []).filter(p => p.previous_owner_id === rid && p.owner_id !== rid).map(pickLabel),
+        ...(t.waiver_budget || []).filter(w => w.sender === rid).map(w => `$${w.amount} FAAB`),
+      ];
+      const partners = (t.roster_ids || []).filter(r => r !== rid)
+        .map(r => ROSTER_TO_OWNER[r]).filter(Boolean)
+        .map(o => `<a href="team.html?owner=${encodeURIComponent(o)}" style="color:var(--text);">${o}</a>`).join(', ');
+      const date = new Date(t.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      return `
+      <div style="display:flex; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.05);">
+        <div style="flex-shrink:0; width:120px;">
+          <div style="font-family:var(--mono); font-size:10px; color:var(--muted);">${date}</div>
+          <div style="font-family:var(--mono); font-size:9px; font-weight:700; letter-spacing:1px; color:var(--purple); border:1px solid var(--purple); border-radius:3px; padding:2px 7px; display:inline-block; margin-top:5px;">${t.season} TRADE</div>
+        </div>
+        <div style="flex:1; min-width:0;">
+          <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">with ${partners || 'unknown counterparty'}</div>
+          ${received.length ? `<div style="font-size:12px; color:var(--green); line-height:1.6;">＋ ${received.join(' · ')}</div>` : ''}
+          ${sent.length ? `<div style="font-size:12px; color:var(--red); line-height:1.6;">− ${sent.join(' · ')}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    statusEl.style.borderColor = 'var(--red-dim)';
+    el.innerHTML = `<span style="font-size:12px; color:var(--muted);">Couldn't load the trade ledger right now (${e.message}). Refresh to try again.</span>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildHeader();
+  buildScorecard();
+  buildUnitRanks();
+  buildRisk();
+  buildStockChart();
+  buildObjectives();
+  buildCorpTimeline();
+  buildLive();
+  buildTradeHistory();
+});
+</script>
+</body>
+</html>

@@ -26,6 +26,8 @@ function buildMarketBar() {
   const fallers = TEAMS.filter(t => t.change < 0).length;
   const topGainer = TEAMS.reduce((a,b) => a.pct > b.pct ? a : b);
   const topLoser = TEAMS.reduce((a,b) => a.pct < b.pct ? a : b);
+  const hi = TEAMS.reduce((a,b) => a.high52 > b.high52 ? a : b);
+  const lo = TEAMS.reduce((a,b) => a.low52 < b.low52 ? a : b);
 
   document.getElementById('market-bar').innerHTML = [
     {label:'LIV INDEX', val:'$'+(TEAMS.reduce((s,t)=>s+t.price26,0)/12).toFixed(2), change: '', cls:'flat'},
@@ -34,14 +36,37 @@ function buildMarketBar() {
     {label:'FALLERS', val:fallers+' ▼', change:'', cls:'down'},
     {label:'TOP GAINER', val:topGainer.ticker, change:'+'+topGainer.pct.toFixed(2)+'%', cls:'up'},
     {label:'TOP LOSER', val:topLoser.ticker, change:topLoser.pct.toFixed(2)+'%', cls:'down'},
-    {label:'52W HIGH', val:'$'+(Math.max(...TEAMS.map(t=>t.price26))).toFixed(2), change:'CROWN', cls:'flat'},
-    {label:'52W LOW', val:'$'+(Math.min(...TEAMS.map(t=>t.price26))).toFixed(2), change:'ATLAS', cls:'down'},
+    {label:'52W HIGH', val:'$'+hi.high52.toFixed(2), change:hi.ticker, cls:'flat'},
+    {label:'52W LOW', val:'$'+lo.low52.toFixed(2), change:lo.ticker, cls:'down'},
   ].map(m => `
     <div class="mbar-item">
       <div class="mbar-label">${m.label}</div>
       <div class="mbar-val ${m.cls}">${m.val}</div>
       ${m.change ? `<div class="mbar-change ${m.cls}">${m.change}</div>` : ''}
     </div>`).join('');
+}
+
+// ── movement helpers ──
+function deltaBadge(now, prev, opts = {}) {
+  if (now == null || prev == null) return '';
+  const raw = opts.lowerBetter ? prev - now : now - prev;
+  const mag = Math.abs(now - prev);
+  if (!raw || !mag) return `<span style="font-family:var(--mono);font-size:10px;color:var(--dim)">—</span>`;
+  const up = raw > 0;
+  const val = (opts.decimals ? mag.toFixed(opts.decimals) : mag) + (opts.suffix || '');
+  return `<span style="font-family:var(--mono);font-size:10px;font-weight:700;color:${up?'var(--green)':'var(--red)'}">${up?'▲':'▼'}${val}</span>`;
+}
+function teamHref(owner) { return `team.html?owner=${encodeURIComponent(owner)}`; }
+function ownerLink(owner, style) { return `<a href="${teamHref(owner)}" style="color:inherit;text-decoration:underline dotted rgba(255,255,255,.25);text-underline-offset:3px;${style||''}">${owner}</a>`; }
+function stockRankNow(owner) { return [...TEAMS].sort((a,b) => b.cap - a.cap).findIndex(t => t.owner === owner) + 1; }
+function posRanksNow(owner) {
+  const out = {};
+  ['qb','rb','wr','te','pick'].forEach(p => { out[p] = [...TEAMS].sort((a,b) => b[p] - a[p]).findIndex(t => t.owner === owner) + 1; });
+  return out;
+}
+function posMove(owner, p) {
+  const prev = (PREV_POS_RANKS[owner] || {})[p];
+  return deltaBadge(posRanksNow(owner)[p], prev, { lowerBetter: true });
 }
 
 function buildLeagueSummary() {
@@ -70,7 +95,7 @@ function buildLeagueSummary() {
     <div style="grid-column:1/-1; display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:8px;">
       <div style="grid-column:1/-1; font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--muted); text-transform:uppercase;">Exchange Glossary — Owner · Ticker · Company · Team</div>
       ${[...TEAMS].sort((a,b) => a.owner.localeCompare(b.owner)).map(t => `
-        <div style="display:flex; align-items:center; gap:10px; min-width:0; background:var(--card); border:1px solid var(--border); border-radius:4px; padding:8px 12px;">
+        <div onclick="location.href='team.html?owner=${encodeURIComponent(t.owner)}'" style="display:flex; align-items:center; gap:10px; min-width:0; background:var(--card); border:1px solid ${OWNER_COLORS[t.owner] || 'var(--gold)'}55; border-radius:4px; padding:8px 12px; cursor:pointer; transition:border-color .15s, background .15s;" onmouseover="this.style.borderColor='${OWNER_COLORS[t.owner] || 'var(--gold)'}'; this.style.background='var(--card2, #151c24)';" onmouseout="this.style.borderColor='${OWNER_COLORS[t.owner] || 'var(--gold)'}55'; this.style.background='var(--card)';">
           <span class="sym-tag" style="flex-shrink:0;">${t.ticker}</span>
           <div style="min-width:0;">
             <div style="font-size:12px; font-weight:600; color:${OWNER_COLORS[t.owner] || 'var(--text)'}">${t.owner}</div>
@@ -91,19 +116,6 @@ function buildLeagueSummary() {
     `<strong class="intel-name-down">${topFaller.owner}</strong> & <strong class="intel-name-down">${fallers.sort((a,b) => a.pct - b.pct)[1].owner}</strong> are in steep decline. ` +
     `<strong class="intel-name-gold">${champion2025?.owner}</strong> is the defending champion with market skepticism priced in.`;
 
-  document.getElementById('intel-row').innerHTML = `
-    <div class="intel-card risers">
-      <div class="intel-eyebrow risers">🚀 Risers (2025→2026)</div>
-      <div class="intel-body">${riserList}</div>
-    </div>
-    <div class="intel-card fallers">
-      <div class="intel-eyebrow fallers">📉 Fallers (2025→2026)</div>
-      <div class="intel-body">${fallerList}</div>
-    </div>
-    <div class="intel-card insight">
-      <div class="intel-eyebrow insight">⚡ Key Intelligence</div>
-      <div class="intel-body">${insight}</div>
-    </div>`;
 }
 
 function initCommon() {

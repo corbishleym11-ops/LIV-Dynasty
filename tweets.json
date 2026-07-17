@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-07-16T23:55:28.732130+00:00",
+  "events_seen": [
+    "TRADE (Jul 15): Charles receives Bijan Robinson (RB, ATL). Shaq receives Brock Bowers (TE, LV), 2027 R1 pick.",
+    "WAIVER CLAIM (Jul 14): Kevin added Brock Bowers (TE, LV) for $12 FAAB (dropped Bijan Robinson (RB, ATL))."
+  ],
+  "tweets": [
+    {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "Hearing Crownline and Monarch just moved real assets. Details shortly.",
+      "posted_at": "2026-07-16T23:15:28.732130+00:00",
+      "likes": 88,
+      "rt": 21,
+      "reply": 12
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "The desk will have plenty to unpack Thursday. Bring coffee.",
+      "posted_at": "2026-07-16T20:35:28.732130+00:00",
+      "likes": 54,
+      "rt": 9,
+      "reply": 6
+    }
+  ]
+}

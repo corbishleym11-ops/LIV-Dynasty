@@ -51,12 +51,12 @@
   <div class="sec-head">
     <div class="sec-title">Market Overview</div>
     <div class="sec-line"></div>
-    <div class="sec-tag">2025 → 2026</div>
+    <div class="sec-tag">LIVE PRICING</div>
   </div>
   <div class="g2">
     <div class="chart-card">
-      <div class="card-title">Stock Price Movement — All Teams</div>
-      <div class="card-sub">2025 price vs 2026 price with net change waterfall</div>
+      <div class="card-title">Stock Price History — All Teams</div>
+      <div class="card-sub">Every listing since the exchange opened · Dec 2025 → present</div>
       <canvas id="chart-waterfall" height="300"></canvas>
     </div>
     <div class="chart-card">
@@ -133,26 +133,31 @@ function buildStockCards() {
     'Major Faller':'cat-major-fall','Crash':'cat-major-fall','Biggest Faller':'cat-major-fall'
   };
   const riseClass = t => t.change >= 0 ? 'rise' : 'fall';
-  document.getElementById('stock-grid').innerHTML = TEAMS.map(t => `
-    <div class="stock-card ${riseClass(t)}">
+  document.getElementById('stock-grid').innerHTML = [...TEAMS].sort((a,b) => b.cap - a.cap).map(t => {
+    const mv = MOVEMENT[t.owner] || {};
+    const rank = stockRankNow(t.owner);
+    return `
+    <div class="stock-card ${riseClass(t)}" onclick="location.href='team.html?owner=${encodeURIComponent(t.owner)}'" style="cursor:pointer;">
       <div class="sc-top">
-        <div class="sc-ticker">${t.ticker}</div>
+        <div class="sc-ticker">${t.ticker} <span style="font-size:11px; color:var(--muted); font-weight:400;">#${rank}</span> ${mv.stockRank ? deltaBadge(mv.stockRank.now, mv.stockRank.prev, {lowerBetter:true}) : ''}</div>
         <div class="sc-category ${catMap[t.cat]||'cat-flat'}">${t.cat.toUpperCase()}</div>
       </div>
       <div class="sc-company">${t.company}</div>
       <div class="sc-team">${t.owner} · ${t.team}</div>
       <div class="sc-prices">
         <span class="sc-price-now ${t.change>=0?'up':'down'}">$${t.price26.toFixed(2)}</span>
-        <span class="sc-price-prev">prev $${t.price25.toFixed(2)}</span>
+        <span class="sc-price-prev">prev $${t.prevPrice.toFixed(2)}</span>
       </div>
       <div class="sc-change-row">
         <span class="sc-delta ${t.change>=0?'up':'down'}">${t.change>=0?'+':''}$${t.change.toFixed(2)}</span>
         <span class="sc-pct ${t.change>=0?'up':'down'}">${t.pct>=0?'+':''}${t.pct.toFixed(2)}%</span>
       </div>
       <div class="sc-market-cap">MKT CAP: $${t.cap.toLocaleString()}</div>
+      <div class="sc-market-cap">BOARD CONFIDENCE: ${mv.conf ? `${mv.conf.now} ${deltaBadge(mv.conf.now, mv.conf.prev)}` : '—'}</div>
       <div class="sc-trend-blurb">${t.trend}</div>
       <div class="mini-bar"><div class="mini-bar-fill" style="width:${(t.cap/maxCap*100).toFixed(0)}%; background:${t.change>=0?'var(--green)':'var(--red)'}"></div></div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function buildScreener() {
@@ -161,7 +166,7 @@ function buildScreener() {
   document.getElementById('screener-table').innerHTML = `
     <thead><tr>
       <th>#</th><th>Symbol</th><th>Company</th><th>Owner</th><th>Team</th>
-      <th class="r">Price '25</th><th class="r">Price '26</th><th class="r">Change</th><th class="r">% Chg</th>
+      <th class="r">Listed '25</th><th class="r">Current</th><th class="r">Change</th><th class="r">% Chg</th>
       <th>Market Cap</th><th>Strength</th><th>Weakness</th>
     </tr></thead>
     <tbody>${sorted.map((t,i) => {
@@ -170,10 +175,10 @@ function buildScreener() {
       const barW = (t.cap / maxCap * 100).toFixed(0);
       const barColor = t.change >= 0 ? 'var(--green)' : 'var(--red)';
       return `<tr>
-        <td><span class="rank-badge ${rk}">${i+1}</span></td>
+        <td><div style="display:flex; align-items:center; gap:6px;"><span class="rank-badge ${rk}">${i+1}</span>${MOVEMENT[t.owner] ? deltaBadge(MOVEMENT[t.owner].stockRank.now, MOVEMENT[t.owner].stockRank.prev, {lowerBetter:true}) : ''}</div></td>
         <td><span class="sym-tag">${t.ticker}</span></td>
         <td style="color:var(--muted); font-size:11px; max-width:160px">${t.company}</td>
-        <td class="owner-col">${t.owner}</td>
+        <td class="owner-col">${ownerLink(t.owner)}</td>
         <td class="team-col" style="font-size:11px">${t.team}</td>
         <td class="r" style="color:var(--muted)">$${t.price25.toFixed(2)}</td>
         <td class="r" style="color:${pctColor}; font-weight:700">$${t.price26.toFixed(2)}</td>
@@ -188,14 +193,18 @@ function buildScreener() {
 
 function buildCharts() {
   const sorted = [...TEAMS].sort((a,b) => b.change - a.change);
+  const histLabels = TEAMS[0].history.map(h => h.d);
   new Chart(document.getElementById('chart-waterfall').getContext('2d'), {
-    type: 'bar',
-    data: { labels: sorted.map(t => t.ticker), datasets: [
-      { label: '2025 Price', data: sorted.map(t => t.price25), backgroundColor: 'rgba(90,122,150,0.4)', borderRadius: 4 },
-      { label: '2026 Price', data: sorted.map(t => t.price26), backgroundColor: sorted.map(t => t.change >= 0 ? 'rgba(0,230,118,0.7)' : 'rgba(255,61,61,0.7)'), borderRadius: 4 }
-    ]},
-    options: { animation:{duration:700}, plugins:{ legend:{labels:{color:'#5a7a96',boxWidth:12}}, tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: $${ctx.raw.toFixed(2)}`}} },
-      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v}} } }
+    type: 'line',
+    data: { labels: histLabels, datasets: TEAMS.map(t => ({
+      label: t.ticker, data: t.history.map(h => h.p),
+      borderColor: OWNER_COLORS[t.owner], backgroundColor: OWNER_COLORS[t.owner],
+      borderWidth: 2, pointRadius: 3, tension: 0.25, fill: false })) },
+    options: { animation:{duration:700},
+      plugins:{ legend:{labels:{color:'#5a7a96', boxWidth:10, font:{family:'IBM Plex Mono', size:10}}},
+        tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: $${ctx.raw.toFixed(2)}`}} },
+      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}},
+                y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v}} } }
   });
 
   const capSorted = [...TEAMS].sort((a,b) => b.cap - a.cap);
