@@ -75,6 +75,16 @@ def describe_transactions(players):
     txs = [t for t in txs if t and t.get("status") == "complete" and t.get("created")]
     txs.sort(key=lambda t: t["created"], reverse=True)
 
+    season_type = state.get("season_type", "")
+    in_season = season_type in ("regular", "post")
+    reality_note = "" if in_season else (
+        "CRITICAL REALITY CHECK: It is currently the NFL OFFSEASON. No football games have "
+        "been played recently and none are imminent. NEVER reference recent game performances, "
+        "stat lines, players 'going off,' box scores, or last week's action — none of that exists. "
+        "Offseason content means: trades, roster construction, valuations, rankings debates, "
+        "training-camp/preview speculation (clearly framed as looking AHEAD), show promos, and beefs."
+    )
+
     events = []
     for tx in txs[:MAX_EVENTS]:
         when = fmt_when(tx["created"])
@@ -107,6 +117,8 @@ def describe_transactions(players):
             events.append(f"CUT ({when}): {owner(rid)} released {players.get(pid, pid)}.")
 
     season_note = f"NFL state: {state.get('season')} {state.get('season_type')}, week {week}."
+    if reality_note:
+        season_note = reality_note + "\n" + season_note
     return events, season_note
 
 
