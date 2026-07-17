@@ -97,6 +97,12 @@ function catClass(cat) {
   return m[cat] || 'cat-ops';
 }
 
+function statusClass(s) {
+  if (s === 'Complete') return 'status-complete';
+  if (s === 'In Progress') return 'status-progress';
+  return 'status-pending';
+}
+
 function buildBoardGrid() {
   const byOwner = {};
   OBJECTIVES.forEach(o => { if(!byOwner[o.owner]) byOwner[o.owner] = []; byOwner[o.owner].push(o); });
@@ -121,6 +127,9 @@ function buildBoardGrid() {
                 <div class="obj-top">
                   <span class="obj-cat ${catClass(o.cat)}">${o.cat}</span>
                   <span class="obj-priority">#${i+1} · ${o.priority}</span>
+                </div>
+                <div class="obj-top" style="margin-top:6px">
+                  <span class="obj-status ${statusClass(o.status)}">${(o.status || 'Pending').toUpperCase()}</span>
                 </div>
                 <div class="obj-text">${o.text}</div>
                 <div class="obj-check" id="check-${key}" ${officialStates[key] ? `style="color:var(--gold);"` : ''}>${officialStates[key] ? '★' : '✓'}</div>
