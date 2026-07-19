@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-07-19T12:53:36.476677+00:00",
+  "generated_at": "2026-07-19T18:50:20.290887+00:00",
   "events_seen": [
+    "TRADE (Jul 19): Corbishley receives Michael Wilson (WR, ARI), Tee Higgins (WR, CIN), Breece Hall (RB, NYJ), 2027 R2 pick. Fronge receives TreVeyon Henderson (RB, NE), Kyle Monangai (RB, CHI), Nico Collins (WR, HOU), 2028 R2 pick.",
     "TRADE (Jul 17): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
     "TRADE (Jul 10): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick.",
     "WAIVER CLAIM (Jun 21): Drew added Colbie Young (WR, CIN) (dropped Joe Mixon (RB, FA)).",
@@ -9,99 +10,98 @@
     "WAIVER CLAIM (May 16): Charles added Matt Hibner (TE, BAL) (dropped Moliki Matavao (TE, NO)).",
     "CUT (May 16): Charles released Zonovan Knight (RB, ARI).",
     "WAIVER CLAIM (May 13): Shaq added Zavion Thomas (WR, CHI).",
-    "WAIVER CLAIM (May 12): Adam added John Michael Gyllenborg (TE, KC) (dropped Elijah Higgins (TE, ARI)).",
-    "CUT (May 11): Jake released Evan Hull (RB, HOU)."
+    "WAIVER CLAIM (May 12): Adam added John Michael Gyllenborg (TE, KC) (dropped Elijah Higgins (TE, ARI))."
   ],
   "tweets": [
     {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Crownline is the market-cap leader, went 23-5, and still left the season without hardware. The board reckoning narrative is being treated like a 2026 storyline. I had it circled as a structural problem before the 2025 draft. Championship-or-bust organizations that don't win championships eventually stop being described as championship-or-bust and start being described as something else.",
-      "posted_at": "2026-07-19T12:35:36.476677+00:00",
-      "likes": 91,
-      "rt": 22,
-      "reply": 33
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Tomorrow's Exchange Report is shaping up to be a genuinely crowded hour. Dina has sourcing on the Deepwater asset move, Matteo is ranking every roster that touched a waiver wire this offseason, and Terrence just told me off-air that he partially agrees with Chad about ForgeHammer \u2014 which I have never said on this network before and may never say again. Nine o'clock.",
-      "posted_at": "2026-07-19T11:18:36.476677+00:00",
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "The Deepwater asset I've been tracking \u2014 I can now confirm there's a formal offer on the table. The player is a wideout. The return involves future capital. Filing when terms clear but Mitchum has a decision to make and the clock is not theoretical anymore.",
+      "posted_at": "2026-07-19T18:32:20.290887+00:00",
       "likes": 104,
-      "rt": 21,
-      "reply": 17
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "DEEP at $68.70 and sliding into a confirmed sell posture. If Mitchum moves the asset Dina is describing and the price is wrong \u2014 and it will be wrong, it is always wrong in a distressed sale \u2014 whoever is on the other side of that deal is going to look very smart in October.",
-      "posted_at": "2026-07-19T07:13:36.476677+00:00",
-      "likes": 79,
-      "rt": 19,
-      "reply": 14
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "The Atlas stock price is $44.38 and people keep calling it a red flag. In my model, that's just the market failing to account for the fact that Drew is in a rebuild, and rebuilds, historically, are how championships get built. The Brazzellian Booty Lift is simply operating in a timeline the rest of you haven't reached yet.",
-      "posted_at": "2026-07-19T02:33:36.476677+00:00",
-      "likes": 51,
-      "rt": 8,
-      "reply": 36
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "I have spent considerable time with the ForgeHammer situation and I have arrived at a conclusion that surprises even me: Fronge is not wrong. Zero pick liquidity is a real problem. Relocating to Havana is a theatrical solution to a real problem. I do not endorse the method. I cannot argue with the logic.",
-      "posted_at": "2026-07-18T22:03:36.476677+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 29
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Since nobody else is going to say it: the Cyrus Allen addition at Helix is doing real quiet work in that Chiefs offense. Not a headline. Not a stock mover. But in a TE-premium, superflex format where roster depth compounds, Reid's scheme history with slot receivers is exactly the kind of thing that ages well on a 24-man roster.",
-      "posted_at": "2026-07-18T17:03:36.476677+00:00",
-      "likes": 55,
-      "rt": 9,
-      "reply": 13
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Putting Deepwater on my Watch list this week, which is a category I invented specifically for rosters I can't rank because I genuinely don't know what they're trying to be. DEEP at $68.70 isn't a floor. It's a waiting room.",
-      "posted_at": "2026-07-18T11:43:36.476677+00:00",
-      "likes": 67,
-      "rt": 11,
-      "reply": 18
+      "rt": 27,
+      "reply": 35
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Mitchum is apparently about to blow up Deepwater and everyone's just sitting here talking about the Herbert invoice AGAIN. The Herbert trade is done. It's filed. Deepwater is a live grenade. Someone throw it to me.",
-      "posted_at": "2026-07-18T08:13:36.476677+00:00",
-      "likes": 74,
-      "rt": 14,
+      "text": "Dina just said 'the clock is not theoretical' and I need SOMEONE to give me a segment on this because I have been saying Deepwater is a live situation since before it was fashionable to say that and now suddenly everyone's an analyst.",
+      "posted_at": "2026-07-19T18:09:20.290887+00:00",
+      "likes": 88,
+      "rt": 19,
+      "reply": 28
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Ranking the Corbishley-Fronge trade a week out: Apex got better at wideout, unambiguously. Tee Higgins on a roster built for volume is the kind of asset that looks obvious in hindsight. Breece Hall is the interesting one \u2014 Apex needed RB depth and got RB depth with upside, which is a different thing. Fronge got younger and cheaper. Whether that's wisdom or necessity is the real question.",
+      "posted_at": "2026-07-19T17:21:20.290887+00:00",
+      "likes": 97,
+      "rt": 21,
       "reply": 22
     },
     {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "The Deepwater situation is moving faster than the market is pricing. What I'm hearing now is that Mitchum has a specific asset in mind \u2014 not a vague 'open for business' posture, but a named player and a named direction. Not filing yet because the other side hasn't confirmed terms. But this one is closer than it looks.",
-      "posted_at": "2026-07-18T03:53:36.476677+00:00",
-      "likes": 98,
-      "rt": 24,
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Nico Collins to ForgeHammer in that deal. A receiver of that caliber, in a Havana-based operation with zero pick liquidity and a head coach who relocated for 'regulatory flexibility.' I am not saying it cannot work. I am saying the conditions required for it to work are extraordinarily specific and Fronge has not yet demonstrated he can engineer them.",
+      "posted_at": "2026-07-19T16:36:20.290887+00:00",
+      "likes": 82,
+      "rt": 14,
+      "reply": 18
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "Herbert confirmed at Helix, Stroud goes to ForgeHammer, and the market is somehow sleeping on the fact that Adam just solved the one thing that was keeping HLX from being a genuine title contender in a superflex format. That +34.9% preseason bump was the appetizer.",
+      "posted_at": "2026-07-19T15:20:20.290887+00:00",
+      "likes": 93,
+      "rt": 22,
+      "reply": 17
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Everyone treating the ForgeHammer Havana relocation as a distraction is missing the point entirely. Geographical distance from the other eleven GMs is a proven cognitive advantage. I have been saying this about corner offices for years. Fronge is simply applying it at scale.",
+      "posted_at": "2026-07-19T12:22:20.290887+00:00",
+      "likes": 71,
+      "rt": 16,
       "reply": 31
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "The Corbishley trade gets all the attention but nobody's talking about what ForgeHammer's depth chart looks like at RB now. Henderson and Monangai are both good. Neither is a locked-in bell cow. In a 0.5 PPR format you need to know whose touches are real and whose are committee scraps. That's not settled.",
+      "posted_at": "2026-07-19T09:20:20.290887+00:00",
+      "likes": 68,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "Hearing rumblings \u2014 and I want to be clear these are rumblings, not a report, not a scoop, more of an atmospheric pressure change \u2014 that at least one team currently described as 'quiet this offseason' is not planning to remain quiet. Per two people who used the word 'quiet' to me.",
+      "posted_at": "2026-07-19T04:00:20.290887+00:00",
+      "likes": 59,
+      "rt": 9,
+      "reply": 23
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Tonight on the Exchange Report: Dina has new detail on Deepwater, Vance wants to reprice every QB1 in the league following the Herbert move, and Terrence has prepared what he called \u2014 unprompted, before I finished asking \u2014 'a full verdict on Fronge's decision-making framework.' That is either twelve minutes of television or four. Nine o'clock.",
+      "posted_at": "2026-07-18T22:10:20.290887+00:00",
+      "likes": 112,
+      "rt": 24,
+      "reply": 19
     }
   ]
 }
