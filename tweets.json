@@ -1,121 +1,107 @@
 {
-  "generated_at": "2026-07-20T19:45:00+00:00",
+  "generated_at": "2026-07-20T16:07:37.950354+00:00",
   "events_seen": [
-    "RATINGS SWITCH (Jul 20): Exchange adopts Dynasty Daddy contender grades (QB/RB/WR/TE/FLEX). All twelve stocks repriced: RDC +23.97%, FORG +12.24%, DEEP +10.39%, OBS -9.31%, MWB -7.51%.",
-    "TRADE (Jul 19): Corbishley receives Michael Wilson (WR, ARI), Tee Higgins (WR, CIN), Breece Hall (RB, NYJ), 2027 R2 pick. Fronge receives TreVeyon Henderson (RB, NE), Kyle Monangai (RB, CHI), Nico Collins (WR, HOU), 2028 R2 pick.",
-    "TRADE (Jul 17): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
-    "TRADE (Jul 10): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick."
+    "TRADE (Jul 19 (yesterday)): Corbishley receives Michael Wilson (WR, ARI), Tee Higgins (WR, CIN), Breece Hall (RB, NYJ), 2027 R2 pick. Fronge receives TreVeyon Henderson (RB, NE), Kyle Monangai (RB, CHI), Nico Collins (WR, HOU), 2028 R2 pick.",
+    "TRADE (Jul 17 (3 days ago)): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
+    "TRADE (Jul 10 (10 days ago)): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick.",
+    "WAIVER CLAIM (Jun 21 (29 days ago)): Drew added Colbie Young (WR, CIN) (dropped Joe Mixon (RB, FA)).",
+    "WAIVER CLAIM (Jun 08 (42 days ago)): Adam added Cyrus Allen (WR, KC) (dropped Phil Mafah (RB, DAL)).",
+    "WAIVER CLAIM (May 27 (54 days ago)): Charles added Chris Brooks (RB, GB) for $1 FAAB (dropped Austin Ekeler (RB, FA)).",
+    "WAIVER CLAIM (May 16 (65 days ago)): Charles added Matt Hibner (TE, BAL) (dropped Moliki Matavao (TE, NO)).",
+    "CUT (May 16 (65 days ago)): Charles released Zonovan Knight (RB, ARI).",
+    "WAIVER CLAIM (May 13 (68 days ago)): Shaq added Zavion Thomas (WR, CHI).",
+    "WAIVER CLAIM (May 12 (69 days ago)): Adam added John Michael Gyllenborg (TE, KC) (dropped Elijah Higgins (TE, ARI))."
   ],
   "tweets": [
     {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "Filing now: the exchange has switched contender ratings agencies, effective immediately. Every board repriced this afternoon. I had this twenty minutes before it posted. Per source. Per me.",
-      "posted_at": "2026-07-20T19:20:00+00:00",
-      "likes": 82,
-      "rt": 21,
-      "reply": 44
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "To add context to my colleague's twenty minutes of glory: the move to Dynasty Daddy grades has been in the works since June \u2014 five inputs now, FLEX included. What was NOT planned is dropping it the day after the Dublin\u2013Havana trade. One league official called the timing, quote, 'a choice.'",
-      "posted_at": "2026-07-20T18:50:00+00:00",
-      "likes": 94,
-      "rt": 18,
-      "reply": 15
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "REDLINE UP TWENTY-FOUR PERCENT. I said sell in November. I said sell in May. I am saying BUY at $84.67 and I will not be taking questions about the journey.",
-      "posted_at": "2026-07-20T18:25:00+00:00",
-      "likes": 118,
-      "rt": 29,
-      "reply": 39
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Every analyst is focused on Herbert going to Helix. I am focused on the fact that Stroud went to Fronge, who plays home games in Havana, where the altitude is zero and therefore carries no elevation premium whatsoever. I don't make the geography, I just grade it.",
+      "posted_at": "2026-07-20T15:12:37.950354+00:00",
+      "likes": 112,
+      "rt": 26,
+      "reply": 38
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Correction from last hour's promo: the Corbishley\u2013Fronge trade closed yesterday, not four days ago \u2014 my producer and I have resolved our differences off-air. Frankly the story has moved anyway: twelve boards just repriced at once. Terrence and Dexter at the desk. Seven o'clock.",
-      "posted_at": "2026-07-20T17:45:00+00:00",
+      "text": "Tonight at seven: Corbishley's haul, the Helix two-trade window, Redline up 24% and what Kevin actually did to earn it, and whether Obsidian at $71.69 is a discount or a warning. Terrence and Dexter are already disagreeing about three of those four things. We open in ninety minutes.",
+      "posted_at": "2026-07-20T12:37:37.950354+00:00",
       "likes": 91,
-      "rt": 12,
-      "reply": 19
+      "rt": 19,
+      "reply": 28
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "ForgeHammer up 12.24% and suddenly everybody's a depth truther. I ranked that bench top-three in June while you were all doing Havana jokes. The screenshots have timestamps.",
-      "posted_at": "2026-07-20T17:05:00+00:00",
-      "likes": 74,
-      "rt": 14,
-      "reply": 26
+      "text": "The Fronge side of yesterday's trade is being slept on industry-wide. Henderson plus Monangai plus Collins plus a 2028 second \u2014 none of those names move a stock price in a headline, but every one of them is a productive asset with runway. I said before the draft that Fronge's real problem was never the Havana thing, it was the asset mix. This fixes the asset mix.",
+      "posted_at": "2026-07-20T08:07:37.950354+00:00",
+      "likes": 72,
+      "rt": 17,
+      "reply": 20
     },
     {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Obsidian fell 9.31% today and I will not let the agency take the blame. Let. Me. Be. Clear. You cannot rate your way around a QB11, RB12 operation. Brock Bowers is a monopoly asset trapped in a broken holding company, and tonight I intend to say so at length.",
-      "posted_at": "2026-07-20T16:15:00+00:00",
-      "likes": 121,
-      "rt": 26,
-      "reply": 42
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "New power rankings are live with the reprice. Kevin climbs three spots, which means I owe Detroit a formal correction \u2014 the hardest sentence I've written all offseason. Full list on the board.",
-      "posted_at": "2026-07-20T15:20:00+00:00",
-      "likes": 77,
-      "rt": 11,
-      "reply": 23
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "Deepwater up 10.4% to $79.88 and I was not positioned for this. The drift-to-crash narrative I have been running for three weeks is now a drift-to-confusing-bounce narrative and I am recalibrating in real time. Mitchum did nothing. The market just got bored being right.",
+      "posted_at": "2026-07-20T04:07:37.950354+00:00",
+      "likes": 58,
+      "rt": 9,
+      "reply": 14
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "An agency that finally grades FLEX depth. Fronge first, Monarch eleventh. I have been yelling about benches into the void for a full calendar year and today the void yelled back.",
-      "posted_at": "2026-07-20T14:05:00+00:00",
-      "likes": 61,
-      "rt": 12,
-      "reply": 17
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Two trades, a new ratings agency, a FLEX column, and TWELVE repricings in one afternoon. I don't fully understand the methodology and I have honestly never been happier, FOLKS.",
-      "posted_at": "2026-07-20T12:45:00+00:00",
-      "likes": 105,
-      "rt": 27,
-      "reply": 14
+      "text": "Nobody's asking the roster-construction question on the Corbishley trade so I will: Apex still hasn't stabilized its QB room. You can acquire Hall and Higgins and Wilson \u2014 and that is a real haul \u2014 but in a superflex league you are one bad week from starting a QB11 in a critical flex spot. The ceiling just moved. The floor did not.",
+      "posted_at": "2026-07-19T23:47:37.950354+00:00",
+      "likes": 68,
+      "rt": 16,
+      "reply": 27
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Last night I asked what happens when Monarch never moves. Today the new agency answered: minus 7.5% for standing still. I want my segment and I want it before that WR bank becomes a museum exhibit.",
-      "posted_at": "2026-07-20T11:30:00+00:00",
-      "likes": 88,
-      "rt": 16,
-      "reply": 33
+      "text": "Fronge ships Herbert to Helix, reloads with Henderson, Monangai, Collins, and a 2028 first, relocates to Havana, and somehow the stock is UP 12.2% to $91.52? The Havana era is going better than Dublin had any right to hope.",
+      "posted_at": "2026-07-19T20:07:37.950354+00:00",
+      "likes": 103,
+      "rt": 24,
+      "reply": 35
     },
     {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "The FLEX grade is a psyop. Naming a fifth starter category just rewards hoarding mediocrity. True contenders start four players and dare you to notice. Obsidian understands this. The market will catch up in 2029.",
-      "posted_at": "2026-07-20T10:25:00+00:00",
-      "likes": 49,
-      "rt": 8,
-      "reply": 37
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "The Helix story this offseason reads like a guy who shows up to the reunion looking inexplicably good and won't explain what changed. Herbert on Friday, Keaton Mitchell from 10 days ago, Gyllenborg on the TE depth \u2014 Adam has been quiet and deliberate and the +5.4% to $90.89 today is the market finally paying attention.",
+      "posted_at": "2026-07-19T14:57:37.950354+00:00",
+      "likes": 76,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Corbishley adds Tee Higgins, Breece Hall, and Michael Wilson yesterday, and Apex is down 6.9% to $103.98. The market is telling you something. Whether Corbishley is listening is an entirely different conversation \u2014 and one I fully intend to have on air tonight.",
+      "posted_at": "2026-07-19T11:07:37.950354+00:00",
+      "likes": 94,
+      "rt": 21,
+      "reply": 31
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Worth flagging now that the dust has settled on yesterday's trade: multiple sources confirm Corbishley wasn't just buying Higgins and Hall \u2014 the 2027 R2 was the sweetener that closed it. Fronge wanted a future anchor, not a present one. That detail matters for how you read the return.",
+      "posted_at": "2026-07-19T06:47:37.950354+00:00",
+      "likes": 87,
+      "rt": 18,
+      "reply": 22
     }
   ]
 }
