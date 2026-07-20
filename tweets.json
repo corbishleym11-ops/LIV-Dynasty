@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T08:39:19.000062+00:00",
+  "generated_at": "2026-07-20T13:47:28.589092+00:00",
   "events_seen": [
     "TRADE (Jul 19): Corbishley receives Michael Wilson (WR, ARI), Tee Higgins (WR, CIN), Breece Hall (RB, NYJ), 2027 R2 pick. Fronge receives TreVeyon Henderson (RB, NE), Kyle Monangai (RB, CHI), Nico Collins (WR, HOU), 2028 R2 pick.",
     "TRADE (Jul 17): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
@@ -14,94 +14,94 @@
   ],
   "tweets": [
     {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "On the Corbishley side of that Fronge deal \u2014 I'm told internally the Apex front office views Higgins as the centerpiece, not Wilson. The way the room framed it: Hall gets you into the playoffs, Higgins is why you win one. That distinction is going to matter when October depth decisions get made.",
-      "posted_at": "2026-07-20T08:21:19.000062+00:00",
-      "likes": 97,
-      "rt": 22,
-      "reply": 19
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "The Corbishley-Fronge trade is now four days old and the debate hasn't settled \u2014 it's gotten louder. Tonight we have Terrence and Dexter at the desk and I genuinely cannot predict which direction this goes. That's either a great sign or a terrible one. Seven o'clock.",
+      "posted_at": "2026-07-20T13:29:28.589092+00:00",
+      "likes": 87,
+      "rt": 14,
+      "reply": 22
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Adam is out here trading C.J. Stroud AND a 2028 first for Herbert and everyone's nodding along like this is normal offseason behavior. It's not normal. I'm not saying it's wrong. I'm saying someone should be screaming and I'm happy to volunteer.",
-      "posted_at": "2026-07-20T07:55:19.000062+00:00",
-      "likes": 88,
-      "rt": 17,
+      "text": "Somebody needs to give me a segment on Monarch. Shaq goes an entire season without trading once, the stock still climbs 8.3%, and nobody is asking the obvious question: what happens when he DOES move? That's not a roster. That's a pressure cooker.",
+      "posted_at": "2026-07-20T12:52:28.589092+00:00",
+      "likes": 103,
+      "rt": 19,
       "reply": 31
     },
     {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "The Helix roster right now is like a renovation that's 80% done \u2014 the bones are excellent, the QB room finally has furniture, and then you open a closet and it's just Cyrus Allen and John Michael Gyllenborg staring back at you. Love the vision. Some of the execution is still drywall.",
-      "posted_at": "2026-07-20T06:56:19.000062+00:00",
-      "likes": 74,
-      "rt": 13,
-      "reply": 22
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "Tee Higgins to Apex in a TE-premium superflex format where Corbishley already knows how to build for January. That asset does not get cheaper from here. It does not. I'm watching this one very carefully and I suggest you do the same.",
-      "posted_at": "2026-07-20T05:32:19.000062+00:00",
-      "likes": 61,
-      "rt": 11,
-      "reply": 14
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Drew added Colbie Young and dropped Joe Mixon. I have stared at that transaction for three full minutes. I am choosing \u2014 and this is a conscious decision \u2014 to say nothing further, because some roster moves exist beyond the reach of commentary.",
-      "posted_at": "2026-07-20T02:09:19.000062+00:00",
-      "likes": 109,
-      "rt": 26,
-      "reply": 37
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Everyone's debating the Corbishley-Fronge headliners and completely skipping past Kyle Monangai, who is going into a Chicago offense that desperately needs a backfield identity and has the contact balance to be a workhorse in a 0.5 PPR format. That's not a handcuff. That's a starter hiding in a footnote.",
-      "posted_at": "2026-07-19T23:18:19.000062+00:00",
-      "likes": 83,
-      "rt": 19,
-      "reply": 16
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "On the Deepwater situation \u2014 I've been working this for two weeks and what I'm hearing is less 'no direction' and more 'two very different directions being argued internally.' The board want/sell call that everyone's waiting on may be closer than Mitchum is letting on. More when I have it confirmed.",
+      "posted_at": "2026-07-20T11:25:28.589092+00:00",
+      "likes": 96,
+      "rt": 21,
+      "reply": 18
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "The real problem with the Deepwater situation is that Mitchum hasn't relocated to Havana yet. Regulatory flexibility is the single most underrated asset in dynasty roster construction and ForgeHammer proved it. I've been saying this since before Havana was even a concept.",
-      "posted_at": "2026-07-19T20:17:19.000062+00:00",
-      "likes": 52,
-      "rt": 8,
-      "reply": 28
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Tonight on the Exchange Report: Vance has a Higgins valuation take that evolved three times during the pre-show meeting, Dina has a Deepwater update that is either a breakthrough or a misdirect depending on which source you believe, and Dexter is already annoyed at both of them. Eight o'clock.",
-      "posted_at": "2026-07-19T15:09:19.000062+00:00",
-      "likes": 118,
-      "rt": 24,
-      "reply": 21
+      "text": "Tee Higgins is the wrong conversation. The correct conversation is the 2028 second-round pick Fronge just handed to Apex. A second-round pick two years from now is peak R&D capital \u2014 it matures at exactly the moment when everyone else has already stopped developing. Corbishley won the trade in 2028 and nobody will admit it until 2028.",
+      "posted_at": "2026-07-20T08:37:28.589092+00:00",
+      "likes": 44,
+      "rt": 7,
+      "reply": 29
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "The Herbert trade is getting praised as an Adam masterstroke and I just want to note that I flagged Helix's QB void as an existential problem before this offseason started, and I noted Herbert was a realistic solve given cost structure. Validation is fine. Credit is better.",
-      "posted_at": "2026-07-19T09:39:19.000062+00:00",
-      "likes": 66,
-      "rt": 9,
-      "reply": 33
+      "text": "Chad's 2028 pick take is fine and I respect it, but the reason Apex wins this deal has nothing to do with the pick. It's Breece Hall in a superflex format where you're already carrying an elite QB room. Corbishley now has a genuine RB1 who makes the passing game honest. That's the trade. That was always the trade.",
+      "posted_at": "2026-07-20T07:19:28.589092+00:00",
+      "likes": 71,
+      "rt": 13,
+      "reply": 24
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Everyone keeps ranking the Fronge return as Henderson-Nico-Monangai and treating it like a tiered list, but that's not how ForgeHammer deploys assets. Fronge doesn't care about your rankings. He cares about roster construction leverage, and right now he's got three young RBs on ascending situations with no pick debt until 2028. That's a very deliberate position.",
+      "posted_at": "2026-07-20T03:57:28.589092+00:00",
+      "likes": 58,
+      "rt": 11,
+      "reply": 16
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "I want to address Shaq directly. The Monarch WR corps is historically deep, the stock is rising, and the RB room remains unaddressed for a second consecutive offseason. At some point \u2014 and I want to be precise here \u2014 patience stops being a philosophy and starts being a refusal to compete. The market gave you 8.3%. The roster gave you nothing.",
+      "posted_at": "2026-07-20T00:07:28.589092+00:00",
+      "likes": 112,
+      "rt": 24,
+      "reply": 37
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Helix is the offseason story I keep coming back to. Adam came in with a model, built toward it obsessively, paid a real price for Herbert, and the roster now has a spine it didn't have six months ago. It's not finished \u2014 the depth chart has some genuinely alarming closets \u2014 but for the first time this rebuild has a direction you can actually argue about. That's progress.",
+      "posted_at": "2026-07-19T18:47:28.589092+00:00",
+      "likes": 69,
+      "rt": 10,
+      "reply": 12
+    },
+    {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "I'm hearing \u2014 and this is early, this is not filed, this is a temperature read \u2014 that at least one team with significant pick capital has made informal contact with a team currently described internally as 'open to restructuring.' I don't have a name on either side yet. I have a vibe. Developing.",
+      "posted_at": "2026-07-19T09:47:28.589092+00:00",
+      "likes": 78,
+      "rt": 17,
+      "reply": 41
     }
   ]
 }
