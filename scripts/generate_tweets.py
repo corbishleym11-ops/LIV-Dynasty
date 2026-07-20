@@ -12,6 +12,7 @@ Requires: ANTHROPIC_API_KEY in the environment. Stdlib only — no pip installs.
 
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -21,6 +22,7 @@ MODEL = "claude-sonnet-4-6"
 MAX_EVENTS = 10          # most recent league events fed to the writer
 TWEETS_PER_RUN = (6, 9)  # min, max tweets to ask for
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "tweets.json")
+DATA_JS_PATH = os.path.join(os.path.dirname(__file__), "..", "data.js")
 
 SLEEPER_MAP = {  # owner -> roster_id (mirrors sleeper.js)
     "Charles": 5, "Corbishley": 1, "Shaq": 11, "Adam": 2, "Jake": 6,
@@ -57,7 +59,45 @@ def player_names():
 
 
 def fmt_when(ms):
-    return datetime.fromtimestamp(ms / 1000, tz=timezone.utc).strftime("%b %d")
+    """'Jul 19 (yesterday)' — the age is computed so the writer can never miscount."""
+    then = datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
+    days = (datetime.now(timezone.utc).date() - then.date()).days
+    if days <= 0:
+        rel = "today"
+    elif days == 1:
+        rel = "yesterday"
+    else:
+        rel = f"{days} days ago"
+    return f"{then.strftime('%b %d')} ({rel})"
+
+
+# ── Exchange board (data.js) ─────────────────────────────────────────
+
+def read_exchange_board():
+    """Best-effort parse of data.js: current + previous stock price per team.
+    Returns a list of text lines, or [] if anything fails — never blocks a run."""
+    try:
+        src = open(DATA_JS_PATH).read()
+    except Exception:
+        return []
+    lines = []
+    team_re = re.compile(
+        r"owner:'(\w+)'.*?company:'([^']*)'.*?ticker:'(\w+)'.*?history:\[([^\]]*)\]"
+    )
+    price_re = re.compile(r"\{d:'([^']*)',\s*p:([\d.]+)\}")
+    for m in team_re.finditer(src):
+        owner, company, ticker, hist = m.groups()
+        pts = price_re.findall(hist)
+        if not pts:
+            continue
+        d_now, p_now = pts[-1][0], float(pts[-1][1])
+        line = f"- {company} ({ticker}, {owner}): ${p_now:.2f} as of {d_now}"
+        if len(pts) >= 2:
+            p_prev = float(pts[-2][1])
+            chg = 100 * (p_now - p_prev) / p_prev
+            line += f" ({'+' if chg >= 0 else ''}{chg:.1f}% vs previous update)"
+        lines.append(line)
+    return lines
 
 
 def describe_transactions(players):
@@ -124,7 +164,7 @@ def describe_transactions(players):
 
 # ── Claude ───────────────────────────────────────────────────────────
 
-def build_prompt(kit, lore, events, season_note, previous_texts):
+def build_prompt(kit, lore, events, season_note, previous_texts, board_lines):
     people = "\n".join(
         f"- {p['name']} ({p['handle']}) — {p['role']}, {p['show']}. Beat: {p['beat']} "
         f"Sample of their register (do NOT copy or template this): \"{p['voice_sample']}\""
@@ -138,16 +178,27 @@ def build_prompt(kit, lore, events, season_note, previous_texts):
         "- No new transactions. It's a quiet stretch — write offseason content instead: " \
         "preview takes, rankings beefs, show promos, market chatter, slow-news-day pundit behavior."
     prev_block = "\n".join(f"- {t}" for t in previous_texts[:20]) or "- (none)"
+    board_block = "\n".join(board_lines) if board_lines else "- (unavailable this run)"
     lo, hi = TWEETS_PER_RUN
+    today = datetime.now(timezone.utc).strftime("%A, %B %d, %Y")
 
     return f"""You are the entire on-air talent pool of the LIV Network, the fictional sports-media \
 ecosystem covering the LIV Dynasty fantasy football league. You write their tweets.
+
+## Today's date
+Today is {today}. Every event below is labeled with its date AND its age (e.g. "Jul 19 (yesterday)"). \
+Use those labels verbatim when referencing timing — NEVER recompute or guess how old an event is. \
+A trade labeled "(yesterday)" happened yesterday, full stop. Getting an event's age wrong is the \
+single worst mistake you can make; real pundits get dragged for it.
 
 ## League lore (canon — reference naturally, never info-dump)
 {lore}
 
 ## Owner / corporation glossary
 {owners}
+
+## Current exchange board (stock prices — quote these numbers exactly, never invent prices)
+{board_block}
 
 ## The personalities
 {people}
@@ -178,6 +229,7 @@ A newsroom is a conversation, not twelve monologues.
 Breaking news belongs to Marty Volkman (first, not always right) and Dina Ravioli (the confirmation).
 - Ground tweets in the actual events and canon above: real player names, real owners' situations, \
 real storylines (superflex QB scarcity, TE premium, the 2027 pick premium, etc.). No invented trades.
+- Market takes should cite real prices from the exchange board above, exactly as given.
 - If an event is minor (a waiver add nobody cares about), it's fine for someone to say exactly that.
 - Tweets should read like real sports-media Twitter: 1-3 sentences mostly, occasionally longer. \
 No hashtag spam. At most one emoji across the whole batch, if any.
@@ -236,8 +288,11 @@ def main():
     events, season_note = describe_transactions(players)
     print(f"{len(events)} recent events found.")
 
+    board_lines = read_exchange_board()
+    print(f"Exchange board: {len(board_lines)} listings parsed from data.js.")
+
     print("Asking Claude to write the feed…")
-    raw = call_claude(build_prompt(kit, lore, events, season_note, previous_texts))
+    raw = call_claude(build_prompt(kit, lore, events, season_note, previous_texts, board_lines))
 
     now = datetime.now(timezone.utc)
     tweets = []
