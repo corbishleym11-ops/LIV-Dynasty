@@ -1,8 +1,11 @@
 name: Generate LIV Network tweets
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'
+  # ── OFFSEASON: scheduled runs disabled Jul 20 2026 ──
+  # To re-enable for the season, uncomment the schedule block below.
+  # (cron '0 */6 * * *' = every 6 hours / 4 runs per day)
+  # schedule:
+  #   - cron: '0 */6 * * *'
   workflow_dispatch: {}
 
 permissions:
