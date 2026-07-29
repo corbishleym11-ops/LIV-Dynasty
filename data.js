@@ -133,18 +133,79 @@ const TEAM_TICKERS = {
 };
 
 
-// ── FEATURED EPISODE — when set, this takes over the "This Week On LIV" slot
-// on the Overview page and links to the episode. Set to null to restore the
-// default day-based show rotation.
-const FEATURED_EPISODE = {
-  show:   'The Weekly Sit-Down',
-  title:  'Training Camp Special',
-  href:   'sitdown.html',
-  host:   'Clara Hopkins',
-  hostSub:'with Big Dog, Chad Bellwether & guest Jay Kelpey',
-  photo:  'avatars/clara-hopkins.jpg',
-  badge:  'NOW AIRING',
-  teaser: 'Camps are open and the desk is full: the Havana question, whether the league is Charles\u2019s to lose, eight Apex trades under the microscope, the board\u2019s growing faith in Kevin \u2014 and four dark-horse picks that go on the record. Tap to watch the episode.',
+// ── CURRENT EPISODE — renders as an embedded slide deck in the "This Week On
+// LIV" slot on the Overview page (and standalone at sitdown.html). To publish
+// a new episode, replace this block. Set EPISODE = null to restore the
+// default day-based show rotation on the Overview.
+const L = (who, text) => ({ who, text });
+const EPISODE = {
+  show:  'The Weekly Sit-Down',
+  title: 'Training Camp Special',
+  badge: 'NOW AIRING',
+  date:  'Jul 29 2026',
+  cast: {
+  clara: { name:'Clara Hopkins',   role:'Host · The Anchor',       img:'avatars/clara-hopkins.jpg',   host:true  },
+  dog:   { name:'Big Dog',         role:'Hype Narrator',           img:'avatars/big-dog.jpg',         host:false },
+  chad:  { name:'Chad Bellwether', role:'The Bit Guy',             img:'avatars/chad-bellwether.jpg', host:false },
+  jay:   { name:'Jay Kelpey',      role:"This Week's Guest",       img:'avatars/jay-kelpey.jpg',      host:false },
+},
+  slides: [
+  // ── 1. TITLE CARD ──
+  { kicker:'LIV NETWORK ORIGINAL', title:'The Weekly Sit-Down', live:true,
+    sub:'Training Camp Special — Jul 29, 2026. Camps are open, two blockbusters are on the books, and the board is grading. Clara Hopkins hosts Big Dog, Chad Bellwether, and this week\u2019s guest from the trenches, Jay Kelpey.',
+    panel:['clara','dog','chad','jay'] },
+
+  // ── 2. HAVANA ──
+  { kicker:'Segment 01 — The Havana Question', title:'ForgeHammer Went to Cuba', lines:[
+    L('clara', 'Welcome in, everyone. Before we touch a single trade, we have to address the geography. Fronge moved ForgeHammer Industries to Havana this offseason, citing \u201Cregulatory flexibility.\u201D Big Dog, what does that even mean?'),
+    L('dog', 'Clara, I have NO idea what it means and I am OBSESSED with it. FOLKS. A fantasy football corporation relocated to a country with no fantasy football regulations to flee. That is commitment to the bit at a level even I respect.'),
+    L('chad', 'I\u2019ll say what nobody else will: this is the shrewdest move of the offseason. Havana has no extradition treaty for bad trades. When you flip your entire Herbert haul into three running backs, you want to be somewhere the market can\u2019t reach you.'),
+    L('jay', 'Everyone\u2019s laughing, but look at the roster since the move. Nico Collins. Henderson. Monangai. A number-one FLEX grade from the new agency. The factory relocated and immediately got deeper. If that\u2019s regulatory flexibility, sign everyone up.'),
+    L('clara', 'The objectives board just marked his WR acquisition complete, so someone in Havana is doing paperwork. Moving on \u2014 the big one.'),
+  ]},
+
+  // ── 3. CHARLES ──
+  { kicker:'Segment 02 — The $131 Question', title:'Is the League Charles\u2019s to Lose?', lines:[
+    L('clara', 'Crownline: $131.71, a sixteen-dollar lead, best regular season in league history at 23-and-5, projected 21-and-7 again. Is this his league?'),
+    L('dog', 'On paper? It\u2019s not close. Allen, Gibbs, McBride \u2014 that\u2019s not a roster, that\u2019s a museum exhibit. But Clara, I need everyone to remember something: the trophy lives in Philadelphia. Ryan won it at 14-and-14. The regular season is Charles\u2019s. December belongs to chaos.'),
+    L('chad', 'The market has priced in a coronation, which historically is exactly when empires fall. I\u2019ve run the numbers \u2014 in my head, on the drive over \u2014 and no team with the number one QB room AND the number one payroll has ever won this league. Sample size of one season. The data is undefeated.'),
+    L('jay', 'Here\u2019s my actual concern with Crownline, and it\u2019s on the depth chart: the pick shelf slid to eighth. If Gibbs or Allen misses a month, what\u2019s the move? You can\u2019t trade what you already spent. The starting eleven is a monarchy. The bench is a question.'),
+    L('clara', 'So: his to lose, with an asterisk the size of last year\u2019s playoff bracket. Noted. Next segment.'),
+  ]},
+
+  // ── 4. CORBISHLEY ──
+  { kicker:'Segment 03 — Eight Trades Later', title:'The Apex Rebuild-on-the-Fly', lines:[
+    L('clara', 'Corbishley: runner-up last season, and this offseason \u2014 eight trades. Breece Hall. Tee Higgins. Joe Burrow. The pick vault is now dead last and the stock hit $115.51, second on the exchange. Better or worse?'),
+    L('jay', 'Buddy. Eight trades and the roster got better every single time. QB went from ninth to fourth in nine days. That\u2019s not activity, that\u2019s construction. The only flag is the vault \u2014 twelve of twelve in picks means the next injury gets solved with prayer.'),
+    L('chad', 'Eight trades is seven more than a confident GM makes. I said it during the Cigar Accord and I\u2019ll say it now: he\u2019s winning every headline and mortgaging every Tuesday in 2028. The board marked his QB objective complete. The board also doesn\u2019t have to live in 2028.'),
+    L('dog', 'Chad, I love you, but WHO CARES about 2028! The man lost the championship game and responded by acquiring a top-five quarterback, a top-five running back, and a WR1! Confidence 93! Highest on the exchange! If this doesn\u2019t end in a title game rematch with Crownline, I will eat my headset ON AIR.'),
+    L('clara', 'Producers are noting the headset promise. Officially on the record.'),
+  ]},
+
+  // ── 5. KEVIN ──
+  { kicker:'Segment 04 — The Redline Recovery', title:'The Board Believes in Kevin', lines:[
+    L('clara', 'Redline Distressed Capital. New CEO Kevin inherited the Wes scandal in November with confidence at rock bottom. It\u2019s now 41 \u2014 still last in the league, but the biggest jump on the board this cycle. He sold Joe Burrow at the top of a 24-percent rally. Thoughts?'),
+    L('chad', 'Selling your best asset the week everyone finally likes you is either a cry for help or the coldest piece of business this exchange has ever seen. I\u2019ve decided it\u2019s the second one, purely because it makes my Tuesday more interesting.'),
+    L('jay', 'Look at what came back, though. Judkins. Watson. The pick vault jumped from eighth to third, and the roster got a full year younger overnight. That\u2019s not a fire sale \u2014 that\u2019s a controlled burn. The infrastructure objective is already stamped complete.'),
+    L('dog', 'The Wes era ended in scandal. The Kevin era started with the most disciplined teardown I\u2019ve ever seen from a last-place confidence rating. FOLKS \u2014 I\u2019m not saying playoffs. I\u2019m saying respect. And in Detroit, that\u2019s worth more.'),
+    L('clara', 'From 26 in the winter to 41 at camp. Slowest rally on the board, and maybe the most earned. Last segment \u2014 everybody\u2019s favorite.'),
+  ]},
+
+  // ── 6. DARK HORSES ──
+  { kicker:'Segment 05 — On the Record', title:'Preseason Dark Horse Picks', 
+    intro:'One pick each. No favorites allowed \u2014 Crownline and Apex are off the board. These go on the wall and we WILL replay them in December.',
+    picks:[
+      { who:'dog',  team:'HLX \u00B7 The 100xers', quote:'Three straight issues of gains, Herbert\u2019s unit grading QB2, and the angriest spreadsheet in the league. Adam went 7-and-21 last year. The revenge tour is REAL, folks.' },
+      { who:'jay',  team:'FORG \u00B7 JD Power & Ass.', quote:'Number one FLEX depth in the league and nobody\u2019s talking about it because of the Havana jokes. Depth wins Novembers. The factory is my pick, buddy.' },
+      { who:'chad', team:'OBS \u00B7 2028 League Champs', quote:'The team is literally named 2028 League Champs and it\u2019s 2026. That\u2019s a two-year mispricing the market refuses to correct. Also Brock Bowers exists. I\u2019m in.' },
+      { who:'clara',team:'DEEP \u00B7 Mitchumm11', quote:'Someone has to be the adult: WR2 grade, RB5 grade, quietly stable while everyone else lurched. If Mitchum ever picks a direction, this roster was a contender all along. There. I picked. Never ask me again.' },
+    ]},
+
+  // ── 7. SIGN-OFF ──
+  { kicker:'That\u2019s the show', title:'See You After Week One', live:true,
+    sub:'Four dark horses on the record, one headset promise notarized, and a season about to start. The Weekly Sit-Down returns after the first slate of games with actual football to argue about \u2014 same desk, same chaos. From all of us at LIV Network Studios: hydrate, check your lineups, and never trust a preseason grade.',
+    panel:['clara','dog','chad','jay'] },
+],
 };
 
 // ── MEDIA CENTER ──
