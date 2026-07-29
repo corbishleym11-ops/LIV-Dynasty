@@ -132,6 +132,21 @@ const TEAM_TICKERS = {
   Kevin:'RDC', Drew:'ATLAS'
 };
 
+
+// ── FEATURED EPISODE — when set, this takes over the "This Week On LIV" slot
+// on the Overview page and links to the episode. Set to null to restore the
+// default day-based show rotation.
+const FEATURED_EPISODE = {
+  show:   'The Weekly Sit-Down',
+  title:  'Training Camp Special',
+  href:   'sitdown.html',
+  host:   'Clara Hopkins',
+  hostSub:'with Big Dog, Chad Bellwether & guest Jay Kelpey',
+  photo:  'avatars/clara-hopkins.jpg',
+  badge:  'NOW AIRING',
+  teaser: 'Camps are open and the desk is full: the Havana question, whether the league is Charles\u2019s to lose, eight Apex trades under the microscope, the board\u2019s growing faith in Kevin \u2014 and four dark-horse picks that go on the record. Tap to watch the episode.',
+};
+
 // ── MEDIA CENTER ──
 const SHOWS = [
   { name:'The Wire', desc:'Competing scoops on trades, waivers, and roster moves before anyone else confirms them.', cast:[{n:'Marty Volkman', host:false},{n:'Dina Ravioli', host:false}] },

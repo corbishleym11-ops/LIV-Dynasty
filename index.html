@@ -41,19 +41,10 @@
 
 <div class="league-summary">
   <div class="kpi-strip" id="kpi-strip"></div>
+  <div class="intel-row" id="intel-row"></div>
 </div>
 
 <div class="main">
-
-  <!-- LEAGUE FEED -->
-  <div class="sec-head">
-    <div class="sec-title">The League Feed</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag" id="feed-status">LIVE REACTIONS</div>
-  </div>
-  <div class="card g1">
-    <div class="feed-list" id="feed-list"></div>
-  </div>
 
   <!-- WEEKLY SHOW MODULE -->
   <div class="sec-head">
@@ -70,14 +61,6 @@
     <div class="sec-tag" id="matchup-status">LOADING FROM SLEEPER…</div>
   </div>
   <div class="g2" id="matchup-grid" style="grid-template-columns: repeat(2, 1fr);"></div>
-
-  <!-- DEAL ROOM — TRANSACTION IMPACT -->
-  <div class="sec-head">
-    <div class="sec-title">Deal Room — Transaction Impact</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag" id="impact-status">LOADING FROM SLEEPER…</div>
-  </div>
-  <div class="g2" id="impact-grid"></div>
 
   <!-- CURRENT STANDINGS + POWER RANKINGS -->
   <div class="sec-head">
@@ -102,6 +85,16 @@
     </div>
   </div>
 
+  <!-- LEAGUE FEED -->
+  <div class="sec-head">
+    <div class="sec-title">The League Feed</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag">LIVE REACTIONS</div>
+  </div>
+  <div class="card g1">
+    <div class="feed-list" id="feed-list"></div>
+  </div>
+
 </div>
 
 <footer>
@@ -120,6 +113,28 @@
 <script src="common.js"></script>
 <script>
 function renderWeeklyShow() {
+  // Featured episode (from data.js) takes over the slot when present
+  if (typeof FEATURED_EPISODE !== 'undefined' && FEATURED_EPISODE) {
+    const e = FEATURED_EPISODE;
+    document.getElementById('day-tag').textContent = e.badge || 'NOW AIRING';
+    document.getElementById('weekly-show-card').innerHTML = `
+      <a href="${e.href}" style="display:contents; text-decoration:none; color:inherit;">
+        <div class="weekly-show-photo"><img src="${e.photo}" alt="${e.host}"><div class="weekly-show-photo-gradient"></div></div>
+        <div class="weekly-show-body">
+          <div class="weekly-show-top-row">
+            <span class="weekly-show-live-badge"><span class="weekly-show-live-dot"></span>${e.badge || 'NOW AIRING'}</span>
+          </div>
+          <div class="weekly-show-name">${e.show} \u2014 ${e.title}</div>
+          <div class="weekly-show-host">${e.host} <span>\u2014 ${e.hostSub}</span></div>
+          <div class="weekly-show-teaser">${e.teaser}</div>
+          <div style="margin-top:12px; font-family:var(--mono); font-size:11px; letter-spacing:1.5px; color:var(--gold);">\u25B6 WATCH THE EPISODE</div>
+        </div>
+      </a>`;
+    const card = document.getElementById('weekly-show-card');
+    card.style.cursor = 'pointer';
+    card.onclick = () => { window.location.href = e.href; };
+    return;
+  }
   const day = new Date().getDay();
   let show;
   if (day === 2 || day === 3) {
@@ -152,18 +167,15 @@ function renderWeeklyShow() {
 
 function buildStandings2026() {
   document.getElementById('standings-2026').innerHTML = `
-    <thead><tr><th>#</th><th></th><th>Owner</th><th>Team</th><th>Est. Record</th><th class="r">Playoff %</th><th>Ticker</th></tr></thead>
+    <thead><tr><th>#</th><th>Owner</th><th>Team</th><th>Est. Record</th><th>Ticker</th></tr></thead>
     <tbody>${PROJ_2026.map(p => {
       const t = TEAMS.find(x => x.owner === p.owner);
-      const mv = MOVEMENT[p.owner] || {};
       const isPO = p.rank <= 6;
       return `<tr>
         <td><span class="pos-dot ${isPO?'playoff-yes':'playoff-no'}">${p.rank}</span></td>
-        <td>${mv.proj ? deltaBadge(mv.proj.now, mv.proj.prev, {lowerBetter:true}) : ''}</td>
-        <td style="font-weight:600;color:${OWNER_COLORS[p.owner]}">${ownerLink(p.owner)}</td>
+        <td style="font-weight:600;color:${OWNER_COLORS[p.owner]}">${p.owner}</td>
         <td style="font-size:11px;color:var(--muted)">${p.team}</td>
         <td class="win-loss r">${p.record}</td>
-        <td class="r" style="font-family:var(--mono); font-size:11px;">${mv.playoff ? `${mv.playoff.now}% ${deltaBadge(mv.playoff.now, mv.playoff.prev, {suffix:''})}` : '—'}</td>
         <td><span class="sym-tag">${t?t.ticker:''}</span></td>
       </tr>`;
     }).join('')}</tbody>`;
@@ -182,8 +194,8 @@ function buildRankings() {
   }).join('');
 }
 
-function renderFeed(list) {
-  document.getElementById('feed-list').innerHTML = list.map(t => `
+function buildFeed() {
+  document.getElementById('feed-list').innerHTML = TWEETS.map(t => `
     <div class="tweet">
       <img class="tweet-avatar" src="avatars/${t.key}.jpg" alt="${t.name}">
       <div class="tweet-body">
@@ -201,153 +213,6 @@ function renderFeed(list) {
         </div>
       </div>
     </div>`).join('');
-}
-
-// ── live feed: turn real Sleeper transactions into pundit tweets ──
-const FEED_PUNDITS = {
-  marty:  { key:'marty-volkman',  name:'Marty Volkman',   handle:'@MartyBreaks' },
-  dina:   { key:'dina-ravioli',   name:'Dina Ravioli',    handle:'@DinaOnTheLine' },
-  bigdog: { key:'big-dog',        name:'Big Dog',         handle:'@BigDogHype' },
-  jay:    { key:'jay-kelpey',     name:'Jay Kelpey',      handle:'@JayInTheTrenches' },
-  dexter: { key:'dexter-vail',    name:'Dexter Vail',     handle:'@DexterCalledIt' },
-  vance:  { key:'vance-hollis',   name:'Vance Hollis',    handle:'@VanceScreamsLIV' },
-  chad:   { key:'chad-bellwether',name:'Chad Bellwether', handle:'@ChadTakesLIV' },
-  terrence: { key:'terrence-odom',  name:'Terrence E. Odom', handle:'@TerrenceVerdict' },
-  bo:     { key:'bo-ruckman',     name:'Bo Ruckman',      handle:'@BoRuckmanLIVE' },
-};
-
-function relTime(ms) {
-  const d = Date.now() - ms;
-  const m = Math.floor(d / 60000), h = Math.floor(d / 3600000), days = Math.floor(d / 86400000);
-  if (m < 60) return Math.max(1, m) + 'm';
-  if (h < 24) return h + 'h';
-  return days + 'd';
-}
-
-function txToTweets(tx, players) {
-  const seed = tx.created || 0;
-  const pick = (arr) => arr[seed % arr.length];
-  const pname = (pid) => { const p = players[pid]; return p ? `${p.name} (${p.pos})` : 'a player'; };
-  const ownerOf = (rid) => ROSTER_TO_OWNER[rid] || 'Unknown';
-  const stats = (off) => ({ likes: 20 + ((seed + off * 37) % 90), rt: 3 + ((seed + off * 13) % 20), reply: 2 + ((seed + off * 7) % 15) });
-  const at = (ts) => ({ time: relTime(ts), ago: Date.now() - ts });
-
-  if (tx.type === 'trade' && tx.roster_ids && tx.roster_ids.length >= 2) {
-    const [ra, rb] = tx.roster_ids;
-    const gets = (rid) => Object.entries(tx.adds || {}).filter(([, r]) => r === rid).map(([pid]) => pname(pid));
-    const getsA = gets(ra), getsB = gets(rb);
-    const picksA = (tx.draft_picks || []).filter(p => p.owner_id === ra).map(p => `${p.season} R${p.round} pick`);
-    const picksB = (tx.draft_picks || []).filter(p => p.owner_id === rb).map(p => `${p.season} R${p.round} pick`);
-    const sideA = [...getsA, ...picksA].join(', ') || 'future considerations';
-    const sideB = [...getsB, ...picksB].join(', ') || 'future considerations';
-    const a = ownerOf(ra), b = ownerOf(rb);
-    // 1) Marty breaks it → 2) Dina confirms → 3) a third pundit reacts
-    const third = pick([FEED_PUNDITS.terrence, FEED_PUNDITS.vance, FEED_PUNDITS.dexter, FEED_PUNDITS.chad, FEED_PUNDITS.bo]);
-    const thirdTexts = {
-      'terrence-odom': `Let. Me. Be. Clear. The ${a}–${b} trade is either a masterstroke or a cry for help. There is no third option. My verdict comes Thursday.`,
-      'vance-hollis': `THE ${a.toUpperCase()}–${b.toUpperCase()} TRADE JUST MOVED THE ENTIRE MARKET. SELL. WAIT — BUY. I'VE REVERSED TWICE WRITING THIS TWEET.`,
-      'dexter-vail': `Everyone shocked by the ${a}–${b} deal clearly doesn't follow my account. Called this exact framework in the preseason. Go check. I'll wait.`,
-      'chad-bellwether': `The ${a}–${b} trade confirms my long-held thesis: every trade is just two GMs agreeing to blame each other later.`,
-      'bo-ruckman': `${a} and ${b} really did THAT?? I've read zero details and I am FURIOUS on someone's behalf. Book me a segment RIGHT NOW.`,
-    };
-    return [
-      { ...FEED_PUNDITS.marty, ...at(tx.created), ...stats(0),
-        text: `🚨 TRADE ALERT: ${a} and ${b} have agreed to terms. ${a} receives ${sideA}; ${b} receives ${sideB}. Sources tell me both sides think they won. They cannot both be right.` },
-      { ...FEED_PUNDITS.dina, ...at(tx.created + 22 * 60000), ...stats(1),
-        text: `Confirmed: the ${a}–${b} deal is done — ${sideA} heading one way, ${sideB} the other. League sources describe the mood in both front offices as “smug.”` },
-      { ...third, ...at(tx.created + 51 * 60000), ...stats(2), text: thirdTexts[third.key] },
-    ];
-  }
-
-  const addEntries = Object.entries(tx.adds || {});
-  const dropEntries = Object.entries(tx.drops || {});
-  if (addEntries.length) {
-    const [pid, rid] = addEntries[0];
-    const owner = ownerOf(rid);
-    const player = pname(pid);
-    const bid = tx.settings && tx.settings.waiver_bid ? ` for $${tx.settings.waiver_bid} FAAB` : '';
-    const dropped = dropEntries.length ? ` ${pname(dropEntries[0][0])} packs a box to make room.` : '';
-    const p = pick([FEED_PUNDITS.bigdog, FEED_PUNDITS.jay, FEED_PUNDITS.vance, FEED_PUNDITS.bo]);
-    const texts = {
-      'big-dog': `FOLKS. ${owner} just scooped ${player} off the wire${bid}.${dropped} The waiver wire is UNDEFEATED.`,
-      'jay-kelpey': `Buddy. BUDDY. ${owner} adding ${player}${bid} is exactly the kind of depth move nobody claps for. I'm clapping.${dropped}`,
-      'vance-hollis': `${owner.toUpperCase()} JUST BOUGHT ${player.toUpperCase()}${bid.toUpperCase()}. THAT'S EITHER A STEAL OR A CRY FOR HELP. POSSIBLY BOTH. BUY.`,
-      'bo-ruckman': `${owner} adding ${player}${bid} at this hour?? I have QUESTIONS and absolutely no reading of the depth chart to back them up. Segment. NOW.`,
-    };
-    return [{ ...p, ...at(tx.created), ...stats(0), text: texts[p.key] }];
-  }
-
-  if (dropEntries.length) {
-    const [pid, rid] = dropEntries[0];
-    const p = pick([FEED_PUNDITS.dexter, FEED_PUNDITS.chad]);
-    const text = p.key === 'dexter-vail'
-      ? `${ownerOf(rid)} finally dropping ${pname(pid)}. I said this was coming weeks ago. Go check. I'll wait.`
-      : `${ownerOf(rid)} cutting ${pname(pid)} proves my long-held thesis: rosters are just vibes with a salary cap.`;
-    return [{ ...p, ...at(tx.created), ...stats(0), text }];
-  }
-  return [];
-}
-
-// '2h' / '45m' / '1d' → approximate ms-ago, so hand-written and live tweets sort together
-function agoFromLabel(label) {
-  const m = /^(\d+)([mhd])$/.exec(label || '');
-  if (!m) return Infinity;
-  const mult = { m: 60000, h: 3600000, d: 86400000 }[m[2]];
-  return parseInt(m[1], 10) * mult;
-}
-
-// AI-written tweets committed by the GitHub Action (scripts/generate_tweets.py)
-async function loadNetworkTweets() {
-  const res = await fetch('tweets.json?cb=' + Math.floor(Date.now() / 300000)); // 5-min cache-bust
-  if (!res.ok) throw new Error('no tweets.json');
-  const data = await res.json();
-  const tweets = (data.tweets || []).map(t => {
-    const posted = new Date(t.posted_at).getTime();
-    return { key: t.key, name: t.name, handle: t.handle, text: t.text,
-             time: relTime(posted), ago: Date.now() - posted,
-             likes: t.likes, rt: t.rt, reply: t.reply };
-  }).filter(t => isFinite(t.ago) && t.ago >= 0);
-  if (!tweets.length) throw new Error('tweets.json empty');
-  return tweets;
-}
-
-async function buildFeed() {
-  renderFeed(TWEETS); // instant paint; upgraded below
-
-  // 1st choice: the AI-written LIV Network feed
-  try {
-    const network = await loadNetworkTweets();
-    const merged = [...network, ...TWEETS.slice(0, Math.max(0, 14 - network.length)).map(t => ({ ...t, ago: agoFromLabel(t.time) }))]
-      .sort((a, b) => a.ago - b.ago)
-      .slice(0, 14);
-    renderFeed(merged);
-    const st = document.getElementById('feed-status');
-    st.textContent = 'LIV NETWORK LIVE';
-    st.style.color = 'var(--green)';
-    st.style.borderColor = 'var(--green-dim)';
-    return;
-  } catch (e) { /* fall through to Sleeper template feed */ }
-
-  try {
-    const [state, players] = await Promise.all([getNFLState(), getPlayersMap()]);
-    const week = Math.max(1, state.week || 1);
-    const rounds = [...new Set([week, week - 1, 1])].filter(r => r >= 1);
-    const lists = await Promise.all(rounds.map(r => getTransactions(r).catch(() => [])));
-    const txs = lists.flat()
-      .filter(t => t && t.status === 'complete' && t.created)
-      .sort((a, b) => b.created - a.created)
-      .slice(0, 6);
-    const live = txs.flatMap(t => txToTweets(t, players)).slice(0, 12);
-    if (live.length) {
-      const merged = [...live, ...TWEETS.slice(0, Math.max(0, 12 - live.length)).map(t => ({ ...t, ago: agoFromLabel(t.time) }))]
-        .sort((a, b) => a.ago - b.ago); // newest first
-      renderFeed(merged);
-      const st = document.getElementById('feed-status');
-      st.textContent = 'LIVE FROM SLEEPER';
-      st.style.color = 'var(--green)';
-      st.style.borderColor = 'var(--green-dim)';
-    }
-  } catch (e) { /* keep hand-written feed */ }
 }
 
 async function buildMatchups() {
@@ -387,13 +252,13 @@ async function buildMatchups() {
         <div style="display:flex; align-items:center; justify-content:space-between;">
           <div style="text-align:center; flex:1;">
             <div class="sym-tag" style="font-size:16px;">${teamA ? teamA.ticker : ownerA}</div>
-            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerA ? ownerLink(ownerA) : ''}</div>
+            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerA}</div>
             <div style="font-family:var(--mono); font-size:22px; font-weight:700; color:${aWinning?'var(--green)':'var(--text)'}">${(a.points||0).toFixed(1)}</div>
           </div>
           <div style="color:var(--dim); font-family:var(--mono); font-size:11px; padding:0 12px;">VS</div>
           <div style="text-align:center; flex:1;">
             <div class="sym-tag" style="font-size:16px;">${teamB ? teamB.ticker : ownerB}</div>
-            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerB ? ownerLink(ownerB) : ''}</div>
+            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerB}</div>
             <div style="font-family:var(--mono); font-size:22px; font-weight:700; color:${bWinning?'var(--green)':'var(--text)'}">${(b.points||0).toFixed(1)}</div>
           </div>
         </div>
@@ -407,89 +272,10 @@ async function buildMatchups() {
   }
 }
 
-// ── Deal Room: real Sleeper trades → impact cards ──
-function tradeImpact(tx, players) {
-  const seed = tx.created || 0;
-  const pname = (pid) => { const p = players[pid]; return p ? `${p.name} (${p.pos})` : 'Player'; };
-  const [ra, rb] = tx.roster_ids;
-  const ownerA = ROSTER_TO_OWNER[ra] || '?', ownerB = ROSTER_TO_OWNER[rb] || '?';
-  const gets = (rid) => Object.entries(tx.adds || {}).filter(([, r]) => r === rid).map(([pid]) => ({ label: pname(pid), val: 3 }));
-  const picks = (rid) => (tx.draft_picks || []).filter(p => p.owner_id === rid).map(p => ({ label: `${p.season} R${p.round} pick`, val: p.round === 1 ? 3 : p.round === 2 ? 2 : 1 }));
-  const sideA = [...gets(ra), ...picks(ra)], sideB = [...gets(rb), ...picks(rb)];
-  const valA = sideA.reduce((s, x) => s + x.val, 0), valB = sideB.reduce((s, x) => s + x.val, 0);
-  const winner = valA === valB ? (seed % 2 ? ownerA : ownerB) : (valA > valB ? ownerA : ownerB);
-  const loser = winner === ownerA ? ownerB : ownerA;
-  const bump = (1.2 + (seed % 34) / 10).toFixed(1);
-  const drop = (0.8 + ((seed >> 3) % 28) / 10).toFixed(1);
-  const headlines = [
-    `"${winner} just picked ${loser}'s pocket in broad daylight" — Terrence E. Odom`,
-    `"A win-win trade, which means one of them is wrong" — Dexter Vail`,
-    `"THIS DEAL MOVED THE WHOLE MARKET. I'M SHAKING." — Vance Hollis`,
-    `"Fine deal. Wrong week. Bold jawlines on both sides." — Chad Bellwether`,
-    `"I ranked this trade. Someone in the replies is mad." — Matteo Honeydew`,
-  ];
-  return { ownerA, ownerB, sideA, sideB, winner, loser, bump, drop, headline: headlines[seed % headlines.length], when: relTime(tx.created) };
-}
-
-function renderImpactCards(cards) {
-  document.getElementById('impact-grid').innerHTML = cards.map(c => {
-    const tk = (o) => (TEAMS.find(t => t.owner === o) || {}).ticker || o;
-    const side = (owner, assets) => `
-      <div style="flex:1; min-width:0;">
-        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:${OWNER_COLORS[owner] || 'var(--text)'}; margin-bottom:6px;">${tk(owner)} · ${ownerLink(owner)} receives</div>
-        ${assets.length ? assets.map(a => `<div style="font-size:12px; color:var(--text); padding:2px 0;">• ${a.label}</div>`).join('') : '<div style="font-size:12px; color:var(--muted);">future considerations</div>'}
-      </div>`;
-    return `
-    <div class="card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <span style="font-family:var(--mono); font-size:10px; font-weight:700; letter-spacing:1px; color:var(--purple); border:1px solid var(--purple); border-radius:3px; padding:3px 8px;">TRADE · ${c.when} ago</span>
-        <span style="font-family:var(--mono); font-size:10px; color:var(--muted);">MARKET-VALUE WINNER: <span style="color:var(--gold); font-weight:700;">${tk(c.winner)}</span></span>
-      </div>
-      <div style="display:flex; gap:16px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-        ${side(c.ownerA, c.sideA)}
-        <div style="align-self:center; color:var(--dim); font-family:var(--mono); font-size:11px;">⇄</div>
-        ${side(c.ownerB, c.sideB)}
-      </div>
-      <div style="display:flex; gap:18px; padding:10px 0; border-bottom:1px solid var(--border); font-family:var(--mono); font-size:11px;">
-        <span style="color:var(--green);">${tk(c.winner)} ▲${c.bump}%</span>
-        <span style="color:var(--red);">${tk(c.loser)} ▼${c.drop}%</span>
-        <span style="color:var(--muted);">BOARD: <span style="color:var(--green);">${tk(c.winner)} approves</span> · <span style="color:var(--red);">${tk(c.loser)} convenes emergency session</span></span>
-      </div>
-      <div style="font-size:12px; font-style:italic; color:var(--text); padding-top:10px;">${c.headline}</div>
-    </div>`;
-  }).join('');
-}
-
-async function buildImpactCards() {
-  const statusEl = document.getElementById('impact-status');
-  try {
-    const [state, players] = await Promise.all([getNFLState(), getPlayersMap()]);
-    const week = Math.max(1, state.week || 1);
-    const rounds = [...new Set([week, week - 1, week - 2, 1])].filter(r => r >= 1);
-    const lists = await Promise.all(rounds.map(r => getTransactions(r).catch(() => [])));
-    const trades = lists.flat()
-      .filter(t => t && t.type === 'trade' && t.status === 'complete' && t.roster_ids && t.roster_ids.length >= 2)
-      .sort((a, b) => b.created - a.created).slice(0, 4);
-    if (!trades.length) {
-      statusEl.textContent = 'NO RECENT TRADES';
-      document.getElementById('impact-grid').innerHTML = `<div class="card" style="grid-column:1/-1; color:var(--muted); font-size:12px;">The deal room is quiet. Vivienne suspects it will not stay that way.</div>`;
-      return;
-    }
-    statusEl.textContent = 'LIVE FROM SLEEPER';
-    statusEl.style.color = 'var(--green)';
-    statusEl.style.borderColor = 'var(--green-dim)';
-    renderImpactCards(trades.map(t => tradeImpact(t, players)));
-  } catch (e) {
-    statusEl.textContent = 'SLEEPER UNAVAILABLE';
-    statusEl.style.color = 'var(--red)';
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
   renderWeeklyShow();
   buildMatchups();
-  buildImpactCards();
   buildStandings2026();
   buildRankings();
   buildFeed();
