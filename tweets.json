@@ -1,107 +1,107 @@
 {
-  "generated_at": "2026-07-29T13:44:29.139154+00:00",
+  "generated_at": "2026-08-11T18:07:46.326888+00:00",
   "events_seen": [
-    "CUT (Jul 29 (today)): Corbishley released Roschon Johnson (RB, CHI).",
-    "CUT (Jul 29 (today)): Kevin released Zach Ertz (TE, FA).",
-    "TRADE (Jul 29 (today)): Corbishley receives Chris Bell (WR, MIA), David Montgomery (RB, HOU), Joe Burrow (QB, CIN), Jordan Addison (WR, MIN). Kevin receives Michael Wilson (WR, ARI), Quinshon Judkins (RB, CLE), Daniel Jones (QB, IND), Christian Watson (WR, GB), 2027 R2 pick.",
-    "CUT (Jul 29 (today)): Kevin released Marquez Valdes-Scantling (WR, DAL).",
-    "CUT (Jul 29 (today)): Kevin released Raheem Mostert (RB, FA).",
-    "CUT (Jul 29 (today)): Kevin released Adam Thielen (WR, FA).",
-    "TRADE (Jul 19 (10 days ago)): Corbishley receives Michael Wilson (WR, ARI), Tee Higgins (WR, CIN), Breece Hall (RB, NYJ), 2027 R2 pick. Fronge receives TreVeyon Henderson (RB, NE), Kyle Monangai (RB, CHI), Nico Collins (WR, HOU), 2028 R2 pick.",
-    "TRADE (Jul 17 (12 days ago)): Adam receives Justin Herbert (QB, LAC). Fronge receives Jacory Croskey-Merritt (RB, WAS), C.J. Stroud (QB, HOU), 2028 R1 pick.",
-    "TRADE (Jul 10 (19 days ago)): Adam receives Keaton Mitchell (RB, LAC). Wingard receives 2028 R3 pick.",
-    "WAIVER CLAIM (Jun 21 (38 days ago)): Drew added Colbie Young (WR, CIN) (dropped Joe Mixon (RB, FA))."
+    "CUT (Aug 07 (4 days ago)): Wingard released Beaux Collins (WR, NYG).",
+    "WAIVER CLAIM (Aug 06 (5 days ago)): Fronge added Seth McGowan (RB, IND).",
+    "CUT (Aug 05 (6 days ago)): Fronge released Tyler Huntley (QB, BAL).",
+    "TRADE (Aug 05 (6 days ago)): Corbishley receives Braelon Allen (RB, NYJ). Fronge receives Stefon Diggs (WR, WAS).",
+    "CUT (Aug 03 (8 days ago)): Brent released Emari Demercado (RB, KC).",
+    "CUT (Aug 03 (8 days ago)): Brent released Diego Pavia (QB, FA).",
+    "WAIVER CLAIM (Aug 03 (8 days ago)): Charles added Malik Benson (WR, LV).",
+    "WAIVER CLAIM (Aug 03 (8 days ago)): Charles added Roman Wilson (WR, PIT).",
+    "WAIVER CLAIM (Jul 29 (13 days ago)): Adam added Damien Martinez (RB, GB).",
+    "CUT (Jul 29 (13 days ago)): Corbishley released Roschon Johnson (RB, CHI)."
   ],
   "tweets": [
     {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "The Corbishley-Kevin trade is bigger than it looks on paper. I'm told the Burrow piece was Kevin's primary ask from the jump \u2014 Jones and Judkins were the framework that made the math close. Daniel Jones as a QB2 in a superflex format is not nothing, but Burrow as a QB1 is a different business entirely. Apex got their guy. The question is at what cost.",
-      "posted_at": "2026-07-29T13:26:29.139154+00:00",
-      "likes": 98,
-      "rt": 21,
-      "reply": 28
-    },
-    {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "I'm hearing \u2014 and this is early, so hold loosely \u2014 that Kevin's decision to cut Ertz, MVS, Mostert, and Thielen in the same window as filing this trade was not coincidental. A source I trust slightly more than usual describes it as 'clearing the deck with intention.' Redline at $84.67 and apparently not done moving.",
-      "posted_at": "2026-07-29T12:57:29.139154+00:00",
-      "likes": 72,
-      "rt": 14,
-      "reply": 19
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Kevin released Zach Ertz. Raheem Mostert. Adam Thielen. Marquez Valdes-Scantling. All today. All in a window where he also traded away Burrow. I want to be careful here because I have been wrong about Redline before \u2014 but I need someone to explain to me what the 2026 roster looks like right now, because from where I'm standing it looks like a skeleton in a blazer.",
-      "posted_at": "2026-07-29T12:15:29.139154+00:00",
-      "likes": 107,
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Tonight on the Exchange Report: the Fronge transaction log that nobody has fully untangled, what Crownline's waiver activity says about a roster already built to win, and whether SDR's pick-hoarding strategy has finally crossed from 'disciplined' into 'delusional.' Terrence has a verdict. Dexter says he already called it. Seven o'clock.",
+      "posted_at": "2026-08-11T16:32:46.326888+00:00",
+      "likes": 104,
       "rt": 24,
-      "reply": 35
+      "reply": 36
     },
     {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Corbishley now has Tee Higgins, Breece Hall, Michael Wilson, Jordan Addison, Chris Bell, David Montgomery, AND Joe Burrow. In ten days. I don't know what to tell you. The Guiness Guzzlers front office woke up and chose VIOLENCE.",
-      "posted_at": "2026-07-29T11:30:29.139154+00:00",
-      "likes": 114,
-      "rt": 27,
-      "reply": 31
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Quick inventory of where we actually are right now: Apex is stacked and QB-fragile, Crownline is quiet and ominous, Obsidian is trimming without replacing, Sovereign is hoarding picks while releasing receivers, and Fronge is in Cuba. Tonight's show writes itself. We're live at seven \u2014 Vivienne, Terrence, and Dexter are already arguing about Brent in the group chat.",
+      "posted_at": "2026-08-11T11:07:46.326888+00:00",
+      "likes": 83,
+      "rt": 16,
+      "reply": 29
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "Everyone acting shocked that Kevin stripped the roster post-trade should go back and look at what he inherited from the Wes situation. He has been rebuilding with distressed assets because that is literally what Redline Distressed Capital does. The cuts today aren't panic \u2014 they're the business model. I've been saying Redline was a slow buy for two months. The 24% pop to $84.67 was the tell.",
-      "posted_at": "2026-07-29T10:26:29.139154+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 22
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "Quinshon Judkins landing at Redline after the Corbishley trade is the most underreacted-to piece of this entire transaction log today. Young back, cheap contract, CLE offense that will need to run the ball. I am not screaming about this one. I'm saying it quietly, which means I'm more sure than usual: that asset has a ceiling Kevin did not pay for.",
-      "posted_at": "2026-07-29T09:17:29.139154+00:00",
-      "likes": 88,
-      "rt": 19,
-      "reply": 14
+      "text": "Adam adding Damien Martinez thirteen days ago got exactly zero coverage from anyone at this network. Martinez is sitting behind a real opportunity in Green Bay. I flagged the GB backfield situation before the rookie draft and apparently everyone forgot. HLX at $95.11 is not an accident \u2014 the quiet adds are part of why Helix's turnaround story has legs.",
+      "posted_at": "2026-08-11T06:17:46.326888+00:00",
+      "likes": 61,
+      "rt": 11,
+      "reply": 23
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "The Roschon Johnson cut from Apex makes complete sense once you understand what Corbishley is building at RB \u2014 Hall and Montgomery in the same room means the depth chart math changed overnight. You don't carry Johnson behind that. The move that looks like housekeeping is actually just good roster construction.",
-      "posted_at": "2026-07-29T06:52:29.139154+00:00",
-      "likes": 61,
-      "rt": 9,
-      "reply": 11
+      "text": "The Corbishley-Fronge trade from six days ago doesn't get enough credit for what it means at the depth level. Fronge getting Diggs is a win on paper, but they just released Tyler Huntley \u2014 a QB6-7 in superflex terms \u2014 the same day and haven't replaced him. That room has a Diggs-shaped highlight on top of a roster construction problem underneath.",
+      "posted_at": "2026-08-11T01:57:46.326888+00:00",
+      "likes": 48,
+      "rt": 8,
+      "reply": 14
     },
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Tonight's Exchange Report: the Corbishley-Kevin blockbuster, four Redline cuts in a single afternoon, and what the Apex stock dip to $103.98 is actually telling us about how the market reads 16-trade GMs who still don't have QB certainty. Terrence and Dexter are already on opposite sides of this. We're live at seven.",
-      "posted_at": "2026-07-29T04:46:29.139154+00:00",
-      "likes": 76,
-      "rt": 13,
-      "reply": 9
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Brent releasing Emari Demercado and Diego Pavia in the same window eight days ago would be unremarkable housekeeping on any other roster. On Obsidian \u2014 where you already cannot buy a win projection and your entire valuation story runs through one tight end \u2014 trimming without adding is not roster management. It is hoping. And hope is not a business strategy.",
+      "posted_at": "2026-08-10T22:17:46.326888+00:00",
+      "likes": 91,
+      "rt": 20,
+      "reply": 27
     },
     {
       "key": "matteo-honeydew",
       "name": "Matteo Honeydew",
       "handle": "@MatteoRanksIt",
-      "text": "The Redline roster after today's cuts and that trade is a lot of question marks and a lot of runway \u2014 which, honestly, is not the worst thing in a league where the 2027 class is being treated like a golden ticket. Kevin has Judkins, Wilson, Watson, Jones, and a 2027 second. That's not a championship roster. It might be a very good 2027 foundation, and I think that's the pitch.",
-      "posted_at": "2026-07-29T01:50:29.139154+00:00",
-      "likes": 69,
-      "rt": 11,
-      "reply": 16
+      "text": "Charles quietly added Malik Benson and Roman Wilson off waivers eight days ago and basically nobody said anything about it. That's how good Crownline's roster already is \u2014 the additions that would headline anyone else's week are just footnotes. CROWN at $131.71 and championship-or-bust energy radiating off every single transaction. I respect the pressure they're operating under.",
+      "posted_at": "2026-08-10T18:37:46.326888+00:00",
+      "likes": 72,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Fronge is in Havana with zero pick liquidity, just traded away Stefon Diggs, added an RB named Seth McGowan off waivers, and FORG is sitting at $90.38 like everything is fine. I need someone to give me a segment on this roster because from the outside it looks like the business equivalent of ordering soup in a hurricane.",
+      "posted_at": "2026-08-10T14:47:46.326888+00:00",
+      "likes": 89,
+      "rt": 17,
+      "reply": 31
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "APEX at $115.51 is the only number on the board I want to talk about today. Corbishley added Braelon Allen six days ago, has Burrow, Hall, Montgomery, Higgins \u2014 and the market is STILL undervaluing the QB situation because there's no true QB1 locked in behind Burrow. One injury and that whole beautiful machine has a crisis. Which is why I am a BUY with a very loud asterisk.",
+      "posted_at": "2026-08-10T11:47:46.326888+00:00",
+      "likes": 54,
+      "rt": 9,
+      "reply": 22
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "The Wingard cut of Beaux Collins four days ago is still sitting with me. Collins wasn't a cornerstone, but Sovereign Draft Reserve is already thin on production \u2014 they keep stacking picks and releasing the few young receivers they actually have. I'm told internally there's no replacement move imminent. That's the part that concerns me.",
+      "posted_at": "2026-08-10T08:47:46.326888+00:00",
+      "likes": 67,
+      "rt": 12,
+      "reply": 18
     }
   ]
 }
