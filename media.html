@@ -19,7 +19,7 @@
   <div class="header-left">
     <div>
       <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
-      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Season</div>
     </div>
     <div class="header-divider"></div>
     <div class="market-status">
@@ -29,17 +29,29 @@
   </div>
   <div class="header-right">
     <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="feed.html">League Feed</a>
     <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
     <a class="nav-btn active" href="media.html">Media Center</a>
-    <a class="nav-btn" href="standings.html">History</a>
   </div>
 </header>
 
 <div class="market-bar" id="market-bar"></div>
 
 <div class="main">
+
+  <!-- THE WEEKLY LEDGER ARCHIVE -->
+  <div class="sec-head">
+    <div class="sec-title">The Weekly Ledger \u2014 Archive</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="archive-tag">ISSUES</div>
+  </div>
+  <div class="card g1" style="margin-bottom:24px;">
+    <div id="ledger-archive"></div>
+  </div>
+
 
   <div class="sec-head">
     <div class="sec-title">Media Center</div>
@@ -50,16 +62,15 @@
   <div class="media-hero">
     <div>
       <div class="media-hero-title">THE LIV NETWORK</div>
-      <div class="media-hero-sub">Breaking news, trade rumors, market hype, and weekly debate — the voices covering every trade, crash, and boardroom scandal across the exchange.</div>
+      <div class="media-hero-sub">Breaking news, trade rumors, market hype, and the Weekly Ledger — the voices covering every trade, crash, and boardroom scandal across the exchange.</div>
     </div>
     <div class="media-hero-stats">
       <div class="media-hero-stat"><div class="media-hero-stat-val">12</div><div class="media-hero-stat-label">On Air</div></div>
-      <div class="media-hero-stat"><div class="media-hero-stat-val">5</div><div class="media-hero-stat-label">Shows</div></div>
+      <div class="media-hero-stat"><div class="media-hero-stat-val">8</div><div class="media-hero-stat-label">Pick-Em Panel</div></div>
       <div class="media-hero-stat"><div class="media-hero-stat-val">2</div><div class="media-hero-stat-label">Insiders</div></div>
     </div>
   </div>
 
-  <div class="shows-grid" id="shows-grid"></div>
   <div class="media-filters" id="media-filters"></div>
   <div class="media-grid" id="media-grid"></div>
 
@@ -68,7 +79,7 @@
 <footer>
   <div>
     <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
-    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+    <div style="margin-top:4px">Data as of Sep 7 2026 · 2026 Season</div>
   </div>
   <div style="text-align:right">
     <div>All figures represent dynasty fantasy football asset valuations</div>
@@ -79,14 +90,6 @@
 <script src="data.js"></script>
 <script src="common.js"></script>
 <script>
-function buildShows() {
-  document.getElementById('shows-grid').innerHTML = SHOWS.map(s => `
-    <div class="show-card">
-      <div class="show-card-title">${s.name}</div>
-      <div class="show-card-desc">${s.desc}</div>
-      <div class="show-cast-list">${s.cast.map(c => `<span class="show-cast-tag ${c.host?'host':''}">${c.host?'★ ':''}${c.n}</span>`).join('')}</div>
-    </div>`).join('');
-}
 
 function buildFilters() {
   const filters = [
@@ -124,9 +127,45 @@ function buildMediaGrid() {
     </div>`).join('');
 }
 
+
+function buildLedgerArchive() {
+  const issues = [];
+  if (typeof NEWSLETTER !== 'undefined' && NEWSLETTER) issues.push({ ...NEWSLETTER, current: true });
+  if (typeof NEWSLETTER_ARCHIVE !== 'undefined') issues.push(...NEWSLETTER_ARCHIVE);
+  document.getElementById('archive-tag').textContent = issues.length + (issues.length === 1 ? ' ISSUE' : ' ISSUES');
+  document.getElementById('ledger-archive').innerHTML = issues.length ? issues.map(iss => {
+    const nar = MEDIA.find(x => x.key === iss.narrator) || {};
+    return `
+    <details ${iss.current ? 'open' : ''} style="border-bottom:1px solid rgba(255,255,255,.05); padding:10px 0;">
+      <summary style="cursor:pointer; display:flex; align-items:center; gap:12px; list-style:none;">
+        <span style="font-family:var(--mono); font-size:10px; letter-spacing:1px; color:var(--gold); border:1px solid var(--gold-dim); border-radius:3px; padding:3px 8px; white-space:nowrap;">WK ${iss.week}</span>
+        <span style="flex:1; font-weight:700; font-size:13px; text-transform:uppercase;">${iss.title}</span>
+        <span style="font-family:var(--mono); font-size:10px; color:var(--muted); white-space:nowrap;">${iss.date}${iss.current ? ' \u00B7 CURRENT' : ''}</span>
+      </summary>
+      <div style="padding:16px 4px 6px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <img src="${nar.photo || 'avatars/' + iss.narrator + '.jpg'}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-dim);">
+          <span style="font-size:11px; color:var(--muted);">${nar.name || iss.narrator} \u00B7 ${iss.kind}</span>
+        </div>
+        ${iss.paragraphs.map(p => {
+          if (p.who) {
+            const pm = MEDIA.find(x => x.key === p.who) || {};
+            return `<div style="display:flex; gap:10px; background:var(--card2); border:1px solid var(--border); border-left:3px solid var(--gold-dim); border-radius:4px; padding:11px 13px; margin-bottom:13px;">
+              <img src="${pm.photo || 'avatars/' + p.who + '.jpg'}" style="width:32px; height:32px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--gold); text-transform:uppercase; margin-bottom:3px;">${pm.name || p.who}</div>
+              <div style="font-size:12px; line-height:1.6; font-style:italic;">${p.quote}</div></div>
+            </div>`;
+          }
+          return `<div style="font-size:13px; line-height:1.7; margin-bottom:13px;">${p.text}</div>`;
+        }).join('')}
+      </div>
+    </details>`;
+  }).join('') : '<div style="color:var(--muted); font-size:12px;">First issue drops with the season.</div>';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
-  buildShows();
+  buildLedgerArchive();
   buildFilters();
   buildMediaGrid();
 });

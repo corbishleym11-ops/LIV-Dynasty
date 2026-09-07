@@ -4,18 +4,18 @@
 // ═══════════════════════════════════════════════
 
 const TEAMS = [
-  { owner:'Charles',   team:'Chuckys Cutlets',         company:'Crownline Global Holdings',   ticker:'CROWN', history:[{d:'Dec 2025',p:118.28},{d:'May 2026',p:139.84},{d:'Jul 2026',p:135.34},{d:'Jul 17 2026',p:139.28},{d:'Jul 20 2026',p:134.14},{d:'Jul 29 2026',p:131.71}], trend:'Slight dip into camp; still holds a sixteen-dollar lead at the top',        qb:100,rb:84, wr:60, te:92, pick:44, strength:'QB',     weakness:'Pick Liquidity', summary:'Elite operating platform with premium QB/RB/TE strength' },
-  { owner:'Corbishley',team:'Guiness Guzzlers',         company:'Apex Iron Capital',           ticker:'APEX',  history:[{d:'Dec 2025',p:87.53},{d:'May 2026',p:107.27},{d:'Jul 2026',p:114.53},{d:'Jul 17 2026',p:111.66},{d:'Jul 20 2026',p:103.98},{d:'Jul 29 2026',p:115.51}], trend:'The Burrow deal ends the QB crisis; pick vault now dead last — all-in',     qb:76,rb:68, wr:84, te:76, pick:12, strength:'RB/WR',  weakness:'QB',            summary:'Explosive skill-position portfolio dragged by QB concerns' },
-  { owner:'Shaq',      team:'The Shough Boys',          company:'Monarch Wideout Bank',        ticker:'MWB',   history:[{d:'Dec 2025',p:87.73},{d:'May 2026',p:100.98},{d:'Jul 2026',p:109.39},{d:'Jul 17 2026',p:109.39},{d:'Jul 20 2026',p:101.17},{d:'Jul 29 2026',p:95.21}], trend:'Bench grade falls to dead last; biggest faller of the camp issue',              qb:84,rb:28, wr:100, te:68, pick:60, strength:'WR',     weakness:'RB',            summary:'Luxury WR bank with underfunded RB cash flow' },
-  { owner:'Adam',      team:'The 100xers',              company:'Helix Quant Strategies',      ticker:'HLX',   history:[{d:'Dec 2025',p:68.37},{d:'May 2026',p:92.23},{d:'Jul 2026',p:92.58},{d:'Jul 17 2026',p:86.21},{d:'Jul 20 2026',p:90.89},{d:'Jul 29 2026',p:95.11}],  trend:'Third straight rise; the Herbert unit grades QB2 entering camp',qb:68,rb:36, wr:92, te:60, pick:20, strength:'WR',     weakness:'RB',            summary:'Strong WR/young asset base with weak current RB output' },
-  { owner:'Jake',      team:'yakeyaine',                company:'EchoPoint Global Markets',    ticker:'ECHO',  history:[{d:'Dec 2025',p:86.28},{d:'May 2026',p:99.58},{d:'Jul 2026',p:105.22},{d:'Jul 17 2026',p:105.22},{d:'Jul 20 2026',p:99.13},{d:'Jul 29 2026',p:97.90}],  trend:'Idling under $100; backfield elite, TE desk still vacant',                qb:60,rb:100, wr:52, te:28, pick:92, strength:'RB',     weakness:'TE',            summary:'Liquidity-heavy trading desk powered by elite RB and solid QB' },
-  { owner:'Fronge',    team:'JD Power & Ass.',          company:'ForgeHammer Industries',      ticker:'FORG',  history:[{d:'Dec 2025',p:97.43},{d:'May 2026',p:94.03},{d:'Jul 2026',p:84.6},{d:'Jul 17 2026',p:81.54},{d:'Jul 20 2026',p:91.52},{d:'Jul 29 2026',p:90.38}],  trend:'Cools slightly watching the Burrow deal from the sidelines',             qb:44,rb:92, wr:20, te:36, pick:28, strength:'RB/QB',  weakness:'Pick Liquidity', summary:'High-impact factory contender with thin support and no reserves' },
-  { owner:'Brent',     team:'2028 League Champs',       company:'Obsidian Specialty Holdings', ticker:'OBS',   history:[{d:'Dec 2025',p:75.4},{d:'May 2026',p:87.62},{d:'Jul 2026',p:79.05},{d:'Jul 17 2026',p:79.05},{d:'Jul 20 2026',p:71.69},{d:'Jul 29 2026',p:73.89}],  trend:'WR shelf improves to 4th; claws back three percent',          qb:20,rb:12, wr:76, te:100, pick:76, strength:'TE',     weakness:'QB/RB',         summary:'Elite TE and future assets attached to broken operations' },
-  { owner:'Wingard',   team:'Mile High Bo',             company:'Sovereign Draft Reserve',     ticker:'SDR',   history:[{d:'Dec 2025',p:81.02},{d:'May 2026',p:74.63},{d:'Jul 2026',p:73.37},{d:'Jul 17 2026',p:73.37},{d:'Jul 20 2026',p:71.20},{d:'Jul 29 2026',p:69.01}],  trend:'Drifts lower into camp; the vault stays patient',  qb:28,rb:60, wr:44, te:44, pick:100,strength:'Pick Portfolio',weakness:'QB', summary:'Offshore futures empire with current production discount' },
-  { owner:'Mitchum',   team:'Mitchumm11',               company:'Deepwater Supply Co.',        ticker:'DEEP',  history:[{d:'Dec 2025',p:100.66},{d:'May 2026',p:85.2},{d:'Jul 2026',p:68.7},{d:'Jul 17 2026',p:72.36},{d:'Jul 20 2026',p:79.88},{d:'Jul 29 2026',p:78.76}],  trend:'Holds steady; WR2 grade intact, direction still unannounced',      qb:12,rb:44, wr:68, te:52, pick:52, strength:'WR',     weakness:'QB',            summary:'Deep WR warehouse with unclear consolidation strategy' },
-  { owner:'Ryan',      team:'Diggs-y Party',            company:'Aegis Quarterback Systems',   ticker:'AEGIS', history:[{d:'Dec 2025',p:76.63},{d:'May 2026',p:77.61},{d:'Jul 2026',p:118.42},{d:'Jul 17 2026',p:115.54},{d:'Jul 20 2026',p:109.70},{d:'Jul 29 2026',p:109.72}],  trend:'QB1 grade meets the flattest price ever recorded: two cents of movement',    qb:92,rb:76, wr:12, te:84, pick:68, strength:'QB',     weakness:'WR',            summary:'Defending champion with elite command systems but broken WR supply chain' },
-  { owner:'Kevin',     team:'ksanda',                   company:'Redline Distressed Capital',  ticker:'RDC',   history:[{d:'Dec 2025',p:126.29},{d:'May 2026',p:69.47},{d:'Jul 2026',p:64.48},{d:'Jul 17 2026',p:68.30},{d:'Jul 20 2026',p:84.67},{d:'Jul 29 2026',p:81.85}],  trend:'Sold Burrow at the top; younger roster, 3rd-ranked vault, short-term markdown',           qb:52,rb:52, wr:28, te:12, pick:84, strength:'QB',     weakness:'TE',            summary:'Premium QB leverage trapped in distressed supporting structure' },
-  { owner:'Drew',      team:'Brazzellian Booty Lift',   company:'Atlas Rebuild Works',         ticker:'ATLAS', history:[{d:'Dec 2025',p:106.18},{d:'May 2026',p:47.52},{d:'Jul 2026',p:44.38},{d:'Jul 17 2026',p:48.09},{d:'Jul 20 2026',p:50.08},{d:'Jul 29 2026',p:50.03}],  trend:'Flat at fifty; the rebuild reports to camp',       qb:36,rb:20, wr:36, te:20, pick:36, strength:'QB',     weakness:'RB',            summary:'Recognizable assets inside an unfinished rebuild' },
+  { owner:'Charles',   team:'Chuckys Cutlets',         company:'Crownline Global Holdings',   ticker:'CROWN', history:[{d:'Dec 2025',p:118.28},{d:'May 2026',p:139.84},{d:'Jul 2026',p:135.34},{d:'Jul 17 2026',p:139.28},{d:'Jul 20 2026',p:134.14},{d:'Jul 29 2026',p:131.71},{d:'Aug 20 2026',p:129.47},{d:'Sep 7 2026',p:133.12}], trend:'Gibbs seizes the #1 asset spot; the lead rebuilds to $16.41 at kickoff',        qb:100,rb:92, wr:60, te:92, pick:52, strength:'QB',     weakness:'Pick Liquidity', summary:'Elite operating platform with premium QB/RB/TE strength' },
+  { owner:'Corbishley',team:'Guiness Guzzlers',         company:'Apex Iron Capital',           ticker:'APEX',  history:[{d:'Dec 2025',p:87.53},{d:'May 2026',p:107.27},{d:'Jul 2026',p:114.53},{d:'Jul 17 2026',p:111.66},{d:'Jul 20 2026',p:103.98},{d:'Jul 29 2026',p:115.51},{d:'Aug 20 2026',p:118.00},{d:'Sep 7 2026',p:116.71}], trend:'Cools slightly into Week 1; eight trades on the books, games decide now',     qb:76,rb:68, wr:76, te:60, pick:12, strength:'RB/WR',  weakness:'QB',            summary:'Explosive skill-position portfolio dragged by QB concerns' },
+  { owner:'Shaq',      team:'The Shough Boys',          company:'Monarch Wideout Bank',        ticker:'MWB',   history:[{d:'Dec 2025',p:87.73},{d:'May 2026',p:100.98},{d:'Jul 2026',p:109.39},{d:'Jul 17 2026',p:109.39},{d:'Jul 20 2026',p:101.17},{d:'Jul 29 2026',p:95.21},{d:'Aug 20 2026',p:99.99},{d:'Sep 7 2026',p:99.99}], trend:'Frozen at $99.99 for a second straight issue — one cent from history',              qb:84,rb:28, wr:100, te:68, pick:60, strength:'WR',     weakness:'RB',            summary:'Luxury WR bank with underfunded RB cash flow' },
+  { owner:'Adam',      team:'The 100xers',              company:'Helix Quant Strategies',      ticker:'HLX',   history:[{d:'Dec 2025',p:68.37},{d:'May 2026',p:92.23},{d:'Jul 2026',p:92.58},{d:'Jul 17 2026',p:86.21},{d:'Jul 20 2026',p:90.89},{d:'Jul 29 2026',p:95.11},{d:'Aug 20 2026',p:90.95},{d:'Sep 7 2026',p:92.02}],  trend:'Ticks up into kickoff; the model gets its first live test',qb:60,rb:44, wr:84, te:76, pick:20, strength:'WR',     weakness:'RB',            summary:'Strong WR/young asset base with weak current RB output' },
+  { owner:'Jake',      team:'yakeyaine',                company:'EchoPoint Global Markets',    ticker:'ECHO',  history:[{d:'Dec 2025',p:86.28},{d:'May 2026',p:99.58},{d:'Jul 2026',p:105.22},{d:'Jul 17 2026',p:105.22},{d:'Jul 20 2026',p:99.13},{d:'Jul 29 2026',p:97.90},{d:'Aug 20 2026',p:101.55},{d:'Sep 7 2026',p:103.99}],  trend:'Holds above $100 into Week 1; the TE desk remains the argument',                qb:68,rb:100, wr:52, te:28, pick:92, strength:'RB',     weakness:'TE',            summary:'Liquidity-heavy trading desk powered by elite RB and solid QB' },
+  { owner:'Fronge',    team:'JD Power & Ass.',          company:'ForgeHammer Industries',      ticker:'FORG',  history:[{d:'Dec 2025',p:97.43},{d:'May 2026',p:94.03},{d:'Jul 2026',p:84.6},{d:'Jul 17 2026',p:81.54},{d:'Jul 20 2026',p:91.52},{d:'Jul 29 2026',p:90.38},{d:'Aug 20 2026',p:86.85},{d:'Sep 7 2026',p:81.86}],  trend:'Gives back most of the Cigar Accord pop as the agencies cool',             qb:36,rb:84, wr:28, te:36, pick:28, strength:'RB/QB',  weakness:'Pick Liquidity', summary:'High-impact factory contender with thin support and no reserves' },
+  { owner:'Brent',     team:'2028 League Champs',       company:'Obsidian Specialty Holdings', ticker:'OBS',   history:[{d:'Dec 2025',p:75.4},{d:'May 2026',p:87.62},{d:'Jul 2026',p:79.05},{d:'Jul 17 2026',p:79.05},{d:'Jul 20 2026',p:71.69},{d:'Jul 29 2026',p:73.89},{d:'Aug 20 2026',p:74.95},{d:'Sep 7 2026',p:77.10}],  trend:'WR shelf climbs to 2nd; passes Deepwater into 9th on the board',          qb:20,rb:12, wr:92, te:100, pick:76, strength:'TE',     weakness:'QB/RB',         summary:'Elite TE and future assets attached to broken operations' },
+  { owner:'Wingard',   team:'Mile High Bo',             company:'Sovereign Draft Reserve',     ticker:'SDR',   history:[{d:'Dec 2025',p:81.02},{d:'May 2026',p:74.63},{d:'Jul 2026',p:73.37},{d:'Jul 17 2026',p:73.37},{d:'Jul 20 2026',p:71.20},{d:'Jul 29 2026',p:69.01},{d:'Aug 20 2026',p:67.86},{d:'Sep 7 2026',p:63.56}],  trend:'All-time low of $63.56; the vault-versus-standings collision begins',  qb:28,rb:52, wr:36, te:44, pick:100,strength:'Pick Portfolio',weakness:'QB', summary:'Offshore futures empire with current production discount' },
+  { owner:'Mitchum',   team:'Mitchumm11',               company:'Deepwater Supply Co.',        ticker:'DEEP',  history:[{d:'Dec 2025',p:100.66},{d:'May 2026',p:85.2},{d:'Jul 2026',p:68.7},{d:'Jul 17 2026',p:72.36},{d:'Jul 20 2026',p:79.88},{d:'Jul 29 2026',p:78.76},{d:'Aug 20 2026',p:76.60},{d:'Sep 7 2026',p:75.34}],  trend:'Slips a rung on the board as the season opens',      qb:12,rb:36, wr:68, te:52, pick:44, strength:'WR',     weakness:'QB',            summary:'Deep WR warehouse with unclear consolidation strategy' },
+  { owner:'Ryan',      team:'Diggs-y Party',            company:'Aegis Quarterback Systems',   ticker:'AEGIS', history:[{d:'Dec 2025',p:76.63},{d:'May 2026',p:77.61},{d:'Jul 2026',p:118.42},{d:'Jul 17 2026',p:115.54},{d:'Jul 20 2026',p:109.70},{d:'Jul 29 2026',p:109.72},{d:'Aug 20 2026',p:115.06},{d:'Sep 7 2026',p:114.98}],  trend:'Eight cents of movement; the flatline champion opens title defense at QB1',    qb:92,rb:76, wr:12, te:84, pick:68, strength:'QB',     weakness:'WR',            summary:'Defending champion with elite command systems but broken WR supply chain' },
+  { owner:'Kevin',     team:'ksanda',                   company:'Redline Distressed Capital',  ticker:'RDC',   history:[{d:'Dec 2025',p:126.29},{d:'May 2026',p:69.47},{d:'Jul 2026',p:64.48},{d:'Jul 17 2026',p:68.30},{d:'Jul 20 2026',p:84.67},{d:'Jul 29 2026',p:81.85},{d:'Aug 20 2026',p:79.65},{d:'Sep 7 2026',p:78.52}],  trend:'Co-CEO Tyler joins the desk; governance up, WR room still distressed',           qb:52,rb:60, wr:20, te:12, pick:84, strength:'QB',     weakness:'TE',            coCeo:'Tyler', summary:'Co-CEO era begins: Kevin and Tyler steer the post-scandal turnaround together' },
+  { owner:'Drew',      team:'Brazzellian Booty Lift',   company:'Atlas Rebuild Works',         ticker:'ATLAS', history:[{d:'Dec 2025',p:106.18},{d:'May 2026',p:47.52},{d:'Jul 2026',p:44.38},{d:'Jul 17 2026',p:48.09},{d:'Jul 20 2026',p:50.08},{d:'Jul 29 2026',p:50.03},{d:'Aug 20 2026',p:50.11},{d:'Sep 7 2026',p:53.53}],  trend:'Best issue of the rebuild, on opening week no less: $53.53 and climbing',       qb:44,rb:20, wr:44, te:20, pick:36, strength:'QB',     weakness:'RB',            summary:'Recognizable assets inside an unfinished rebuild' },
 ];
 
 // ── derived pricing — price history is the source of truth ──
@@ -137,84 +137,42 @@ const TEAM_TICKERS = {
 // LIV" slot on the Overview page (and standalone at sitdown.html). To publish
 // a new episode, replace this block. Set EPISODE = null to restore the
 // default day-based show rotation on the Overview.
-const L = (who, text) => ({ who, text });
-const EPISODE = {
-  show:  'The Weekly Sit-Down',
-  title: 'Training Camp Special',
-  badge: 'NOW AIRING',
-  date:  'Jul 29 2026',
-  cast: {
-  clara: { name:'Clara Hopkins',   role:'Host · The Anchor',       img:'avatars/clara-hopkins.jpg',   host:true  },
-  dog:   { name:'Big Dog',         role:'Hype Narrator',           img:'avatars/big-dog.jpg',         host:false },
-  chad:  { name:'Chad Bellwether', role:'The Bit Guy',             img:'avatars/chad-bellwether.jpg', host:false },
-  jay:   { name:'Jay Kelpey',      role:"This Week's Guest",       img:'avatars/jay-kelpey.jpg',      host:false },
-},
-  slides: [
-  // ── 1. TITLE CARD ──
-  { kicker:'LIV NETWORK ORIGINAL', title:'The Weekly Sit-Down', live:true,
-    sub:'Training Camp Special — Jul 29, 2026. Camps are open, two blockbusters are on the books, and the board is grading. Clara Hopkins hosts Big Dog, Chad Bellwether, and this week\u2019s guest from the trenches, Jay Kelpey.',
-    panel:['clara','dog','chad','jay'] },
-
-  // ── 2. HAVANA ──
-  { kicker:'Segment 01 — The Havana Question', title:'ForgeHammer Went to Cuba', lines:[
-    L('clara', 'Welcome in, everyone. Before we touch a single trade, we have to address the geography. Fronge moved ForgeHammer Industries to Havana this offseason, citing \u201Cregulatory flexibility.\u201D Big Dog, what does that even mean?'),
-    L('dog', 'Clara, I have NO idea what it means and I am OBSESSED with it. FOLKS. A fantasy football corporation relocated to a country with no fantasy football regulations to flee. That is commitment to the bit at a level even I respect.'),
-    L('chad', 'I\u2019ll say what nobody else will: this is the shrewdest move of the offseason. Havana has no extradition treaty for bad trades. When you flip your entire Herbert haul into three running backs, you want to be somewhere the market can\u2019t reach you.'),
-    L('jay', 'Everyone\u2019s laughing, but look at the roster since the move. Nico Collins. Henderson. Monangai. A number-one FLEX grade from the new agency. The factory relocated and immediately got deeper. If that\u2019s regulatory flexibility, sign everyone up.'),
-    L('clara', 'The objectives board just marked his WR acquisition complete, so someone in Havana is doing paperwork. Moving on \u2014 the big one.'),
-  ]},
-
-  // ── 3. CHARLES ──
-  { kicker:'Segment 02 — The $131 Question', title:'Is the League Charles\u2019s to Lose?', lines:[
-    L('clara', 'Crownline: $131.71, a sixteen-dollar lead, best regular season in league history at 23-and-5, projected 21-and-7 again. Is this his league?'),
-    L('dog', 'On paper? It\u2019s not close. Allen, Gibbs, McBride \u2014 that\u2019s not a roster, that\u2019s a museum exhibit. But Clara, I need everyone to remember something: the trophy lives in Philadelphia. Ryan won it at 14-and-14. The regular season is Charles\u2019s. December belongs to chaos.'),
-    L('chad', 'The market has priced in a coronation, which historically is exactly when empires fall. I\u2019ve run the numbers \u2014 in my head, on the drive over \u2014 and no team with the number one QB room AND the number one payroll has ever won this league. Sample size of one season. The data is undefeated.'),
-    L('jay', 'Here\u2019s my actual concern with Crownline, and it\u2019s on the depth chart: the pick shelf slid to eighth. If Gibbs or Allen misses a month, what\u2019s the move? You can\u2019t trade what you already spent. The starting eleven is a monarchy. The bench is a question.'),
-    L('clara', 'So: his to lose, with an asterisk the size of last year\u2019s playoff bracket. Noted. Next segment.'),
-  ]},
-
-  // ── 4. CORBISHLEY ──
-  { kicker:'Segment 03 — Eight Trades Later', title:'The Apex Rebuild-on-the-Fly', lines:[
-    L('clara', 'Corbishley: runner-up last season, and this offseason \u2014 eight trades. Breece Hall. Tee Higgins. Joe Burrow. The pick vault is now dead last and the stock hit $115.51, second on the exchange. Better or worse?'),
-    L('jay', 'Buddy. Eight trades and the roster got better every single time. QB went from ninth to fourth in nine days. That\u2019s not activity, that\u2019s construction. The only flag is the vault \u2014 twelve of twelve in picks means the next injury gets solved with prayer.'),
-    L('chad', 'Eight trades is seven more than a confident GM makes. I said it during the Cigar Accord and I\u2019ll say it now: he\u2019s winning every headline and mortgaging every Tuesday in 2028. The board marked his QB objective complete. The board also doesn\u2019t have to live in 2028.'),
-    L('dog', 'Chad, I love you, but WHO CARES about 2028! The man lost the championship game and responded by acquiring a top-five quarterback, a top-five running back, and a WR1! Confidence 93! Highest on the exchange! If this doesn\u2019t end in a title game rematch with Crownline, I will eat my headset ON AIR.'),
-    L('clara', 'Producers are noting the headset promise. Officially on the record.'),
-  ]},
-
-  // ── 5. KEVIN ──
-  { kicker:'Segment 04 — The Redline Recovery', title:'The Board Believes in Kevin', lines:[
-    L('clara', 'Redline Distressed Capital. New CEO Kevin inherited the Wes scandal in November with confidence at rock bottom. It\u2019s now 41 \u2014 still last in the league, but the biggest jump on the board this cycle. He sold Joe Burrow at the top of a 24-percent rally. Thoughts?'),
-    L('chad', 'Selling your best asset the week everyone finally likes you is either a cry for help or the coldest piece of business this exchange has ever seen. I\u2019ve decided it\u2019s the second one, purely because it makes my Tuesday more interesting.'),
-    L('jay', 'Look at what came back, though. Judkins. Watson. The pick vault jumped from eighth to third, and the roster got a full year younger overnight. That\u2019s not a fire sale \u2014 that\u2019s a controlled burn. The infrastructure objective is already stamped complete.'),
-    L('dog', 'The Wes era ended in scandal. The Kevin era started with the most disciplined teardown I\u2019ve ever seen from a last-place confidence rating. FOLKS \u2014 I\u2019m not saying playoffs. I\u2019m saying respect. And in Detroit, that\u2019s worth more.'),
-    L('clara', 'From 26 in the winter to 41 at camp. Slowest rally on the board, and maybe the most earned. Last segment \u2014 everybody\u2019s favorite.'),
-  ]},
-
-  // ── 6. DARK HORSES ──
-  { kicker:'Segment 05 — On the Record', title:'Preseason Dark Horse Picks', 
-    intro:'One pick each. No favorites allowed \u2014 Crownline and Apex are off the board. These go on the wall and we WILL replay them in December.',
-    picks:[
-      { who:'dog',  team:'HLX \u00B7 The 100xers', quote:'Three straight issues of gains, Herbert\u2019s unit grading QB2, and the angriest spreadsheet in the league. Adam went 7-and-21 last year. The revenge tour is REAL, folks.' },
-      { who:'jay',  team:'FORG \u00B7 JD Power & Ass.', quote:'Number one FLEX depth in the league and nobody\u2019s talking about it because of the Havana jokes. Depth wins Novembers. The factory is my pick, buddy.' },
-      { who:'chad', team:'OBS \u00B7 2028 League Champs', quote:'The team is literally named 2028 League Champs and it\u2019s 2026. That\u2019s a two-year mispricing the market refuses to correct. Also Brock Bowers exists. I\u2019m in.' },
-      { who:'clara',team:'DEEP \u00B7 Mitchumm11', quote:'Someone has to be the adult: WR2 grade, RB5 grade, quietly stable while everyone else lurched. If Mitchum ever picks a direction, this roster was a contender all along. There. I picked. Never ask me again.' },
-    ]},
-
-  // ── 7. SIGN-OFF ──
-  { kicker:'That\u2019s the show', title:'See You After Week One', live:true,
-    sub:'Four dark horses on the record, one headset promise notarized, and a season about to start. The Weekly Sit-Down returns after the first slate of games with actual football to argue about \u2014 same desk, same chaos. From all of us at LIV Network Studios: hydrate, check your lineups, and never trust a preseason grade.',
-    panel:['clara','dog','chad','jay'] },
-],
+// ══════════════════════════════════════════════════════════════
+// THE WEEKLY LEDGER — prose newsletter, renders in the Overview slot.
+// Publish a new issue: move the current NEWSLETTER object into
+// NEWSLETTER_ARCHIVE (front of array), then replace NEWSLETTER.
+// paragraphs: {text:'...'} for narration, {who:'pundit-key', quote:'...'} for desk quotes.
+// ══════════════════════════════════════════════════════════════
+const NEWSLETTER = {
+  week: 1, kind: 'SEASON PREVIEW', date: 'Sep 7 2026',
+  narrator: 'vivienne-ashcroft',
+  title: 'TWELVE CORPORATIONS ENTER. THE MARKET GRADES ON A CURVE ANYWAY.',
+  paragraphs: [
+    { text: 'Season two of the LIV Dynasty Exchange opens Thursday, and the board arrives exactly as dysfunctional as we left it: a $133 juggernaut with no jewelry, a champion nobody will price correctly, one stock frozen a single cent from triple digits, and — as of this morning — a corporation with two chief executives. It is, in every measurable way, good to be back.' },
+    { text: 'Start at the top, because Charles insists. Crownline opens at $133.12 with Jahmyr Gibbs newly crowned the number one asset in all of dynasty, a number one FLEX grade, and a sixteen-dollar lead on the field. The resume remains spotless except for the only line that matters: 23-and-5 last year, zero rings. The market has priced a coronation two years running. The trophy lives in Philadelphia.' },
+    { who: 'big-dog', quote: 'FOLKS, I have watched this movie. The empire wins twenty-three games, the empire does laundry in December, and a 14-and-14 team walks off with the belt. I am not saying it happens again. I am saying I have popcorn.' },
+    { text: 'Speaking of Philadelphia: Aegis Quarterback Systems opens its title defense at $114.98, having moved eight cents in three weeks. Ryan is the only CEO on this exchange who treats volatility as a personal insult. The new agency grades his QB room first in the league, his stock refuses to acknowledge anything, and the repeat conversation is — for the first time — not a punchline.' },
+    { text: 'The all-in belongs to London. Corbishley made eight trades in one offseason, emptied the pick vault to dead last, and bought Joe Burrow, Breece Hall, and Tee Higgins with the proceeds. Apex opens at $116.71 in the two spot. Every analyst on this network has an opinion; none of them matter after Thursday.' },
+    { who: 'vance-hollis', quote: 'APEX AT $116.71 IS EITHER THE BUY OF THE DECADE OR THE FIRST CHAPTER OF A CAUTIONARY TALE AND I HAVE PERSONALLY PRE-RECORDED BOTH SEGMENTS.' },
+    { text: 'Now the news desk. Redline Distressed Capital announced this morning that Kevin has brought in a co-chief executive: Tyler, whose mandate is — per the release — \u201Cshareholder confidence, structural discipline, and never mentioning the previous administration again.\u201D It is the first two-CEO structure in exchange history, and the board immediately rewarded it: Redline confidence jumped seven points, its largest single move since the Wes fallout began. Whether two executives can fix one WR room remains an open research question.' },
+    { who: 'chad-bellwether', quote: 'Two CEOs is genius and I will explain why: accountability is a finite resource, and Redline just diluted it fifty percent. That is not a criticism. That is corporate strategy. Wes had one hundred percent of the accountability and look what happened.' },
+    { text: 'Around the rest of the floor: Monarch opens at $99.99 for the second consecutive issue, which is no longer a price so much as a psychological experiment. ForgeHammer gave back most of the Cigar Accord pop but still owns the deepest startable roster in the league. Helix gets the first live test of the model. Obsidian quietly climbed to ninth. And at the bottom, a genuine role reversal: Atlas posted the best issue of its rebuild on opening week, while Sovereign hit an all-time low of $63.56 — the pick empire now officially costs more to hold than it pays to admire.' },
+    { who: 'matteo-honeydew', quote: 'My Week 1 rankings are live and yes, Jake, you fell four spots without losing a game. The tight end room did that, not me. I am simply the messenger with a numbered list.' },
+    { text: 'Housekeeping before the bell: the pundit pick-em era begins with Week 1 — eight analysts, every matchup, one lock apiece, records tracked all season on the Overview. Momentum multipliers stay dormant until three full weeks are banked, so the first three boards are pure roster. After that, winning starts compounding. From all of us at LIV Network Studios: the mahogany is polished, the tickers are humming, and the opening bell rings Thursday. Do not embarrass your shareholders.' },
+  ],
 };
-
-// ── MEDIA CENTER ──
-const SHOWS = [
-  { name:'The Wire', desc:'Competing scoops on trades, waivers, and roster moves before anyone else confirms them.', cast:[{n:'Marty Volkman', host:false},{n:'Dina Ravioli', host:false}] },
-  { name:'The Weekly Sit-Down', desc:'Tue/Wed — recaps every matchup from the week that just wrapped.', cast:[{n:'Clara Hopkins', host:true},{n:'Big Dog', host:false},{n:'Chad Bellwether', host:false},{n:'Rotating Guest', host:false}] },
-  { name:'The Marquee', desc:'Draft night, playoffs, and championship coverage. The biggest stage, the biggest voices.', cast:[{n:'Vivienne Ashcroft', host:true},{n:'Terrence E. Odom', host:false},{n:'Dexter Vail', host:false},{n:'Bo Ruckman', host:false}] },
-  { name:'Market Movers', desc:'A stock-market-style trade show — hype, valuations, and reversals of opinion mid-segment.', cast:[{n:'Vance Hollis', host:true},{n:'Matteo Honeydew', host:true}] },
+const NEWSLETTER_ARCHIVE = [
+  // past issues get pushed here, newest first — rendered on the Media Center page
 ];
+
+// ── PUNDIT PICK-EM — eight pickers, every matchup, one lock each ──
+// Picks land with each Weekly Ledger. Grading is automatic client-side vs Sleeper finals.
+// Entry shape: { week:1, picks:{ 'big-dog':{ winners:['Charles','Jake',...], lock:'Charles' }, ... } }
+const PUNDIT_PICKERS = ['big-dog','chad-bellwether','vance-hollis','terrence-odom','dexter-vail','bo-ruckman','jay-kelpey','matteo-honeydew'];
+const PICKS_HISTORY = [
+];
+
+// ── MEDIA CENTER (personalities only — shows retired Sep 2026) ──
 
 const MEDIA = [
   { key:'marty-volkman', name:'Marty Volkman', role:'The Insider', show:'insider', showLabel:'The Wire', photo:'avatars/marty-volkman.jpg',
@@ -257,23 +215,23 @@ const MEDIA = [
 
 // ── WEEKLY POWER RANKINGS (Matteo Honeydew) ──
 const RANKINGS = [
-  { rank:1, move:'same', ticker:'CROWN', owner:'Charles', take:'Camp opens and the gap is still sixteen dollars. Wake me when someone makes it interesting.' },
-  { rank:2, move:'same', ticker:'APEX', owner:'Corbishley', take:'Joe Burrow ends the argument. The QB crisis is over, the vault is empty, and I respect the commitment completely.' },
-  { rank:3, move:'up', delta:2, ticker:'AEGIS', owner:'Ryan', take:'QB1 grade, defending champ, flattest stock alive. The most stable operation on the exchange, for better and worse.' },
-  { rank:4, move:'up', delta:3, ticker:'HLX', owner:'Adam', take:'Three straight issues of gains. The model is winning arguments I was having with myself in March.' },
-  { rank:5, move:'down', delta:1, ticker:'ECHO', owner:'Jake', take:'Elite backfield, broom-closet TE room, sub-$100 price. All three things have been true for a month.' },
-  { rank:6, move:'down', delta:3, ticker:'FORG', owner:'Fronge', take:'The factory sat out the Burrow deal and the market noticed. Depth is a virtue until it\'s an alibi.' },
-  { rank:7, move:'down', delta:1, ticker:'MWB', owner:'Shaq', take:'Biggest faller of the issue. A dead-last bench grade behind a top WR bank is a choice, not an accident.' },
-  { rank:8, move:'up', delta:1, ticker:'DEEP', owner:'Mitchum', take:'Quietly holding while everyone else lurches. Still waiting on a direction, but the floor is real.' },
-  { rank:9, move:'down', delta:1, ticker:'RDC', owner:'Kevin', take:'Selling Burrow at the rally top is either brilliant or heartbreak, and camp won\'t tell us which. The vault says brilliant.' },
-  { rank:10, move:'same', ticker:'OBS', owner:'Brent', take:'A real WR improvement to 4th. Small green shoots in Zurich. I\'m as surprised as you are.' },
-  { rank:11, move:'same', ticker:'SDR', owner:'Wingard', take:'The vault is patient. The standings will not be. Camp is where those two facts start colliding.' },
-  { rank:12, move:'same', ticker:'ATLAS', owner:'Drew', take:'Fifty dollars flat, hard hats on, reporting to camp. Ask me again in October.' },
+  { rank:1, move:'same', ticker:'CROWN', owner:'Charles', take:'Opening day, $133.12, and a roster that answers every question except December. Same as it ever was.' },
+  { rank:2, move:'up', delta:1, ticker:'AEGIS', owner:'Ryan', take:'QB1 grade, a title belt, and a stock that refuses to move. Boring is a superpower. I have ranked him accordingly.' },
+  { rank:3, move:'down', delta:1, ticker:'APEX', owner:'Corbishley', take:'Eight trades bought the second-best roster on paper. Paper does not play Week 1. Prove it.' },
+  { rank:4, move:'up', delta:2, ticker:'FORG', owner:'Fronge', take:'I keep coming back to the depth. Fourteen startable players is a cheat code in a two-matchup league.' },
+  { rank:5, move:'down', delta:1, ticker:'HLX', owner:'Adam', take:'The model earned the benefit of the doubt this summer. The schedule decides whether it keeps it.' },
+  { rank:6, move:'up', delta:1, ticker:'MWB', owner:'Shaq', take:'The bench is still a rumor, but that starting lineup wins you weeks. $99.99 of pure tension.' },
+  { rank:7, move:'up', delta:1, ticker:'DEEP', owner:'Mitchum', take:'Sneaky-stable all summer. If the warehouse ever picks a lane, this ranking looks low.' },
+  { rank:8, move:'down', delta:3, ticker:'ECHO', owner:'Jake', take:'The market loves the backfield. I need to see a tight end who is not a search party.' },
+  { rank:9, move:'same', ticker:'RDC', owner:'Kevin', take:'Two CEOs, one rebuild. Governance is up; the WR room is still a superfund site.' },
+  { rank:10, move:'up', delta:2, ticker:'ATLAS', owner:'Drew', take:'Best issue of the rebuild, on opening week. Growth is growth — even at $53.' },
+  { rank:11, move:'down', delta:1, ticker:'OBS', owner:'Brent', take:'Nabers and Bowers will win some weeks by themselves. The other eight starters concern me deeply.' },
+  { rank:12, move:'down', delta:1, ticker:'SDR', owner:'Wingard', take:'An all-time-low stock into opening day. The vault does not block anybody.' },
 ];
 
 
 // Last-updated stamp for the power rankings. Bump this date whenever RANKINGS changes.
-const RANKINGS_UPDATED = 'Jul 29 2026';
+const RANKINGS_UPDATED = 'Sep 7 2026';
 // Self-rendering: inserts the stamp above the rankings list wherever it appears.
 // Defensive — if the page has no #rankings-list element, this does nothing.
 document.addEventListener('DOMContentLoaded', () => {
@@ -305,34 +263,34 @@ const TWEETS = [
 
 // ── MOVEMENT — who moved and why (prev values drive ▲/▼ indicators everywhere) ──
 const MOVEMENT = {
-  Charles:   { stockRank:{now:1, prev:1},  power:{now:1, prev:1},   proj:{now:1, prev:1},   playoff:{now:92, prev:89}, conf:{now:91, prev:84}, asset:{now:1, prev:1},   hq:'Manhattan, NY',    risk:{level:'Low',    text:'Championship-or-bust: any finish short of a title triggers a board reckoning.'}, headline:'Crownline dips to $131.71 as camp opens — the lead is still sixteen dollars.' },
-  Corbishley:{ stockRank:{now:2, prev:3},  power:{now:2, prev:2},   proj:{now:3, prev:4},   playoff:{now:81, prev:74}, conf:{now:93, prev:88}, asset:{now:2, prev:3},   hq:'London, England',       risk:{level:'Medium', text:'QB division remains unstabilized; one injury from a full-blown crisis.'}, headline:'Apex lands Joe Burrow and rockets 11% into the 2 spot — the QB crisis is over, and so is the pick vault.' },
-  Shaq:      { stockRank:{now:5, prev:4},  power:{now:7, prev:6},   proj:{now:6, prev:5},   playoff:{now:58, prev:63}, conf:{now:76, prev:79}, asset:{now:4, prev:4},   hq:'Dallas, TX',       risk:{level:'Medium', text:'WR wealth is illiquid; the RB hole is unaddressed for a second consecutive window.'}, headline:'Monarch is the issue\'s biggest faller — the bench grade slides to dead last as camp opens.' },
-  Adam:      { stockRank:{now:6, prev:7},  power:{now:4, prev:7},  proj:{now:7, prev:9},   playoff:{now:47, prev:31}, conf:{now:84, prev:79}, asset:{now:5, prev:6},   hq:'Chicago, IL',      risk:{level:'Medium', text:'Model-driven turnaround still unproven against live competition.'}, headline:'Helix rises a third straight issue — the Herbert unit now grades QB2.' },
-  Jake:      { stockRank:{now:4, prev:5},  power:{now:5, prev:4},   proj:{now:2, prev:2},   playoff:{now:84, prev:85}, conf:{now:82, prev:78}, asset:{now:3, prev:2},   hq:'Singapore',        risk:{level:'Low',    text:'TE position is a rounding error; elite RB depreciation is the long-term worry.'}, headline:'EchoPoint idles under $100 into camp; the TE desk remains a broom closet.' },
-  Fronge:    { stockRank:{now:7, prev:6},  power:{now:6, prev:3},   proj:{now:4, prev:3},   playoff:{now:74, prev:78}, conf:{now:80, prev:74}, asset:{now:7, prev:7},   hq:'Havana, CU',       risk:{level:'High',   text:'Zero pick liquidity — one injury and there is no capital to respond.'}, headline:'ForgeHammer cools slightly — the factory watches the Burrow deal from the sidelines.' },
-  Brent:     { stockRank:{now:10, prev:10},  power:{now:10, prev:10},   proj:{now:11, prev:11}, playoff:{now:14, prev:12}, conf:{now:52, prev:49}, asset:{now:8, prev:9},   hq:'Zurich, CH',       risk:{level:'High',   text:'Operating model broken at two positions; the Bowers advantage is wasting on the vine.'}, headline:'Obsidian claws back 3% — the WR shelf quietly improves to 4th.' },
-  Wingard:   { stockRank:{now:11, prev:11}, power:{now:11, prev:11},  proj:{now:10, prev:10}, playoff:{now:18, prev:22}, conf:{now:44, prev:51}, asset:{now:6, prev:5},   hq:'George Town, KY',  risk:{level:'High',   text:'Pick empire depreciates if the rebuild window slips another season.'}, headline:'Sovereign drifts as camp opens — the vault is patient, the market is not.' },
-  Mitchum:   { stockRank:{now:9, prev:9},  power:{now:8, prev:9},   proj:{now:8, prev:8},   playoff:{now:38, prev:44}, conf:{now:47, prev:55}, asset:{now:10, prev:9},  hq:'Houston, TX',      risk:{level:'High',   text:'No flagship direction; depth without consolidation is a slow leak.'}, headline:'Deepwater holds steady — WR2 grade intact, direction still unannounced.' },
-  Ryan:      { stockRank:{now:3, prev:2},  power:{now:3, prev:5},   proj:{now:5, prev:6},   playoff:{now:62, prev:58}, conf:{now:71, prev:70}, asset:{now:9, prev:10},  hq:'Philadelphia, PA', risk:{level:'Medium', text:'Repeat skepticism is priced in; the WR supply chain is still broken.'}, headline:'Aegis moves two cents — QB1 per the agency, and the flattest price in exchange history.' },
-  Kevin:     { stockRank:{now:8, prev:8},power:{now:9, prev:8}, proj:{now:9, prev:9},   playoff:{now:31, prev:28}, conf:{now:41, prev:33}, asset:{now:11, prev:11}, hq:'Detroit, MI',      risk:{level:'Severe', text:'Post-scandal trust deficit; one more misstep invites a hostile takeover.'}, headline:'Redline sells Burrow at the top — down 3% today, up a year of roster youth and a 3rd-ranked vault.' },
-  Drew:      { stockRank:{now:12, prev:12},power:{now:12, prev:12}, proj:{now:12, prev:12}, playoff:{now:6, prev:11},  conf:{now:28, prev:41}, asset:{now:12, prev:12}, hq:'Sao Paulo, BR',    risk:{level:'Severe', text:'Liquidation risk: aging assets depreciating faster than the rebuild absorbs.'}, headline:'Atlas unchanged at fifty bucks — the rebuild reports to camp.' },
+  Charles:   { stockRank:{now:1, prev:1},  power:{now:1, prev:1},   proj:{now:1, prev:1},   playoff:{now:92, prev:89}, conf:{now:91, prev:84}, asset:{now:1, prev:1},   hq:'Manhattan, NY',    risk:{level:'Low',    text:'Championship-or-bust: any finish short of a title triggers a board reckoning.'}, headline:'Crownline opens the season at $133.12 — Gibbs seizes the #1 asset spot and the lead rebuilds to $16.41.' },
+  Corbishley:{ stockRank:{now:2, prev:2},  power:{now:3, prev:2},   proj:{now:3, prev:4},   playoff:{now:81, prev:74}, conf:{now:93, prev:88}, asset:{now:2, prev:3},   hq:'London, England',       risk:{level:'Medium', text:'QB division remains unstabilized; one injury from a full-blown crisis.'}, headline:'Apex cools slightly into kickoff — eight trades on the books, and now the games decide.' },
+  Shaq:      { stockRank:{now:5, prev:5},  power:{now:6, prev:7},   proj:{now:6, prev:5},   playoff:{now:58, prev:63}, conf:{now:76, prev:79}, asset:{now:4, prev:4},   hq:'Dallas, TX',       risk:{level:'Medium', text:'WR wealth is illiquid; the RB hole is unaddressed for a second consecutive window.'}, headline:'Monarch opens the season at $99.99 — frozen one cent from triple digits for a second straight issue.' },
+  Adam:      { stockRank:{now:6, prev:6},  power:{now:5, prev:4},  proj:{now:7, prev:9},   playoff:{now:47, prev:31}, conf:{now:84, prev:79}, asset:{now:5, prev:6},   hq:'Chicago, IL',      risk:{level:'Medium', text:'Model-driven turnaround still unproven against live competition.'}, headline:'Helix ticks up into kickoff — the model gets its first live test.' },
+  Jake:      { stockRank:{now:4, prev:4},  power:{now:8, prev:5},   proj:{now:2, prev:2},   playoff:{now:84, prev:85}, conf:{now:82, prev:78}, asset:{now:3, prev:2},   hq:'Singapore',        risk:{level:'Low',    text:'TE position is a rounding error; elite RB depreciation is the long-term worry.'}, headline:'EchoPoint holds above $100 into Week 1 — the TE desk remains the argument.' },
+  Fronge:    { stockRank:{now:7, prev:7},  power:{now:4, prev:6},   proj:{now:4, prev:3},   playoff:{now:74, prev:78}, conf:{now:80, prev:74}, asset:{now:7, prev:7},   hq:'Havana, CU',       risk:{level:'High',   text:'Zero pick liquidity — one injury and there is no capital to respond.'}, headline:'ForgeHammer gives back most of the Cigar Accord pop — both agencies cooled into opening day.' },
+  Brent:     { stockRank:{now:9, prev:10},  power:{now:11, prev:10},   proj:{now:11, prev:11}, playoff:{now:14, prev:12}, conf:{now:52, prev:49}, asset:{now:8, prev:9},   hq:'Zurich, CH',       risk:{level:'High',   text:'Operating model broken at two positions; the Bowers advantage is wasting on the vine.'}, headline:'Obsidian passes Deepwater into 9th — the WR shelf climbs to 2nd behind Nabers.' },
+  Wingard:   { stockRank:{now:11, prev:11}, power:{now:12, prev:11},  proj:{now:10, prev:10}, playoff:{now:18, prev:22}, conf:{now:44, prev:51}, asset:{now:6, prev:5},   hq:'George Town, KY',  risk:{level:'High',   text:'Pick empire depreciates if the rebuild window slips another season.'}, headline:'Sovereign hits an all-time low of $63.56 — the vault-versus-standings collision begins Thursday.' },
+  Mitchum:   { stockRank:{now:10, prev:9},  power:{now:7, prev:8},   proj:{now:8, prev:8},   playoff:{now:38, prev:44}, conf:{now:47, prev:55}, asset:{now:10, prev:9},  hq:'Houston, TX',      risk:{level:'High',   text:'No flagship direction; depth without consolidation is a slow leak.'}, headline:'Deepwater slips a rung on the board as the season opens — the direction question now has a scoreboard.' },
+  Ryan:      { stockRank:{now:3, prev:3},  power:{now:2, prev:3},   proj:{now:5, prev:6},   playoff:{now:62, prev:58}, conf:{now:71, prev:70}, asset:{now:9, prev:10},  hq:'Philadelphia, PA', risk:{level:'Medium', text:'Repeat skepticism is priced in; the WR supply chain is still broken.'}, headline:'Aegis moves eight cents — the flattest stock on the exchange opens its title defense at QB1.' },
+  Kevin:     { stockRank:{now:8, prev:8},power:{now:9, prev:9}, proj:{now:9, prev:9},   playoff:{now:31, prev:28}, conf:{now:48, prev:41}, asset:{now:11, prev:11}, hq:'Detroit, MI',      risk:{level:'Severe', text:'Post-scandal trust deficit; one more misstep invites a hostile takeover.'}, headline:'Redline appoints Tyler as co-CEO — a governance play to steady shareholders still bracing from the Wes fallout.' },
+  Drew:      { stockRank:{now:12, prev:12},power:{now:10, prev:12}, proj:{now:12, prev:12}, playoff:{now:6, prev:11},  conf:{now:28, prev:41}, asset:{now:12, prev:12}, hq:'Sao Paulo, BR',    risk:{level:'Severe', text:'Liquidation risk: aging assets depreciating faster than the rebuild absorbs.'}, headline:'Atlas posts its best issue ever on opening week — $53.53 and climbing.' },
 };
 
 // Previous positional RANKS (1-12, lower = better) — current ranks are computed live from TEAMS
 const PREV_POS_RANKS = {
-  Charles:   { qb:1,   rb:3,   wr:6,   te:2,   pick:6  },
-  Corbishley:{ qb:9,   rb:5,   wr:2,   te:4,   pick:10 },
-  Shaq:      { qb:4,   rb:10,  wr:1,   te:5,   pick:5  },
-  Adam:      { qb:5,   rb:9,   wr:3,   te:6,   pick:12 },
-  Jake:      { qb:6,   rb:1,   wr:7,   te:10,  pick:2  },
-  Fronge:    { qb:7,   rb:2,   wr:11,  te:9,   pick:11 },
-  Brent:     { qb:11,  rb:12,  wr:5,   te:1,   pick:3  },
-  Wingard:   { qb:10,  rb:6,   wr:8,   te:8,   pick:1  },
-  Mitchum:   { qb:12,  rb:8,   wr:4,   te:7,   pick:7  },
-  Ryan:      { qb:2,   rb:4,   wr:12,  te:3,   pick:4  },
-  Kevin:     { qb:3,   rb:7,   wr:10,  te:12,  pick:8  },
-  Drew:      { qb:8,   rb:11,  wr:9,   te:11,  pick:9  },
+  Charles:   { qb:1,   rb:3,   wr:6,   te:2,   pick:8  },
+  Corbishley:{ qb:4,   rb:5,   wr:5,   te:4,   pick:12 },
+  Shaq:      { qb:3,   rb:10,  wr:1,   te:5,   pick:6  },
+  Adam:      { qb:6,   rb:8,   wr:2,   te:6,   pick:11 },
+  Jake:      { qb:5,   rb:1,   wr:7,   te:10,  pick:2  },
+  Fronge:    { qb:8,   rb:2,   wr:10,  te:9,   pick:10 },
+  Brent:     { qb:11,  rb:12,  wr:3,   te:1,   pick:4  },
+  Wingard:   { qb:9,   rb:6,   wr:8,   te:8,   pick:1  },
+  Mitchum:   { qb:12,  rb:9,   wr:4,   te:7,   pick:7  },
+  Ryan:      { qb:2,   rb:4,   wr:12,  te:3,   pick:5  },
+  Kevin:     { qb:7,   rb:7,   wr:11,  te:12,  pick:3  },
+  Drew:      { qb:10,  rb:11,  wr:9,   te:11,  pick:9  },
 };
 
 // ── LEAGUE TIMELINE — permanent canon, chronological ──
@@ -348,4 +306,7 @@ const TIMELINE = [
   { date:'Jul 2026', tag:'VALUATIONS',   color:'gold',   title:'The Ratings Agency Switch',          text:'The exchange adopts Dynasty Daddy contender grades — five inputs, FLEX included — and every stock reprices at once: Redline +24%, Obsidian -9.3%. Chaos, by design.' },
   { date:'Jul 2026', tag:'TRADE',        color:'red',    title:'The Burrow Deal',                    text:'Apex lands Joe Burrow, Jordan Addison, and David Montgomery from Redline for Quinshon Judkins, Christian Watson, Daniel Jones, and pick capital. Corbishley goes all-in; Kevin sells the rally top and gets a year younger doing it.', owner:'Corbishley' },
   { date:'Jul 2026', tag:'SEASON',       color:'blue',   title:'Training Camp Opens',                text:'The 2026 season stirs to life: training camps open league-wide on Jul 29. Momentum multipliers stay dormant until three full weeks of games are on the books.' },
+  { date:'Aug 2026', tag:'VALUATIONS',   color:'gold',   title:'Preseason Final Valuations',         text:'The last board before real football: Apex enters the season near an all-time high, Monarch closes one cent from triple digits, and the Crownline lead briefly shrinks to $11.47 — the smallest in exchange history.' },
+  { date:'Sep 2026', tag:'GOVERNANCE',   color:'blue',   title:'Redline Appoints a Co-CEO',          text:'Kevin brings in Tyler as co-chief executive of Redline Distressed Capital — a governance move designed to steady shareholders still bracing from the Wes fallout. The board responds: confidence ticks up for the first structural reason since the scandal.', owner:'Kevin' },
+  { date:'Sep 2026', tag:'SEASON',       color:'green',  title:'Opening Bell — the 2026 Season Kicks Off', text:'Real football at last. Crownline opens at $133.12, Monarch is frozen at $99.99, Sovereign hits an all-time low, and the pundit pick-em era begins. Momentum multipliers activate after Week 3.' },
 ];

@@ -113,3 +113,132 @@ async function loadLiveRosterData() {
     return { owner, rosterId: r.roster_id, starters, bench, wins: r.settings?.wins || 0, losses: r.settings?.losses || 0, fpts: r.settings?.fpts || 0 };
   });
 }
+
+// ══════════════════════════════════════════════════════════════
+// LIFETIME HEAD-TO-HEAD ENGINE (added Sep 7 2026)
+// 2025 league H2H games + winners-bracket playoffs, plus completed
+// 2026 weeks — median games are never counted. Cached in localStorage;
+// lifetime records grow automatically as the season plays out.
+// ══════════════════════════════════════════════════════════════
+const SLEEPER_2025_LEAGUE_ID = '1187148266420215808';
+const H2H_USERNAME_MAP = {
+  'cp0304':'Charles', 'mattcorbishley':'Corbishley', 'bschachle':'Shaq',
+  'morrowad10':'Adam', 'yakeyaine':'Jake', 'frongellomp':'Fronge',
+  'babethel14':'Brent', 'brentbethel':'Brent', 'mwinny':'Wingard',
+  'mitchumm11':'Mitchum', 'ryansamuels':'Ryan', 'ksanda':'Kevin', 'drewsats':'Drew'
+};
+function h2hKey(a, b) { return [a, b].sort().join('|'); }
+function h2hRecord(store, a, b) {
+  const k = h2hKey(a, b), r = store[k];
+  if (!r) return { w: 0, l: 0 };
+  return k.startsWith(a + '|') ? { w: r.aw, l: r.bw } : { w: r.bw, l: r.aw };
+}
+function h2hAdd(store, winner, loser) {
+  const k = h2hKey(winner, loser);
+  if (!store[k]) store[k] = { aw: 0, bw: 0 };
+  if (k.startsWith(winner + '|')) store[k].aw++; else store[k].bw++;
+}
+
+async function mapRostersToOwners(leagueId) {
+  const [users, rosters] = await Promise.all([
+    sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId}/users`),
+    sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId}/rosters`),
+  ]);
+  const byUser = {};
+  (users || []).forEach(u => {
+    const owner = H2H_USERNAME_MAP[(u.display_name || '').toLowerCase()];
+    if (owner) { byUser[u.user_id] = owner; return; }
+    const tn = ((u.metadata && u.metadata.team_name) || '').toLowerCase();
+    const t = TEAMS.find(x => x.team.toLowerCase() === tn);
+    if (t) byUser[u.user_id] = t.owner;
+  });
+  const map = {};
+  (rosters || []).forEach(r => { if (byUser[r.owner_id]) map[r.roster_id] = byUser[r.owner_id]; });
+  return map;
+}
+
+async function h2hFromWeeks(leagueId, rosterMap, fromWeek, toWeek, into, gamesList) {
+  for (let w = fromWeek; w <= toWeek; w++) {
+    const ms = await sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId}/matchups/${w}`);
+    const byId = {};
+    (ms || []).forEach(m => { if (m.matchup_id != null) (byId[m.matchup_id] = byId[m.matchup_id] || []).push(m); });
+    Object.values(byId).forEach(pair => {
+      if (pair.length !== 2) return;
+      const [a, b] = pair;
+      if (!(a.points > 0 || b.points > 0)) return;         // not played
+      if (a.points === b.points) return;                    // tie — no H2H credit
+      const oa = rosterMap[a.roster_id], ob = rosterMap[b.roster_id];
+      if (!oa || !ob) return;
+      const winner = a.points > b.points ? oa : ob;
+      const loser  = winner === oa ? ob : oa;
+      h2hAdd(into, winner, loser);
+      if (gamesList) gamesList.push({ week: w, winner, loser,
+        ws: (a.points > b.points ? a.points : b.points), ls: (a.points > b.points ? b.points : a.points) });
+    });
+  }
+}
+
+async function h2hFromWinnersBracket(leagueId, rosterMap, into, gamesList) {
+  const bracket = await sleeperFetch(`https://api.sleeper.app/v1/league/${leagueId}/winners_bracket`);
+  (bracket || []).forEach(g => {
+    if (!g.w || !g.l) return;                               // undecided or bye
+    const winner = rosterMap[g.w], loser = rosterMap[g.l];
+    if (!winner || !loser) return;
+    h2hAdd(into, winner, loser);
+    if (gamesList) gamesList.push({ round: g.r, winner, loser, playoff: true });
+  });
+}
+
+async function getH2HData() {
+  const CACHE_KEY = 'liv_h2h_v1';
+  let base2025 = null;
+  try { base2025 = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); } catch (e) {}
+
+  if (!base2025) {
+    const map25 = await mapRostersToOwners(SLEEPER_2025_LEAGUE_ID);
+    const records = {}, regGames = [], poGames = [];
+    await h2hFromWeeks(SLEEPER_2025_LEAGUE_ID, map25, 1, 14, records, regGames);
+    await h2hFromWinnersBracket(SLEEPER_2025_LEAGUE_ID, map25, records, poGames);
+    base2025 = { records, regGames, poGames };
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(base2025)); } catch (e) {}
+  }
+
+  // fold in completed 2026 weeks (small; re-fetched each visit, playoffs auto-join later)
+  const lifetime = JSON.parse(JSON.stringify(base2025.records));
+  try {
+    const state = await getNFLState();
+    const doneThrough = (state.season_type === 'regular') ? Math.max(0, (state.week || 1) - 1)
+                      : (state.season_type === 'post' ? 14 : 0);
+    if (doneThrough > 0) {
+      await h2hFromWeeks(SLEEPER_LEAGUE_ID, ROSTER_TO_OWNER, 1, Math.min(doneThrough, 14), lifetime, null);
+    }
+    if (state.season_type === 'post') {
+      await h2hFromWinnersBracket(SLEEPER_LEAGUE_ID, ROSTER_TO_OWNER, lifetime, null);
+    }
+  } catch (e) { /* 2026 portion unavailable — 2025 base still returned */ }
+
+  return { lifetime, s2025: base2025 };
+}
+
+// ══════════════════════════════════════════════════════════════
+// SLEEPER PROJECTIONS (unofficial endpoint — fails gracefully)
+// ══════════════════════════════════════════════════════════════
+async function getWeekProjections(season, week) {
+  try {
+    const rows = await sleeperFetch(
+      `https://api.sleeper.app/projections/nfl/${season}/${week}?season_type=regular` +
+      `&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K&position[]=DEF&order_by=pts_half_ppr`);
+    const map = {};
+    (rows || []).forEach(r => {
+      const pts = r.stats && (r.stats.pts_half_ppr != null ? r.stats.pts_half_ppr : r.stats.pts_ppr);
+      if (r.player_id && pts != null) map[r.player_id] = pts;
+    });
+    return Object.keys(map).length ? map : null;
+  } catch (e) { return null; }
+}
+function projForStarters(projMap, starters) {
+  if (!projMap || !starters) return null;
+  let sum = 0, hits = 0;
+  starters.forEach(pid => { if (projMap[pid] != null) { sum += projMap[pid]; hits++; } });
+  return hits >= 5 ? sum : null;   // require a real lineup's worth of data
+}

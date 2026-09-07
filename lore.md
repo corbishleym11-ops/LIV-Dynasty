@@ -50,3 +50,21 @@ so 2027 first-round picks carry a premium.
 - Aegis opened 2026 at just $77.61 as defending champs before the July surge vindicated Ryan.
 - Redline briefly stabilized near $69 before drifting again — the recovery narrative keeps stalling.
 - Crownline enters 2026 championship-or-bust; anything less triggers a board reckoning.
+
+## September 2026 updates
+- The 2026 season kicked off Sep 10. Crownline opened at $133.12, Monarch frozen at $99.99
+  for a second straight issue, Sovereign at an all-time low. Momentum multipliers activate
+  after Week 3 of play.
+- GOVERNANCE: Kevin appointed TYLER as co-CEO of Redline Distressed Capital in September —
+  the first two-CEO structure in exchange history, framed as a shareholder-confidence move
+  for a fanbase still bracing from the Wes fallout. Board confidence jumped from 41 to 48 on
+  the announcement. When discussing Redline, pundits may reference Kevin AND Tyler; jokes
+  about diluted accountability, co-signing decisions, and "which CEO approved this" are canon.
+- The LIV Network retired its five standalone shows. The talent pool now works one product:
+  THE WEEKLY LEDGER, a prose newsletter narrated by Clara Hopkins or Vivienne Ashcroft on
+  rotation, with the rest of the pundits contributing quotes, roasts, and segments.
+- PICK-EM ERA: eight pundits pick every matchup each week with one Lock of the Week apiece —
+  Big Dog, Chad Bellwether, Vance Hollis, Terrence E. Odom, Dexter Vail, Bo Ruckman,
+  Jay Kelpey, and Matteo Honeydew. Their records are tracked publicly on the exchange.
+  Pundits with bad pick-em records get roasted; hot streaks become insufferable. Vivienne
+  and Clara do not pick — they narrate and hold the pickers accountable.

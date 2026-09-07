@@ -32,7 +32,7 @@
   <div class="header-left">
     <div>
       <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
-      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Season</div>
     </div>
     <div class="header-divider"></div>
     <div class="market-status">
@@ -42,11 +42,12 @@
   </div>
   <div class="header-right">
     <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="feed.html">League Feed</a>
     <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn active" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
     <a class="nav-btn" href="media.html">Media Center</a>
-    <a class="nav-btn active" href="standings.html">History</a>
   </div>
 </header>
 
@@ -61,6 +62,31 @@
   </div>
   <div class="card g1">
     <div id="timeline-list"></div>
+  </div>
+
+
+  <!-- HEAD-TO-HEAD RECORD BOOK -->
+  <div class="sec-head">
+    <div class="sec-title">Head-to-Head Record Book</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="h2h-status">LOADING FROM SLEEPER\u2026</div>
+  </div>
+  <div class="card g1" style="margin-bottom:16px;">
+    <div class="card-title" style="margin-bottom:6px">Lifetime Rivalry Grid</div>
+    <div style="font-size:11px; color:var(--muted); margin-bottom:12px;">True head-to-head only \u2014 median games don't count here. Includes winners-bracket playoffs. Read across: the row owner's record vs each column. Updates automatically as 2026 plays out.</div>
+    <div style="overflow-x:auto;">
+      <table class="screener-table" id="h2h-grid"></table>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px">2025 H2H Standings (regular season)</div>
+      <table class="standings-table" id="h2h-2025"></table>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:12px">2025 Playoff Results (winners bracket)</div>
+      <div id="h2h-playoffs" style="display:flex; flex-direction:column; gap:8px;"></div>
+    </div>
   </div>
 
   <div class="sec-head">
@@ -85,7 +111,7 @@
 <footer>
   <div>
     <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
-    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+    <div style="margin-top:4px">Data as of Sep 7 2026 · 2026 Season</div>
   </div>
   <div style="text-align:right">
     <div>All figures represent dynasty fantasy football asset valuations</div>
@@ -94,6 +120,7 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="sleeper.js"></script>
 <script src="common.js"></script>
 <script>
 function buildStandings2025() {
@@ -146,8 +173,65 @@ function buildTimeline() {
   }).join('');
 }
 
+
+async function buildH2H() {
+  const st = document.getElementById('h2h-status');
+  try {
+    const data = await getH2HData();
+    st.textContent = 'LIVE \u00B7 AUTO-UPDATING';
+    st.style.color = 'var(--green)';
+    st.style.borderColor = 'var(--green-dim)';
+
+    const owners = TEAMS.map(t => t.owner);
+
+    // lifetime rivalry grid
+    document.getElementById('h2h-grid').innerHTML = `
+      <thead><tr><th></th>${owners.map(o => `<th style="font-size:9px;">${(TEAMS.find(t=>t.owner===o)||{}).ticker||o}</th>`).join('')}</tr></thead>
+      <tbody>${owners.map(rowO => `<tr>
+        <td style="font-weight:600; color:${OWNER_COLORS[rowO]};">${rowO}</td>
+        ${owners.map(colO => {
+          if (rowO === colO) return '<td style="color:var(--dim);">\u2014</td>';
+          const r = h2hRecord(data.lifetime, rowO, colO);
+          if (r.w + r.l === 0) return '<td style="color:var(--dim); font-family:var(--mono); font-size:10px;">0-0</td>';
+          const c = r.w > r.l ? 'var(--green)' : r.w < r.l ? 'var(--red)' : 'var(--muted)';
+          return `<td style="font-family:var(--mono); font-size:11px; font-weight:600; color:${c};">${r.w}-${r.l}</td>`;
+        }).join('')}
+      </tr>`).join('')}</tbody>`;
+
+    // 2025 regular-season H2H standings
+    const recs = {};
+    owners.forEach(o => recs[o] = { w: 0, l: 0 });
+    data.s2025.regGames.forEach(g => { recs[g.winner].w++; recs[g.loser].l++; });
+    const sorted = owners.slice().sort((a, b) => recs[b].w - recs[a].w || recs[a].l - recs[b].l);
+    document.getElementById('h2h-2025').innerHTML = `
+      <thead><tr><th>#</th><th>Owner</th><th>H2H Record</th><th>Win %</th></tr></thead>
+      <tbody>${sorted.map((o, i) => {
+        const r = recs[o], pct = (r.w + r.l) ? (100 * r.w / (r.w + r.l)).toFixed(0) : '\u2014';
+        return `<tr>
+          <td style="font-family:var(--mono); color:var(--dim);">${i + 1}</td>
+          <td style="font-weight:600; color:${OWNER_COLORS[o]};">${ownerLink(o)}</td>
+          <td class="win-loss">${r.w}-${r.l}</td>
+          <td style="font-family:var(--mono); font-size:11px;">${pct}%</td>
+        </tr>`;
+      }).join('')}</tbody>`;
+
+    // 2025 playoff results
+    const roundName = { 1: 'QUARTERFINAL', 2: 'SEMIFINAL', 3: 'CHAMPIONSHIP' };
+    document.getElementById('h2h-playoffs').innerHTML = data.s2025.poGames.map(g => `
+      <div style="display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.04);">
+        <span style="font-family:var(--mono); font-size:9px; letter-spacing:1px; color:${g.round === 3 ? 'var(--gold)' : 'var(--muted)'}; border:1px solid ${g.round === 3 ? 'var(--gold-dim)' : 'var(--border2)'}; border-radius:3px; padding:3px 7px; white-space:nowrap;">${roundName[g.round] || 'ROUND ' + g.round}</span>
+        <span style="font-size:12px;"><b style="color:var(--green);">${g.winner}</b> <span style="color:var(--dim);">def.</span> <span style="color:var(--muted);">${g.loser}</span></span>
+      </div>`).join('') || '<div style="color:var(--muted); font-size:12px;">Bracket data unavailable.</div>';
+  } catch (e) {
+    st.textContent = 'SLEEPER UNAVAILABLE';
+    st.style.color = 'var(--red)';
+    document.getElementById('h2h-grid').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</td></tr></tbody>`;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
+  buildH2H();
   buildTimeline();
   buildStandings2025();
   buildPtsChart();

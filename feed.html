@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIV Dynasty Exchange — League Feed</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIV EXCHANGE</div>
+  <div style="overflow:hidden; flex:1"><div class="ticker-track" id="ticker-track"></div></div>
+</div>
+
+<header class="header">
+  <div class="header-left">
+    <div>
+      <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Season</div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="market-status">
+      <div class="market-open"><div class="pulse"></div> MARKET OPEN</div>
+      <div class="market-date" id="market-date"></div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn active" href="feed.html">League Feed</a>
+    <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="standings.html">History</a>
+    <a class="nav-btn" href="rosters.html">Rosters</a>
+    <a class="nav-btn" href="objectives.html">Objectives</a>
+    <a class="nav-btn" href="media.html">Media Center</a>
+  </div>
+</header>
+
+<div class="market-bar" id="market-bar"></div>
+
+<div class="main">
+
+  <!-- THE LEAGUE FEED -->
+  <div class="sec-head">
+    <div class="sec-title">The League Feed</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="feed-status">LOADING…</div>
+  </div>
+  <div class="card g1">
+    <div class="feed-list" id="feed-list"></div>
+  </div>
+
+  <!-- RECENT TRANSACTIONS -->
+  <div class="sec-head">
+    <div class="sec-title">Recent Transactions</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="txn-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1">
+    <div id="txn-list" style="display:flex; flex-direction:column; gap:10px;"></div>
+  </div>
+
+  <!-- TRADED PICK OWNERSHIP -->
+  <div class="sec-head">
+    <div class="sec-title">Traded Pick Ownership</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="picks-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1">
+    <table class="screener-table" id="picks-table"></table>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
+    <div style="margin-top:4px">Data as of Sep 7 2026 · 2026 Season</div>
+  </div>
+  <div style="text-align:right">
+    <div>All figures represent dynasty fantasy football asset valuations</div>
+    <div style="margin-top:3px; color: var(--dim)">Not financial advice · For league entertainment purposes only</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="sleeper.js"></script>
+<script src="common.js"></script>
+<script>
+function relTime(ms) {
+  const s = Math.floor((Date.now() - ms) / 1000);
+  if (s < 3600) return Math.max(1, Math.floor(s / 60)) + 'm';
+  if (s < 86400) return Math.floor(s / 3600) + 'h';
+  return Math.floor(s / 86400) + 'd';
+}
+
+function renderFeed(tweets) {
+  document.getElementById('feed-list').innerHTML = tweets.map(t => `
+    <div class="tweet">
+      <img class="tweet-avatar" src="avatars/${t.key}.jpg" alt="${t.name}">
+      <div class="tweet-body">
+        <div class="tweet-head">
+          <span class="tweet-name">${t.name}</span>
+          <span class="tweet-handle">${t.handle}</span>
+          <span class="tweet-dot">·</span>
+          <span class="tweet-time">${t.time}</span>
+        </div>
+        <div class="tweet-text">${t.text}</div>
+        <div class="tweet-stats">
+          <span class="tweet-stat">\uD83D\uDCAC ${t.reply}</span>
+          <span class="tweet-stat">\uD83D\uDD01 ${t.rt}</span>
+          <span class="tweet-stat">\u2665 ${t.likes}</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+async function buildFeed() {
+  const st = document.getElementById('feed-status');
+  // 1st choice: the AI-written LIV Network feed (tweets.json, refreshed daily at 1pm ET)
+  try {
+    const res = await fetch('tweets.json?cb=' + Math.floor(Date.now() / 300000));
+    if (!res.ok) throw new Error('no tweets.json');
+    const data = await res.json();
+    const tweets = (data.tweets || []).map(t => ({
+      key: t.key, name: t.name, handle: t.handle, text: t.text,
+      time: relTime(new Date(t.posted_at).getTime()),
+      likes: t.likes, rt: t.rt, reply: t.reply,
+    }));
+    if (!tweets.length) throw new Error('tweets.json empty');
+    renderFeed(tweets);
+    st.textContent = 'LIV NETWORK LIVE';
+    st.style.color = 'var(--green)';
+    st.style.borderColor = 'var(--green-dim)';
+    return;
+  } catch (e) { /* fall back to the static feed below */ }
+  renderFeed(TWEETS);
+  st.textContent = 'ARCHIVE FEED';
+}
+
+async function buildTransactions() {
+  const statusEl = document.getElementById('txn-status');
+  try {
+    const state = await getNFLState();
+    const week = Math.max(1, state.week || 1);
+    const [txns, players] = await Promise.all([getTransactions(week), getPlayersMap()]);
+
+    if (!txns || txns.length === 0) {
+      statusEl.textContent = 'NO ACTIVITY YET';
+      document.getElementById('txn-list').innerHTML = `<div style="color:var(--muted); font-size:12px;">No trades or waiver moves recorded yet this week.</div>`;
+      return;
+    }
+
+    statusEl.textContent = 'LIVE FROM SLEEPER';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    const sorted = [...txns].sort((a,b) => (b.created||0) - (a.created||0));
+    document.getElementById('txn-list').innerHTML = sorted.slice(0, 20).map(t => {
+      const owners = (t.roster_ids || []).map(rid => ROSTER_TO_OWNER[rid]).filter(Boolean);
+      const ownerStr = owners.join(' ↔ ') || 'League';
+      const added = t.adds ? Object.keys(t.adds).map(id => players[id]?.name || id) : [];
+      const dropped = t.drops ? Object.keys(t.drops).map(id => players[id]?.name || id) : [];
+      const typeLabel = t.type === 'trade' ? 'TRADE' : t.type === 'waiver' ? 'WAIVER' : 'FREE AGENT';
+      const typeColor = t.type === 'trade' ? 'var(--purple)' : t.type === 'waiver' ? 'var(--blue)' : 'var(--muted)';
+      return `
+      <div style="display:flex; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.04);">
+        <span style="font-family:var(--mono); font-size:9px; font-weight:700; color:${typeColor}; border:1px solid ${typeColor}; border-radius:3px; padding:3px 7px; height:fit-content; white-space:nowrap;">${typeLabel}</span>
+        <div style="flex:1;">
+          <div style="font-size:12px; color:var(--text); font-weight:600;">${ownerStr}</div>
+          ${added.length ? `<div style="font-size:11px; color:var(--green);">+ ${added.join(', ')}</div>` : ''}
+          ${dropped.length ? `<div style="font-size:11px; color:var(--red);">− ${dropped.join(', ')}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    document.getElementById('txn-list').innerHTML = `<div style="color:var(--muted); font-size:12px;">Couldn't reach the Sleeper API right now (${e.message}).</div>`;
+  }
+}
+
+async function buildTradedPicks() {
+  const statusEl = document.getElementById('picks-status');
+  try {
+    const picks = await getTradedPicks();
+    if (!picks || picks.length === 0) {
+      statusEl.textContent = 'NO PICKS TRADED';
+      document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">No draft picks have changed hands yet.</td></tr></tbody>`;
+      return;
+    }
+    statusEl.textContent = 'LIVE FROM SLEEPER';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+
+    const sorted = [...picks].sort((a,b) => a.season - b.season || a.round - b.round);
+    document.getElementById('picks-table').innerHTML = `
+      <thead><tr><th>Season</th><th>Round</th><th>Original Team</th><th>Now Owned By</th></tr></thead>
+      <tbody>${sorted.map(p => {
+        const original = ROSTER_TO_OWNER[p.roster_id] || '—';
+        const current = ROSTER_TO_OWNER[p.owner_id] || '—';
+        return `<tr>
+          <td style="font-family:var(--mono);">${p.season}</td>
+          <td style="font-family:var(--mono);">R${p.round}</td>
+          <td class="owner-col">${original}</td>
+          <td class="owner-col" style="color:var(--gold); font-weight:600;">${current}</td>
+        </tr>`;
+      }).join('')}</tbody>`;
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</td></tr></tbody>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommon();
+  buildFeed();
+  buildTransactions();
+  buildTradedPicks();
+});
+</script>
+</body>
+</html>

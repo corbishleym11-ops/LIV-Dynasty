@@ -8,83 +8,33 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-/* ── Sit-Down episode deck (scoped .sd-) ── */
-.sd-stage { max-width: 860px; margin: 0 auto; }
-.sd-frame {
-  background: var(--card); border: 1px solid var(--border2); border-radius: 4px;
-  min-height: 480px; padding: 34px 38px 90px; position: relative; overflow: hidden;
-}
-.sd-frame::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:3px;
-  background: linear-gradient(90deg, var(--gold), transparent 60%);
-}
-.sd-live {
-  display:inline-flex; align-items:center; gap:7px; font-family:var(--mono);
-  font-size:9px; letter-spacing:2px; color:var(--red); border:1px solid var(--red-dim);
-  padding:4px 10px; border-radius:2px; margin-bottom:14px;
-}
-.sd-live .dot { width:6px; height:6px; border-radius:50%; background:var(--red); animation:pulse 1.6s infinite; }
-.sd-kicker { font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin-bottom:8px; }
-.sd-title { font-size:26px; font-weight:700; letter-spacing:-0.5px; margin-bottom:6px; }
-.sd-sub { color:var(--muted); font-size:13px; margin-bottom:24px; line-height:1.5; }
-
-/* Title-card panel strip */
-.sd-panel { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:26px; }
-.sd-seat { background:var(--card2); border:1px solid var(--border); border-radius:4px; padding:14px 10px; text-align:center; }
-.sd-seat img { width:74px; height:74px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); margin-bottom:10px; }
-.sd-seat.host img { border-color:var(--gold-dim); }
-.sd-seat-name { font-weight:600; font-size:13px; }
-.sd-seat-role { font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; margin-top:4px; }
-.sd-seat.host .sd-seat-role { color:var(--gold); }
-
-/* Dialogue */
-.sd-line { display:flex; gap:14px; margin-bottom:18px; align-items:flex-start; }
-.sd-line img { width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); flex-shrink:0; }
-.sd-line.host img { border-color:var(--gold-dim); }
-.sd-bubble { background:var(--card2); border:1px solid var(--border); border-radius:4px; padding:11px 14px; flex:1; }
-.sd-speaker { font-family:var(--mono); font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
-.sd-line.host .sd-speaker { color:var(--gold); }
-.sd-text { font-size:14px; line-height:1.6; }
-.sd-text em { color:var(--muted); font-style:italic; }
-
-/* Dark-horse cards */
-.sd-picks { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px; }
-.sd-pick { background:var(--card2); border:1px solid var(--border); border-radius:4px; padding:14px; }
-.sd-pick-head { display:flex; align-items:center; gap:10px; margin-bottom:9px; }
-.sd-pick-head img { width:36px; height:36px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); }
-.sd-pick-team { font-family:var(--mono); font-size:15px; font-weight:700; color:var(--gold); letter-spacing:1px; }
-.sd-pick-who { font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; }
-.sd-pick-quote { font-size:13px; line-height:1.55; color:var(--text); }
-
-/* Controls */
-.sd-controls {
-  position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center;
-  justify-content:space-between; padding:16px 38px; border-top:1px solid var(--border);
-  background:var(--card);
-}
-.sd-btn {
-  font-family:var(--mono); font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
-  background:var(--card2); color:var(--text); border:1px solid var(--border2);
-  padding:10px 20px; border-radius:3px; cursor:pointer; transition:all .15s;
-}
-.sd-btn:hover:not(:disabled) { border-color:var(--gold-dim); color:var(--gold); }
-.sd-btn:disabled { opacity:.3; cursor:default; }
-.sd-dots { display:flex; gap:8px; }
-.sd-dot { width:8px; height:8px; border-radius:50%; background:var(--border2); cursor:pointer; transition:all .15s; }
-.sd-dot.on { background:var(--gold); transform:scale(1.25); }
-.sd-count { font-family:var(--mono); font-size:10px; color:var(--dim); letter-spacing:1px; }
-
-.sd-slide { display:none; animation:sdfade .35s ease; }
-.sd-slide.on { display:block; }
-@keyframes sdfade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
-
-@media (max-width:768px) {
-  .sd-frame { padding:22px 18px 86px; }
-  .sd-controls { padding:14px 18px; }
-  .sd-panel { grid-template-columns:1fr 1fr; }
-  .sd-picks { grid-template-columns:1fr; }
-  .sd-title { font-size:21px; }
-}
+/* ── The Weekly Ledger (newsletter, scoped .nl-) ── */
+.nl-frame { background:var(--card); border:1px solid var(--border2); border-radius:4px; padding:34px 40px; position:relative; overflow:hidden; }
+.nl-frame::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--gold), transparent 60%); }
+.nl-masthead { display:flex; align-items:center; justify-content:space-between; gap:14px; border-bottom:1px solid var(--border); padding-bottom:14px; margin-bottom:18px; flex-wrap:wrap; }
+.nl-brand { font-family:var(--mono); font-size:10px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+.nl-issue { font-family:var(--mono); font-size:10px; letter-spacing:1.5px; color:var(--muted); }
+.nl-title { font-size:24px; font-weight:800; letter-spacing:-0.3px; line-height:1.25; margin-bottom:6px; text-transform:uppercase; }
+.nl-byline { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+.nl-byline img { width:34px; height:34px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-dim); }
+.nl-byline-name { font-size:12px; font-weight:600; }
+.nl-byline-sub { font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; }
+.nl-p { font-size:14px; line-height:1.75; color:var(--text); margin-bottom:16px; }
+.nl-quote { display:flex; gap:12px; align-items:flex-start; background:var(--card2); border:1px solid var(--border); border-left:3px solid var(--gold-dim); border-radius:4px; padding:13px 15px; margin:0 0 16px; }
+.nl-quote img { width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); flex-shrink:0; }
+.nl-quote-name { font-family:var(--mono); font-size:9px; letter-spacing:1.5px; color:var(--gold); text-transform:uppercase; margin-bottom:4px; }
+.nl-quote-text { font-size:13px; line-height:1.6; font-style:italic; color:var(--text); }
+@media (max-width:768px) { .nl-frame { padding:22px 18px; } .nl-title { font-size:19px; } }
+.mu-h2h { font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--muted); margin-top:4px; }
+.mu-proj { font-family:var(--mono); font-size:10px; color:var(--dim); margin-top:2px; }
+.mu-pickrow { display:flex; justify-content:center; gap:4px; margin-top:8px; min-height:22px; flex-wrap:wrap; }
+.mu-pick { width:20px; height:20px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); }
+.mu-pick.lock { border-color:var(--gold); box-shadow:0 0 6px rgba(255,200,64,.45); }
+.pe-row { display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.04); }
+.pe-row img { width:30px; height:30px; border-radius:50%; object-fit:cover; border:2px solid var(--border2); }
+.pe-name { flex:1; font-size:12px; font-weight:600; }
+.pe-rec { font-family:var(--mono); font-size:12px; font-weight:700; }
+.pe-lock { font-family:var(--mono); font-size:10px; color:var(--gold); }
 </style>
 </head>
 <body>
@@ -98,7 +48,7 @@
   <div class="header-left">
     <div>
       <div class="exchange-logo">LIV DYNASTY EXCHANGE</div>
-      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Preseason</div>
+      <div class="exchange-sub">Dynasty Fantasy Capital Markets · 2026 Season</div>
     </div>
     <div class="header-divider"></div>
     <div class="market-status">
@@ -108,11 +58,12 @@
   </div>
   <div class="header-right">
     <a class="nav-btn active" href="index.html">Overview</a>
+    <a class="nav-btn" href="feed.html">League Feed</a>
     <a class="nav-btn" href="stocks.html">Stocks</a>
+    <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
     <a class="nav-btn" href="media.html">Media Center</a>
-    <a class="nav-btn" href="standings.html">History</a>
   </div>
 </header>
 
@@ -131,17 +82,8 @@
     <div class="sec-line"></div>
     <div class="sec-tag" id="day-tag">—</div>
   </div>
-  <div class="weekly-show-card" id="weekly-show-card"></div>
+  <div id="ledger-mount"></div>
 
-  <!-- LEAGUE FEED -->
-  <div class="sec-head">
-    <div class="sec-title">The League Feed</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag">LIVE REACTIONS</div>
-  </div>
-  <div class="card g1">
-    <div class="feed-list" id="feed-list"></div>
-  </div>
 
   <!-- LIVE MATCHUPS -->
   <div class="sec-head">
@@ -153,14 +95,14 @@
 
   <!-- CURRENT STANDINGS + POWER RANKINGS -->
   <div class="sec-head">
-    <div class="sec-title">Current Standings & Power Rankings</div>
+    <div class="sec-title">Pick-Em Standings & Power Rankings</div>
     <div class="sec-line"></div>
-    <div class="sec-tag">2026 PROJECTED</div>
+    <div class="sec-tag">WEEK 1</div>
   </div>
   <div class="g2">
     <div class="card">
-      <div class="card-title" style="margin-bottom:12px">2026 Projected Standings</div>
-      <table class="standings-table" id="standings-2026"></table>
+      <div class="card-title" style="margin-bottom:12px">Analyst Pick-Em Standings</div>
+      <div id="pickem-standings"></div>
     </div>
     <div class="card">
       <div class="rankings-header">
@@ -180,7 +122,7 @@
 <footer>
   <div>
     <div class="footer-brand">LIV DYNASTY EXCHANGE</div>
-    <div style="margin-top:4px">Data as of June 2026 · 2026 Preseason Evaluation</div>
+    <div style="margin-top:4px">Data as of Sep 7 2026 · 2026 Season</div>
   </div>
   <div style="text-align:right">
     <div>All figures represent dynasty fantasy football asset valuations</div>
@@ -193,134 +135,80 @@
 <script src="common.js"></script>
 <script>
 
-/* ── Embedded episode deck (content lives in data.js EPISODE) ── */
-let sdCur = 0;
-function sdSeat(k) {
-  const c = EPISODE.cast[k];
-  return `<div class="sd-seat ${c.host?'host':''}">
-    <img src="${c.img}" alt="${c.name}" onerror="this.style.display='none'">
-    <div class="sd-seat-name">${c.name}</div>
-    <div class="sd-seat-role">${c.role}</div>
-  </div>`;
-}
-function sdLine(l) {
-  const c = EPISODE.cast[l.who];
-  return `<div class="sd-line ${c.host?'host':''}">
-    <img src="${c.img}" alt="${c.name}" onerror="this.style.display='none'">
-    <div class="sd-bubble">
-      <div class="sd-speaker">${c.name}</div>
-      <div class="sd-text">${l.text}</div>
-    </div>
-  </div>`;
-}
-function sdPick(p) {
-  const c = EPISODE.cast[p.who];
-  return `<div class="sd-pick">
-    <div class="sd-pick-head">
-      <img src="${c.img}" alt="${c.name}" onerror="this.style.display='none'">
-      <div>
-        <div class="sd-pick-team">${p.team}</div>
-        <div class="sd-pick-who">${c.name}\u2019s pick</div>
+function renderNewsletter() {
+  if (typeof NEWSLETTER === 'undefined' || !NEWSLETTER) return;
+  const nar = MEDIA.find(m => m.key === NEWSLETTER.narrator) || {};
+  document.getElementById('day-tag').textContent = `WEEK ${NEWSLETTER.week} \u00B7 ${NEWSLETTER.kind}`;
+  document.getElementById('ledger-mount').innerHTML = `
+    <div class="nl-frame">
+      <div class="nl-masthead">
+        <div class="nl-brand">The Weekly Ledger \u00B7 A LIV Network Publication</div>
+        <div class="nl-issue">WEEK ${NEWSLETTER.week} \u00B7 ${NEWSLETTER.date}</div>
       </div>
-    </div>
-    <div class="sd-pick-quote">\u201C${p.quote}\u201D</div>
-  </div>`;
-}
-function sdRender() {
-  const S = EPISODE.slides;
-  document.getElementById('sd-slides').innerHTML = S.map((s, i) => `
-    <div class="sd-slide ${i===sdCur?'on':''}">
-      ${s.live ? '<div class="sd-live"><span class="dot"></span>LIV NETWORK</div>' : ''}
-      <div class="sd-kicker">${s.kicker}</div>
-      <div class="sd-title">${s.title}</div>
-      ${s.sub ? `<div class="sd-sub">${s.sub}</div>` : ''}
-      ${s.intro ? `<div class="sd-sub">${s.intro}</div>` : ''}
-      ${s.panel ? `<div class="sd-panel">${s.panel.map(sdSeat).join('')}</div>` : ''}
-      ${s.lines ? s.lines.map(sdLine).join('') : ''}
-      ${s.picks ? `<div class="sd-picks">${s.picks.map(sdPick).join('')}</div>` : ''}
-    </div>`).join('');
-  document.getElementById('sd-dots').innerHTML = S.map((_, i) =>
-    `<div class="sd-dot ${i===sdCur?'on':''}" onclick="sdGo(${i})"></div>`).join('');
-  document.getElementById('sd-count').textContent = `${sdCur+1} / ${S.length}`;
-  document.getElementById('sd-prev').disabled = sdCur === 0;
-  document.getElementById('sd-next').disabled = sdCur === S.length - 1;
-}
-function sdGo(i) { sdCur = Math.max(0, Math.min(EPISODE.slides.length - 1, i)); sdRender(); }
-function initEpisodeDeck() {
-  sdRender();
-  document.getElementById('sd-prev').onclick = () => sdGo(sdCur - 1);
-  document.getElementById('sd-next').onclick = () => sdGo(sdCur + 1);
-  document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') sdGo(sdCur + 1);
-    if (e.key === 'ArrowLeft')  sdGo(sdCur - 1);
-  });
-}
-
-function renderWeeklyShow() {
-  // Current episode (from data.js) renders as an embedded deck in this slot
-  if (typeof EPISODE !== 'undefined' && EPISODE) {
-    document.getElementById('day-tag').textContent = EPISODE.badge || 'NOW AIRING';
-    document.getElementById('weekly-show-card').outerHTML = `
-      <div class="sd-stage" style="max-width:none; margin-bottom:34px;">
-        <div class="sd-frame">
-          <div id="sd-slides"></div>
-          <div class="sd-controls">
-            <button class="sd-btn" id="sd-prev">&#8592; Back</button>
-            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
-              <div class="sd-dots" id="sd-dots"></div>
-              <div class="sd-count" id="sd-count"></div>
-            </div>
-            <button class="sd-btn" id="sd-next">Next &#8594;</button>
-          </div>
+      <div class="nl-title">${NEWSLETTER.title}</div>
+      <div class="nl-byline">
+        <img src="${nar.photo || 'avatars/' + NEWSLETTER.narrator + '.jpg'}" alt="${nar.name || ''}">
+        <div>
+          <div class="nl-byline-name">${nar.name || NEWSLETTER.narrator}</div>
+          <div class="nl-byline-sub">Lead Desk \u00B7 LIV Network</div>
         </div>
-      </div>`;
-    initEpisodeDeck();
-    return;
-  }
-  const day = new Date().getDay();
-  let show;
-  if (day === 2 || day === 3) {
-    show = { name:'The Weekly Sit-Down', host:'Clara Hopkins', hostSub:'with Big Dog, Chad Bellwether & rotating guest',
-      photo:'avatars/clara-hopkins.jpg', day: day===2?'Tuesday':'Wednesday', badge:'live',
-      teaser:'Clara recaps every matchup from the week that just wrapped — who covered, who cratered, and which board members owe the group chat an explanation.' };
-  } else if (day === 4) {
-    show = { name:'The Exchange Report', host:'Vivienne Ashcroft', hostSub:'Weekly matchup previews & prediction picks',
-      photo:'avatars/vivienne-ashcroft.jpg', day:'Thursday', badge:'live',
-      teaser:'Vivienne previews the week ahead with her prediction picks against the board, plus a full rundown of every trade that moved the exchange.' };
-  } else {
-    show = { name:'The Exchange Report', host:'Vivienne Ashcroft', hostSub:'Weekly matchup previews & prediction picks',
-      photo:'avatars/vivienne-ashcroft.jpg', day:'Thursday', badge:'latest',
-      teaser:'Vivienne previews the week ahead with her prediction picks against the board, plus a full rundown of every trade that moved the exchange.' };
-  }
-  document.getElementById('day-tag').textContent = show.badge === 'live' ? 'AIRING NOW' : 'LATEST EPISODE';
-  document.getElementById('weekly-show-card').innerHTML = `
-    <div class="weekly-show-photo"><img src="${show.photo}" alt="${show.host}"><div class="weekly-show-photo-gradient"></div></div>
-    <div class="weekly-show-body">
-      <div class="weekly-show-top-row">
-        ${show.badge === 'live'
-          ? `<span class="weekly-show-live-badge"><span class="weekly-show-live-dot"></span>LIVE — ${show.day}</span>`
-          : `<span class="weekly-show-latest-badge">LATEST — ${show.day}</span>`}
       </div>
-      <div class="weekly-show-name">${show.name}</div>
-      <div class="weekly-show-host">${show.host} <span>— ${show.hostSub}</span></div>
-      <div class="weekly-show-teaser">${show.teaser}</div>
+      ${NEWSLETTER.paragraphs.map(p => {
+        if (p.who) {
+          const m = MEDIA.find(x => x.key === p.who) || {};
+          return `<div class="nl-quote">
+            <img src="${m.photo || 'avatars/' + p.who + '.jpg'}" alt="${m.name || p.who}">
+            <div><div class="nl-quote-name">${m.name || p.who}</div>
+            <div class="nl-quote-text">${p.quote}</div></div>
+          </div>`;
+        }
+        return `<div class="nl-p">${p.text}</div>`;
+      }).join('')}
     </div>`;
 }
 
-function buildStandings2026() {
-  document.getElementById('standings-2026').innerHTML = `
-    <thead><tr><th>#</th><th>Owner</th><th>Team</th><th>Est. Record</th><th>Ticker</th></tr></thead>
-    <tbody>${PROJ_2026.map(p => {
-      const t = TEAMS.find(x => x.owner === p.owner);
-      const isPO = p.rank <= 6;
-      return `<tr>
-        <td><span class="pos-dot ${isPO?'playoff-yes':'playoff-no'}">${p.rank}</span></td>
-        <td style="font-weight:600;color:${OWNER_COLORS[p.owner]}">${p.owner}</td>
-        <td style="font-size:11px;color:var(--muted)">${p.team}</td>
-        <td class="win-loss r">${p.record}</td>
-        <td><span class="sym-tag">${t?t.ticker:''}</span></td>
-      </tr>`;
-    }).join('')}</tbody>`;
+async function buildPickemStandings() {
+  const el = document.getElementById('pickem-standings');
+  const recs = {};
+  PUNDIT_PICKERS.forEach(k => recs[k] = { w: 0, l: 0, lw: 0, ll: 0 });
+  try {
+    if (PICKS_HISTORY.length) {
+      const state = await getNFLState();
+      const doneThrough = (state.season_type === 'regular') ? Math.max(0, (state.week || 1) - 1)
+                        : (state.season_type === 'post' ? 18 : 0);
+      for (const entry of PICKS_HISTORY) {
+        if (entry.week > doneThrough) continue;
+        const ms = await getMatchups(entry.week);
+        const byId = {};
+        (ms || []).forEach(m => { if (m.matchup_id != null) (byId[m.matchup_id] = byId[m.matchup_id] || []).push(m); });
+        const winners = new Set();
+        Object.values(byId).forEach(pair => {
+          if (pair.length !== 2) return;
+          const [a, b] = pair;
+          if (!(a.points > 0 || b.points > 0) || a.points === b.points) return;
+          winners.add(ROSTER_TO_OWNER[(a.points > b.points ? a : b).roster_id]);
+        });
+        if (!winners.size) continue;
+        PUNDIT_PICKERS.forEach(k => {
+          const p = entry.picks[k];
+          if (!p) return;
+          p.winners.forEach(o => { winners.has(o) ? recs[k].w++ : recs[k].l++; });
+          if (p.lock) { winners.has(p.lock) ? recs[k].lw++ : recs[k].ll++; }
+        });
+      }
+    }
+  } catch (e) { /* grade with whatever is completed */ }
+  const rows = PUNDIT_PICKERS.map(k => ({ k, m: MEDIA.find(x => x.key === k) || {}, r: recs[k] }))
+    .sort((a, b) => (b.r.w - b.r.l) - (a.r.w - a.r.l) || b.r.lw - a.r.lw);
+  el.innerHTML = rows.map((row, i) => `
+    <div class="pe-row">
+      <span style="font-family:var(--mono); font-size:11px; color:var(--dim); width:16px;">${i + 1}</span>
+      <img src="${row.m.photo || 'avatars/' + row.k + '.jpg'}" alt="${row.m.name || row.k}">
+      <span class="pe-name">${row.m.name || row.k}</span>
+      <span class="pe-lock" title="Lock of the Week record">\uD83D\uDD12 ${row.r.lw}-${row.r.ll}</span>
+      <span class="pe-rec">${row.r.w}-${row.r.l}</span>
+    </div>`).join('') +
+    (PICKS_HISTORY.length ? '' : `<div style="font-size:11px; color:var(--muted); padding-top:10px;">Picks land with the Week 1 Ledger \u2014 records start counting when the games do.</div>`);
 }
 
 function buildRankings() {
@@ -336,49 +224,48 @@ function buildRankings() {
   }).join('');
 }
 
-function buildFeed() {
-  document.getElementById('feed-list').innerHTML = TWEETS.map(t => `
-    <div class="tweet">
-      <img class="tweet-avatar" src="avatars/${t.key}.jpg" alt="${t.name}">
-      <div class="tweet-body">
-        <div class="tweet-head">
-          <span class="tweet-name">${t.name}</span>
-          <span class="tweet-handle">${t.handle}</span>
-          <span class="tweet-dot">·</span>
-          <span class="tweet-time">${t.time}</span>
-        </div>
-        <div class="tweet-text">${t.text}</div>
-        <div class="tweet-stats">
-          <span class="tweet-stat">💬 ${t.reply}</span>
-          <span class="tweet-stat">🔁 ${t.rt}</span>
-          <span class="tweet-stat">♥ ${t.likes}</span>
-        </div>
-      </div>
-    </div>`).join('');
-}
 
 async function buildMatchups() {
   const statusEl = document.getElementById('matchup-status');
   try {
     const state = await getNFLState();
     const week = state.week || 1;
-    const matchups = await getMatchups(week);
+    const [matchups, h2hData, projMap] = await Promise.all([
+      getMatchups(week),
+      getH2HData().catch(() => null),
+      getWeekProjections(state.season || '2026', week),
+    ]);
 
     if (!matchups || matchups.length === 0) {
-      statusEl.textContent = `WEEK ${week} · NOT STARTED`;
-      document.getElementById('matchup-grid').innerHTML = `<div class="card" style="grid-column:1/-1; color:var(--muted); font-size:12px;">No matchup data yet for Week ${week} — check back once the season kicks off.</div>`;
+      statusEl.textContent = `WEEK ${week} \u00B7 NOT STARTED`;
+      document.getElementById('matchup-grid').innerHTML = `<div class="card" style="grid-column:1/-1; color:var(--muted); font-size:12px;">No matchup data yet for Week ${week} \u2014 check back once the season kicks off.</div>`;
       return;
     }
 
-    statusEl.textContent = `WEEK ${week} · LIVE FROM SLEEPER`;
+    statusEl.textContent = `WEEK ${week} \u00B7 LIVE FROM SLEEPER`;
     statusEl.style.color = 'var(--green)';
     statusEl.style.borderColor = 'var(--green-dim)';
+
+    const weekPicks = (typeof PICKS_HISTORY !== 'undefined')
+      ? (PICKS_HISTORY.find(p => p.week === week) || null) : null;
 
     const byMatchup = {};
     matchups.forEach(m => {
       if (!byMatchup[m.matchup_id]) byMatchup[m.matchup_id] = [];
       byMatchup[m.matchup_id].push(m);
     });
+
+    const pickRow = (owner) => {
+      if (!weekPicks) return '';
+      const icons = PUNDIT_PICKERS.map(k => {
+        const p = weekPicks.picks[k];
+        if (!p || !p.winners.includes(owner)) return '';
+        const md = MEDIA.find(x => x.key === k) || {};
+        const lock = p.lock === owner ? ' lock' : '';
+        return `<img class="mu-pick${lock}" src="${md.photo || 'avatars/' + k + '.jpg'}" alt="${md.name || k}" title="${(md.name || k)}${lock ? ' \u00B7 LOCK OF THE WEEK' : ''}">`;
+      }).join('');
+      return `<div class="mu-pickrow">${icons}</div>`;
+    };
 
     document.getElementById('matchup-grid').innerHTML = Object.values(byMatchup).map(pair => {
       if (pair.length < 2) return '';
@@ -389,20 +276,32 @@ async function buildMatchups() {
       const teamB = TEAMS.find(t => t.owner === ownerB);
       const aWinning = a.points > b.points;
       const bWinning = b.points > a.points;
+      let h2hLine = '';
+      if (h2hData) {
+        const r = h2hRecord(h2hData.lifetime, ownerA, ownerB);
+        h2hLine = (r.w + r.l) > 0
+          ? `ALL-TIME: ${r.w > r.l ? ownerA : r.l > r.w ? ownerB : 'EVEN'} ${Math.max(r.w, r.l)}\u2013${Math.min(r.w, r.l)}`
+          : 'ALL-TIME: FIRST MEETING';
+      }
+      const projA = projForStarters(projMap, a.starters);
+      const projB = projForStarters(projMap, b.starters);
+      const side = (owner, team, m, winning, proj) => `
+          <div style="text-align:center; flex:1;">
+            <div class="sym-tag" style="font-size:16px;">${team ? team.ticker : owner}</div>
+            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${owner}</div>
+            <div style="font-family:var(--mono); font-size:22px; font-weight:700; color:${winning ? 'var(--green)' : 'var(--text)'}">${(m.points || 0).toFixed(1)}</div>
+            ${proj != null ? `<div class="mu-proj">PROJ ${proj.toFixed(1)}</div>` : ''}
+            ${pickRow(owner)}
+          </div>`;
       return `
       <div class="card">
-        <div style="display:flex; align-items:center; justify-content:space-between;">
-          <div style="text-align:center; flex:1;">
-            <div class="sym-tag" style="font-size:16px;">${teamA ? teamA.ticker : ownerA}</div>
-            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerA}</div>
-            <div style="font-family:var(--mono); font-size:22px; font-weight:700; color:${aWinning?'var(--green)':'var(--text)'}">${(a.points||0).toFixed(1)}</div>
+        <div style="display:flex; align-items:flex-start; justify-content:space-between;">
+          ${side(ownerA, teamA, a, aWinning, projA)}
+          <div style="text-align:center; color:var(--dim); font-family:var(--mono); font-size:11px; padding:14px 12px 0;">
+            VS
+            ${h2hLine ? `<div class="mu-h2h">${h2hLine}</div>` : ''}
           </div>
-          <div style="color:var(--dim); font-family:var(--mono); font-size:11px; padding:0 12px;">VS</div>
-          <div style="text-align:center; flex:1;">
-            <div class="sym-tag" style="font-size:16px;">${teamB ? teamB.ticker : ownerB}</div>
-            <div style="font-size:11px; color:var(--muted); margin-bottom:6px;">${ownerB}</div>
-            <div style="font-family:var(--mono); font-size:22px; font-weight:700; color:${bWinning?'var(--green)':'var(--text)'}">${(b.points||0).toFixed(1)}</div>
-          </div>
+          ${side(ownerB, teamB, b, bWinning, projB)}
         </div>
       </div>`;
     }).join('');
@@ -416,11 +315,10 @@ async function buildMatchups() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
-  renderWeeklyShow();
+  renderNewsletter();
   buildMatchups();
-  buildStandings2026();
+  buildPickemStandings();
   buildRankings();
-  buildFeed();
 });
 </script>
 </body>
