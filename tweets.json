@@ -1,107 +1,107 @@
 {
-  "generated_at": "2026-08-11T18:07:46.326888+00:00",
+  "generated_at": "2026-09-07T20:10:07.494595+00:00",
   "events_seen": [
-    "CUT (Aug 07 (4 days ago)): Wingard released Beaux Collins (WR, NYG).",
-    "WAIVER CLAIM (Aug 06 (5 days ago)): Fronge added Seth McGowan (RB, IND).",
-    "CUT (Aug 05 (6 days ago)): Fronge released Tyler Huntley (QB, BAL).",
-    "TRADE (Aug 05 (6 days ago)): Corbishley receives Braelon Allen (RB, NYJ). Fronge receives Stefon Diggs (WR, WAS).",
-    "CUT (Aug 03 (8 days ago)): Brent released Emari Demercado (RB, KC).",
-    "CUT (Aug 03 (8 days ago)): Brent released Diego Pavia (QB, FA).",
-    "WAIVER CLAIM (Aug 03 (8 days ago)): Charles added Malik Benson (WR, LV).",
-    "WAIVER CLAIM (Aug 03 (8 days ago)): Charles added Roman Wilson (WR, PIT).",
-    "WAIVER CLAIM (Jul 29 (13 days ago)): Adam added Damien Martinez (RB, GB).",
-    "CUT (Jul 29 (13 days ago)): Corbishley released Roschon Johnson (RB, CHI)."
+    "CUT (Sep 07 (today)): Charles released Roman Wilson (WR, PIT).",
+    "CUT (Sep 07 (today)): Mitchum released Luke McCaffrey (WR, WAS).",
+    "CUT (Sep 07 (today)): Mitchum released Jerome Ford (RB, WAS).",
+    "FREE AGENT ADD (Sep 07 (today)): Wingard added Samaje Perine (RB, CIN) (dropped Will Levis (QB, FA)).",
+    "CUT (Sep 04 (3 days ago)): Mitchum released Michael Trigg (TE, DAL).",
+    "CUT (Sep 04 (3 days ago)): Mitchum released Xavier Restrepo (WR, TEN).",
+    "WAIVER CLAIM (Sep 03 (4 days ago)): Corbishley added Roschon Johnson (RB, CHI) for $1 FAAB.",
+    "WAIVER CLAIM (Sep 02 (5 days ago)): Drew added Camden Brown (WR, DAL) (dropped Zavier Scott (RB, CHI)).",
+    "WAIVER CLAIM (Sep 02 (5 days ago)): Kevin added Jaleel McLaughlin (RB, CLE) for $2 FAAB.",
+    "WAIVER CLAIM (Sep 02 (5 days ago)): Adam added George Holani (RB, SEA) (dropped Damien Martinez (RB, FA))."
   ],
   "tweets": [
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Tonight on the Exchange Report: the Fronge transaction log that nobody has fully untangled, what Crownline's waiver activity says about a roster already built to win, and whether SDR's pick-hoarding strategy has finally crossed from 'disciplined' into 'delusional.' Terrence has a verdict. Dexter says he already called it. Seven o'clock.",
-      "posted_at": "2026-08-11T16:32:46.326888+00:00",
-      "likes": 104,
-      "rt": 24,
-      "reply": 36
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Quick inventory of where we actually are right now: Apex is stacked and QB-fragile, Crownline is quiet and ominous, Obsidian is trimming without replacing, Sovereign is hoarding picks while releasing receivers, and Fronge is in Cuba. Tonight's show writes itself. We're live at seven \u2014 Vivienne, Terrence, and Dexter are already arguing about Brent in the group chat.",
-      "posted_at": "2026-08-11T11:07:46.326888+00:00",
-      "likes": 83,
-      "rt": 16,
-      "reply": 29
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Adam adding Damien Martinez thirteen days ago got exactly zero coverage from anyone at this network. Martinez is sitting behind a real opportunity in Green Bay. I flagged the GB backfield situation before the rookie draft and apparently everyone forgot. HLX at $95.11 is not an accident \u2014 the quiet adds are part of why Helix's turnaround story has legs.",
-      "posted_at": "2026-08-11T06:17:46.326888+00:00",
-      "likes": 61,
-      "rt": 11,
-      "reply": 23
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "The Corbishley-Fronge trade from six days ago doesn't get enough credit for what it means at the depth level. Fronge getting Diggs is a win on paper, but they just released Tyler Huntley \u2014 a QB6-7 in superflex terms \u2014 the same day and haven't replaced him. That room has a Diggs-shaped highlight on top of a roster construction problem underneath.",
-      "posted_at": "2026-08-11T01:57:46.326888+00:00",
-      "likes": 48,
-      "rt": 8,
-      "reply": 14
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Brent releasing Emari Demercado and Diego Pavia in the same window eight days ago would be unremarkable housekeeping on any other roster. On Obsidian \u2014 where you already cannot buy a win projection and your entire valuation story runs through one tight end \u2014 trimming without adding is not roster management. It is hoping. And hope is not a business strategy.",
-      "posted_at": "2026-08-10T22:17:46.326888+00:00",
-      "likes": 91,
-      "rt": 20,
-      "reply": 27
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Charles quietly added Malik Benson and Roman Wilson off waivers eight days ago and basically nobody said anything about it. That's how good Crownline's roster already is \u2014 the additions that would headline anyone else's week are just footnotes. CROWN at $131.71 and championship-or-bust energy radiating off every single transaction. I respect the pressure they're operating under.",
-      "posted_at": "2026-08-10T18:37:46.326888+00:00",
-      "likes": 72,
-      "rt": 14,
-      "reply": 19
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Multiple sources confirm Mitchum has now released four players in the last four days \u2014 Trigg three days ago, Restrepo three days ago, McCaffrey and Ford both today. That's not roster trimming. I'm told internally there is no defined direction right now, and the people around the situation are starting to say that quietly out loud. DEEP at $75.34 and sliding.",
+      "posted_at": "2026-09-07T19:52:07.494595+00:00",
+      "likes": 98,
+      "rt": 21,
+      "reply": 28
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Fronge is in Havana with zero pick liquidity, just traded away Stefon Diggs, added an RB named Seth McGowan off waivers, and FORG is sitting at $90.38 like everything is fine. I need someone to give me a segment on this roster because from the outside it looks like the business equivalent of ordering soup in a hurricane.",
-      "posted_at": "2026-08-10T14:47:46.326888+00:00",
-      "likes": 89,
+      "text": "Mitchum has released FOUR players since Thursday and I refuse to believe there is a plan here. McCaffrey AND Jerome Ford in the same morning? On the same roster? Someone call a wellness check on Deepwater Supply Co.",
+      "posted_at": "2026-09-07T19:26:07.494595+00:00",
+      "likes": 87,
       "rt": 17,
-      "reply": 31
+      "reply": 33
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "APEX at $115.51 is the only number on the board I want to talk about today. Corbishley added Braelon Allen six days ago, has Burrow, Hall, Montgomery, Higgins \u2014 and the market is STILL undervaluing the QB situation because there's no true QB1 locked in behind Burrow. One injury and that whole beautiful machine has a crisis. Which is why I am a BUY with a very loud asterisk.",
-      "posted_at": "2026-08-10T11:47:46.326888+00:00",
-      "likes": 54,
-      "rt": 9,
+      "text": "DEEP at $75.34 is a number I can no longer defend. Four cuts in four days, no flagship asset, no direction, the board has been asking for a buy-or-sell call all offseason and the answer they keep getting is 'neither, actually, we're just going to let people go.' That is not a strategy. That is a slow leak.",
+      "posted_at": "2026-09-07T18:18:07.494595+00:00",
+      "likes": 74,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Wingard dropped Will Levis \u2014 a warm-bodied quarterback, which in superflex is a luxury you do not casually discard \u2014 to add Samaje Perine off the street. I will not sit here and pretend that is a neutral transaction. SDR at $63.56, down six percent, hoarding picks, releasing production, and now thinning its QB room. The market is not wrong about this one.",
+      "posted_at": "2026-09-07T16:52:07.494595+00:00",
+      "likes": 103,
+      "rt": 22,
+      "reply": 31
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I said before the season that Sovereign's pick-hoarding would eventually require sacrificing real roster pieces to stay liquid, and dropping Levis for Perine today is exactly that trade-off materializing in real time. SDR is not building toward a window. SDR is deferring toward one. There's a difference and it costs you eventually.",
+      "posted_at": "2026-09-07T15:43:07.494595+00:00",
+      "likes": 81,
+      "rt": 16,
       "reply": 22
     },
     {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "The Wingard cut of Beaux Collins four days ago is still sitting with me. Collins wasn't a cornerstone, but Sovereign Draft Reserve is already thin on production \u2014 they keep stacking picks and releasing the few young receivers they actually have. I'm told internally there's no replacement move imminent. That's the part that concerns me.",
-      "posted_at": "2026-08-10T08:47:46.326888+00:00",
-      "likes": 67,
-      "rt": 12,
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "George Holani joining Helix five days ago got ignored because everyone was busy watching the Mitchum implosion, but Seattle's backfield situation is genuinely interesting depth-chart-wise right now. Adam trades in depth and patience. HLX at $92.02 is cheap for a roster that keeps finding pieces in the margins.",
+      "posted_at": "2026-09-07T13:40:07.494595+00:00",
+      "likes": 61,
+      "rt": 9,
+      "reply": 14
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Charles cutting Roman Wilson today after adding him eight days ago is the kind of roster hygiene that only reads as ruthless because Crownline has the depth to make it look easy. That spot opened, Wilson auditioned, Wilson didn't make the cut. CROWN at $133.12 \u2014 the roster is that tight and that intentional about it.",
+      "posted_at": "2026-09-07T10:40:07.494595+00:00",
+      "likes": 77,
+      "rt": 13,
       "reply": 18
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Tonight we are devoting a full segment to the Deepwater situation \u2014 four cuts in four days, $75.34 and drifting, and still no coherent answer from the Mitchum camp on what the roster is supposed to look like. Terrence has already recorded his verdict. Bo has opinions and zero preparation. Seven o'clock.",
+      "posted_at": "2026-09-07T08:10:07.494595+00:00",
+      "likes": 92,
+      "rt": 19,
+      "reply": 24
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Just to level-set before tonight's show: Atlas is up 6.8% on the week, Sovereign is down 6.3%, and Deepwater has released four players since Thursday. That's the actual story of this market window and somehow we spent forty minutes in the pre-show meeting talking about Fronge being in Cuba. We're getting it together. Seven o'clock.",
+      "posted_at": "2026-09-07T04:30:07.494595+00:00",
+      "likes": 69,
+      "rt": 11,
+      "reply": 21
     }
   ]
 }
