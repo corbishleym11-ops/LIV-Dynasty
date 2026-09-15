@@ -144,6 +144,26 @@ const TEAM_TICKERS = {
 // paragraphs: {text:'...'} for narration, {who:'pundit-key', quote:'...'} for desk quotes.
 // ══════════════════════════════════════════════════════════════
 const NEWSLETTER = {
+  week: 1, kind: 'WEEK 1 RECAP', date: 'Sep 15 2026',
+  narrator: 'clara-hopkins',
+  title: 'THE CHAMPION LOST, THE SPITE LOCK CASHED, AND CHAD BELLWETHER IS INSUFFERABLE NOW',
+  paragraphs: [
+    { text: 'One week of real football is in the books, and the league wasted no time reorganizing itself. The defending champion lost. The three-point game everyone circled went the wrong way for seven of our eight analysts. And the man who made four picks against the entire room is currently doing television with the energy of someone who has never been wrong in his life. I will present the facts. You may draw your own conclusions, though I have already drawn mine.' },
+    { text: 'Start where the scoreboard demands: Charles (Crownline Global Holdings) hung a week-high 168.90 on Drew (Atlas Rebuild Works), winning by 52 and change in a game that was over by Sunday brunch. Gibbs did precisely what the number one asset in dynasty is supposed to do, and the three analysts who locked Charles \u2014 Big Dog, Dexter, and Matteo \u2014 spent Monday congratulating themselves for correctly predicting the sunrise. Drew, to his credit, took the beating on schedule. The rebuild continues, presently in a hard hat.' },
+    { text: 'The story of the week happened one card over: Shaq (Monarch Wideout Bank) 143.86, Ryan (Aegis Quarterback Systems) 125.92. The champion is 0-and-1. The stock that has been frozen at $99.99 for two consecutive issues just posted the third-highest score of the week, and the one analyst who locked it \u2014 out of what we all assumed was pure grievance \u2014 is owed a public accounting.' },
+    { who: 'bo-ruckman', quote: 'I locked Monarch at $99.99 while this network was doing champion-repeat segments, and all I asked for in return was airtime. 143 points later I am done asking. I want my segment, I want it this week, and I want the graphics package.' },
+    { who: 'terrence-odom', quote: 'My lock lost and I will not be hiding from that. Let. Me. Be. Clear. I locked the champion because champions deserve the benefit of the doubt \u2014 once. Ryan got his once. What I watched Sunday was a QB1 room producing a fourth-place score, and the next time I extend Philadelphia any courtesy, it will be earned at market rate.' },
+    { text: 'In London, the all-in cashed its first check: Corbishley (Apex Iron Capital) 139.20, Kevin (Redline Distressed Capital) 130.76. Joe Burrow\u2019s Guzzlers debut won the week, Vance\u2019s lock survived, and eight offseason trades briefly looked like a plan instead of a compulsion. The consolation desk notes that Kevin\u2019s 130.76 actually beat the league median \u2014 meaning the co-CEO era opened 1-and-1 rather than 0-and-2, a distinction the Redline communications office reached three separate outlets about before noon.' },
+    { who: 'dina-ravioli', quote: 'To be precise, since precision is apparently my department now: Kevin lost the matchup and beat the median, Brent won the matchup and lost to the median, and both front offices called that outcome \u201Cencouraging.\u201D Sources tell me Tyler personally approved the phrase. This is what governance looks like, I am told.' },
+    { text: 'Which brings us to the smallest margin and the largest ego of the week. Brent (Obsidian Specialty Holdings) edged Fronge (ForgeHammer Industries) 126.88 to 123.52 \u2014 a 3.36-point escape that detonated the pick board. Seven analysts took Fronge. One took Brent. That one also locked Brent, and had already taken Drew, Mitchum, and Shaq against the room for good measure. Chad Bellwether finished 4-and-2 with a perfect lock, from an island he built himself, and has referred to consensus as \u201Ca wealth transfer from the many to me\u201D on two programs since.' },
+    { text: 'Elsewhere: Adam (Helix Quant Strategies) handled Mitchum (Deepwater Supply Co.) 127.66 to 120.12 \u2014 the model is 1-and-0 and unbearable about it \u2014 and Jake (EchoPoint Global Markets) dropped 155.16 on Wingard (Sovereign Draft Reserve), which is what happens when the vault plays an actual roster. Bo\u2019s lone miss of the week was taking Wingard, a decision he has declined to discuss, citing the Monarch segment.' },
+    { who: 'dexter-vail', quote: 'Four-and-two with a lock on the board leader. I would also direct you to my June file where I flagged EchoPoint as a top-three Week 1 score \u2014 155.16, thank you \u2014 and my standing Fronge depth thesis, which loses by 3.36 points exactly once before it starts printing. Timestamps on everything, folks.' },
+    { who: 'vance-hollis', quote: 'I LOCKED CORBISHLEY AT $116.71 AND HE WON THE WEEK BURROW THREW FOR LONDON AND I AM AIRING THE PRE-RECORDED VINDICATION SEGMENT TONIGHT IN ITS ENTIRETY. BOTH HOURS.' },
+    { text: 'The board after one week: everyone at 4-and-2 except Terrence at 3-and-3, six locks hit, two locks in the ground. Standings show six winners \u2014 Charles on top by points, Jake and Shaq right behind \u2014 and a bottom half that includes the defending champion, which the exchange will be pricing shortly and without sentiment. Week 2 picks land with the next Ledger. Until then: the mahogany has been dusted, Chad has been asked to stop taking victory laps through the newsroom, and the market \u2014 as always \u2014 opens whether you are ready or not.' },
+  ],
+};
+const NEWSLETTER_ARCHIVE = [
+  {
   week: 1, kind: 'SEASON PREVIEW', date: 'Sep 7 2026',
   narrator: 'vivienne-ashcroft',
   title: 'TWELVE CORPORATIONS ENTER. THE MARKET GRADES ON A CURVE ANYWAY.',
@@ -160,8 +180,7 @@ const NEWSLETTER = {
     { who: 'matteo-honeydew', quote: 'My Week 1 rankings are live and yes, Jake, you fell four spots without losing a game. The tight end room did that, not me. I am simply the messenger with a numbered list.' },
     { text: 'Housekeeping before the bell: the pick-em board is officially live \u2014 eight analysts, every matchup, one lock apiece, and their faces now sit under their picks on the Overview. Charles draws three locks, Chad is alone on an island with Brent, and Bo locked the frozen $99.99 stock out of what we can only assume is spite. Records are tracked all season; the roasting is scheduled accordingly. Momentum multipliers stay dormant until three full weeks are banked \u2014 after that, winning starts compounding. From all of us at LIV Network Studios: the mahogany is polished, the tickers are humming, and the opening bell rings Thursday. Do not embarrass your shareholders.' },
   ],
-};
-const NEWSLETTER_ARCHIVE = [
+  },
   // past issues get pushed here, newest first — rendered on the Media Center page
 ];
 
