@@ -144,6 +144,27 @@ const TEAM_TICKERS = {
 // paragraphs: {text:'...'} for narration, {who:'pundit-key', quote:'...'} for desk quotes.
 // ══════════════════════════════════════════════════════════════
 const NEWSLETTER = {
+  week: 2, kind: 'WEEK 2 PREVIEW', date: 'Sep 19 2026',
+  narrator: 'vivienne-ashcroft',
+  title: 'FIVE UNDEFEATED, FIVE WINLESS, AND ONE GAME WHERE SOMEBODY HAS TO STOP LOSING',
+  paragraphs: [
+    { text: 'Good evening. One week of real football has sorted this exchange into three tidy piles, and the middle pile is nearly empty. Five corporations sit at 2-and-0. Five sit at 0-and-2. Exactly two — Kevin and Brent — managed to split, which in a league that scores a head-to-head result and a median result every week is the statistical equivalent of shrugging. Week 2 opens tomorrow. Here is what the desk is watching.' },
+    { text: 'Start with the game nobody wants and everybody will watch: Ryan versus Drew. The defending champion is 0-and-2. The cheapest listing on the exchange is 0-and-2. One of them walks out of Sunday with a win and the other begins a conversation that does not end quickly. Sleeper gives Ryan a 63 percent chance and projects him for 142.91 — second-highest on the slate — which tells you the roster is fine and the results are not.' },
+    { who: 'big-dog', quote: 'A winless champion against a winless rebuild. FOLKS. This is not a marquee game, this is a hostage situation, and I have cleared my entire Sunday for it.' },
+    { text: 'The heavyweight fixture is Charles against Kevin, and the projection is not subtle: 157.35 to 132.05, 74 percent to 26. Crownline has scored more than anyone in the league and drawn seven of eight analyst picks. Redline enters at 1-and-1 with the fifth-most points in the exchange and a co-CEO structure that has now survived exactly one week without incident — which the Detroit communications office has, I am told, described as a milestone.' },
+    { who: 'marty-volkman', quote: 'Hearing Redline has been quietly taking calls on a WR piece — not shopping, taking calls, there is a difference and I will be reminding people of it all week. No names. Two CEOs now have to agree on the answer, which is either a safeguard or a delay depending on who you ask. Developing.' },
+    { text: 'The most interesting number on the board belongs to the ForgeHammer–EchoPoint game. Jake is 2-and-0 and dropped 155.16 in Week 1. Fronge is 0-and-2. Sleeper favors Fronge, 59 percent to 41, projecting 127.57 against 125.29. A winless team favored over an undefeated one is exactly the sort of thing that makes one analyst at this network insufferable, and he has not disappointed.' },
+    { who: 'jay-kelpey', quote: 'My lock lost by 3.36 points and I would make it again tomorrow. Buddy, the depth thesis did not fail — it ran into the one week where every coin landed wrong. Number one FLEX grade in the league, favored by the projection, 0-and-2 record that describes nothing. I am back on Fronge and I am locking it.' },
+    { text: 'Elsewhere: Corbishley faces Mitchum in the tightest projection of the week, 134.39 to 132.72, a 51-49 coin flip that Apex should probably win more comfortably than that. Shaq takes on Wingard, where Monarch is favored 62 percent and Sovereign is projected for a league-low 109.42 — the pick empire having now spent a full week failing to appear in the box score. And Adam meets Brent in a 2-and-0 versus 1-and-1 matchup that Sleeper calls 55-45, which is the polite way of saying nobody has any idea.' },
+    { text: 'To the pick-em board, where Week 1 was nearly unanimous and somehow still produced a villain. Seven of our eight analysts finished 4-and-2. Terrence finished 3-and-3, alone in last, having locked the champion. Six locks hit. Two did not. And Chad Bellwether, who picked four games against the entire room and locked Brent Bethel in a three-point game, went 4-and-2 with a perfect lock and has been describing consensus as “a wealth transfer” on two programs since.' },
+    { who: 'chad-bellwether', quote: 'This week I am picking all six games against the room, because last week proved the room is a liability. Kevin. Mitchum. Wingard. Brent. Drew. Fronge. If I hit even four of those again I would like the network to consider renaming the segment after me. If I hit zero, I will simply never mention it, as is tradition.' },
+    { text: 'New power rankings also landed today, and the headline is Jake climbing six spots to second — the largest single-week move on the board — on the back of a 155-point opener. Ryan drops four to sixth. Fronge drops five to ninth. Our rankings guru would like everyone to understand that this was not an overcorrection.' },
+    { who: 'matteo-honeydew', quote: 'Moving a team six spots after one week looks like panic. It is not. I had EchoPoint eighth because I could not get past the tight end room, and then the roster scored 155 points without one. When the evidence arrives that fast, you move. I moved. The list is updated.' },
+    { text: 'So: Charles is the heaviest favorite, Chad is on an island of his own construction, Fronge is a winless favorite, and two 0-and-2 teams have to produce a winner whether they like it or not. All eight analysts are on the record, their faces sit under their picks on the Overview, and their records follow them until December. From all of us at LIV Network Studios — the board is set, the locks are in, and the market opens tomorrow at one.' },
+  ],
+};
+const NEWSLETTER_ARCHIVE = [
+  {
   week: 1, kind: 'WEEK 1 RECAP', date: 'Sep 15 2026',
   narrator: 'clara-hopkins',
   title: 'THE CHAMPION LOST, THE SPITE LOCK CASHED, AND CHAD BELLWETHER IS INSUFFERABLE NOW',
@@ -161,8 +182,7 @@ const NEWSLETTER = {
     { who: 'vance-hollis', quote: 'I LOCKED CORBISHLEY AT $116.71 AND HE WON THE WEEK BURROW THREW FOR LONDON AND I AM AIRING THE PRE-RECORDED VINDICATION SEGMENT TONIGHT IN ITS ENTIRETY. BOTH HOURS.' },
     { text: 'The board after one week: everyone at 4-and-2 except Terrence at 3-and-3, six locks hit, two locks in the ground. Standings show six winners \u2014 Charles on top by points, Jake and Shaq right behind \u2014 and a bottom half that includes the defending champion, which the exchange will be pricing shortly and without sentiment. Week 2 picks land with the next Ledger. Until then: the mahogany has been dusted, Chad has been asked to stop taking victory laps through the newsroom, and the market \u2014 as always \u2014 opens whether you are ready or not.' },
   ],
-};
-const NEWSLETTER_ARCHIVE = [
+  },
   {
   week: 1, kind: 'SEASON PREVIEW', date: 'Sep 7 2026',
   narrator: 'vivienne-ashcroft',
@@ -189,6 +209,16 @@ const NEWSLETTER_ARCHIVE = [
 // Entry shape: { week:1, picks:{ 'big-dog':{ winners:['Charles','Jake',...], lock:'Charles' }, ... } }
 const PUNDIT_PICKERS = ['big-dog','chad-bellwether','vance-hollis','terrence-odom','dexter-vail','bo-ruckman','jay-kelpey','matteo-honeydew'];
 const PICKS_HISTORY = [
+  { week: 2, picks: {
+    'big-dog':         { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Jake'],     lock: 'Charles' },
+    'chad-bellwether': { winners: ['Kevin','Mitchum','Wingard','Brent','Drew','Fronge'],    lock: 'Brent' },
+    'vance-hollis':    { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Jake'],     lock: 'Corbishley' },
+    'terrence-odom':   { winners: ['Charles','Corbishley','Shaq','Adam','Drew','Jake'],     lock: 'Charles' },
+    'dexter-vail':     { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Jake'],     lock: 'Jake' },
+    'bo-ruckman':      { winners: ['Charles','Corbishley','Shaq','Brent','Ryan','Jake'],    lock: 'Shaq' },
+    'jay-kelpey':      { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Fronge'],   lock: 'Fronge' },
+    'matteo-honeydew': { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Jake'],     lock: 'Jake' },
+  } },
   { week: 1, picks: {
     'big-dog':         { winners: ['Charles','Corbishley','Adam','Ryan','Fronge','Jake'],    lock: 'Charles' },
     'chad-bellwether': { winners: ['Drew','Corbishley','Mitchum','Shaq','Brent','Jake'],     lock: 'Brent' },
@@ -244,23 +274,23 @@ const MEDIA = [
 
 // ── WEEKLY POWER RANKINGS (Matteo Honeydew) ──
 const RANKINGS = [
-  { rank:1, move:'same', ticker:'CROWN', owner:'Charles', take:'Opening day, $133.12, and a roster that answers every question except December. Same as it ever was.' },
-  { rank:2, move:'up', delta:1, ticker:'AEGIS', owner:'Ryan', take:'QB1 grade, a title belt, and a stock that refuses to move. Boring is a superpower. I have ranked him accordingly.' },
-  { rank:3, move:'down', delta:1, ticker:'APEX', owner:'Corbishley', take:'Eight trades bought the second-best roster on paper. Paper does not play Week 1. Prove it.' },
-  { rank:4, move:'up', delta:2, ticker:'FORG', owner:'Fronge', take:'I keep coming back to the depth. Fourteen startable players is a cheat code in a two-matchup league.' },
-  { rank:5, move:'down', delta:1, ticker:'HLX', owner:'Adam', take:'The model earned the benefit of the doubt this summer. The schedule decides whether it keeps it.' },
-  { rank:6, move:'up', delta:1, ticker:'MWB', owner:'Shaq', take:'The bench is still a rumor, but that starting lineup wins you weeks. $99.99 of pure tension.' },
-  { rank:7, move:'up', delta:1, ticker:'DEEP', owner:'Mitchum', take:'Sneaky-stable all summer. If the warehouse ever picks a lane, this ranking looks low.' },
-  { rank:8, move:'down', delta:3, ticker:'ECHO', owner:'Jake', take:'The market loves the backfield. I need to see a tight end who is not a search party.' },
-  { rank:9, move:'same', ticker:'RDC', owner:'Kevin', take:'Two CEOs, one rebuild. Governance is up; the WR room is still a superfund site.' },
-  { rank:10, move:'up', delta:2, ticker:'ATLAS', owner:'Drew', take:'Best issue of the rebuild, on opening week. Growth is growth — even at $53.' },
-  { rank:11, move:'down', delta:1, ticker:'OBS', owner:'Brent', take:'Nabers and Bowers will win some weeks by themselves. The other eight starters concern me deeply.' },
-  { rank:12, move:'down', delta:1, ticker:'SDR', owner:'Wingard', take:'An all-time-low stock into opening day. The vault does not block anybody.' },
+  { rank:1, move:'same', ticker:'CROWN', owner:'Charles', take:'168.90 and a 2-0 start. I have no take. I have a scoreboard and a shrug.' },
+  { rank:2, move:'up', delta:6, ticker:'ECHO', owner:'Jake', take:'Six spots. Yes, six. He scored 155 without a tight end and I am not going to pretend I did not see it.' },
+  { rank:3, move:'same', ticker:'APEX', owner:'Corbishley', take:'Burrow won London the week. Eight trades are starting to look less like panic and more like a plan.' },
+  { rank:4, move:'up', delta:2, ticker:'MWB', owner:'Shaq', take:'Beat the champion, 143.86, 2-0. The $99.99 roster can play. The bench still cannot, but that is October’s problem.' },
+  { rank:5, move:'same', ticker:'HLX', owner:'Adam', take:'2-0 by four-tenths of a point over the median. Survived is not the same as dominated, but it banks the same.' },
+  { rank:6, move:'down', delta:4, ticker:'AEGIS', owner:'Ryan', take:'The champion is 0-2. The roster is fine. The results are not. Those two facts cannot coexist much longer.' },
+  { rank:7, move:'up', delta:2, ticker:'RDC', owner:'Kevin', take:'Fifth-most points in the league and a 1-1 record to show for it. Two CEOs, zero excuses, quietly competent.' },
+  { rank:8, move:'up', delta:3, ticker:'OBS', owner:'Brent', take:'Won by 3.36 and lost to the median in the same afternoon. Perfectly Obsidian.' },
+  { rank:9, move:'down', delta:5, ticker:'FORG', owner:'Fronge', take:'Best depth in the league, 0-2 record. Sleeper still favors him this week. Somebody is wrong and I do not think it is the projection.' },
+  { rank:10, move:'down', delta:3, ticker:'DEEP', owner:'Mitchum', take:'120.12 and no direction. Same review I have written six times. I would love to write a different one.' },
+  { rank:11, move:'up', delta:1, ticker:'SDR', owner:'Wingard', take:'0-2, but 123.24 says he is not the worst roster here. Projected last this week, which says the opposite.' },
+  { rank:12, move:'down', delta:2, ticker:'ATLAS', owner:'Drew', take:'Lowest score in the league and a date with a desperate champion. Hard hat weather.' },
 ];
 
 
 // Last-updated stamp for the power rankings. Bump this date whenever RANKINGS changes.
-const RANKINGS_UPDATED = 'Sep 7 2026';
+const RANKINGS_UPDATED = 'Sep 19 2026';
 // Self-rendering: inserts the stamp above the rankings list wherever it appears.
 // Defensive — if the page has no #rankings-list element, this does nothing.
 document.addEventListener('DOMContentLoaded', () => {
