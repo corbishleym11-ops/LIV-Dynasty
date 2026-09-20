@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-09-20T03:36:22.266497+00:00",
+  "generated_at": "2026-09-20T19:11:37.053331+00:00",
   "events_seen": [
+    "FREE AGENT ADD (Sep 20 (today)): Wingard added DeeJay Dallas (RB, MIN).",
     "WAIVER CLAIM (Sep 18 (2 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
     "WAIVER CLAIM (Sep 17 (3 days ago)): Drew added Sione Vaki (RB, DET) (dropped Marquise Brown (WR, PHI)).",
     "WAIVER CLAIM (Sep 15 (5 days ago)): Charles added Drew Lock (QB, SEA) for $7 FAAB (dropped Darnell Washington (TE, PIT)).",
@@ -8,109 +9,108 @@
     "WAIVER CLAIM (Sep 15 (5 days ago)): Drew added Emari Demercado (RB, DAL).",
     "WAIVER CLAIM (Sep 15 (5 days ago)): Drew added Demarcus Robinson (WR, SF).",
     "WAIVER CLAIM (Sep 15 (5 days ago)): Corbishley added Carson Wentz (QB, MIN) for $9 FAAB.",
-    "WAIVER CLAIM (Sep 15 (5 days ago)): Jake added Kendrick Bourne (WR, ARI) for $8 FAAB (dropped Brandon Aiyuk (WR, SF)).",
     "WEEK 1 RESULTS: Corbishley def. Kevin, 139.2-130.8; Adam def. Mitchum, 127.7-120.1; Charles def. Drew, 168.9-116.6 (BLOWOUT); Brent def. Fronge, 126.9-123.5 (NAIL-BITER); Jake def. Wingard, 155.2-123.2; Shaq def. Ryan, 143.9-125.9"
   ],
   "tweets": [
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Charles is 2-0 with 168.9 points scored and is currently putting up 85.9 against Kevin with the day barely half over. At some point 'measuring stick' stops being a metaphor and starts being a crime scene outline.",
-      "posted_at": "2026-09-20T03:24:22.266497+00:00",
-      "likes": 134,
-      "rt": 31,
-      "reply": 38
-    },
-    {
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "LIVE: Corbishley leads Mitchum 55.3-30.7 in the early window. Apex is on pace for a statement win. Deepwater's slide from -19.4% in July is now getting on-field confirmation.",
-      "posted_at": "2026-09-20T03:08:22.266497+00:00",
-      "likes": 89,
+      "text": "FINAL from the early window: Corbishley def. Mitchum 83.2-41.3. That is not a football score, that is an audit.",
+      "posted_at": "2026-09-20T18:59:37.053331+00:00",
+      "likes": 98,
       "rt": 22,
-      "reply": 14
+      "reply": 18
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Terrence E. Odom is 3-3 on the season and sitting on a 0-1 locks record. Everyone else who locked in Week 1 is sitting at 1-0. I am not saying the gap is embarrassing. The gap is embarrassing.",
+      "posted_at": "2026-09-20T18:43:37.053331+00:00",
+      "likes": 112,
+      "rt": 29,
+      "reply": 34
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "I locked Ryan last week. Ryan lost by 18. I have reviewed the tape and the tape has reviewed me back. Moving on.",
-      "posted_at": "2026-09-20T02:41:22.266497+00:00",
-      "likes": 112,
-      "rt": 28,
-      "reply": 41
+      "text": "I locked Ryan because Ryan is the defending champion with a fine roster and a history of finding ways to win. I stand by the logic. I refuse to stand by the result. Those are two different things and I will die on this hill.",
+      "posted_at": "2026-09-20T18:26:37.053331+00:00",
+      "likes": 54,
+      "rt": 8,
+      "reply": 27
     },
     {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, I had Fronge as my lock Week 1 and he lost to Brent by 3.36 points in a nail-biter. Three. Point. Three. Six. I want a review board convened. I want my 0-1 locks record audited. I want justice.",
-      "posted_at": "2026-09-20T02:16:22.266497+00:00",
-      "likes": 97,
-      "rt": 19,
-      "reply": 33
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Four-and-two on the season, locks one-and-oh, and I have heard exactly zero apologies from the people who said Charles was a boring pick. Boring cashes.",
-      "posted_at": "2026-09-20T01:46:22.266497+00:00",
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "CHARLES IS PUTTING UP 111.7 ON KEVIN AND THE SUN IS STILL OUT. CROWN at $133.12 and climbing. AT SOME POINT THE REST OF THE EXCHANGE HAS TO LOOK AT THIS SCOREBOARD AND HAVE A CONVERSATION WITH ITSELF.",
+      "posted_at": "2026-09-20T18:04:37.053331+00:00",
       "likes": 121,
-      "rt": 27,
+      "rt": 31,
       "reply": 22
     },
     {
       "key": "matteo-honeydew",
       "name": "Matteo Honeydew",
       "handle": "@MatteoRanksIt",
-      "text": "The reply guys have questions about Jake at number two. I have answers. One-five-five points. Zero tight ends. Six spots climbed in one week. You can disagree with the ranking or you can disagree with the scoreboard \u2014 I recommend you pick the fight you can win.",
-      "posted_at": "2026-09-20T01:11:22.266497+00:00",
-      "likes": 118,
-      "rt": 24,
-      "reply": 44
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Corbishley as a top-three roster before the season and right now Apex is up 55.3 to 30.7 on Mitchum midway through Sunday. Eight trades in the offseason, zero panic \u2014 that was always the read.",
-      "posted_at": "2026-09-20T00:26:22.266497+00:00",
-      "likes": 88,
-      "rt": 16,
-      "reply": 18
+      "text": "Fronge is up 59.1-14.2 on Jake in the late window and my power rankings have Fronge ninth. I said somebody was wrong and I did not think it was the projection. I am now watching the projection get proven wrong in real time. I am taking notes. I am not happy about it.",
+      "posted_at": "2026-09-20T17:43:37.053331+00:00",
+      "likes": 87,
+      "rt": 17,
+      "reply": 31
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Shaq beat the defending champion 143.9 to 125.9, is 2-0, and the stock is frozen at $99.99 \u2014 the flattest line on the entire exchange board. I need someone on this network to give me ten minutes and a whiteboard to explain how that is physically possible.",
-      "posted_at": "2026-09-19T23:26:22.266497+00:00",
-      "likes": 107,
-      "rt": 23,
-      "reply": 29
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Ryan is 0-2, down to Drew right now in a matchup the league expected him to win, and the Matteo ranking has him at six with the note 'those two facts cannot coexist much longer.' The clock on that coexistence is ticking audibly.",
-      "posted_at": "2026-09-19T22:26:22.266497+00:00",
-      "likes": 95,
-      "rt": 20,
-      "reply": 27
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Locked Brent last week, hit it, will absolutely not pretend the 3.36-point margin made me comfortable. A win is a win. Obsidian at $77.10 getting that result with the TE monopoly and no win projection is the most Brent outcome the ledger has ever produced.",
-      "posted_at": "2026-09-19T20:56:22.266497+00:00",
+      "text": "Wingard added DeeJay Dallas and Cooper Rush in the same week and is still down 13.5 to 39.3 against Shaq. I need a segment. Not a tweet. A full segment. Whiteboard, red marker, the works \u2014 because the SDR pick-hoarding strategy has now produced a 0-2 record and a waiver wire shopping spree.",
+      "posted_at": "2026-09-20T17:26:37.053331+00:00",
       "likes": 76,
       "rt": 14,
       "reply": 19
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Charles as my lock Week 1, hit it, called him number one all offseason, and right now he has 111.7 points on the board before the late games kick off. I called it. The ledger agrees. You can check the ledger.",
+      "posted_at": "2026-09-20T16:57:37.053331+00:00",
+      "likes": 93,
+      "rt": 19,
+      "reply": 11
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Fronge up 59-14 on Jake midway through Sunday and my lock record is 0-1 because I had Fronge in Week 1 and Brent beat him by three points. The universe owes me a hit and it is paying out two weeks late.",
+      "posted_at": "2026-09-20T16:32:37.053331+00:00",
+      "likes": 68,
+      "rt": 11,
+      "reply": 24
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Ryan is currently beating Drew 41.8 to 27.9 \u2014 which should be a relief except the Ledger noted 'a desperate champion' and 'hard hat weather' for Drew, and somehow 41.8 points through most of Sunday feels less like relief and more like Ryan squeaking past the floor.",
+      "posted_at": "2026-09-20T16:09:37.053331+00:00",
+      "likes": 84,
+      "rt": 16,
+      "reply": 20
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Adam down 26.0 to 60.2 to Brent at the moment \u2014 which is the most interesting live score on the board because Matteo has Adam fifth and Brent eighth, and right now Brent's TE monopoly is the only roster that looks like it knows what day it is.",
+      "posted_at": "2026-09-20T15:41:37.053331+00:00",
+      "likes": 71,
+      "rt": 13,
+      "reply": 17
     }
   ]
 }
