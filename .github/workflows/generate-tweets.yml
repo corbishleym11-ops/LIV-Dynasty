@@ -1,11 +1,11 @@
 name: Generate LIV Network tweets
 
 on:
-  # ── OFFSEASON: scheduled runs disabled Jul 20 2026 ──
-  # To re-enable for the season, uncomment the schedule block below.
-  # (cron '0 */6 * * *' = every 6 hours / 4 runs per day)
-  # schedule:
-  #   - cron: '0 */6 * * *'
+  # ── SEASON SCHEDULE (enabled Sep 7 2026): daily at 1:00 PM Eastern ──
+  # GitHub cron runs in UTC. 17:00 UTC = 1pm EDT (Mar-Nov).
+  # After daylight saving ends in November, change to '0 18 * * *' to stay at 1pm EST.
+  schedule:
+    - cron: '0 17 * * *'
   workflow_dispatch: {}
 
 permissions:
