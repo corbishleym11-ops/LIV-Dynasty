@@ -1,97 +1,116 @@
 {
-  "generated_at": "2026-09-14T13:58:43.788481+00:00",
+  "generated_at": "2026-09-20T03:36:22.266497+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Sep 13 (yesterday)): Ryan added Dyami Brown (WR, WAS) (dropped Devontez Walker (WR, BAL)).",
-    "FREE AGENT ADD (Sep 12 (2 days ago)): Drew added Charlie Kolar (TE, LAC).",
-    "WAIVER CLAIM (Sep 09 (5 days ago)): Ryan added Jaydon Blue (RB, PHI) (dropped Dyami Brown (WR, WAS)).",
-    "WAIVER CLAIM (Sep 09 (5 days ago)): Ryan added Efton Chism (WR, NE) (dropped Sam Howell (QB, DAL)).",
-    "CUT (Sep 09 (5 days ago)): Ryan released Mitchell Trubisky (QB, TEN).",
-    "CUT (Sep 09 (5 days ago)): Ryan released Michael Carter (RB, TEN).",
-    "CUT (Sep 09 (5 days ago)): Ryan released Jonnu Smith (TE, GB).",
-    "CUT (Sep 09 (5 days ago)): Jake released Ja'Lynn Polk (WR, FA).",
-    "CUT (Sep 09 (5 days ago)): Jake released Kenny Pickett (QB, CAR).",
-    "CUT (Sep 09 (5 days ago)): Jake released Cade Stover (TE, HOU)."
+    "WAIVER CLAIM (Sep 18 (2 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "WAIVER CLAIM (Sep 17 (3 days ago)): Drew added Sione Vaki (RB, DET) (dropped Marquise Brown (WR, PHI)).",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Charles added Drew Lock (QB, SEA) for $7 FAAB (dropped Darnell Washington (TE, PIT)).",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Corbishley added Kalif Raymond (WR, CHI) for $9 FAAB (dropped Roschon Johnson (RB, CHI)).",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Drew added Emari Demercado (RB, DAL).",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Drew added Demarcus Robinson (WR, SF).",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Corbishley added Carson Wentz (QB, MIN) for $9 FAAB.",
+    "WAIVER CLAIM (Sep 15 (5 days ago)): Jake added Kendrick Bourne (WR, ARI) for $8 FAAB (dropped Brandon Aiyuk (WR, SF)).",
+    "WEEK 1 RESULTS: Corbishley def. Kevin, 139.2-130.8; Adam def. Mitchum, 127.7-120.1; Charles def. Drew, 168.9-116.6 (BLOWOUT); Brent def. Fronge, 126.9-123.5 (NAIL-BITER); Jake def. Wingard, 155.2-123.2; Shaq def. Ryan, 143.9-125.9"
   ],
   "tweets": [
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Tonight's desk: Ryan's revolving-door roster construction gets its proper examination, Drew's Kolar add is either stabilization or noise depending on who you ask, and we are not leaving without a definitive take on whether AEGIS at $114.98 is still a buy after a week of moves that would make any compliance officer nervous. Eight o'clock.",
-      "posted_at": "2026-09-14T13:03:43.788481+00:00",
-      "likes": 93,
-      "rt": 21,
-      "reply": 16
+      "text": "Charles is 2-0 with 168.9 points scored and is currently putting up 85.9 against Kevin with the day barely half over. At some point 'measuring stick' stops being a metaphor and starts being a crime scene outline.",
+      "posted_at": "2026-09-20T03:24:22.266497+00:00",
+      "likes": 134,
+      "rt": 31,
+      "reply": 38
     },
     {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Everyone's focused on the Deepwater meltdown and I get it, but the quieter story is Sovereign at $63.56 with a thinning QB room in a superflex league. I pointed to that pick-hoarding discount as the core structural risk before this season started. The Levis cut was just the most visible symptom.",
-      "posted_at": "2026-09-14T10:28:43.788481+00:00",
-      "likes": 53,
-      "rt": 9,
-      "reply": 11
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "The Ryan waiver activity from five days ago \u2014 Jaydon Blue in, Efton Chism in, Trubisky and Carter and Jonnu Smith all cut \u2014 reads like a man emptying his closet and filling it with things he found on the sidewalk. Could be genius. Could be chaos. With Aegis those two things have never been easy to tell apart.",
-      "posted_at": "2026-09-14T06:48:43.788481+00:00",
-      "likes": 81,
-      "rt": 15,
-      "reply": 22
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "AEGIS has released Trubisky, Carter, and Jonnu Smith in the same window while cycling the same wideout through the roster twice in five days. At $114.98 the market is still pricing Ryan as an elite operator. I'm not sure that number survives a full month of this offseason roster energy.",
-      "posted_at": "2026-09-14T02:38:43.788481+00:00",
-      "likes": 59,
-      "rt": 10,
-      "reply": 12
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "LIVE: Corbishley leads Mitchum 55.3-30.7 in the early window. Apex is on pace for a statement win. Deepwater's slide from -19.4% in July is now getting on-field confirmation.",
+      "posted_at": "2026-09-20T03:08:22.266497+00:00",
+      "likes": 89,
+      "rt": 22,
+      "reply": 14
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "Jake released Ja'Lynn Polk, Kenny Pickett, AND Cade Stover on the same day five days ago. Three assets. Gone. I will acknowledge that EchoPoint's RB room is elite, their stock is at $103.99, and sometimes you cut bait cleanly. This was clean. I will not say it was wrong. I will say it took longer than it should have.",
-      "posted_at": "2026-09-13T22:18:43.788481+00:00",
-      "likes": 72,
-      "rt": 13,
+      "text": "I locked Ryan last week. Ryan lost by 18. I have reviewed the tape and the tape has reviewed me back. Moving on.",
+      "posted_at": "2026-09-20T02:41:22.266497+00:00",
+      "likes": 112,
+      "rt": 28,
+      "reply": 41
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, I had Fronge as my lock Week 1 and he lost to Brent by 3.36 points in a nail-biter. Three. Point. Three. Six. I want a review board convened. I want my 0-1 locks record audited. I want justice.",
+      "posted_at": "2026-09-20T02:16:22.266497+00:00",
+      "likes": 97,
+      "rt": 19,
+      "reply": 33
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Four-and-two on the season, locks one-and-oh, and I have heard exactly zero apologies from the people who said Charles was a boring pick. Boring cashes.",
+      "posted_at": "2026-09-20T01:46:22.266497+00:00",
+      "likes": 121,
+      "rt": 27,
+      "reply": 22
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "The reply guys have questions about Jake at number two. I have answers. One-five-five points. Zero tight ends. Six spots climbed in one week. You can disagree with the ranking or you can disagree with the scoreboard \u2014 I recommend you pick the fight you can win.",
+      "posted_at": "2026-09-20T01:11:22.266497+00:00",
+      "likes": 118,
+      "rt": 24,
+      "reply": 44
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Corbishley as a top-three roster before the season and right now Apex is up 55.3 to 30.7 on Mitchum midway through Sunday. Eight trades in the offseason, zero panic \u2014 that was always the read.",
+      "posted_at": "2026-09-20T00:26:22.266497+00:00",
+      "likes": 88,
+      "rt": 16,
       "reply": 18
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Ryan dropped Dyami Brown to add Jaydon Blue, then re-added Dyami Brown by dropping Dyami Brown. I read that three times and it still reads the same way. Aegis is a championship-winning organization and also apparently a revolving door for one specific Washington receiver.",
-      "posted_at": "2026-09-13T17:58:43.788481+00:00",
-      "likes": 88,
-      "rt": 19,
+      "text": "Shaq beat the defending champion 143.9 to 125.9, is 2-0, and the stock is frozen at $99.99 \u2014 the flattest line on the entire exchange board. I need someone on this network to give me ten minutes and a whiteboard to explain how that is physically possible.",
+      "posted_at": "2026-09-19T23:26:22.266497+00:00",
+      "likes": 107,
+      "rt": 23,
+      "reply": 29
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Ryan is 0-2, down to Drew right now in a matchup the league expected him to win, and the Matteo ranking has him at six with the note 'those two facts cannot coexist much longer.' The clock on that coexistence is ticking audibly.",
+      "posted_at": "2026-09-19T22:26:22.266497+00:00",
+      "likes": 95,
+      "rt": 20,
       "reply": 27
     },
     {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Drew adding Charlie Kolar two days ago is exactly the kind of move that gets no coverage and absolutely deserves some. EchoPoint isn't the only team with a TE problem \u2014 Atlas has been running that desk empty for months. Kolar isn't a fix but he's a placeholder that at least has a pulse. ATLAS at $53.53 is still bargain-bin territory but the pieces are being assembled, slowly.",
-      "posted_at": "2026-09-13T11:58:43.788481+00:00",
-      "likes": 44,
-      "rt": 7,
-      "reply": 9
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "Ryan added Dyami Brown yesterday \u2014 the same Dyami Brown he dropped five days ago to add Jaydon Blue. That's not a coincidence, that's a revisit. I'm told Aegis is still searching for WR depth that can hold a roster spot. The churn on the back end of that 24-man is real.",
-      "posted_at": "2026-09-13T07:38:43.788481+00:00",
-      "likes": 67,
-      "rt": 11,
-      "reply": 14
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Locked Brent last week, hit it, will absolutely not pretend the 3.36-point margin made me comfortable. A win is a win. Obsidian at $77.10 getting that result with the TE monopoly and no win projection is the most Brent outcome the ledger has ever produced.",
+      "posted_at": "2026-09-19T20:56:22.266497+00:00",
+      "likes": 76,
+      "rt": 14,
+      "reply": 19
     }
   ]
 }
