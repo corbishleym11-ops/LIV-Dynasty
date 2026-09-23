@@ -80,6 +80,21 @@
   </div>
 
   <div class="sec-head">
+    <div class="sec-title">Quadrant Board</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="quad-updated">QUADRANT BOARD</div>
+  </div>
+  <div class="chart-card g1">
+    <div class="card-title">Win-Now Score vs Dynasty Rating</div>
+    <div class="card-sub">Where every desk sits on its two valuation lenses. Both scales are zero-sum across the twelve teams, so the league mean lands on exactly 280 on each axis &mdash; the crosshair is arithmetic, not opinion. Click a dot for the full company file.</div>
+    <div class="quad-wrap"><svg id="quad-board" viewBox="0 0 900 640" role="img" aria-labelledby="quad-t quad-d">
+      <title id="quad-t">Win-now score versus dynasty rating for all twelve LIV Dynasty franchises</title>
+      <desc id="quad-d">A scatter plot split into four named quadrants at the league mean of 280 on both axes.</desc>
+    </svg></div>
+    <div class="quad-legend" id="quad-legend"></div>
+  </div>
+
+  <div class="sec-head">
     <div class="sec-title">Exchange Screener</div>
     <div class="sec-line"></div>
     <div class="sec-tag">FULL MARKET</div>
@@ -230,10 +245,123 @@ function buildCharts() {
 
 
 
+
+function buildQuadrant() {
+  const svg = document.getElementById('quad-board');
+  if (!svg || typeof QUADRANT === 'undefined') return;
+  const NS = 'http://www.w3.org/2000/svg';
+  const MONO = "'IBM Plex Mono', monospace";
+  const SANS = "'Inter', sans-serif";
+  const MEAN = QUADRANT_MEAN;
+
+  const rows = TEAMS.filter(t => QUADRANT[t.owner]).map(t => Object.assign({
+    owner: t.owner, ticker: t.ticker, company: t.company
+  }, QUADRANT[t.owner]));
+  if (!rows.length) return;
+
+  const W = 900, H = 640, M = { l:72, r:40, t:40, b:62 };
+  const PW = W - M.l - M.r, PH = H - M.t - M.b;
+  const xs = rows.map(r => r.dyn), ys = rows.map(r => r.con);
+  // extra headroom at the top of each axis so the quadrant captions clear the marks
+  const XD = [Math.min(...xs) - 26, Math.max(...xs) + 30];
+  const YD = [Math.min(...ys) - 32, Math.max(...ys) + 58];
+  const sx = v => M.l + (v - XD[0]) / (XD[1] - XD[0]) * PW;
+  const sy = v => M.t + (YD[1] - v) / (YD[1] - YD[0]) * PH;
+  const ticks = (d, step) => { const out = []; for (let v = Math.ceil(d[0]/step)*step; v <= d[1]; v += step) out.push(v); return out; };
+
+  function el(name, attrs, text, parent) {
+    const e = document.createElementNS(NS, name);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    (parent || svg).appendChild(e);
+    return e;
+  }
+
+  svg.querySelectorAll('g,rect,line,text,circle').forEach(n => n.remove());
+  const cx = sx(MEAN), cy = sy(MEAN);
+  const L = M.l, R = M.l + PW, T = M.t, B = M.t + PH;
+
+  // quadrant region tints, in the same order as QUADRANT_ZONES
+  const boxes = {
+    chips:      { x:cx, y:T,  w:R-cx, h:cy-T, fill:'rgba(255,200,64,.055)' },
+    borrowed:   { x:L,  y:T,  w:cx-L, h:cy-T, fill:'rgba(236,131,90,.05)'  },
+    distressed: { x:L,  y:cy, w:cx-L, h:B-cy, fill:'rgba(255,92,92,.05)'   },
+    vault:      { x:cx, y:cy, w:R-cx, h:B-cy, fill:'rgba(79,195,247,.055)' }
+  };
+  QUADRANT_ZONES.forEach(z => {
+    const b = boxes[z.key];
+    el('rect', { x:b.x, y:b.y, width:b.w, height:b.h, fill:b.fill });
+  });
+  el('rect', { x:L, y:T, width:PW, height:PH, fill:'none', stroke:'#1e2a36', 'stroke-width':1 });
+
+  const xt = ticks(XD, 40), yt = ticks(YD, 40);
+  xt.forEach(v => { if (v !== MEAN) el('line', { x1:sx(v), y1:T, x2:sx(v), y2:B, stroke:'rgba(255,255,255,.035)', 'stroke-width':1 }); });
+  yt.forEach(v => { if (v !== MEAN) el('line', { x1:L, y1:sy(v), x2:R, y2:sy(v), stroke:'rgba(255,255,255,.035)', 'stroke-width':1 }); });
+
+  // the crosshair — league mean on both lenses
+  el('line', { x1:cx, y1:T, x2:cx, y2:B, stroke:'#2f4560', 'stroke-width':1.5, 'stroke-dasharray':'5 4' });
+  el('line', { x1:L, y1:cy, x2:R, y2:cy, stroke:'#2f4560', 'stroke-width':1.5, 'stroke-dasharray':'5 4' });
+  el('text', { x:cx+7, y:T-9, fill:'#3f5a72', 'font-size':10.5, 'font-family':MONO, 'text-anchor':'start' }, 'league mean = ' + MEAN);
+
+  xt.forEach(v => el('text', { x:sx(v), y:B+20, fill:'#5a7a96', 'font-size':11.5, 'font-family':MONO, 'text-anchor':'middle' }, v));
+  yt.forEach(v => el('text', { x:L-12, y:sy(v)+4, fill:'#5a7a96', 'font-size':11.5, 'font-family':MONO, 'text-anchor':'end' }, v));
+  el('text', { x:L, y:B+46, fill:'#8aa7c2', 'font-size':11.5, 'font-family':MONO, 'letter-spacing':'1.8', 'text-anchor':'start' }, 'DYNASTY RATING \u2192');
+  el('text', { x:-T, y:20, transform:'rotate(-90)', fill:'#8aa7c2', 'font-size':11.5, 'font-family':MONO, 'letter-spacing':'1.8', 'text-anchor':'end' }, 'WIN-NOW SCORE \u2192');
+
+  // quadrant captions, each at the top inside corner of its own region
+  const caps = {
+    chips:      { x:R-10, y:T+24,  anchor:'end'   },
+    borrowed:   { x:L+10, y:T+24,  anchor:'start' },
+    distressed: { x:L+10, y:cy+26, anchor:'start' },
+    vault:      { x:R-10, y:cy+26, anchor:'end'   }
+  };
+  QUADRANT_ZONES.forEach(z => {
+    const c = caps[z.key];
+    el('text', { x:c.x, y:c.y, fill:z.color, 'fill-opacity':.92, 'font-size':13.5, 'font-weight':700,
+                 'letter-spacing':'1.9', 'text-anchor':c.anchor, 'font-family':SANS }, z.name);
+    el('text', { x:c.x, y:c.y+17, fill:z.color, 'fill-opacity':.5, 'font-size':11.5,
+                 'font-family':MONO, 'text-anchor':c.anchor }, z.tag);
+  });
+
+  rows.forEach(r => {
+    const px = sx(r.dyn), py = sy(r.con);
+    const right = r.side !== 'left';
+    const g = el('g', { class:'quad-dot', style:'cursor:pointer' });
+    g.addEventListener('click', () => { location.href = 'team.html?owner=' + encodeURIComponent(r.owner); });
+    el('title', {}, r.company + ' (' + r.owner + ') \u2014 dynasty ' + r.dyn + ', win-now ' + r.con, g);
+    el('circle', { cx:px, cy:py, r:9, fill:'#0f1318' }, null, g);              // surface ring
+    el('circle', { cx:px, cy:py, r:5.5, fill:'#ffc840' }, null, g);
+    el('text', { x: right ? px+11 : px-11, y: py+4, 'text-anchor': right ? 'start' : 'end',
+                 'font-size':13, 'font-weight':600, 'font-family':MONO, fill:'#e2eaf4' }, r.owner, g);
+  });
+
+  const tag = document.getElementById('quad-updated');
+  if (tag && typeof QUADRANT_UPDATED !== 'undefined') tag.textContent = 'UPDATED ' + QUADRANT_UPDATED.toUpperCase();
+
+  const legend = document.getElementById('quad-legend');
+  if (legend) {
+    legend.innerHTML = QUADRANT_ZONES.map(z => {
+      const members = rows.filter(r =>
+        z.dynUp === (r.dyn >= MEAN) && z.conUp === (r.con >= MEAN)
+      ).sort((a,b) => (b.dyn + b.con) - (a.dyn + a.con));
+      const names = members.length
+        ? members.map(m => ownerLink(m.owner)).join(' &middot; ')
+        : '<span class="quad-zone-empty">nobody &mdash; for now</span>';
+      return `<div class="quad-zone" style="border-left-color:${z.color}">
+        <div class="quad-zone-name" style="color:${z.color}">${z.name}</div>
+        <div class="quad-zone-tag">${z.tag}</div>
+        <div class="quad-zone-blurb">${z.blurb}</div>
+        <div class="quad-zone-roster">${names}</div>
+      </div>`;
+    }).join('');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
   buildStockCards();
   buildScreener();
+  buildQuadrant();
   buildCharts();
 });
 </script>

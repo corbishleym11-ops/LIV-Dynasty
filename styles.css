@@ -629,3 +629,31 @@ footer {
 .status-pending { background: rgba(90,122,150,.12); border: 1px solid var(--border2); color: var(--muted); }
 .status-progress { background: rgba(79,195,247,.12); border: 1px solid rgba(79,195,247,.4); color: #4fc3f7; }
 .status-complete { background: rgba(0,230,118,.12); border: 1px solid var(--green-dim); color: var(--green); }
+
+
+/* ── QUADRANT BOARD ── */
+.quad-wrap { overflow-x: auto; margin: 0 -4px; }
+.quad-wrap svg { display: block; width: 100%; min-width: 720px; height: auto; }
+.quad-legend {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-top: 18px;
+}
+.quad-zone {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-left: 3px solid var(--border2); border-radius: 5px; padding: 12px 13px;
+}
+.quad-zone-name {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 1.4px; margin-bottom: 3px;
+}
+.quad-zone-tag { font-size: 10px; color: var(--dim); font-style: italic; margin-bottom: 8px; }
+.quad-zone-blurb { font-size: 11px; color: var(--muted); line-height: 1.55; margin-bottom: 9px; }
+.quad-zone-roster {
+  font-family: var(--mono); font-size: 10.5px; color: var(--muted);
+  letter-spacing: .3px; border-top: 1px solid var(--border); padding-top: 8px;
+}
+.quad-zone-roster a { color: var(--text); text-decoration: none; }
+.quad-zone-roster a:hover { color: var(--gold); }
+.quad-zone-empty { color: var(--dim); }
+@media (max-width: 1000px) { .quad-legend { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .quad-legend { grid-template-columns: 1fr; } }

@@ -313,6 +313,49 @@ const RANKINGS = [
 
 
 // Last-updated stamp for the power rankings. Bump this date whenever RANKINGS changes.
+// ── QUADRANT BOARD — dynasty rating (x) vs win-now score (y) ──
+// Both lenses use the same zero-sum rank scale: score = 100 - 8*(rank-1),
+// summed over 5 inputs. Twelve teams therefore always total 3360 per lens,
+// so the league mean is exactly 280 on each axis — that is the crosshair.
+//   dyn = KTC full team + picks   (QB/RB/WR/TE/PICK)
+//   con = Dynasty Daddy starters  (QB/RB/WR/TE/FLEX)
+// side = which way the owner label hangs off its dot, hand-set to avoid collisions.
+const QUADRANT_MEAN = 280;
+const QUADRANT_UPDATED = 'Sep 22 2026';
+const QUADRANT = {
+  Charles:   { dyn:380, con:412, side:'left'  },
+  Ryan:      { dyn:324, con:412, side:'left'  },
+  Corbishley:{ dyn:316, con:364, side:'right' },
+  Jake:      { dyn:324, con:284, side:'right' },
+  Adam:      { dyn:252, con:332, side:'left'  },
+  Kevin:     { dyn:236, con:308, side:'left'  },
+  Mitchum:   { dyn:236, con:284, side:'right' },
+  Shaq:      { dyn:356, con:228, side:'left'  },
+  Brent:     { dyn:284, con:156, side:'right' },
+  Fronge:    { dyn:236, con:268, side:'left'  },
+  Wingard:   { dyn:260, con:180, side:'right' },
+  Drew:      { dyn:156, con:132, side:'right' }
+};
+const QUADRANT_ZONES = [
+  { key:'chips',      name:'BLUE CHIPS',        tag:'win now, win later',
+    blurb:'Above the mean on both lenses. Winning today and holding the paper to keep winning. No trade-off left to make.',
+    color:'#ffc840', dynUp:true,  conUp:true  },
+  { key:'borrowed',   name:'BORROWED TIME',     tag:'contending on thin capital',
+    blurb:'Lineups good enough to contend, balance sheets too thin to sustain it. Every win is financed.',
+    color:'#ec835a', dynUp:false, conUp:true  },
+  { key:'distressed', name:'DISTRESSED ASSETS', tag:'no present, no future',
+    blurb:'Below the mean both ways. Nothing on the field and nothing in the vault — only a decision nobody has made yet.',
+    color:'#ff5c5c', dynUp:false, conUp:false },
+  { key:'vault',      name:'THE VAULT',         tag:'rich on paper, quiet on Sunday',
+    blurb:'Assets are real; none of them have been converted into wins. The widest spreads on the exchange live here.',
+    color:'#4fc3f7', dynUp:true,  conUp:false }
+];
+function quadrantZone(owner) {
+  const q = QUADRANT[owner]; if (!q) return null;
+  return QUADRANT_ZONES.find(z =>
+    z.dynUp === (q.dyn >= QUADRANT_MEAN) && z.conUp === (q.con >= QUADRANT_MEAN)) || null;
+}
+
 const RANKINGS_UPDATED = 'Sep 22 2026';
 // Self-rendering: inserts the stamp above the rankings list wherever it appears.
 // Defensive — if the page has no #rankings-list element, this does nothing.
