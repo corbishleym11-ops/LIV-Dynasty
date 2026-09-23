@@ -1,131 +1,135 @@
 {
-  "generated_at": "2026-09-22T19:57:58.161527+00:00",
+  "generated_at": "2026-09-23T19:54:56.781716+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Sep 20 (2 days ago)): Wingard added DeeJay Dallas (RB, MIN).",
-    "WAIVER CLAIM (Sep 18 (4 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
-    "WAIVER CLAIM (Sep 17 (5 days ago)): Drew added Sione Vaki (RB, DET) (dropped Marquise Brown (WR, PHI)).",
+    "WAIVER CLAIM (Sep 23 (today)): Wingard added AJ Dillon (RB, CAR).",
+    "WAIVER CLAIM (Sep 22 (yesterday)): Fronge added Athan Kaliakmanis (QB, WAS) (dropped Darnell Mooney (WR, NYG)).",
+    "WAIVER CLAIM (Sep 22 (yesterday)): Drew added Roman Wilson (WR, PIT) for $9 FAAB (dropped Demarcus Robinson (WR, SF)).",
+    "WAIVER CLAIM (Sep 22 (yesterday)): Drew added Zach Ertz (TE, PHI) for $1 FAAB (dropped Charlie Kolar (TE, LAC)).",
+    "FREE AGENT ADD (Sep 20 (3 days ago)): Wingard added DeeJay Dallas (RB, MIN).",
+    "WAIVER CLAIM (Sep 18 (5 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "WAIVER CLAIM (Sep 17 (6 days ago)): Drew added Sione Vaki (RB, DET) (dropped Marquise Brown (WR, PHI)).",
     "WEEK 2 RESULTS: Mitchum def. Corbishley, 160.0-151.7; Brent def. Adam, 98.9-71.1; Ryan def. Drew, 136.7-92.7 (BLOWOUT); Fronge def. Jake, 146.6-97.9 (BLOWOUT); Charles def. Kevin, 205.6-133.6 (BLOWOUT); Shaq def. Wingard, 87.3-70.6"
   ],
   "tweets": [
     {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Power rankings are live. Charles is first and I am not apologizing for how short that section was. Ryan moved up three. Fronge moved up four. I moved Jake down six and I stand on every word.",
-      "posted_at": "2026-09-22T19:42:58.161527+00:00",
-      "likes": 118,
-      "rt": 28,
-      "reply": 38
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "MATTEO HAS RYAN AT NUMBER THREE. THE MAN IS 2-2. CORBISHLEY IS 3-1 AND SECOND. SHAQ IS 3-1 AND FOURTH. I UNDERSTAND THE SCORING ARGUMENT. I DO NOT ACCEPT IT.",
-      "posted_at": "2026-09-22T19:23:58.161527+00:00",
-      "likes": 87,
-      "rt": 19,
-      "reply": 31
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Vance: Shaq won 87.30 to 70.56. That is a score. It is not an endorsement. The record says contender; the math says he has been handed a very kind month and I am not ranking the calendar.",
-      "posted_at": "2026-09-22T19:05:58.161527+00:00",
-      "likes": 104,
-      "rt": 22,
-      "reply": 27
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I had Jake. Jake scored 97.94. Fronge beat him by 48 points. I have reviewed the film, the projections, and my own conscience, and what I have concluded is that Jake's tight end room is a certified crime scene and I could not have known.",
-      "posted_at": "2026-09-22T18:39:58.161527+00:00",
-      "likes": 76,
-      "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, I locked Fronge, the man everyone had ninth, and he went 146.6 against the second-best team in the league. My record is 8-4. I am not discussing methodology. I am discussing results.",
-      "posted_at": "2026-09-22T18:12:58.161527+00:00",
-      "likes": 93,
-      "rt": 21,
-      "reply": 18
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Charles scored 205.6 last week. Now he draws Brent in Week 3. DEEP respect for Obsidian's 2-0 head-to-head record \u2014 but OBS stock just fell to $66.11 and Brent is QB12 and RB12. This one grades as a scheduled earnings beat for Crownline.",
-      "posted_at": "2026-09-22T17:37:58.161527+00:00",
-      "likes": 82,
-      "rt": 17,
-      "reply": 14
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "5-7 on the season and I will not pretend that number doesn't exist. What I will say is that my lock hit last week \u2014 Charles, 205.6, no debate. I am building from there. One brick at a time.",
-      "posted_at": "2026-09-22T16:42:58.161527+00:00",
-      "likes": 44,
-      "rt": 6,
-      "reply": 19
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Somebody needs to give me a full segment on the Sovereign draft philosophy \u2014 four 2027 firsts stockpiled, 0-4 on the field, and the biggest midweek move was Cooper Rush. The picks are real. The Sundays are not.",
-      "posted_at": "2026-09-22T15:37:58.161527+00:00",
-      "likes": 99,
-      "rt": 24,
-      "reply": 33
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "The Week 2 Ledger is up. The headline is Charles scoring 205.6. The subhead is Adam scoring 71.1. The story hiding underneath both of those is that neither number was the most alarming thing we tracked. Go read it.",
-      "posted_at": "2026-09-22T14:27:58.161527+00:00",
-      "likes": 111,
-      "rt": 26,
-      "reply": 21
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Adam vs Ryan this week. HLX is at $85.64 and falling. AEGIS is at $129.22 and climbing. Matteo has Ryan third. The exchange has already priced this matchup and it is not close.",
-      "posted_at": "2026-09-22T11:57:58.161527+00:00",
-      "likes": 67,
-      "rt": 13,
-      "reply": 16
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "ATLAS sits at $45.57 \u2014 down 14.9% this issue \u2014 and Drew draws Corbishley in Week 3. The cheapest listing in exchange history against the second-place team. The Ledger is calling that a character-defining moment. We will see what character shows up.",
-      "posted_at": "2026-09-22T07:57:58.161527+00:00",
-      "likes": 88,
-      "rt": 20,
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Wingard adds AJ Dillon out of Carolina this morning. SDR is now 0-4 with four 2027 firsts and a backfield built from the waiver wire. Cooper Rush on Tuesday, AJ Dillon on Wednesday. The empire is assembling.",
+      "posted_at": "2026-09-23T19:39:56.781716+00:00",
+      "likes": 47,
+      "rt": 8,
       "reply": 12
     },
     {
       "key": "dina-ravioli",
       "name": "Dina Ravioli",
       "handle": "@DinaOnTheLine",
-      "text": "Kevin vs Shaq is the matchup nobody is talking about. RDC at $86.58 after a +10.3% bounce. MWB down to $95.12, off 4.9%. Kevin has been handed brutal schedules and is still 2-2. This one is more competitive than the preview slots suggest.",
-      "posted_at": "2026-09-22T02:27:58.161527+00:00",
-      "likes": 58,
+      "text": "Wingard has now made three waiver moves in five days \u2014 Rush, DeeJay Dallas, AJ Dillon \u2014 and has not won a game. I am not connecting those dots for you. I am just stacking them neatly on the desk.",
+      "posted_at": "2026-09-23T19:16:56.781716+00:00",
+      "likes": 63,
       "rt": 11,
-      "reply": 9
+      "reply": 19
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "I LOCKED CORBISHLEY LAST WEEK. CORBISHLEY SCORED 151.7. MITCHUM SCORED 159.98. I HAVE NOTHING TO SAY EXCEPT THAT 159.98 IS AN ABSURD NUMBER TO LOSE TO AND I STAND BY THE LOGIC EVEN IF THE RESULT DOES NOT STAND BY ME.",
+      "posted_at": "2026-09-23T18:42:56.781716+00:00",
+      "likes": 88,
+      "rt": 14,
+      "reply": 31
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Shaq wins, my lock hits, my record goes to 8-4. I need a full segment on why I am the only person on this panel who understood that Shaq's 3-1 is real regardless of the point totals. Book it.",
+      "posted_at": "2026-09-23T18:09:56.781716+00:00",
+      "likes": 54,
+      "rt": 9,
+      "reply": 16
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Vance, you locked the team that lost to a 159.98. I locked the team that let in the 159.98. We both missed. The difference is I moved Jake down six spots and corrected the record in writing. You have not corrected anything.",
+      "posted_at": "2026-09-23T17:44:56.781716+00:00",
+      "likes": 79,
+      "rt": 13,
+      "reply": 27
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Drew added Roman Wilson AND Zach Ertz in the same waiver window. $9 and $1 FAAB respectively. When you are 0-4 and $45.57 on the exchange, you spend whatever is left and you hope. No shame in the hustle.",
+      "posted_at": "2026-09-23T16:46:56.781716+00:00",
+      "likes": 41,
+      "rt": 6,
+      "reply": 10
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "My lock was Brent \u2014 hit. Brent wins, OBS stock drops 14.3% to $66.11. The market punished a team for winning because the wins look survivable and nothing else does. Two correct picks, one brutal lesson in how the exchange prices ceilings.",
+      "posted_at": "2026-09-23T15:49:56.781716+00:00",
+      "likes": 72,
+      "rt": 12,
+      "reply": 22
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Fronge relocated to Havana, added Athan Kaliakmanis off waivers, and still has the fourth-most points in the league. Whatever regulatory flexibility means in practice, it means 146.56 against the second seed. I locked it and I would lock it again.",
+      "posted_at": "2026-09-23T14:44:56.781716+00:00",
+      "likes": 95,
+      "rt": 17,
+      "reply": 28
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "5-7 on the year, I am aware. My lock was Charles and Charles scored 205.6. I am going to ride that hit all the way into Week 3 picks and I am not apologizing for the math on either end of that sentence.",
+      "posted_at": "2026-09-23T12:44:56.781716+00:00",
+      "likes": 38,
+      "rt": 5,
+      "reply": 14
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Fronge vs Wingard this week. ForgeHammer is 2-2 with the fourth-most points in the league after a 146-point blowout. Sovereign is 0-4, has four 2027 firsts, and just added AJ Dillon this morning. One of these franchises is building. The other one is also building, just differently.",
+      "posted_at": "2026-09-23T10:34:56.781716+00:00",
+      "likes": 66,
+      "rt": 10,
+      "reply": 18
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I said Jake's tight end room was a problem before it graded dead last. I said it. The 97.94 and the six-spot power ranking drop are the confirmation, not the discovery. Next time someone asks why I keep circling back to positional depth, point them here.",
+      "posted_at": "2026-09-23T07:54:56.781716+00:00",
+      "likes": 57,
+      "rt": 9,
+      "reply": 21
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "AEGIS at $129.22, up 12.4% this issue. HLX at $85.64, down 6.9%. Adam vs Ryan is on the schedule for Week 3 and the exchange has been running this projection since Tuesday. The gap between those two numbers is doing more previewing than any of our panel.",
+      "posted_at": "2026-09-23T04:04:56.781716+00:00",
+      "likes": 83,
+      "rt": 15,
+      "reply": 24
     }
   ]
 }
