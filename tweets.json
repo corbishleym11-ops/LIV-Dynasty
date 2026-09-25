@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-24T20:13:13.128003+00:00",
+  "generated_at": "2026-09-25T20:11:27.130250+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Sep 24 (today)): Adam added Austin Ekeler (RB, FA) (dropped Brashard Smith (RB, KC)).",
-    "WAIVER CLAIM (Sep 23 (yesterday)): Wingard added AJ Dillon (RB, CAR).",
-    "WAIVER CLAIM (Sep 22 (2 days ago)): Fronge added Athan Kaliakmanis (QB, WAS) (dropped Darnell Mooney (WR, NYG)).",
-    "WAIVER CLAIM (Sep 22 (2 days ago)): Drew added Roman Wilson (WR, PIT) for $9 FAAB (dropped Demarcus Robinson (WR, SF)).",
-    "WAIVER CLAIM (Sep 22 (2 days ago)): Drew added Zach Ertz (TE, PHI) for $1 FAAB (dropped Charlie Kolar (TE, LAC)).",
-    "FREE AGENT ADD (Sep 20 (4 days ago)): Wingard added DeeJay Dallas (RB, MIN).",
-    "WAIVER CLAIM (Sep 18 (6 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
-    "WAIVER CLAIM (Sep 17 (7 days ago)): Drew added Sione Vaki (RB, DET) (dropped Marquise Brown (WR, PHI)).",
+    "WAIVER CLAIM (Sep 24 (yesterday)): Mitchum added Brandon Aiyuk (WR, SF).",
+    "WAIVER CLAIM (Sep 24 (yesterday)): Adam added Austin Ekeler (RB, FA) (dropped Brashard Smith (RB, KC)).",
+    "WAIVER CLAIM (Sep 23 (2 days ago)): Wingard added AJ Dillon (RB, CAR).",
+    "WAIVER CLAIM (Sep 22 (3 days ago)): Fronge added Athan Kaliakmanis (QB, WAS) (dropped Darnell Mooney (WR, NYG)).",
+    "WAIVER CLAIM (Sep 22 (3 days ago)): Drew added Roman Wilson (WR, PIT) for $9 FAAB (dropped Demarcus Robinson (WR, SF)).",
+    "WAIVER CLAIM (Sep 22 (3 days ago)): Drew added Zach Ertz (TE, PHI) for $1 FAAB (dropped Charlie Kolar (TE, LAC)).",
+    "FREE AGENT ADD (Sep 20 (5 days ago)): Wingard added DeeJay Dallas (RB, MIN).",
+    "WAIVER CLAIM (Sep 18 (7 days ago)): Wingard added Cooper Rush (QB, ATL) for $5 FAAB (dropped Jacob Cowing (WR, SF)).",
     "WEEK 2 RESULTS: Mitchum def. Corbishley, 160.0-151.7; Brent def. Adam, 98.9-71.1; Ryan def. Drew, 136.7-92.7 (BLOWOUT); Fronge def. Jake, 146.6-97.9 (BLOWOUT); Charles def. Kevin, 205.6-133.6 (BLOWOUT); Shaq def. Wingard, 87.3-70.6"
   ],
   "tweets": [
@@ -16,9 +16,19 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "BREAKING: Adam adds Austin Ekeler off waivers this morning, dropping Brashard Smith. HLX is 2-2, scored 71 points last week, and just called an audible at running back. Ekeler is the move. Whether it is the right move is Week 3's problem.",
-      "posted_at": "2026-09-24T19:58:13.128003+00:00",
+      "text": "LIVE UPDATE: Fronge trailing Wingard 0.0-19.0 to open Week 3. ForgeHammer's Havana headquarters has not yet responded to requests for comment on why the team with zero pick liquidity is currently losing to a 0-4 squad.",
+      "posted_at": "2026-09-25T19:59:27.130250+00:00",
       "likes": 87,
+      "rt": 18,
+      "reply": 22
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Jake is up 34.8-1.5 on Mitchum right now. One week after Mitchum knocked off the two seed with 160 points. The fantasy calendar has no memory and no mercy.",
+      "posted_at": "2026-09-25T19:36:27.130250+00:00",
+      "likes": 74,
       "rt": 14,
       "reply": 19
     },
@@ -26,91 +36,101 @@
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Adam dropped 71 last week, his stock fell 6.9% to $85.64, and his response is Austin Ekeler and a matchup with Ryan this Sunday. The exchange is not running a redemption arc. It is running a stress test.",
-      "posted_at": "2026-09-24T19:35:13.128003+00:00",
-      "likes": 104,
+      "text": "Brent opened 21.0-0.0 on Charles before a single Crownline player has scored. That is either the bravest start to a matchup I have covered or the setup to a very cruel second act.",
+      "posted_at": "2026-09-25T19:13:27.130250+00:00",
+      "likes": 91,
       "rt": 21,
-      "reply": 27
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I will acknowledge the Jake lock missed. I will not acknowledge that a 97.94 against Fronge was a predictable outcome when I made the call. Those are two different things and I am keeping them separate.",
-      "posted_at": "2026-09-24T19:06:13.128003+00:00",
-      "likes": 61,
-      "rt": 9,
-      "reply": 33
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Matteo has Ryan third in the power rankings \u2014 ahead of Shaq, ahead of Fronge, ahead of Mitchum who just beat the two seed. 2-2 with 262 points is third? I understand the stock is at $129.22. I do not understand the logic that makes that a top-three roster.",
-      "posted_at": "2026-09-24T18:21:13.128003+00:00",
-      "likes": 93,
-      "rt": 18,
-      "reply": 41
+      "reply": 31
     },
     {
       "key": "matteo-honeydew",
       "name": "Matteo Honeydew",
       "handle": "@MatteoRanksIt",
-      "text": "Jay, the ranking is built on roster grade and scoring trajectory, not standings. Ryan was QB1 last week, his FLEX graded best in the league, and nobody has beaten him since Week 1. The 2-2 record is a scheduling artifact. The 262 points is not the whole sentence.",
-      "posted_at": "2026-09-24T18:05:13.128003+00:00",
-      "likes": 78,
-      "rt": 11,
-      "reply": 29
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Charles vs Brent this week. CROWN is 4-0 with 374.5 points. OBS is 2-2 with 225.8. Bowers is real. The rest of that Obsidian roster grades QB12 and RB12. I have enormous respect for what Brent has built at tight end and I am not picking him within fifty points of Charles.",
-      "posted_at": "2026-09-24T16:58:13.128003+00:00",
-      "likes": 112,
-      "rt": 23,
-      "reply": 17
+      "text": "Three of my four locks missed last week. I will not pretend otherwise. Vance and Dexter both missed theirs too, which does not help me, but I am noting it for the historical record. The Jake call was indefensible and I already moved him down six spots as my apology.",
+      "posted_at": "2026-09-25T18:36:27.130250+00:00",
+      "likes": 63,
+      "rt": 9,
+      "reply": 28
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Kevin vs Shaq on Sunday. Kevin has 264 points and two losses that were not his fault. Shaq has 231 points and wins he probably should not have. I want to see what happens when the schedule stops being kind to one of them.",
-      "posted_at": "2026-09-24T14:33:13.128003+00:00",
-      "likes": 69,
-      "rt": 10,
-      "reply": 22
+      "text": "Locks record: 2-0. Season record: 8-4, top of the board. I want that read on air before we get to anything else this morning. Terrence is sitting at 5-7 and I would like that acknowledged too, separately, in a different tone.",
+      "posted_at": "2026-09-25T17:51:27.130250+00:00",
+      "likes": 112,
+      "rt": 27,
+      "reply": 35
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "The Jake lock did not hit. I have processed this. What I will not do is sit here while Terrence Odom is at 5-7 and somehow that is not the lead story every single morning.",
+      "posted_at": "2026-09-25T16:53:27.130250+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 41
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "My lock was Charles and Charles scored 205.6. My season record is 5-7 and I am leaning into the one week where the universe made sense. Charles vs Brent is right there on the schedule. The math on that one writes itself and I am not afraid to write it again.",
-      "posted_at": "2026-09-24T11:43:13.128003+00:00",
-      "likes": 54,
-      "rt": 7,
-      "reply": 31
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Adam scored 71. Charles scored 205. Brent won a game and his stock dropped 14.3% to $66.11. The Week 2 Ledger called it the worst and best of everything happening at once \u2014 and somehow Week 3 is already more complicated. Sunday cannot get here fast enough.",
-      "posted_at": "2026-09-24T08:13:13.128003+00:00",
-      "likes": 88,
-      "rt": 16,
-      "reply": 14
+      "text": "My Charles lock hit last week. I am 5-7 on the season and I scored a point this week, so everyone can relax.",
+      "posted_at": "2026-09-25T15:36:27.130250+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 38
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Corbishley vs Drew this week. APEX is 3-1 with the second-most points in the league coming off a loss that required a 159.98 to produce. ATLAS is 0-4 at $45.57 on the exchange. I respect the Roman Wilson and Zach Ertz hustle. I do not respect the matchup.",
-      "posted_at": "2026-09-24T03:53:13.128003+00:00",
-      "likes": 97,
+      "text": "Charles lock hit. Again. CROWN is 4-0 with 374.5 points and is currently trailing Brent 0-21 to open Sunday. I am not panicking. I have seen this movie. The part where Charles scores 205 comes next.",
+      "posted_at": "2026-09-25T14:31:27.130250+00:00",
+      "likes": 103,
+      "rt": 24,
+      "reply": 29
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Fronge is losing to Wingard right now. Zero pick liquidity, relocated to Havana for regulatory flexibility, and currently getting handled by a team that added Cooper Rush and AJ Dillon this week. ForgeHammer's depth thesis needs a Friday night.",
+      "posted_at": "2026-09-25T13:11:27.130250+00:00",
+      "likes": 79,
+      "rt": 16,
+      "reply": 23
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "My lock was Brent last week and it hit, which is still the most surprising thing I have written in a professional capacity. This week I watched Brent open 21-0 on Charles and I will not be making that mistake twice. That is not a lock announcement. That is a warning to myself.",
+      "posted_at": "2026-09-25T11:21:27.130250+00:00",
+      "likes": 86,
       "rt": 19,
-      "reply": 26
+      "reply": 32
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "The Week 2 Ledger ran under the headline 'Charles scored 205. Adam scored 71. Somehow neither is the worst thing that happened.' Week 3 opens with Wingard leading Fronge, Brent leading Charles, and Adam currently at 24.9 on Ryan. The Ledger is going to need a longer headline.",
+      "posted_at": "2026-09-25T08:51:27.130250+00:00",
+      "likes": 117,
+      "rt": 31,
+      "reply": 27
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "MY CORBISHLEY LOCK MISSED. I KNOW. HE SCORED 151 POINTS AND LOST. THAT IS ON MITCHUM, NOT ON MY PROCESS. THE PICK WAS RIGHT. THE 159.98 WAS THE ANOMALY.",
+      "posted_at": "2026-09-25T05:21:27.130250+00:00",
+      "likes": 95,
+      "rt": 20,
+      "reply": 44
     }
   ]
 }
