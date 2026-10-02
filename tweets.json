@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-10-01T21:30:49.082655+00:00",
+  "generated_at": "2026-10-02T21:06:05.806631+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Sep 30 (yesterday)): Fronge added Skyy Moore (WR, GB) for $1 FAAB.",
-    "WAIVER CLAIM (Sep 30 (yesterday)): Wingard added Josh Cameron (WR, JAX) (dropped AJ Dillon (RB, CAR)).",
-    "WAIVER CLAIM (Sep 30 (yesterday)): Wingard added Case Keenum (QB, CHI) (dropped Cooper Rush (QB, ATL)).",
-    "WAIVER CLAIM (Sep 30 (yesterday)): Drew added DJ Herman (RB, MIA) for $1 FAAB (dropped DJ Giddens (RB, IND)).",
-    "WAIVER CLAIM (Sep 30 (yesterday)): Drew added CJ Donaldson (RB, NO) (dropped Tai Felton (WR, MIN)).",
-    "WAIVER CLAIM (Sep 29 (2 days ago)): Adam added Kendre Miller (RB, NO) for $32 FAAB (dropped Jordan James (RB, SF)).",
-    "WAIVER CLAIM (Sep 29 (2 days ago)): Adam added Konata Mumpfield (WR, LAR) for $61 FAAB (dropped Brashard Smith (RB, KC)).",
-    "FREE AGENT ADD (Sep 27 (4 days ago)): Charles added Isaiah Williams (WR, NYJ).",
+    "WAIVER CLAIM (Sep 30 (2 days ago)): Fronge added Skyy Moore (WR, GB) for $1 FAAB.",
+    "WAIVER CLAIM (Sep 30 (2 days ago)): Wingard added Josh Cameron (WR, JAX) (dropped AJ Dillon (RB, CAR)).",
+    "WAIVER CLAIM (Sep 30 (2 days ago)): Wingard added Case Keenum (QB, CHI) (dropped Cooper Rush (QB, ATL)).",
+    "WAIVER CLAIM (Sep 30 (2 days ago)): Drew added DJ Herman (RB, MIA) for $1 FAAB (dropped DJ Giddens (RB, IND)).",
+    "WAIVER CLAIM (Sep 30 (2 days ago)): Drew added CJ Donaldson (RB, NO) (dropped Tai Felton (WR, MIN)).",
+    "WAIVER CLAIM (Sep 29 (3 days ago)): Adam added Kendre Miller (RB, NO) for $32 FAAB (dropped Jordan James (RB, SF)).",
+    "WAIVER CLAIM (Sep 29 (3 days ago)): Adam added Konata Mumpfield (WR, LAR) for $61 FAAB (dropped Brashard Smith (RB, KC)).",
+    "FREE AGENT ADD (Sep 27 (5 days ago)): Charles added Isaiah Williams (WR, NYJ).",
     "WEEK 3 RESULTS: Corbishley def. Drew, 161.3-93.0 (BLOWOUT); Ryan def. Adam, 114.7-98.8; Wingard def. Fronge, 121.8-99.4; Charles def. Brent, 174.0-89.1 (BLOWOUT); Mitchum def. Jake, 139.5-123.2; Kevin def. Shaq, 148.6-117.4"
   ],
   "tweets": [
     {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Week 4 is live and Kevin leads Mitchum 18.6-14.5 in what shapes up as the most consequential game in the mid-table right now. Fourth place versus third. RDC versus DEEP. Every point matters in this one.",
+      "posted_at": "2026-10-02T20:48:05.806631+00:00",
+      "likes": 89,
+      "rt": 22,
+      "reply": 19
+    },
+    {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Charles is 6-0 with 548.5 points scored and CROWN is at $136.79. Ryan walks into that building this week at 3-3. The exchange knows what's coming. The only question is whether the scoreboard is as merciless as the standings suggest.",
-      "posted_at": "2026-10-01T21:18:49.082655+00:00",
-      "likes": 118,
+      "text": "Charles has scored 174, 548.5 cumulative, and is 6-0. Ryan walks in at 3-3. The Ledger does not hype matchups but it does read scoreboards, and that scoreboard is not ambiguous.",
+      "posted_at": "2026-10-02T20:21:05.806631+00:00",
+      "likes": 112,
       "rt": 28,
-      "reply": 31
+      "reply": 24
     },
     {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Eight and four on the season, locks two-for-two, and I want everyone to sit with the fact that Terrence is at five and seven. Five. And seven. That is not a slump, that is a worldview problem. I want a segment and I want Terrence in the chair across from me.",
-      "posted_at": "2026-10-01T20:56:49.082655+00:00",
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "FRONGE IS UP 14.1 TO NOTHING AND SHAQ HAS ZERO POINTS. ZERO. MWB AT $90.42 ON THE EXCHANGE, NO RB DEPTH, NO POINTS ON THE BOARD, AND THE DEFENDING NON-ANSWER TO THE RB QUESTION IS STILL THE DEFENDING NON-ANSWER. I AM NOT CALM.",
+      "posted_at": "2026-10-02T19:53:05.806631+00:00",
       "likes": 97,
-      "rt": 21,
-      "reply": 38
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "The Adam-Jake matchup this week is genuinely unpredictable and I am treating that as an asset. HLX has cycled through four players in a week. ECHO just dropped a game to Mitchum. My model loves uncertainty. Ask me again Sunday night.",
-      "posted_at": "2026-10-01T20:32:49.082655+00:00",
-      "likes": 29,
-      "rt": 4,
-      "reply": 22
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Wingard added Case Keenum AND Josh Cameron off waivers yesterday and is somehow the more functional side of the Drew matchup this week. SDR at $65.03 and the most exciting thing on the roster is a quarterback who last started meaningful games during a different presidential administration.",
-      "posted_at": "2026-10-01T20:01:49.082655+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 14
+      "rt": 19,
+      "reply": 31
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "I called Fronge's Havana relocation as a red flag in July and now FORG is at $78.62, second-worst on the active board, 2-4, and Wingard just beat them last week. The regulatory flexibility is not showing up in the win column. I called it.",
-      "posted_at": "2026-10-01T19:23:49.082655+00:00",
-      "likes": 61,
-      "rt": 11,
-      "reply": 9
+      "text": "I went 7-5 last week and my lock hit, so let me be direct about something: Terrence is at 5-7. I flagged Terrence's process issues before the season started. The record is public and it is sacred and it says five and seven.",
+      "posted_at": "2026-10-02T19:06:05.806631+00:00",
+      "likes": 74,
+      "rt": 14,
+      "reply": 22
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Five and seven is a number, not a eulogy. The games I missed were closer than the pick-em board reflects and this week I have opinions that are going to age well. That is all I have to say right now.",
+      "posted_at": "2026-10-02T18:38:05.806631+00:00",
+      "likes": 41,
+      "rt": 6,
+      "reply": 33
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Eight and four, locks two-for-two, and Terrence just said his losses were 'closer than the board reflects.' The board does not reflect closeness, Terrence. It reflects correct and incorrect. I want to talk about this on air. I want a full segment.",
+      "posted_at": "2026-10-02T18:24:05.806631+00:00",
+      "likes": 121,
+      "rt": 30,
+      "reply": 27
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Drew is actually leading this Wingard game 15.4 to 11.7 right now. ATLAS. Leading. I am not saying it holds but I want the moment documented before the universe corrects itself.",
+      "posted_at": "2026-10-02T17:41:05.806631+00:00",
+      "likes": 88,
+      "rt": 17,
+      "reply": 20
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "Corbishley put up 161 on Drew last week and is now sitting at $123.00 on the exchange \u2014 up 3.1% \u2014 heading into a Week 4 date with Brent, who scored 89 in a loss. Apex is the second-best record in this league and the desk still can't figure out if they have a real QB. That matters eventually.",
-      "posted_at": "2026-10-01T18:17:49.082655+00:00",
-      "likes": 74,
-      "rt": 13,
-      "reply": 18
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "People keep asking me why Kevin is ranked where he is and I keep pointing at 413 points in six weeks for a team that inherited a trust deficit and a hollowed-out roster. Redline at $82.84 while sitting fourth in the league is the most misprice on the board right now and it is not particularly close.",
-      "posted_at": "2026-10-01T17:19:49.082655+00:00",
-      "likes": 88,
-      "rt": 19,
-      "reply": 27
+      "text": "Adam dropping $61 FAAB on Konata Mumpfield and $32 on Kendre Miller in the same week tells you exactly where HLX thinks it is in the standings \u2014 in a fight at 2-4, not patient-rebuilding. That is a scoreboard read, not an asset strategy.",
+      "posted_at": "2026-10-02T15:56:05.806631+00:00",
+      "likes": 66,
+      "rt": 11,
+      "reply": 14
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "The Ledger's Week 4 preview notes: a 6-0 team hosting the defending champion, an 0-6 team that has now made four moves in a month, and a pundit board where the gap between first and last is six picks. Thursday is going to be a busy morning in this building.",
-      "posted_at": "2026-10-01T16:12:49.082655+00:00",
-      "likes": 102,
-      "rt": 24,
+      "text": "Kevin versus Mitchum sitting at 18.6-14.5 live is the game I will not be stepping away from today. Fourth at 4-2 versus third at 4-2, and both sides of that record came from genuinely different places. The Ledger's full breakdown drops tonight.",
+      "posted_at": "2026-10-02T13:06:05.806631+00:00",
+      "likes": 93,
+      "rt": 21,
       "reply": 16
     },
     {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Seven and five, locks two-for-two, and I have watched Brent lose by 85 points while OBS climbs 13.9% to $75.32 on the exchange. The market has decided Bowers is a time bomb and is buying the fuse. Corbishley gets Brent this week and I know exactly which side of that game I am on.",
-      "posted_at": "2026-10-01T14:48:49.082655+00:00",
-      "likes": 67,
-      "rt": 14,
-      "reply": 11
-    },
-    {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "ATLAS 0-6. Drew added DJ Herman AND CJ Donaldson in the same 48-hour window. Two new backs, zero wins, and a stock price that is still the cheapest non-SDR listing on the board at $49.72 despite a 9.1% bounce. The rebuild is moving. The rebuild is not working.",
-      "posted_at": "2026-10-01T12:26:49.082655+00:00",
-      "likes": 55,
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Everyone clowning on Brent's 89-point loss last week \u2014 OBS is at $75.32, up 13.9%, and Bowers hasn't played a bad game, the supporting cast has. My model treats those as separable problems and Corbishley should not sleep on that distinction heading into this matchup.",
+      "posted_at": "2026-10-02T08:46:05.806631+00:00",
+      "likes": 58,
       "rt": 9,
-      "reply": 20
+      "reply": 28
     }
   ]
 }
