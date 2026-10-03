@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-10-02T21:06:05.806631+00:00",
+  "generated_at": "2026-10-03T19:36:27.653945+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Sep 30 (2 days ago)): Fronge added Skyy Moore (WR, GB) for $1 FAAB.",
-    "WAIVER CLAIM (Sep 30 (2 days ago)): Wingard added Josh Cameron (WR, JAX) (dropped AJ Dillon (RB, CAR)).",
-    "WAIVER CLAIM (Sep 30 (2 days ago)): Wingard added Case Keenum (QB, CHI) (dropped Cooper Rush (QB, ATL)).",
-    "WAIVER CLAIM (Sep 30 (2 days ago)): Drew added DJ Herman (RB, MIA) for $1 FAAB (dropped DJ Giddens (RB, IND)).",
-    "WAIVER CLAIM (Sep 30 (2 days ago)): Drew added CJ Donaldson (RB, NO) (dropped Tai Felton (WR, MIN)).",
-    "WAIVER CLAIM (Sep 29 (3 days ago)): Adam added Kendre Miller (RB, NO) for $32 FAAB (dropped Jordan James (RB, SF)).",
-    "WAIVER CLAIM (Sep 29 (3 days ago)): Adam added Konata Mumpfield (WR, LAR) for $61 FAAB (dropped Brashard Smith (RB, KC)).",
-    "FREE AGENT ADD (Sep 27 (5 days ago)): Charles added Isaiah Williams (WR, NYJ).",
+    "FREE AGENT ADD (Oct 03 (today)): Ryan added Devontez Walker (WR, BAL).",
+    "FREE AGENT ADD (Oct 03 (today)): Ryan added British Brooks (RB, HOU).",
+    "FREE AGENT ADD (Oct 03 (today)): Ryan added Julian Hill (TE, NE).",
+    "FREE AGENT ADD (Oct 03 (today)): Ryan added Demarcus Robinson (WR, SF) (dropped Odell Beckham (WR, FA)).",
+    "WAIVER CLAIM (Oct 02 (yesterday)): Adam added Tyler Higbee (TE, LAR).",
+    "WAIVER CLAIM (Oct 01 (2 days ago)): Shaq added AJ Dillon (RB, CAR).",
+    "WAIVER CLAIM (Sep 30 (3 days ago)): Fronge added Skyy Moore (WR, GB) for $1 FAAB.",
+    "WAIVER CLAIM (Sep 30 (3 days ago)): Wingard added Josh Cameron (WR, JAX) (dropped AJ Dillon (RB, CAR)).",
     "WEEK 3 RESULTS: Corbishley def. Drew, 161.3-93.0 (BLOWOUT); Ryan def. Adam, 114.7-98.8; Wingard def. Fronge, 121.8-99.4; Charles def. Brent, 174.0-89.1 (BLOWOUT); Mitchum def. Jake, 139.5-123.2; Kevin def. Shaq, 148.6-117.4"
   ],
   "tweets": [
     {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "BREAKING: Week 4 is live and Kevin leads Mitchum 18.6-14.5 in what shapes up as the most consequential game in the mid-table right now. Fourth place versus third. RDC versus DEEP. Every point matters in this one.",
-      "posted_at": "2026-10-02T20:48:05.806631+00:00",
-      "likes": 89,
-      "rt": 22,
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Drew leading Wingard 15.4 to 11.7 is the kind of scoreboard that makes you check your phone twice. ATLAS at 0-6 has not led a game in Week 4 with any frequency. The Ledger is watching.",
+      "posted_at": "2026-10-03T19:28:27.653945+00:00",
+      "likes": 87,
+      "rt": 14,
       "reply": 19
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Charles has scored 174, 548.5 cumulative, and is 6-0. Ryan walks in at 3-3. The Ledger does not hype matchups but it does read scoreboards, and that scoreboard is not ambiguous.",
-      "posted_at": "2026-10-02T20:21:05.806631+00:00",
-      "likes": 112,
-      "rt": 28,
-      "reply": 24
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "FRONGE IS UP 14.1 TO NOTHING AND SHAQ HAS ZERO POINTS. ZERO. MWB AT $90.42 ON THE EXCHANGE, NO RB DEPTH, NO POINTS ON THE BOARD, AND THE DEFENDING NON-ANSWER TO THE RB QUESTION IS STILL THE DEFENDING NON-ANSWER. I AM NOT CALM.",
-      "posted_at": "2026-10-02T19:53:05.806631+00:00",
-      "likes": 97,
-      "rt": 19,
-      "reply": 31
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I went 7-5 last week and my lock hit, so let me be direct about something: Terrence is at 5-7. I flagged Terrence's process issues before the season started. The record is public and it is sacred and it says five and seven.",
-      "posted_at": "2026-10-02T19:06:05.806631+00:00",
-      "likes": 74,
-      "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Five and seven is a number, not a eulogy. The games I missed were closer than the pick-em board reflects and this week I have opinions that are going to age well. That is all I have to say right now.",
-      "posted_at": "2026-10-02T18:38:05.806631+00:00",
-      "likes": 41,
-      "rt": 6,
+      "text": "FRONGE IS IN HAVANA, SHAQ HAS ZERO POINTS, AND FORGHAM INDUSTRIES IS WINNING 14.1 TO NOTHING. I HAVE BEEN SAYING THE RB HOLE AT MWB KILLS THEM IN EXACTLY THIS KIND OF GAME AND HERE WE ARE. AJ DILLON IS ON THE ROSTER NOW BUT WHERE IS HE WHEN IT COUNTS.",
+      "posted_at": "2026-10-03T19:14:27.653945+00:00",
+      "likes": 112,
+      "rt": 27,
       "reply": 33
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Eight and four, locks two-for-two, and Terrence just said his losses were 'closer than the board reflects.' The board does not reflect closeness, Terrence. It reflects correct and incorrect. I want to talk about this on air. I want a full segment.",
-      "posted_at": "2026-10-02T18:24:05.806631+00:00",
-      "likes": 121,
-      "rt": 30,
-      "reply": 27
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Drew is actually leading this Wingard game 15.4 to 11.7 right now. ATLAS. Leading. I am not saying it holds but I want the moment documented before the universe corrects itself.",
-      "posted_at": "2026-10-02T17:41:05.806631+00:00",
-      "likes": 88,
-      "rt": 17,
-      "reply": 20
+      "text": "Buddy, I went 8-4 with my lock hitting and Terrence is out here saying his losses were 'closer than the board reflects.' Five and seven is not a vibe, it is a record. The board does not grade effort.",
+      "posted_at": "2026-10-03T18:55:27.653945+00:00",
+      "likes": 98,
+      "rt": 18,
+      "reply": 28
     },
     {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Adam dropping $61 FAAB on Konata Mumpfield and $32 on Kendre Miller in the same week tells you exactly where HLX thinks it is in the standings \u2014 in a fight at 2-4, not patient-rebuilding. That is a scoreboard read, not an asset strategy.",
-      "posted_at": "2026-10-02T15:56:05.806631+00:00",
-      "likes": 66,
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "The Kevin-Mitchum game sitting at 18.6-14.5 this early is not decided \u2014 anyone calling that at this stage has not watched enough football to know how fast a TE premium league swings on one red-zone look.",
+      "posted_at": "2026-10-03T18:29:27.653945+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 22
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I had Corbishley covering Brent by double digits before anyone took it seriously, and now the whole feed is suddenly very aware that OBS is thin behind Bowers. I called the supporting cast as the separable variable. The receipts exist.",
+      "posted_at": "2026-10-03T18:01:27.653945+00:00",
+      "likes": 76,
       "rt": 11,
-      "reply": 14
+      "reply": 15
     },
     {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Kevin versus Mitchum sitting at 18.6-14.5 live is the game I will not be stepping away from today. Fourth at 4-2 versus third at 4-2, and both sides of that record came from genuinely different places. The Ledger's full breakdown drops tonight.",
-      "posted_at": "2026-10-02T13:06:05.806631+00:00",
-      "likes": 93,
-      "rt": 21,
-      "reply": 16
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Eight and four, two-for-two on locks, and I want a formal segment on the Terrence situation \u2014 not a subtweet, not a sidebar, a real conversation about what a 5-7 process looks like and how it gets corrected. I am available all afternoon.",
+      "posted_at": "2026-10-03T17:26:27.653945+00:00",
+      "likes": 103,
+      "rt": 22,
+      "reply": 31
     },
     {
       "key": "matteo-honeydew",
       "name": "Matteo Honeydew",
       "handle": "@MatteoRanksIt",
-      "text": "Everyone clowning on Brent's 89-point loss last week \u2014 OBS is at $75.32, up 13.9%, and Bowers hasn't played a bad game, the supporting cast has. My model treats those as separable problems and Corbishley should not sleep on that distinction heading into this matchup.",
-      "posted_at": "2026-10-02T08:46:05.806631+00:00",
-      "likes": 58,
+      "text": "People keep asking why my last rankings had Mitchum inside the top four \u2014 because 4-2 with 419.6 points scored is not an accident, and Deepwater's roster construction rewards the TE premium in ways the win column is finally catching up to. The model is not broken, the skeptics are just early.",
+      "posted_at": "2026-10-03T16:38:27.653945+00:00",
+      "likes": 67,
       "rt": 9,
-      "reply": 28
+      "reply": 24
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Ryan adding Devontez Walker, British Brooks, Julian Hill, and Demarcus Robinson in a single morning is either genius portfolio diversification or a man staring at a Charles matchup and panicking. AEGIS is at $127.96. The market will sort the motivation out.",
+      "posted_at": "2026-10-03T15:36:27.653945+00:00",
+      "likes": 119,
+      "rt": 21,
+      "reply": 37
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Drew at 0-6 with 302.4 points scored. That is not a team that can't score \u2014 that is a team that has lost six coin flips in a row, or it is a scheduling problem, or it is something the Ledger will untangle tonight. The number deserves an explanation either way.",
+      "posted_at": "2026-10-03T14:26:27.653945+00:00",
+      "likes": 81,
+      "rt": 13,
+      "reply": 18
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Charles put up 174 points against Brent last week and is walking into a Ryan matchup at 6-0. I do not need a power ranking to tell me what the scoreboard already says \u2014 CROWN at $136.79 is the most honest number on the whole exchange board right now.",
+      "posted_at": "2026-10-03T13:06:27.653945+00:00",
+      "likes": 95,
+      "rt": 17,
+      "reply": 12
     }
   ]
 }
