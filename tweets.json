@@ -1,106 +1,116 @@
 {
-  "generated_at": "2026-10-05T23:00:42.459504+00:00",
+  "generated_at": "2026-10-06T21:23:57.154426+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Oct 04 (yesterday)): Brent added Brycen Tremayne (WR, CAR).",
-    "FREE AGENT ADD (Oct 04 (yesterday)): Mitchum added Jacob Cowing (WR, SF).",
-    "FREE AGENT ADD (Oct 04 (yesterday)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, DAL)).",
-    "FREE AGENT ADD (Oct 03 (2 days ago)): Ryan added Devontez Walker (WR, BAL).",
-    "FREE AGENT ADD (Oct 03 (2 days ago)): Ryan added British Brooks (RB, HOU).",
-    "FREE AGENT ADD (Oct 03 (2 days ago)): Ryan added Julian Hill (TE, NE).",
-    "FREE AGENT ADD (Oct 03 (2 days ago)): Ryan added Demarcus Robinson (WR, SF) (dropped Odell Beckham (WR, FA)).",
-    "WAIVER CLAIM (Oct 02 (3 days ago)): Adam added Tyler Higbee (TE, LAR).",
-    "WEEK 3 RESULTS: Corbishley def. Drew, 161.3-93.0 (BLOWOUT); Ryan def. Adam, 114.7-98.8; Wingard def. Fronge, 121.8-99.4; Charles def. Brent, 174.0-89.1 (BLOWOUT); Mitchum def. Jake, 139.5-123.2; Kevin def. Shaq, 148.6-117.4"
+    "FREE AGENT ADD (Oct 04 (2 days ago)): Brent added Brycen Tremayne (WR, CAR).",
+    "FREE AGENT ADD (Oct 04 (2 days ago)): Mitchum added Jacob Cowing (WR, SF).",
+    "FREE AGENT ADD (Oct 04 (2 days ago)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, DAL)).",
+    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Devontez Walker (WR, BAL).",
+    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added British Brooks (RB, HOU).",
+    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Julian Hill (TE, NE).",
+    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Demarcus Robinson (WR, SF) (dropped Odell Beckham (WR, FA)).",
+    "WAIVER CLAIM (Oct 02 (4 days ago)): Adam added Tyler Higbee (TE, LAR).",
+    "WEEK 4 RESULTS: Corbishley def. Brent, 139.7-131.1; Jake def. Adam, 122.9-109.6; Wingard def. Drew, 104.0-93.1; Shaq def. Fronge, 138.3-119.6; Charles def. Ryan, 162.2-138.9; Mitchum def. Kevin, 187.8-133.8 (BLOWOUT)"
   ],
   "tweets": [
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Charles 162.2, Ryan 138.9. Final. Crownline goes 7-0 and the board-reckoning conversation for Ryan at AEGIS $127.96 is not postponed \u2014 it is accelerated. The defending champion just lost to the undefeated team and the Ledger will have a full accounting of what that means for both desks this week.",
-      "posted_at": "2026-10-05T22:48:42.459504+00:00",
-      "likes": 118,
-      "rt": 28,
-      "reply": 31
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "KEVIN BEAT MITCHUM 133.8 TO 180.1 \u2014 WAIT. MITCHUM WON THAT. DEEPWATER DROPS KEVIN TO 4-3 AND REDLINE'S TRUST DEFICIT NARRATIVE IS NOW PAIRED WITH A LOSING RECORD. THE MATH ON THE PLAYOFF PICTURE JUST GOT VERY LOUD VERY FAST AND RDC AT $82.84 IS NOT GOING TO HOLD.",
-      "posted_at": "2026-10-05T22:32:42.459504+00:00",
-      "likes": 97,
-      "rt": 22,
-      "reply": 19
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Corbishley beats Brent 139.7 to 131.1 and I need the people who spent all afternoon telling me OBS was going to pull the upset to explain the final scoreboard to me. I am 8-4 on the season. The thesis holds. Obsidian's ceiling problem is structural, not weekly.",
-      "posted_at": "2026-10-05T22:15:42.459504+00:00",
-      "likes": 84,
-      "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Fronge beats Shaq to go 3-4 and MWB sits at $90.42 with a second straight window of zero movement on that RB hole. I want a segment this week where we put the Monarch roster on the board and someone explains to me how this team wins a championship without addressing the position that scores the most points in this format.",
-      "posted_at": "2026-10-05T21:53:42.459504+00:00",
-      "likes": 76,
-      "rt": 17,
-      "reply": 28
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called the Drew-Wingard game as the sneaky chaos matchup of the week and it finished 89.8 to 87.9 \u2014 a one-point-nine nail-biter won by the 0-6 team. ATLAS gets off the schneid. SDR at $65.03 is hoarding picks and losing to the cheapest listing on the exchange. Those two facts belong in the same sentence.",
-      "posted_at": "2026-10-05T21:31:42.459504+00:00",
-      "likes": 62,
-      "rt": 11,
-      "reply": 15
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Look, I went 5-7 entering today and I will not pretend the Kevin-Mitchum call was my finest hour, but Mitchum at 180.1 points is genuinely hard to project in any model. That number is an outlier. I am recalibrating.",
-      "posted_at": "2026-10-05T21:10:42.459504+00:00",
-      "likes": 31,
-      "rt": 3,
-      "reply": 38
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Terrence said 180 points is an outlier and I will grant him that much \u2014 but 5-7 is not an outlier, it is a pattern. The scoreboard on the pick-em ledger does not care about recalibration. It cares about the record next to your name.",
-      "posted_at": "2026-10-05T20:52:42.459504+00:00",
-      "likes": 89,
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "The Adam situation at $79.57 and 2-6 is the part of this week I keep coming back to. HLX was the market's favorite redemption story in the preseason. The preseason ended. Helix Quant added Tyler Higbee off waivers and that is where the turnaround narrative currently lives.",
+      "posted_at": "2026-10-06T14:23:57.154426+00:00",
+      "likes": 91,
       "rt": 19,
-      "reply": 14
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Seven games on the board. Seven final scores. The Ledger is going to have a lot to process this week \u2014 Charles at 7-0, Mitchum's 180-point explosion, Drew's first win, and a Corbishley-Brent finish that came within nine points of flipping the pick-em conversation entirely. Stay close.",
-      "posted_at": "2026-10-05T20:28:42.459504+00:00",
-      "likes": 103,
-      "rt": 24,
-      "reply": 11
+      "reply": 26
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Adam loses to Jake 97.5 to 92.2 and HLX drops to 2-5. The preseason turnaround story at $79.57 on the exchange is not aging well through six weeks of competition. Helix Quant needs on-field proof and the scoreboard keeps asking the same question.",
-      "posted_at": "2026-10-05T20:02:42.459504+00:00",
-      "likes": 55,
-      "rt": 9,
-      "reply": 17
+      "text": "Ryan added four free agents in two days \u2014 Walker, Brooks, Hill, Robinson \u2014 and dropped Odell Beckham in the process. That is a lot of activity from a team at 4-4 staring down a Week 5 matchup against Wingard. The question is whether any of those moves actually close the gap that a 162-138 loss to Charles opened.",
+      "posted_at": "2026-10-06T10:43:57.154426+00:00",
+      "likes": 83,
+      "rt": 17,
+      "reply": 20
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Terrence picking the chalk after going 5-7 is not a strategy, it is self-preservation. The Ledger will have the full pick-em accountability section this week and the bottom of that board is going to be a very uncomfortable place to sit.",
+      "posted_at": "2026-10-06T07:53:57.154426+00:00",
+      "likes": 79,
+      "rt": 15,
+      "reply": 22
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Going 5-7 on the season and taking my lumps publicly. That said \u2014 I will have Mitchum-Charles this week and I am not fading the 8-0 team. Crownline at $136.79 is the market-cap leader for a reason and I am done finding creative ways to pick against Charles until the scoreboard gives me a reason.",
+      "posted_at": "2026-10-06T05:13:57.154426+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 18
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "DREW IS 0-8. ATLAS IS AT $49.72. WINGARD BEATS THEM 104-93 AND SDR AT $65.03 IS CELEBRATING A WIN OVER THE CHEAPEST LISTING IN EXCHANGE HISTORY. I NEED SOMEONE TO EXPLAIN TO ME WHAT THE WEEK 5 DREW-FRONGE GAME ACTUALLY MEANS FOR EITHER FRANCHISE BECAUSE RIGHT NOW I SEE TWO ORGANIZATIONS FIGHTING OVER DRAFT POSITION AND CALLING IT A RIVALRY.",
+      "posted_at": "2026-10-06T02:23:57.154426+00:00",
+      "likes": 103,
+      "rt": 24,
+      "reply": 31
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Corbishley as the steadiest desk in the league three windows ago and the scoreboard at 7-1 with $123.00 on the exchange is doing my argument for me. Jake is a dangerous draw in Week 5 \u2014 ECHO's RB backfield is elite and Corbishley's QB room has a depth question that one bad snap makes urgent.",
+      "posted_at": "2026-10-05T23:33:57.154426+00:00",
+      "likes": 67,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "The Charles-Mitchum matchup this week is the best game on the slate and it is not particularly close. The only 8-0 team in the league hosting \u2014 sorry, facing \u2014 the guy who just dropped 187 on Kevin. 710 points of force meets the hottest scorer of the week. I am circling this one.",
+      "posted_at": "2026-10-05T20:23:57.154426+00:00",
+      "likes": 112,
+      "rt": 29,
+      "reply": 33
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Mitchum scored 187.8 points in a week where Deepwater had no flagship direction and the board wanted a buy-sell call. DEEP is at $82.86 and rising. At some point the market stops calling it a drift and starts calling it a run.",
+      "posted_at": "2026-10-05T17:53:57.154426+00:00",
+      "likes": 88,
+      "rt": 21,
+      "reply": 27
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "I want a segment where we put the Week 5 board up and talk about the Corbishley-Jake matchup for twenty uninterrupted minutes. APEX at $123.00 is climbing. ECHO at $104.02 is climbing. One of those stocks takes a hit on Sunday and I want to be on record before the coin lands.",
+      "posted_at": "2026-10-05T15:03:57.154426+00:00",
+      "likes": 74,
+      "rt": 12,
+      "reply": 19
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Tuesday morning and the board is fully digested. Charles is 8-0. Mitchum is 6-2 with a 187-point explosion on his r\u00e9sum\u00e9. And Ryan just lost to the undefeated team while AEGIS sits at $127.96. The Ledger is going to be a long read this week.",
+      "posted_at": "2026-10-05T12:23:57.154426+00:00",
+      "likes": 98,
+      "rt": 18,
+      "reply": 22
     }
   ]
 }
