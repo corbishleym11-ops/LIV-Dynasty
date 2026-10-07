@@ -1,116 +1,106 @@
 {
-  "generated_at": "2026-10-06T21:23:57.154426+00:00",
+  "generated_at": "2026-10-07T21:42:23.864193+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Oct 04 (2 days ago)): Brent added Brycen Tremayne (WR, CAR).",
-    "FREE AGENT ADD (Oct 04 (2 days ago)): Mitchum added Jacob Cowing (WR, SF).",
-    "FREE AGENT ADD (Oct 04 (2 days ago)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, DAL)).",
-    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Devontez Walker (WR, BAL).",
-    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added British Brooks (RB, HOU).",
-    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Julian Hill (TE, NE).",
-    "FREE AGENT ADD (Oct 03 (3 days ago)): Ryan added Demarcus Robinson (WR, SF) (dropped Odell Beckham (WR, FA)).",
-    "WAIVER CLAIM (Oct 02 (4 days ago)): Adam added Tyler Higbee (TE, LAR).",
+    "WAIVER CLAIM (Oct 07 (today)): Wingard added Darius Cooper (WR, PHI) for $11 FAAB.",
+    "TRADE (Oct 07 (today)): Charles receives Chris Olave (WR, NO), 2027 R2 pick. Wingard receives 2028 R1 pick, 2027 R2 pick.",
+    "WAIVER CLAIM (Oct 06 (yesterday)): Fronge added Tyler Huntley (QB, BAL) for $21 FAAB (dropped Skyy Moore (WR, GB)).",
+    "WAIVER CLAIM (Oct 05 (2 days ago)): Drew added Joe Mixon (RB, FA) for $19 FAAB (dropped DJ Herman (RB, MIA)).",
+    "FREE AGENT ADD (Oct 04 (3 days ago)): Brent added Brycen Tremayne (WR, CAR).",
+    "FREE AGENT ADD (Oct 04 (3 days ago)): Mitchum added Jacob Cowing (WR, SF).",
+    "FREE AGENT ADD (Oct 04 (3 days ago)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, DAL)).",
+    "FREE AGENT ADD (Oct 03 (4 days ago)): Ryan added Devontez Walker (WR, BAL).",
     "WEEK 4 RESULTS: Corbishley def. Brent, 139.7-131.1; Jake def. Adam, 122.9-109.6; Wingard def. Drew, 104.0-93.1; Shaq def. Fronge, 138.3-119.6; Charles def. Ryan, 162.2-138.9; Mitchum def. Kevin, 187.8-133.8 (BLOWOUT)"
   ],
   "tweets": [
     {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "The Adam situation at $79.57 and 2-6 is the part of this week I keep coming back to. HLX was the market's favorite redemption story in the preseason. The preseason ended. Helix Quant added Tyler Higbee off waivers and that is where the turnaround narrative currently lives.",
-      "posted_at": "2026-10-06T14:23:57.154426+00:00",
-      "likes": 91,
-      "rt": 19,
-      "reply": 26
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Ryan added four free agents in two days \u2014 Walker, Brooks, Hill, Robinson \u2014 and dropped Odell Beckham in the process. That is a lot of activity from a team at 4-4 staring down a Week 5 matchup against Wingard. The question is whether any of those moves actually close the gap that a 162-138 loss to Charles opened.",
-      "posted_at": "2026-10-06T10:43:57.154426+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 20
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Terrence picking the chalk after going 5-7 is not a strategy, it is self-preservation. The Ledger will have the full pick-em accountability section this week and the bottom of that board is going to be a very uncomfortable place to sit.",
-      "posted_at": "2026-10-06T07:53:57.154426+00:00",
-      "likes": 79,
-      "rt": 15,
-      "reply": 22
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Going 5-7 on the season and taking my lumps publicly. That said \u2014 I will have Mitchum-Charles this week and I am not fading the 8-0 team. Crownline at $136.79 is the market-cap leader for a reason and I am done finding creative ways to pick against Charles until the scoreboard gives me a reason.",
-      "posted_at": "2026-10-06T05:13:57.154426+00:00",
-      "likes": 44,
-      "rt": 6,
-      "reply": 18
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "DREW IS 0-8. ATLAS IS AT $49.72. WINGARD BEATS THEM 104-93 AND SDR AT $65.03 IS CELEBRATING A WIN OVER THE CHEAPEST LISTING IN EXCHANGE HISTORY. I NEED SOMEONE TO EXPLAIN TO ME WHAT THE WEEK 5 DREW-FRONGE GAME ACTUALLY MEANS FOR EITHER FRANCHISE BECAUSE RIGHT NOW I SEE TWO ORGANIZATIONS FIGHTING OVER DRAFT POSITION AND CALLING IT A RIVALRY.",
-      "posted_at": "2026-10-06T02:23:57.154426+00:00",
-      "likes": 103,
-      "rt": 24,
-      "reply": 31
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Corbishley as the steadiest desk in the league three windows ago and the scoreboard at 7-1 with $123.00 on the exchange is doing my argument for me. Jake is a dangerous draw in Week 5 \u2014 ECHO's RB backfield is elite and Corbishley's QB room has a depth question that one bad snap makes urgent.",
-      "posted_at": "2026-10-05T23:33:57.154426+00:00",
-      "likes": 67,
-      "rt": 11,
-      "reply": 14
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "The Charles-Mitchum matchup this week is the best game on the slate and it is not particularly close. The only 8-0 team in the league hosting \u2014 sorry, facing \u2014 the guy who just dropped 187 on Kevin. 710 points of force meets the hottest scorer of the week. I am circling this one.",
-      "posted_at": "2026-10-05T20:23:57.154426+00:00",
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Charles acquires Chris Olave and a 2027 second from Wingard in exchange for a 2028 first and a 2027 second. Crownline adds a wide receiver. The 8-0 team is shopping. SDR gets future capital. Full details on the transaction desk now.",
+      "posted_at": "2026-10-07T20:57:23.864193+00:00",
       "likes": 112,
-      "rt": 29,
-      "reply": 33
+      "rt": 28,
+      "reply": 38
     },
     {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Mitchum scored 187.8 points in a week where Deepwater had no flagship direction and the board wanted a buy-sell call. DEEP is at $82.86 and rising. At some point the market stops calling it a drift and starts calling it a run.",
-      "posted_at": "2026-10-05T17:53:57.154426+00:00",
-      "likes": 88,
-      "rt": 21,
-      "reply": 27
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "I want a segment where we put the Week 5 board up and talk about the Corbishley-Jake matchup for twenty uninterrupted minutes. APEX at $123.00 is climbing. ECHO at $104.02 is climbing. One of those stocks takes a hit on Sunday and I want to be on record before the coin lands.",
-      "posted_at": "2026-10-05T15:03:57.154426+00:00",
-      "likes": 74,
-      "rt": 12,
-      "reply": 19
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "To add context to Marty's flash: Wingard was sitting at $65.03 and 3-5 before this deal. Trading Olave and a 2027 second to the undefeated team for a 2028 first is either genius long-term capital management or the most expensive white flag in SDR history. I report it. You decide.",
+      "posted_at": "2026-10-07T20:50:23.864193+00:00",
+      "likes": 98,
+      "rt": 19,
+      "reply": 29
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Tuesday morning and the board is fully digested. Charles is 8-0. Mitchum is 6-2 with a 187-point explosion on his r\u00e9sum\u00e9. And Ryan just lost to the undefeated team while AEGIS sits at $127.96. The Ledger is going to be a long read this week.",
-      "posted_at": "2026-10-05T12:23:57.154426+00:00",
-      "likes": 98,
-      "rt": 18,
+      "text": "Charles is 8-0, just beat Ryan by 23 points, and is now acquiring weapons mid-season from a 3-5 team. Crownline at $136.79 is the market-cap leader and the gap between that number and second place is starting to feel structural. The Ledger will have the full Wingard-Charles transaction breakdown and I want everyone ready for what that cost-benefit column looks like.",
+      "posted_at": "2026-10-07T20:24:23.864193+00:00",
+      "likes": 107,
+      "rt": 24,
+      "reply": 31
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "I want a segment \u2014 not a sidebar, a full segment \u2014 where someone explains what Wingard is building. SDR hoards picks, sits at 3-5, adds Darius Cooper off waivers for $11 FAAB today, and then ships Olave to the 8-0 team. Is that a rebuild? A pivot? A surrender with paperwork?",
+      "posted_at": "2026-10-07T19:59:23.864193+00:00",
+      "likes": 88,
+      "rt": 17,
       "reply": 22
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Fronge is in Havana, 2-6, just dropped Skyy Moore to add Tyler Huntley for $21 FAAB, and somehow has a Week 5 matchup against the 0-8 team that I still cannot figure out how to feel about. One of those franchises walks away with a win on Sunday and neither outcome fixes anything structural.",
+      "posted_at": "2026-10-07T19:28:23.864193+00:00",
+      "likes": 79,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called the Corbishley-Jake matchup as the most interesting game on the slate two days ago and nothing that happened between then and now has changed my mind. APEX at $123.00, ECHO at $104.02, both rising, one takes damage Sunday. Get your position before the bell.",
+      "posted_at": "2026-10-07T18:55:23.864193+00:00",
+      "likes": 73,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "On record before Week 5: I am taking Charles over Mitchum, Corbishley over Jake, and Kevin over Brent. Yes I am 5-7. Yes those are three favorites. I have made peace with where I am on the board and I am not going to manufacture a contrarian take to rehabilitate the record. The scoreboard will do what it does.",
+      "posted_at": "2026-10-07T18:24:23.864193+00:00",
+      "likes": 61,
+      "rt": 8,
+      "reply": 27
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Terrence taking the chalk three straight is a legitimate strategy after 5-7. It is also exactly what someone does when they stop trusting their own process. I am 7-5, my locks are 2-0, and I am still willing to take Mitchum in the Charles game because 187 points last week is not a fluke you just paper over with an undefeated record.",
+      "posted_at": "2026-10-07T17:51:23.864193+00:00",
+      "likes": 84,
+      "rt": 16,
+      "reply": 33
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Drew added Joe Mixon two days ago, added Tyler Goodson four days before that, and is 0-8 with $395.5 points scored on the season. ATLAS is at $49.72. I respect the waiver activity. I do not respect what any of it means in the context of a franchise where liquidation-risk gets brought up in serious conversations.",
+      "posted_at": "2026-10-07T16:53:23.864193+00:00",
+      "likes": 67,
+      "rt": 12,
+      "reply": 18
     }
   ]
 }
