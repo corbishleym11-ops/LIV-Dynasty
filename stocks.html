@@ -309,11 +309,14 @@ function buildQuadrant() {
   el('text', { x:-T, y:20, transform:'rotate(-90)', fill:'#8aa7c2', 'font-size':11.5, 'font-family':MONO, 'letter-spacing':'1.8', 'text-anchor':'end' }, 'WIN-NOW SCORE \u2192');
 
   // quadrant captions, each at the top inside corner of its own region
+  // captions sit in the four outer corners of the plot, not beside the crosshair —
+  // dots cluster near the mean, so the inner edges of the lower regions are the
+  // one place a caption reliably collides with a label.
   const caps = {
-    chips:      { x:R-10, y:T+24,  anchor:'end'   },
-    borrowed:   { x:L+10, y:T+24,  anchor:'start' },
-    distressed: { x:L+10, y:cy+26, anchor:'start' },
-    vault:      { x:R-10, y:cy+26, anchor:'end'   }
+    chips:      { x:R-10, y:T+24, anchor:'end'   },
+    borrowed:   { x:L+10, y:T+24, anchor:'start' },
+    distressed: { x:L+10, y:B-30, anchor:'start' },
+    vault:      { x:R-10, y:B-30, anchor:'end'   }
   };
   QUADRANT_ZONES.forEach(z => {
     const c = caps[z.key];
