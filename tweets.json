@@ -1,116 +1,106 @@
 {
-  "generated_at": "2026-10-08T21:39:03.185897+00:00",
+  "generated_at": "2026-10-09T21:24:22.465036+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Oct 07 (yesterday)): Wingard added Darius Cooper (WR, PHI) for $11 FAAB.",
-    "TRADE (Oct 07 (yesterday)): Charles receives Chris Olave (WR, NO), 2027 R2 pick. Wingard receives 2028 R1 pick, 2027 R2 pick.",
-    "WAIVER CLAIM (Oct 06 (2 days ago)): Fronge added Tyler Huntley (QB, BAL) for $21 FAAB (dropped Skyy Moore (WR, GB)).",
-    "WAIVER CLAIM (Oct 05 (3 days ago)): Drew added Joe Mixon (RB, FA) for $19 FAAB (dropped DJ Herman (RB, MIA)).",
-    "FREE AGENT ADD (Oct 04 (4 days ago)): Brent added Brycen Tremayne (WR, CAR).",
-    "FREE AGENT ADD (Oct 04 (4 days ago)): Mitchum added Jacob Cowing (WR, SF).",
-    "FREE AGENT ADD (Oct 04 (4 days ago)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, DAL)).",
-    "FREE AGENT ADD (Oct 03 (5 days ago)): Ryan added Devontez Walker (WR, BAL).",
+    "WAIVER CLAIM (Oct 08 (yesterday)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "WAIVER CLAIM (Oct 07 (2 days ago)): Wingard added Darius Cooper (WR, PHI) for $11 FAAB.",
+    "TRADE (Oct 07 (2 days ago)): Charles receives Chris Olave (WR, NO), 2027 R2 pick. Wingard receives 2028 R1 pick, 2027 R2 pick.",
+    "WAIVER CLAIM (Oct 06 (3 days ago)): Fronge added Tyler Huntley (QB, BAL) for $21 FAAB (dropped Skyy Moore (WR, GB)).",
+    "WAIVER CLAIM (Oct 05 (4 days ago)): Drew added Joe Mixon (RB, FA) for $19 FAAB (dropped DJ Herman (RB, MIA)).",
+    "FREE AGENT ADD (Oct 04 (5 days ago)): Brent added Brycen Tremayne (WR, CAR).",
+    "FREE AGENT ADD (Oct 04 (5 days ago)): Mitchum added Jacob Cowing (WR, SF).",
+    "FREE AGENT ADD (Oct 04 (5 days ago)): Drew added Tyler Goodson (RB, DAL) (dropped Emari Demercado (RB, FA)).",
     "WEEK 4 RESULTS: Corbishley def. Brent, 139.7-131.1; Jake def. Adam, 122.9-109.6; Wingard def. Drew, 104.0-93.1; Shaq def. Fronge, 138.3-119.6; Charles def. Ryan, 162.2-138.9; Mitchum def. Kevin, 187.8-133.8 (BLOWOUT)"
   ],
   "tweets": [
     {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "Mitchum dropped 187.8 on Kevin last week. That is not a typo. One-eighty-seven. DEEP sitting at $82.86 and 6-2 and I am not sure enough people have recalibrated around what this team is right now.",
-      "posted_at": "2026-10-08T21:24:03.185897+00:00",
-      "likes": 112,
-      "rt": 28,
-      "reply": 19
-    },
-    {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Charles is 8-0, just added Olave mid-season, and faces the hottest team on the slate this week in Mitchum. The Ledger's Charles-Mitchum preview goes deep on whether 187 points in a win is the kind of thing that follows a defense into the next week or evaporates under undefeated pressure.",
-      "posted_at": "2026-10-08T21:01:03.185897+00:00",
+      "text": "Week 5 scoreboard is already doing things. Ryan is putting up 32.8 on Wingard right now and AEGIS needs every point of it. SDR at $56.11 \u2014 down 13.7% \u2014 and the gap between those two prices tells you everything about the stakes on that side of the field.",
+      "posted_at": "2026-10-09T21:06:22.465036+00:00",
       "likes": 89,
       "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, I went 2-1 last week and my lock hit, so I am going to need the board to acknowledge that 8-4 with a 1-1 lock record is exactly what steady process looks like. The pick-em standings are not a crisis. They are a leaderboard and I am on the correct end of it.",
-      "posted_at": "2026-10-08T20:32:03.185897+00:00",
-      "likes": 74,
-      "rt": 11,
-      "reply": 31
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "People keep tagging me in the 5-7 jokes and I just want to say: yes, I took three favorites last week on record, and I will continue doing so until the math tells me otherwise. Contrarianism for its own sake is how you go from 5-7 to 4-8 faster.",
-      "posted_at": "2026-10-08T19:54:03.185897+00:00",
-      "likes": 58,
-      "rt": 9,
-      "reply": 38
+      "reply": 12
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "Three weeks ago I said Mitchum was quietly building something real and everyone cited the Deepwater drift narrative like it was gospel. Six and two. One-eighty-seven points last week. The board is right there.",
-      "posted_at": "2026-10-08T19:15:03.185897+00:00",
-      "likes": 95,
-      "rt": 17,
-      "reply": 25
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Drew versus Fronge on Sunday is the most philosophically exhausting game on the Week 5 slate. Atlas is 0-8. ForgeHammer is 2-6 and running its operation out of Havana. One of them gets a win. I genuinely do not know what to do with that information.",
-      "posted_at": "2026-10-08T18:21:03.185897+00:00",
+      "text": "Corbishley at zero against Jake's 23.5 early is not panic territory yet, but APEX is the number-two team in the league and they do not get spotted three scores at home. I called Apex as a real championship contender before the season and I am not walking that back over a first-quarter deficit.",
+      "posted_at": "2026-10-09T20:37:22.465036+00:00",
       "likes": 66,
-      "rt": 8,
-      "reply": 14
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Kevin at 5-3 is the quietest legitimate playoff contender in the league right now. RDC at $82.84, middle of the market, and nobody is talking about ksanda until it is too late. Week 5 matchup against Brent is exactly the kind of game that separates the real from the pretenders.",
-      "posted_at": "2026-10-08T17:22:03.185897+00:00",
-      "likes": 81,
-      "rt": 13,
+      "rt": 9,
       "reply": 18
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "I want a real accounting of what Adam's 2-6 record means for the Helix turnaround thesis. HLX was the market's favorite redemption story entering the season at $79.57, down 7.1%, and now The 100xers are getting picked apart by Jake in blowout fashion. The model-driven narrative needs on-field evidence and it is not showing up.",
-      "posted_at": "2026-10-08T15:59:03.185897+00:00",
-      "likes": 103,
+      "text": "I am 8-4 with a 2-0 lock record and I need a proper segment to discuss why the pick-em board keeps getting framed as a horse race when the process gap at the top is already significant. Terrence is at 5-7. That is not a slump. That is a methodology problem.",
+      "posted_at": "2026-10-09T19:49:22.465036+00:00",
+      "likes": 112,
       "rt": 21,
-      "reply": 33
+      "reply": 31
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Terrence the schedule did not go 5-7. You went 5-7. There is a difference and the standings board does not accept explanations, only outcomes.",
+      "posted_at": "2026-10-09T19:26:22.465036+00:00",
+      "likes": 97,
+      "rt": 19,
+      "reply": 14
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Yeah I saw the 5-7 discourse and I will say this: the schedule has been cruel, my reads have been right more than the record shows, and a 6-6 correction is coming before anyone can dunk on me again.",
+      "posted_at": "2026-10-09T19:14:22.465036+00:00",
+      "likes": 38,
+      "rt": 5,
+      "reply": 22
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, ForgeHammer is up 31-11 on Drew in Havana's favorite road game right now and FORG is also the only team on the exchange that moved plus-12.8% this issue to $88.66. Fronge relocated to Cuba, has zero pick liquidity, and is somehow the feel-good story of Week 5. I have no framework for this.",
+      "posted_at": "2026-10-09T18:42:22.465036+00:00",
+      "likes": 74,
+      "rt": 11,
+      "reply": 9
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Kevin versus Brent is the game nobody is watching and it is exactly the one that matters. RDC at $95.35 \u2014 up 15.1% \u2014 against OBS at $75.90, and ksanda is sitting at 5-3 quietly lining up a playoff push while Brent's TE monopoly posts zeroes in the win column. I have Brent picked and I already regret it.",
+      "posted_at": "2026-10-09T18:00:22.465036+00:00",
+      "likes": 58,
+      "rt": 8,
+      "reply": 16
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Shaq went 5-3 without addressing the RB hole for a second straight window, beat Fronge 138-119 last week on WR wealth alone, and now draws Adam in Week 5. MWB at $90.42 is down 4.9% and the market seems to be asking the same question the schedule hasn't forced yet \u2014 what happens when the wideouts aren't enough?",
-      "posted_at": "2026-10-08T13:39:03.185897+00:00",
-      "likes": 77,
-      "rt": 16,
-      "reply": 20
+      "text": "Charles versus Mitchum is 0.0 to 1.9 and the Ledger is going to have something very important to say about what happens when an 8-0 juggernaut meets the team that just dropped 187 points on a 5-3 opponent. Those two prices \u2014 CROWN at $148.52 and DEEP at $87.66 \u2014 are not playing the same game.",
+      "posted_at": "2026-10-09T17:09:22.465036+00:00",
+      "likes": 103,
+      "rt": 17,
+      "reply": 7
     },
     {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "RYAN LOST TO CHARLES BY 23 AND IS NOW 4-4 AND DRAWING WINGARD IN WEEK 5. AEGIS IS AT $127.96. THIS IS A MUST-WIN GAME FOR A DEFENDING CHAMPION AND I NEED EVERYONE TO TREAT IT LIKE ONE.",
-      "posted_at": "2026-10-08T09:39:03.185897+00:00",
-      "likes": 118,
-      "rt": 30,
-      "reply": 41
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Power rankings are unavailable this cycle and I want everyone to sit with that information before they decide to spend the afternoon writing think-pieces about where I have Mitchum slotted. You do not know where I have Mitchum slotted. None of you know anything.",
+      "posted_at": "2026-10-09T16:14:22.465036+00:00",
+      "likes": 81,
+      "rt": 13,
+      "reply": 29
     }
   ]
 }
