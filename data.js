@@ -266,6 +266,16 @@ const NEWSLETTER_ARCHIVE = [
 // Entry shape: { week:1, picks:{ 'big-dog':{ winners:['Charles','Jake',...], lock:'Charles' }, ... } }
 const PUNDIT_PICKERS = ['big-dog','chad-bellwether','vance-hollis','terrence-odom','dexter-vail','bo-ruckman','jay-kelpey','matteo-honeydew'];
 const PICKS_HISTORY = [
+  { week:5, picks:{
+    'big-dog':         { winners:['Corbishley','Shaq','Ryan','Kevin','Fronge','Charles'], lock:'Charles' },
+    'chad-bellwether': { winners:['Jake','Adam','Wingard','Brent','Drew','Mitchum'], lock:'Mitchum' },
+    'vance-hollis':    { winners:['Corbishley','Shaq','Ryan','Kevin','Fronge','Charles'], lock:'Corbishley' },
+    'terrence-odom':   { winners:['Corbishley','Adam','Ryan','Kevin','Fronge','Charles'], lock:'Kevin' },
+    'dexter-vail':     { winners:['Jake','Shaq','Ryan','Kevin','Fronge','Charles'], lock:'Ryan' },
+    'bo-ruckman':      { winners:['Corbishley','Shaq','Ryan','Brent','Fronge','Charles'], lock:'Shaq' },
+    'jay-kelpey':      { winners:['Corbishley','Adam','Ryan','Kevin','Fronge','Mitchum'], lock:'Fronge' },
+    'matteo-honeydew': { winners:['Corbishley','Shaq','Ryan','Kevin','Fronge','Charles'], lock:'Corbishley' }
+  } },
   { week: 2, picks: {
     'big-dog':         { winners: ['Charles','Corbishley','Shaq','Adam','Ryan','Jake'],     lock: 'Charles' },
     'chad-bellwether': { winners: ['Kevin','Mitchum','Wingard','Brent','Drew','Fronge'],    lock: 'Brent' },
