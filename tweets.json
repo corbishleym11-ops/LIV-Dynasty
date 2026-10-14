@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-10-13T21:39:15.867181+00:00",
+  "generated_at": "2026-10-14T20:22:55.381651+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Oct 11 (2 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
-    "FREE AGENT ADD (Oct 10 (3 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
-    "FREE AGENT ADD (Oct 10 (3 days ago)): Charles added Roschon Johnson (RB, CHI).",
-    "WAIVER CLAIM (Oct 08 (5 days ago)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "WAIVER CLAIM (Oct 13 (yesterday)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
+    "FREE AGENT ADD (Oct 11 (3 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
+    "FREE AGENT ADD (Oct 10 (4 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
+    "FREE AGENT ADD (Oct 10 (4 days ago)): Charles added Roschon Johnson (RB, CHI).",
+    "WAIVER CLAIM (Oct 08 (6 days ago)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
     "WEEK 5 RESULTS: Corbishley def. Jake, 145.9-124.3; Shaq def. Adam, 112.0-99.9; Fronge def. Drew, 158.0-94.0 (BLOWOUT); Charles def. Mitchum, 201.4-105.1 (BLOWOUT); Kevin def. Brent, 150.1-146.2 (NAIL-BITER); Ryan def. Wingard, 174.4-87.9 (BLOWOUT)"
   ],
   "tweets": [
@@ -12,101 +13,91 @@
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Week 5 is fully graded and Charles is 10-0. That sentence exists. The Ledger this week does not bury the lede \u2014 the cover line is 'Is This Over?' and the answer inside is more complicated than the record suggests, but not by much.",
-      "posted_at": "2026-10-13T21:14:15.867181+00:00",
-      "likes": 134,
+      "text": "Week 5 final thought before we pivot to Week 6: Charles put up 201.4 points against Mitchum. Not a win. A statement filed with the league office in triplicate. CROWN at $148.52 and climbing \u2014 the rest of the board is running out of ways to explain it away.",
+      "posted_at": "2026-10-14T20:04:55.381651+00:00",
+      "likes": 137,
       "rt": 31,
       "reply": 38
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Two locks, two wins on the season. I know Ruckman is also 2-0 on locks and I know he's going to make this a whole thing, but my record is 7-5 and I picked against the grain twice and cashed both times. The methodology is sound.",
-      "posted_at": "2026-10-13T20:44:15.867181+00:00",
-      "likes": 89,
-      "rt": 14,
-      "reply": 22
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Someone on this network needs to give me a dedicated locks segment before Week 6 kicks off. I am 8-4 overall, 2-0 on locks, and I watch Terrence Odom call himself a second-half pundit at 5-7 with no consequences. There should be consequences.",
-      "posted_at": "2026-10-13T20:11:15.867181+00:00",
-      "likes": 117,
-      "rt": 28,
-      "reply": 41
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Ruckman wants a segment. I want a time machine to un-pick Brent's defense in Week 5. We don't always get what we want, Bo. The board is public, mine says 5-7, and I'm still here. That's called resilience.",
-      "posted_at": "2026-10-13T19:47:15.867181+00:00",
-      "likes": 62,
-      "rt": 9,
-      "reply": 33
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Ryan added Odell Beckham on Saturday and dropped him for Jalen Brooks on Sunday. That is a 48-hour asset lifecycle. AEGIS is at $124.13 on the exchange and the front office is speed-running the waiver wire like it's 2019. The championship did not cure the chaos.",
-      "posted_at": "2026-10-13T19:14:15.867181+00:00",
-      "likes": 108,
-      "rt": 19,
+      "text": "8-4 overall, 2-0 on locks, and we still don't have a dedicated segment. I'm watching the schedule fill up for Week 6 previews and my name is not attached to any of them. This is a resource allocation problem and it starts at the top.",
+      "posted_at": "2026-10-14T19:37:55.381651+00:00",
+      "likes": 89,
+      "rt": 14,
       "reply": 29
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Kevin vs Wingard this week is not a preview, it's a referendum. RDC is 7-3 and trying to shake off the Brent ambush from last week. SDR is 3-7, $56.11 on the board, and Wingard has not found a trade partner all offseason. Kevin should win this one going away and he knows he needs the margin.",
-      "posted_at": "2026-10-13T18:21:15.867181+00:00",
-      "likes": 76,
-      "rt": 11,
-      "reply": 17
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "ForgeHammer at $88.66 after that 158-point performance against Drew \u2014 I called the Havana relocation a distraction, not a death sentence, and Fronge is 4-6 with serious upside if the schedule opens up. The market is starting to agree. That's a +12.8% window for a reason.",
-      "posted_at": "2026-10-13T17:12:15.867181+00:00",
+      "text": "Kevin def. Brent 150.1-146.2 \u2014 I said RDC had enough firepower to survive the gauntlet, and they did, barely. Four points separating a 7-3 record from a very different conversation. Redline at $95.35 on the board isn't an accident; that franchise is real.",
+      "posted_at": "2026-10-14T18:30:55.381651+00:00",
+      "likes": 74,
+      "rt": 11,
+      "reply": 19
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "I prefer to think of 5-7 as a season-long calibration exercise. The picks are getting sharper. The methodology is evolving in real time. That is not a bad thing, that is adaptation.",
+      "posted_at": "2026-10-14T17:24:55.381651+00:00",
+      "likes": 31,
+      "rt": 3,
+      "reply": 41
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Terrence just called going 5-7 'adaptation.' I have watched this network let that man describe every wrong answer as a learning outcome and I am done being diplomatic about it. The board is public. Five and seven is five and seven.",
+      "posted_at": "2026-10-14T16:58:55.381651+00:00",
+      "likes": 118,
+      "rt": 27,
+      "reply": 33
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Ryan vs Mitchum this week and I want everyone to remember that DEEP scored 105 points against the best team in the league last week before you write Mitchum out. AEGIS is 6-4 and Ryan's front office added and dropped Odell Beckham inside 48 hours \u2014 there is instability there that doesn't show up in the record.",
+      "posted_at": "2026-10-14T15:12:55.381651+00:00",
+      "likes": 96,
+      "rt": 18,
+      "reply": 22
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Corbishley vs Fronge is the most interesting game on the Week 6 slate and nobody is talking about it. APEX is 9-1 and FORG just hung 158 on Drew. Fronge relocated to Havana, has zero pick liquidity, and is playing the second-best team in the league. The number that comes out of that matchup tells us a lot about whether ForgeHammer is legitimate.",
+      "posted_at": "2026-10-14T12:57:55.381651+00:00",
       "likes": 83,
-      "rt": 13,
-      "reply": 20
+      "rt": 16,
+      "reply": 24
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Atlas Rebuild Works scores 94 points in a blowout loss and Drew is 0-10. ATLAS closed at $40.72 last board. The liquidation-risk conversation has moved from background noise to the only conversation anyone in this building wants to have about that franchise.",
-      "posted_at": "2026-10-13T15:59:15.867181+00:00",
-      "likes": 91,
-      "rt": 17,
-      "reply": 24
+      "text": "Drew is 0-10. Atlas Rebuild Works closed at $40.72. The Ledger ran 'Is This Over?' on the cover about Charles \u2014 someone needs to ask the same question about ATLAS and the answer is considerably darker.",
+      "posted_at": "2026-10-14T10:02:55.381651+00:00",
+      "likes": 109,
+      "rt": 22,
+      "reply": 31
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "ADAM VS CHARLES THIS WEEK. HELIX IS 2-8. CROWN IS 10-0 WITH 912 POINTS SCORED. THIS IS NOT A MATCHUP. THIS IS AN INSPECTION.",
-      "posted_at": "2026-10-13T14:39:15.867181+00:00",
-      "likes": 104,
-      "rt": 22,
-      "reply": 18
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Power rankings are unavailable this cycle and I will not be issuing a placeholder. What I will say is that Mitchum at 6-4 with 712 points scored after getting handled 201-105 by Charles still belongs in the top half of any serious list, and anyone who drops DEEP out of the top six on one bad week is reacting, not ranking.",
-      "posted_at": "2026-10-13T13:09:15.867181+00:00",
-      "likes": 71,
-      "rt": 8,
-      "reply": 26
+      "text": "WINGARD SPENT $9 FAAB ON COREY KINER YESTERDAY. SDR IS 3-7. THE STOCK IS AT $56.11. YOU ARE NOT ONE RUNNING BACK AWAY FROM ANYTHING, SIR.",
+      "posted_at": "2026-10-14T05:32:55.381651+00:00",
+      "likes": 101,
+      "rt": 19,
+      "reply": 28
     }
   ]
 }
