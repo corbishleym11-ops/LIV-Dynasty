@@ -1,114 +1,115 @@
 {
-  "generated_at": "2026-10-15T20:07:50.015706+00:00",
+  "generated_at": "2026-10-16T19:45:54.058873+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Oct 14 (yesterday)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
-    "WAIVER CLAIM (Oct 13 (2 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
-    "FREE AGENT ADD (Oct 11 (4 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
-    "FREE AGENT ADD (Oct 10 (5 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
-    "FREE AGENT ADD (Oct 10 (5 days ago)): Charles added Roschon Johnson (RB, CHI).",
-    "WAIVER CLAIM (Oct 08 (7 days ago)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "WAIVER CLAIM (Oct 16 (today)): Kevin added Jahan Dotson (WR, ATL).",
+    "WAIVER CLAIM (Oct 14 (2 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
+    "WAIVER CLAIM (Oct 13 (3 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
+    "FREE AGENT ADD (Oct 11 (5 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
+    "FREE AGENT ADD (Oct 10 (6 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
+    "FREE AGENT ADD (Oct 10 (6 days ago)): Charles added Roschon Johnson (RB, CHI).",
+    "WAIVER CLAIM (Oct 08 (8 days ago)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
     "WEEK 5 RESULTS: Corbishley def. Jake, 145.9-124.3; Shaq def. Adam, 112.0-99.9; Fronge def. Drew, 158.0-94.0 (BLOWOUT); Charles def. Mitchum, 201.4-105.1 (BLOWOUT); Kevin def. Brent, 150.1-146.2 (NAIL-BITER); Ryan def. Wingard, 174.4-87.9 (BLOWOUT)"
   ],
   "tweets": [
     {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Kevin adds Jahan Dotson off waivers today. RDC already at 7-3, now adding WR depth mid-week before a matchup against Wingard. The floor at Redline keeps rising.",
+      "posted_at": "2026-10-16T19:30:54.058873+00:00",
+      "likes": 87,
+      "rt": 18,
+      "reply": 12
+    },
+    {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Week 6 opens tonight and the only undefeated record in this league belongs to a man who put up 201 points last week like it was a quarterly earnings call he had already won. Charles vs Adam. The 100xers need a miracle. Crownline needs a statement.",
-      "posted_at": "2026-10-15T19:52:50.015706+00:00",
-      "likes": 118,
+      "text": "Charles put up 201.4 points last week against Mitchum. The Ledger has been tracking CROWN's scoring pace all season and I will say plainly: we have not seen a floor like this from any franchise in this league's short history. The board agrees \u2014 $146.42 and still the market-cap leader.",
+      "posted_at": "2026-10-16T19:11:54.058873+00:00",
+      "likes": 112,
       "rt": 28,
-      "reply": 38
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Adam is 2-8 and HLX is sitting at $75.13 \u2014 down 5.6% on the current board. He gets Charles this week. I am not picking against CROWN right now. I am physically incapable of doing it.",
-      "posted_at": "2026-10-15T19:25:50.015706+00:00",
-      "likes": 87,
-      "rt": 19,
-      "reply": 22
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Drew added Brandin Cooks yesterday and dropped Joe Mixon. ATLAS is 0-10 and $40.72 on the exchange. I need someone to explain to me what roster philosophy is being executed here because I am genuinely asking.",
-      "posted_at": "2026-10-15T18:49:50.015706+00:00",
-      "likes": 104,
-      "rt": 24,
-      "reply": 31
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Kevin surviving that 150.1-146.2 nail-biter against Brent proves exactly what I said going into the week \u2014 RDC has enough depth to win the ugly ones. RDC at $95.35 with a 7-3 record is not a fluke, that is a franchise that figured something out.",
-      "posted_at": "2026-10-15T18:12:50.015706+00:00",
-      "likes": 76,
-      "rt": 14,
       "reply": 19
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "DREW IS 0-10. BRENT IS 3-7. SOMEONE IN THIS MATCHUP IS GOING TO IMPROVE THEIR RECORD ON SUNDAY AND THAT TELLS YOU EVERYTHING ABOUT WHERE BOTH FRANCHISES ARE RIGHT NOW.",
-      "posted_at": "2026-10-15T17:24:50.015706+00:00",
-      "likes": 92,
+      "text": "CORBISHLEY IS UP 30.9-4.4 ON FRONGE AND I NEED EVERYONE TO UNDERSTAND THAT APEX IS PLAYING LIKE A TEAM THAT LOST A CHAMPIONSHIP FINAL AND CAME BACK ANGRIER. SIXTEEN TRADES LAST OFFSEASON. THIS IS WHAT THAT BUYS YOU.",
+      "posted_at": "2026-10-16T18:47:54.058873+00:00",
+      "likes": 94,
       "rt": 21,
-      "reply": 27
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "8-4 on the season, 2-0 on locks \u2014 I will take that into Week 6 and I will do it without a preview segment, without a dedicated timeslot, and apparently without anyone at this network noticing that the top of the pick-em board has been the same name for two straight weeks.",
-      "posted_at": "2026-10-15T16:19:50.015706+00:00",
-      "likes": 109,
-      "rt": 26,
-      "reply": 34
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Jake vs Shaq is the bubble game nobody is talking about. Both teams are 4-6 and 6-4 respectively, ECHO down 11.4% to $92.12, MWB up to $92.87 \u2014 these two stocks are nearly identical and one of them is playing playoff football while the other is watching from home. Week 6 starts drawing that line.",
-      "posted_at": "2026-10-15T15:02:50.015706+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 21
+      "reply": 16
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "People keep pointing at 5-7 like it invalidates my framework. What I would say is the pick-em leaderboard is a long game and the analysts who peaked in September are going to have a very interesting October.",
-      "posted_at": "2026-10-15T13:39:50.015706+00:00",
+      "text": "People want to talk about my 5-7 record but nobody wants to talk about the fact that Kevin surviving a 150-point nail-biter then immediately going out and claiming Jahan Dotson is exactly the kind of quiet move that wins leagues in December. I see things early. That is the framework.",
+      "posted_at": "2026-10-16T18:16:54.058873+00:00",
       "likes": 31,
       "rt": 4,
-      "reply": 29
+      "reply": 22
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Terrence is at 5-7 and just said 'peaked in September.' Bo is at 8-4. That is not a long game, that is a gap.",
-      "posted_at": "2026-10-15T13:15:50.015706+00:00",
-      "likes": 127,
-      "rt": 31,
-      "reply": 37
+      "text": "Buddy, Terrence is 5-7 and just used the word 'framework' again. At some point the framework has to produce correct picks. That is, I believe, the entire premise of a pick-em competition.",
+      "posted_at": "2026-10-16T18:08:54.058873+00:00",
+      "likes": 108,
+      "rt": 25,
+      "reply": 31
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "8-4, locks 2-0, and I have a Corbishley-Fronge live game sitting at 30.9-4.4 in the first window that I picked correctly. I am not going to make a scene about this. I am simply going to note that I am still at the top of the board and see if anyone here has an explanation for why I still do not have a dedicated segment.",
+      "posted_at": "2026-10-16T17:31:54.058873+00:00",
+      "likes": 98,
+      "rt": 19,
+      "reply": 27
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "Wingard spending $9 FAAB on Corey Kiner three days ago while sitting at 3-7 and $54.08 on the exchange \u2014 I called the SDR philosophy problem in the preseason and the evidence keeps compiling. You cannot hoard future picks and also make emergency waiver bids. Pick a lane.",
+      "posted_at": "2026-10-16T16:47:54.058873+00:00",
+      "likes": 76,
+      "rt": 14,
+      "reply": 18
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "The Ledger is watching Kevin vs Wingard very closely this week. RDC at 7-3 and $95.35 hosting a 3-7 SDR squad that spent $9 FAAB on a running back two days ago \u2014 the gap between these franchises is not just the standings, it is the philosophy.",
-      "posted_at": "2026-10-15T10:36:50.015706+00:00",
-      "likes": 96,
-      "rt": 22,
-      "reply": 18
+      "text": "Drew vs Brent is currently 0.0-25.2 and ATLAS is 0-10. The Ledger will not look away from this one. A franchise at $35.28 \u2014 down 13.4% on the current board \u2014 is either about to get its first win of the season or fall to 0-11. Both outcomes are significant. Only one is merciful.",
+      "posted_at": "2026-10-16T16:10:54.058873+00:00",
+      "likes": 89,
+      "rt": 17,
+      "reply": 24
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "DEEP is up 7.6% to $94.32 this week and Mitchum is still somehow relevant at 6-4, but Ryan is already leading that matchup 5.2-0.0. The market likes Mitchum's direction. The scoreboard is less convinced.",
+      "posted_at": "2026-10-16T15:18:54.058873+00:00",
+      "likes": 67,
+      "rt": 11,
+      "reply": 9
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "For the record: a 10-0 Charles with 912 points scored is the easiest number-one ranking I have ever assigned. The interesting question on this week's board is not who sits first \u2014 it is whether Corbishley's 9-1 pace puts them ahead of Kevin's 7-3 at third. I have a position on that. It will be in the rankings when they drop.",
+      "posted_at": "2026-10-16T14:33:54.058873+00:00",
+      "likes": 81,
+      "rt": 15,
+      "reply": 20
     }
   ]
 }
