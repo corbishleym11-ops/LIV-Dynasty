@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-16T19:45:54.058873+00:00",
+  "generated_at": "2026-10-17T18:57:08.774173+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Oct 16 (today)): Kevin added Jahan Dotson (WR, ATL).",
-    "WAIVER CLAIM (Oct 14 (2 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
-    "WAIVER CLAIM (Oct 13 (3 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
-    "FREE AGENT ADD (Oct 11 (5 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
-    "FREE AGENT ADD (Oct 10 (6 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
-    "FREE AGENT ADD (Oct 10 (6 days ago)): Charles added Roschon Johnson (RB, CHI).",
-    "WAIVER CLAIM (Oct 08 (8 days ago)): Mitchum added Dameon Pierce (RB, PHI) for $1 FAAB (dropped Jacob Cowing (WR, SF)).",
+    "CUT (Oct 17 (today)): Corbishley released Jacob Saylors (RB, DET).",
+    "FREE AGENT ADD (Oct 17 (today)): Corbishley added Tanner McKee (QB, PHI) (dropped Carson Wentz (QB, MIN)).",
+    "WAIVER CLAIM (Oct 16 (yesterday)): Kevin added Jahan Dotson (WR, ATL).",
+    "WAIVER CLAIM (Oct 14 (3 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
+    "WAIVER CLAIM (Oct 13 (4 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
+    "FREE AGENT ADD (Oct 11 (6 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
+    "FREE AGENT ADD (Oct 10 (7 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
+    "FREE AGENT ADD (Oct 10 (7 days ago)): Charles added Roschon Johnson (RB, CHI).",
     "WEEK 5 RESULTS: Corbishley def. Jake, 145.9-124.3; Shaq def. Adam, 112.0-99.9; Fronge def. Drew, 158.0-94.0 (BLOWOUT); Charles def. Mitchum, 201.4-105.1 (BLOWOUT); Kevin def. Brent, 150.1-146.2 (NAIL-BITER); Ryan def. Wingard, 174.4-87.9 (BLOWOUT)"
   ],
   "tweets": [
@@ -15,101 +16,101 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "BREAKING: Kevin adds Jahan Dotson off waivers today. RDC already at 7-3, now adding WR depth mid-week before a matchup against Wingard. The floor at Redline keeps rising.",
-      "posted_at": "2026-10-16T19:30:54.058873+00:00",
-      "likes": 87,
-      "rt": 18,
-      "reply": 12
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Charles put up 201.4 points last week against Mitchum. The Ledger has been tracking CROWN's scoring pace all season and I will say plainly: we have not seen a floor like this from any franchise in this league's short history. The board agrees \u2014 $146.42 and still the market-cap leader.",
-      "posted_at": "2026-10-16T19:11:54.058873+00:00",
-      "likes": 112,
-      "rt": 28,
-      "reply": 19
+      "text": "TRANSACTION: Corbishley released Jacob Saylors (RB, DET) and added Tanner McKee (QB, PHI) today, dropping Carson Wentz in the process. Apex is already up 30.9-4.4 on Fronge in the live window. The roster moves don't stop even when the scoreboard is already settled.",
+      "posted_at": "2026-10-17T18:45:08.774173+00:00",
+      "likes": 54,
+      "rt": 11,
+      "reply": 9
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "CORBISHLEY IS UP 30.9-4.4 ON FRONGE AND I NEED EVERYONE TO UNDERSTAND THAT APEX IS PLAYING LIKE A TEAM THAT LOST A CHAMPIONSHIP FINAL AND CAME BACK ANGRIER. SIXTEEN TRADES LAST OFFSEASON. THIS IS WHAT THAT BUYS YOU.",
-      "posted_at": "2026-10-16T18:47:54.058873+00:00",
-      "likes": 94,
-      "rt": 21,
-      "reply": 16
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "People want to talk about my 5-7 record but nobody wants to talk about the fact that Kevin surviving a 150-point nail-biter then immediately going out and claiming Jahan Dotson is exactly the kind of quiet move that wins leagues in December. I see things early. That is the framework.",
-      "posted_at": "2026-10-16T18:16:54.058873+00:00",
-      "likes": 31,
-      "rt": 4,
-      "reply": 22
+      "text": "DREW VS BRENT IS LIVE AND ATLAS IS DOWN 0.0-25.2 AND I NEED SOMEONE TO EXPLAIN TO ME HOW A FRANCHISE LISTED AT $35.28 \u2014 DOWN THIRTEEN POINT FOUR PERCENT \u2014 IS GOING TO SURVIVE THIS SEASON WITH ANY CREDIBILITY INTACT. ZERO WINS. TEN GAMES. THIS IS NOT A REBUILD. THIS IS A CONTROLLED DEMOLITION.",
+      "posted_at": "2026-10-17T18:29:08.774173+00:00",
+      "likes": 89,
+      "rt": 22,
+      "reply": 31
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Terrence is 5-7 and just used the word 'framework' again. At some point the framework has to produce correct picks. That is, I believe, the entire premise of a pick-em competition.",
-      "posted_at": "2026-10-16T18:08:54.058873+00:00",
-      "likes": 108,
-      "rt": 25,
-      "reply": 31
+      "text": "Buddy, Tanner McKee off free agency while you're sitting at 30.9-4.4 in a live game is either the most confident roster management move of the season or Corbishley just clearing dead weight because he already knows this one's over. Either way, APEX at $123.78 is not a team that panics.",
+      "posted_at": "2026-10-17T18:12:08.774173+00:00",
+      "likes": 67,
+      "rt": 14,
+      "reply": 18
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "8-4, locks 2-0, and I have a Corbishley-Fronge live game sitting at 30.9-4.4 in the first window that I picked correctly. I am not going to make a scene about this. I am simply going to note that I am still at the top of the board and see if anyone here has an explanation for why I still do not have a dedicated segment.",
-      "posted_at": "2026-10-16T17:31:54.058873+00:00",
-      "likes": 98,
-      "rt": 19,
-      "reply": 27
+      "text": "8-4, locks 2-0, correctly on the right side of Corbishley-Fronge which is currently a 26-point live blowout, and the only dedicated segment I'm getting is Vivienne reading my record out loud to embarrass other people. I will accept this. For now.",
+      "posted_at": "2026-10-17T17:46:08.774173+00:00",
+      "likes": 103,
+      "rt": 27,
+      "reply": 22
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "Wingard spending $9 FAAB on Corey Kiner three days ago while sitting at 3-7 and $54.08 on the exchange \u2014 I called the SDR philosophy problem in the preseason and the evidence keeps compiling. You cannot hoard future picks and also make emergency waiver bids. Pick a lane.",
-      "posted_at": "2026-10-16T16:47:54.058873+00:00",
-      "likes": 76,
-      "rt": 14,
-      "reply": 18
+      "text": "I called the Adam problem before week one \u2014 a model-driven turnaround only works if the model is playing against real competition, not a 10-0 Charles this week. HLX at $74.85 and a 2-8 record. The preseason valuation surge looks a lot lonelier from here.",
+      "posted_at": "2026-10-17T17:19:08.774173+00:00",
+      "likes": 58,
+      "rt": 9,
+      "reply": 14
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Drew vs Brent is currently 0.0-25.2 and ATLAS is 0-10. The Ledger will not look away from this one. A franchise at $35.28 \u2014 down 13.4% on the current board \u2014 is either about to get its first win of the season or fall to 0-11. Both outcomes are significant. Only one is merciful.",
-      "posted_at": "2026-10-16T16:10:54.058873+00:00",
-      "likes": 89,
-      "rt": 17,
-      "reply": 24
+      "text": "Kevin vs Wingard is live at 2.9-4.5 and the defending almost-relevant Redline narrative is on a razor's edge. RDC added Jahan Dotson off waivers yesterday and is somehow trailing Mile High Bo right now. The Ledger is watching. Every point counts at 7-3.",
+      "posted_at": "2026-10-17T16:43:08.774173+00:00",
+      "likes": 76,
+      "rt": 16,
+      "reply": 20
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "DEEP is up 7.6% to $94.32 this week and Mitchum is still somehow relevant at 6-4, but Ryan is already leading that matchup 5.2-0.0. The market likes Mitchum's direction. The scoreboard is less convinced.",
-      "posted_at": "2026-10-16T15:18:54.058873+00:00",
-      "likes": 67,
-      "rt": 11,
-      "reply": 9
+      "text": "Ryan leading Mitchum 5.2-0.0 early while DEEP just surged 7.6% to $94.32 on the exchange board is the exact kind of market-vs-scoreboard tension that makes this league fascinating. The stock says Mitchum has found direction. The defending champion disagrees.",
+      "posted_at": "2026-10-17T15:59:08.774173+00:00",
+      "likes": 61,
+      "rt": 13,
+      "reply": 11
     },
     {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "For the record: a 10-0 Charles with 912 points scored is the easiest number-one ranking I have ever assigned. The interesting question on this week's board is not who sits first \u2014 it is whether Corbishley's 9-1 pace puts them ahead of Kevin's 7-3 at third. I have a position on that. It will be in the rankings when they drop.",
-      "posted_at": "2026-10-16T14:33:54.058873+00:00",
-      "likes": 81,
-      "rt": 15,
-      "reply": 20
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "My 5-7 record is being treated like a character flaw when the reality is I am one corrected momentum call away from a completely different conversation. Jake vs Shaq this week \u2014 Monarch up 8.3% on the exchange, EchoPoint's RB room is elite, Shaq hasn't addressed the RB hole in two offseasons. I like Jake. That is not a lock. That is a considered position.",
+      "posted_at": "2026-10-17T15:12:08.774173+00:00",
+      "likes": 29,
+      "rt": 4,
+      "reply": 19
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Terrence just clarified that his latest pick is 'not a lock, a considered position.' The Ledger appreciates the transparency. The scoreboard, historically, has not cared about the distinction.",
+      "posted_at": "2026-10-17T14:30:08.774173+00:00",
+      "likes": 118,
+      "rt": 31,
+      "reply": 38
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Fronge relocated to Havana for regulatory flexibility and is currently getting outscored 30.9-4.4 by Corbishley. FORG at $86.62, down 2.3%, sitting 4-6. Whatever flexibility the Havana move was supposed to provide \u2014 the standings aren't feeling it yet.",
+      "posted_at": "2026-10-17T13:17:08.774173+00:00",
+      "likes": 72,
+      "rt": 18,
+      "reply": 15
     }
   ]
 }
