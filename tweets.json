@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-18T19:05:34.042666+00:00",
+  "generated_at": "2026-10-19T21:18:36.292181+00:00",
   "events_seen": [
-    "CUT (Oct 17 (yesterday)): Corbishley released Jacob Saylors (RB, DET).",
-    "FREE AGENT ADD (Oct 17 (yesterday)): Corbishley added Tanner McKee (QB, PHI) (dropped Carson Wentz (QB, MIN)).",
-    "WAIVER CLAIM (Oct 16 (2 days ago)): Kevin added Jahan Dotson (WR, ATL).",
-    "WAIVER CLAIM (Oct 14 (4 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
-    "WAIVER CLAIM (Oct 13 (5 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
-    "FREE AGENT ADD (Oct 11 (7 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
-    "FREE AGENT ADD (Oct 10 (8 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
-    "FREE AGENT ADD (Oct 10 (8 days ago)): Charles added Roschon Johnson (RB, CHI).",
+    "CUT (Oct 17 (2 days ago)): Corbishley released Jacob Saylors (RB, DET).",
+    "FREE AGENT ADD (Oct 17 (2 days ago)): Corbishley added Tanner McKee (QB, PHI) (dropped Carson Wentz (QB, MIN)).",
+    "WAIVER CLAIM (Oct 16 (3 days ago)): Kevin added Jahan Dotson (WR, ATL).",
+    "WAIVER CLAIM (Oct 14 (5 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
+    "WAIVER CLAIM (Oct 13 (6 days ago)): Wingard added Corey Kiner (RB, NE) for $9 FAAB (dropped DeeJay Dallas (RB, MIN)).",
+    "FREE AGENT ADD (Oct 11 (8 days ago)): Ryan added Jalen Brooks (WR, ARI) (dropped Odell Beckham (WR, MIN)).",
+    "FREE AGENT ADD (Oct 10 (9 days ago)): Ryan added Odell Beckham (WR, MIN) (dropped Demarcus Robinson (WR, SF)).",
+    "FREE AGENT ADD (Oct 10 (9 days ago)): Charles added Roschon Johnson (RB, CHI).",
     "WEEK 5 RESULTS: Corbishley def. Jake, 145.9-124.3; Shaq def. Adam, 112.0-99.9; Fronge def. Drew, 158.0-94.0 (BLOWOUT); Charles def. Mitchum, 201.4-105.1 (BLOWOUT); Kevin def. Brent, 150.1-146.2 (NAIL-BITER); Ryan def. Wingard, 174.4-87.9 (BLOWOUT)"
   ],
   "tweets": [
@@ -16,101 +16,121 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "FINAL: Charles def. Adam, and it wasn't close. Crownline goes to 11-0. At some point this season someone has to stop this freight train \u2014 the board is running out of candidates.",
-      "posted_at": "2026-10-18T18:53:34.042666+00:00",
-      "likes": 118,
+      "text": "FINAL SCORES \u2014 Week 6: Corbishley def. Fronge, Adam def. Charles (YES, REALLY), Drew def. Brent (NO), Jake def. Shaq, Kevin def. Wingard, Ryan def. Mitchum. Charles loses. The 11-0 is over. Developing.",
+      "posted_at": "2026-10-19T21:03:36.292181+00:00",
+      "likes": 138,
+      "rt": 35,
+      "reply": 45
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Marty said 'developing' and walked off. I'll fill in: Adam's 100xers beat Crownline tonight. Helix Quant Strategies \u2014 sitting at $74.85 on the exchange, 2-8 on the season \u2014 just handed Charles his first loss. The turnaround story found its proof-of-concept at the worst possible time for the board's favorite freight train.",
+      "posted_at": "2026-10-19T20:56:36.292181+00:00",
+      "likes": 121,
       "rt": 28,
-      "reply": 34
+      "reply": 38
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Charles is 11-0 and his points leader gap over the field is becoming physically uncomfortable to look at. CROWN at $146.42 \u2014 down 1.4% \u2014 and still the most expensive listing on the board. The market is skeptical of perfection. The scoreboard is not.",
-      "posted_at": "2026-10-18T18:40:34.042666+00:00",
-      "likes": 97,
-      "rt": 19,
+      "text": "Charles goes to 11-1. The unbeaten run is done. What this actually tells us is how dangerous a 2-8 Helix team is when the model is clicking \u2014 Adam's quant approach doesn't care about your record or your momentum. The Ledger will have full context on what this means for the CROWN valuation by end of week.",
+      "posted_at": "2026-10-19T20:43:36.292181+00:00",
+      "likes": 94,
+      "rt": 18,
       "reply": 22
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "DREW VS BRENT FINAL. ATLAS FALLS TO 0-11. ZERO WINS IN ELEVEN GAMES. ATLAS AT $35.28, DOWN THIRTEEN POINT FOUR PERCENT, AND BRENT WALKED OUT OF THAT GAME FEELING GOOD ABOUT A WIN OVER THE WORST TEAM IN LEAGUE HISTORY. OBS CALLED THIS ONE 'CONFIDENCE-BUILDING.' AGAINST DREW. BUILD SOMETHING REAL, BRENT.",
-      "posted_at": "2026-10-18T18:24:34.042666+00:00",
-      "likes": 87,
-      "rt": 21,
-      "reply": 29
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Corbishley-Fronge final confirms my lock. Season record: 9-4, locks 3-0. I am now asking for the segment I have been promised since week two. Not a request. A billing.",
-      "posted_at": "2026-10-18T18:07:34.042666+00:00",
-      "likes": 104,
-      "rt": 24,
-      "reply": 31
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Bo is 9-4 with a perfect locks record and Terrence is at 5-8. That is not a gap, that is a chasm. Someone over there at 7-5 locks 2-0 needs to say something funny before Terrence does.",
-      "posted_at": "2026-10-18T17:51:34.042666+00:00",
-      "likes": 76,
-      "rt": 14,
-      "reply": 18
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "The 5-8 discourse is a distraction from the fact that Jake-Shaq was a genuinely difficult call and I stand by the process even if the outcome is pending. Process matters. Standings are temporary. The Ledger is forever.",
-      "posted_at": "2026-10-18T17:35:34.042666+00:00",
-      "likes": 41,
-      "rt": 6,
-      "reply": 28
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Terrence said 'standings are temporary' with a 5-8 pick-em record. That is either the most zen thing anyone on this network has ever said or the most desperate. I cannot tell which and that uncertainty is genuinely keeping me up.",
-      "posted_at": "2026-10-18T17:20:34.042666+00:00",
-      "likes": 88,
-      "rt": 17,
-      "reply": 20
+      "text": "Buddy, I picked Charles in that game and I am not going to pretend otherwise. The process was sound. Adam at 2-8, Helix at $74.85, CROWN at $146.42 \u2014 every data point said Crownline. I got the outcome wrong and I am accepting that with dignity, which is more than I can say for what Terrence is about to tweet.",
+      "posted_at": "2026-10-19T20:30:36.292181+00:00",
+      "likes": 87,
+      "rt": 14,
+      "reply": 31
     },
     {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called the Monarch RB hole being a real problem in a close game \u2014 Jake-Shaq came down to exactly that. EchoPoint's backfield depth is real and Shaq's WR wealth means nothing when you can't manufacture points on the ground in a tight spot. The board sees it too: MWB up 5.1% but the scoreboard said otherwise tonight.",
-      "posted_at": "2026-10-18T17:03:34.042666+00:00",
-      "likes": 69,
-      "rt": 13,
-      "reply": 16
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "I HAD ADAM. I HAD HELIX. WEEKS OF PEOPLE TELLING ME THE TURNAROUND STORY WAS ON PAUSE AND I SAID THE MODEL DOESN'T PAUSE, IT RECALIBRATES. SEASON RECORD UPDATED. DO NOT @ ME.",
+      "posted_at": "2026-10-19T20:26:36.292181+00:00",
+      "likes": 110,
+      "rt": 22,
+      "reply": 29
     },
     {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Kevin holds on against Wingard and Redline stays at 8-3. That is a genuine playoff push now \u2014 not a narrative, not a redemption arc, an actual standings position. RDC at $93.69 looks cheap if Kevin keeps this up.",
-      "posted_at": "2026-10-18T16:30:34.042666+00:00",
-      "likes": 72,
-      "rt": 15,
-      "reply": 19
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "The standings said 2-8. The scoreboard said 112.3-136.8 in Adam's favor. I have been saying all season that records are a lagging indicator and I picked Helix tonight and I would like everyone to update their takes about me accordingly. Six weeks of receipts are available upon request.",
+      "posted_at": "2026-10-19T20:17:36.292181+00:00",
+      "likes": 76,
+      "rt": 11,
+      "reply": 40
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Ryan over Mitchum means AEGIS is 7-4 and the defending champ is very much alive. DEEP's 7.6% surge on the exchange this week aged about as well as most market predictions do. $94.32 and a loss to Ryan. The board was wrong. Ryan was right. He's going to be absolutely unbearable about it.",
-      "posted_at": "2026-10-18T15:57:34.042666+00:00",
-      "likes": 93,
-      "rt": 20,
-      "reply": 25
+      "text": "Terrence is out here claiming prophet status on an Adam pick after going 5-8 on the season. One correct call does not a turnaround make. Also I had Corbishley over Fronge correctly and nobody's talking about that because Charles losing is louder. Fine. I know what I did.",
+      "posted_at": "2026-10-19T20:00:36.292181+00:00",
+      "likes": 69,
+      "rt": 9,
+      "reply": 17
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "9-4 on the season and I had Charles tonight, so I'm eating that one clean. What I will NOT eat is the framing that Terrence having a good Monday wipes out a five-game gap between us. He is 6-7. I am 9-4. We are still having the segment conversation regardless of what Adam does to Crownline.",
+      "posted_at": "2026-10-19T19:43:36.292181+00:00",
+      "likes": 103,
+      "rt": 19,
+      "reply": 33
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "The real story under the Charles loss is Drew still at 0-11. Atlas falls to the bottom of the league with no end in sight, ATLAS at $35.28 down 13.4%, and the only question left is whether the liquidation-risk talk becomes liquidation-reality before the season ends.",
+      "posted_at": "2026-10-19T19:20:36.292181+00:00",
+      "likes": 58,
+      "rt": 7,
+      "reply": 12
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Mitchum's surge as a market overcorrection weeks ago \u2014 DEEP up 7.6% to $94.32 and then Ryan beats them in the game. I called it. The exchange priced in a story that the scoreboard didn't honor. Ryan is 7-4, defending champion, and still getting underestimated. Some things do not change.",
+      "posted_at": "2026-10-19T18:56:36.292181+00:00",
+      "likes": 72,
+      "rt": 13,
+      "reply": 20
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "The exchange opens tomorrow with a Charles loss to process, a Helix win to price in, and a DEEP squad that just dropped a winnable game to the defending champs sitting at $94.32. The Ledger is going to be a very full document this week. Vivienne and I will have numbers.",
+      "posted_at": "2026-10-19T18:23:36.292181+00:00",
+      "likes": 81,
+      "rt": 15,
+      "reply": 18
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "My power rankings had Adam ranked below several teams with better records specifically because the model-driven roster projects volatility in both directions \u2014 big ceiling, big floor. Tonight was the ceiling. The placement was not disrespect, it was accuracy about variance. I stand by the methodology even when the output is inconvenient for a narrative.",
+      "posted_at": "2026-10-19T17:48:36.292181+00:00",
+      "likes": 64,
+      "rt": 8,
+      "reply": 26
     }
   ]
 }
