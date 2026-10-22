@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-21T20:25:12.071250+00:00",
+  "generated_at": "2026-10-22T20:21:38.170099+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Oct 21 (today)): Adam added Savion Williams (WR, GB) (dropped Austin Ekeler (RB, WAS)).",
-    "WAIVER CLAIM (Oct 20 (yesterday)): Drew added Pierre Strong (RB, GB) for $25 FAAB (dropped CJ Daniels (WR, LAR)).",
-    "WAIVER CLAIM (Oct 18 (3 days ago)): Charles added Jarrett Stidham (QB, DEN) (dropped Isaiah Williams (WR, NYJ)).",
-    "CUT (Oct 17 (4 days ago)): Corbishley released Jacob Saylors (RB, DET).",
-    "FREE AGENT ADD (Oct 17 (4 days ago)): Corbishley added Tanner McKee (QB, PHI) (dropped Carson Wentz (QB, MIN)).",
-    "WAIVER CLAIM (Oct 16 (5 days ago)): Kevin added Jahan Dotson (WR, ATL).",
-    "WAIVER CLAIM (Oct 14 (7 days ago)): Drew added Brandin Cooks (WR, SF) (dropped Joe Mixon (RB, FA)).",
+    "CUT (Oct 21 (yesterday)): Kevin released Darius Slayton (WR, FA).",
+    "WAIVER CLAIM (Oct 21 (yesterday)): Charles added Zonovan Knight (RB, ARI) (dropped Chris Brooks (RB, GB)).",
+    "WAIVER CLAIM (Oct 21 (yesterday)): Adam added Savion Williams (WR, GB) (dropped Austin Ekeler (RB, WAS)).",
+    "WAIVER CLAIM (Oct 20 (2 days ago)): Drew added Pierre Strong Jr. (RB, GB) for $25 FAAB (dropped CJ Daniels (WR, LAR)).",
+    "WAIVER CLAIM (Oct 18 (4 days ago)): Charles added Jarrett Stidham (QB, DEN) (dropped Isaiah Williams (WR, NYJ)).",
+    "CUT (Oct 17 (5 days ago)): Corbishley released Jacob Saylors (RB, DET).",
+    "FREE AGENT ADD (Oct 17 (5 days ago)): Corbishley added Tanner McKee (QB, PHI) (dropped Carson Wentz (QB, MIN)).",
+    "WAIVER CLAIM (Oct 16 (6 days ago)): Kevin added Jahan Dotson (WR, ATL).",
     "WEEK 6 RESULTS: Fronge def. Corbishley, 103.8-88.3; Charles def. Adam, 136.8-112.3; Brent def. Drew, 132.3-57.5 (BLOWOUT); Jake def. Shaq, 113.8-101.9; Kevin def. Wingard, 114.3-59.7 (BLOWOUT); Mitchum def. Ryan, 149.1-122.1"
   ],
   "tweets": [
@@ -15,101 +16,91 @@
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Adam dropped Austin Ekeler and added Savion Williams this morning. The move is not the headline \u2014 the headline is that Helix is 2-10 and faces Atlas at 0-12 this week, and Adam is still tinkering with the RB room like there is a playoff push being managed here. There is not.",
-      "posted_at": "2026-10-21T20:10:12.071250+00:00",
-      "likes": 87,
-      "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "8-4 on the season, locks 2-0, and nobody is going to give me thirty seconds on the preview show to talk about the Jake vs Kevin game this week. Fine. I'll do it here. EchoPoint is 6-6 with a real RB backfield and Redline just demolished Wingard by 54.6 points. That is a playoff-seeding game dressed up as a Wednesday night conversation. Someone put it on the board.",
-      "posted_at": "2026-10-21T19:47:12.071250+00:00",
-      "likes": 103,
-      "rt": 19,
-      "reply": 31
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "5-7 and fully aware of it. I'm not going to pretend the ledger looks healthy right now. What I will say is that Mitchum at 149.1 points in a week where Deepwater lost to Ryan is the most confusing production line in this league \u2014 861.6 PF on the season, fourth overall, and somehow that firm is 8-4 instead of 10-2. The schedule has not been kind and neither has my pick-em record, so maybe Mitchum and I are the same company.",
-      "posted_at": "2026-10-21T19:18:12.071250+00:00",
-      "likes": 61,
-      "rt": 9,
-      "reply": 18
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Drew added Pierre Strong for $25 FAAB yesterday and dropped CJ Daniels, and the week before that added Brandin Cooks and dropped Joe Mixon. That is not roster construction. That is a man rearranging furniture in a house that is structurally condemned. ATLAS is at $35.28 and the transactions are not going to move that number.",
-      "posted_at": "2026-10-21T18:33:12.071250+00:00",
+      "text": "Twelve and zero. Undefeated. Facing Wingard, who just surrendered 114 points to Kevin and is 3-9 on the year. Whatever Charles does to that franchise on Thursday night, the Ledger will need a new column for it.",
+      "posted_at": "2026-10-22T20:09:38.170099+00:00",
       "likes": 118,
-      "rt": 24,
-      "reply": 33
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called the Fronge angle all week and the score was 103.8-88.3 from Havana. Season record is 7-5 and the locks are 1-1, which I acknowledge, but the directional call on ForgeHammer was correct and that is what I want on the tape. Now Fronge draws Ryan in Week 7 and I am not fading them a second time.",
-      "posted_at": "2026-10-21T17:46:12.071250+00:00",
-      "likes": 74,
-      "rt": 11,
-      "reply": 20
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Corbishley vs Shaq this week and I think people are sleeping on MWB. Monarch is up 5.1% to $97.65 on the exchange, the squad just pushed Jake to 113.8-101.9 in a loss \u2014 that is a competitive score \u2014 and Apex is rattled after dropping one to a 5-7 team in Cuba. The Tanner McKee move does not inspire confidence in that QB room heading into a game Corbishley needs badly.",
-      "posted_at": "2026-10-21T17:01:12.071250+00:00",
-      "likes": 91,
-      "rt": 16,
-      "reply": 27
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "The Ledger is going to have a very specific question for the exchange board Friday morning: Charles has been at or above $145 all window and is 12-0 against a schedule that includes Wingard this week. At what point does CROWN stop sliding \u2014 even a little \u2014 and start getting priced like the undefeated firm it actually is? The $146.42 number is not reflecting what the scoreboard says.",
-      "posted_at": "2026-10-21T15:54:12.071250+00:00",
-      "likes": 109,
-      "rt": 21,
-      "reply": 29
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "The power rankings will be updated before Friday and yes, I am aware that Mitchum is going to be a difficult placement. 8-4 with 861.6 PF is a legitimate case for top four. The loss to Ryan last week is a legitimate case against it. The model does not care about either argument \u2014 it cares about the number \u2014 so stop asking me to justify it before I run it.",
-      "posted_at": "2026-10-21T13:57:12.071250+00:00",
-      "likes": 66,
-      "rt": 8,
-      "reply": 35
+      "rt": 28,
+      "reply": 32
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "WINGARD IS AT $54.08, TOOK A 114.3-59.7 LOSS TO KEVIN LAST WEEK, IS 3-9 ON THE SEASON, AND NOW GETS CHARLES IN WEEK 7. SOVEREIGN DRAFT RESERVE HAS FUTURE PICKS. THAT IS IT. THAT IS THE ENTIRE ASSET BASE. THE PRODUCTION DISCOUNT ON THOSE PICKS IS WIDENING IN REAL TIME AND THIS WEEK IS GOING TO MAKE IT WORSE.",
-      "posted_at": "2026-10-21T11:18:12.071250+00:00",
-      "likes": 95,
+      "text": "MITCHUM PUT UP 149.1 POINTS LAST WEEK. ONE HUNDRED AND FORTY-NINE. BEAT THE DEFENDING CHAMPION BY 27. NOW GETS BRENT IN WEEK 7 AND PEOPLE WANT TO TALK ABOUT CHARLES AGAIN. DEEPWATER IS 8-4 WITH 861.6 POINTS FOR AND I NEED SOMEONE TO EXPLAIN WHY THIS FIRM IS NOT THE CONVERSATION.",
+      "posted_at": "2026-10-22T19:47:38.170099+00:00",
+      "likes": 87,
+      "rt": 19,
+      "reply": 27
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Kevin cut Darius Slayton yesterday and added Jahan Dotson six days ago, and Redline is sitting at 9-3 after blowing out Wingard by 54 points. That is a front office that is actively managing a playoff push, not rearranging condemned furniture. The $93.69 exchange price is underselling what that record says.",
+      "posted_at": "2026-10-22T19:23:38.170099+00:00",
+      "likes": 72,
+      "rt": 14,
+      "reply": 19
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Fronge last week, the score was 103.8-88.3, and now the question the whole desk is dodging is whether ForgeHammer covers in Havana again when Ryan comes to town. Defending champ, 7-5, still floating on that championship premium \u2014 I am not fading FORG a second consecutive week, and my 7-5 season record says I have earned the right to say that out loud.",
+      "posted_at": "2026-10-22T18:50:38.170099+00:00",
+      "likes": 65,
+      "rt": 11,
+      "reply": 22
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Drew added Pierre Strong for $25 FAAB, Adam added Savion Williams and dropped Ekeler, and both teams play each other this week at 0-12 and 2-10 respectively. I'm picking Adam because he has a pulse. That is the full analysis. Sometimes the bar is just being the team that has scored more than 547 points all season.",
+      "posted_at": "2026-10-22T18:01:38.170099+00:00",
+      "likes": 54,
+      "rt": 9,
+      "reply": 18
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Since Vance is going to keep tagging me until I answer: yes, Mitchum is in the top four of the updated rankings. 8-4 and 861.6 PF earns the placement. The loss to Ryan is in the model. The model did not care. Stop treating the rankings like a feelings exercise.",
+      "posted_at": "2026-10-22T16:58:38.170099+00:00",
+      "likes": 93,
+      "rt": 21,
+      "reply": 35
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Eight and four on the season, locks two and zero, and the Jake vs Kevin preview is still not getting air time on this network. I will settle for a written column at this point. That matchup is a playoff-seeding event \u2014 EchoPoint at 6-6 hosting Redline at 9-3, both sides with legitimate stakes, and we are spending the segment budget on the Atlas-Helix void match.",
+      "posted_at": "2026-10-22T15:09:38.170099+00:00",
+      "likes": 101,
+      "rt": 24,
+      "reply": 41
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "The exchange has Obsidian at $78.45, up 3.4% last issue, and Brent draws Mitchum this week after a 132.3-57.5 demolition of Drew. OBS owns the TE desk in this league and cannot buy a win projection \u2014 now gets a team that just put up 149. The Ledger is going to have thoughts.",
+      "posted_at": "2026-10-22T12:56:38.170099+00:00",
+      "likes": 79,
       "rt": 17,
       "reply": 23
     },
     {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "7-5, locks 2-0, and Terrence is at 5-7 talking about furniture rearrangement when he should be talking about his own ledger. I respect the self-awareness but the accountability segment runs both directions. Odom has missed more games than he's hit in the last three weeks and the board sees it.",
-      "posted_at": "2026-10-21T05:33:12.071250+00:00",
-      "likes": 82,
-      "rt": 13,
-      "reply": 28
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Corbishley dropped Carson Wentz and picked up Tanner McKee five days ago, then lost to a 5-7 team out of Havana. Now faces Shaq, who the exchange just repriced up 5.1% to $97.65. APEX is at $123.78 and bleeding \u2014 that number is going to look very fragile by Sunday night if McKee is the answer at QB.",
+      "posted_at": "2026-10-22T09:03:38.170099+00:00",
+      "likes": 88,
+      "rt": 20,
+      "reply": 29
     }
   ]
 }
