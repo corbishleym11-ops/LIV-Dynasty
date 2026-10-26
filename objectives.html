@@ -99,8 +99,10 @@ function catClass(cat) {
 }
 
 function statusClass(s) {
-  if (s === 'Complete') return 'status-complete';
-  if (s === 'In Progress') return 'status-progress';
+  if (s === 'Complete')       return 'status-complete';
+  if (s === 'In Progress')    return 'status-progress';
+  if (s === 'Trending Up')    return 'status-up';
+  if (s === 'Trending Down')  return 'status-down';
   return 'status-pending';
 }
 
