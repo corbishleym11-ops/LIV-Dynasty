@@ -58,6 +58,7 @@
   </div>
   <div class="header-right">
     <a class="nav-btn active" href="index.html">Overview</a>
+    <a class="nav-btn" href="writeup.html">Weekly Write-up</a>
     <a class="nav-btn" href="feed.html">League Feed</a>
     <a class="nav-btn" href="stocks.html">Stocks</a>
     <a class="nav-btn" href="standings.html">History</a>
@@ -75,32 +76,8 @@
 
 <div class="main">
 
-  <!-- WEEKLY SHOW MODULE -->
-  <div class="sec-head">
-    <div class="sec-title">This Week On LIV</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag" id="day-tag">—</div>
-  </div>
-  <div id="ledger-mount"></div>
-
-  <!-- LEDGER ARCHIVE (moved here from the retired Media Center) -->
-  <div class="sec-head">
-    <div class="sec-title">Ledger Archive</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag" id="archive-tag">ISSUES</div>
-  </div>
-  <div class="card g1" style="margin-bottom:16px;">
-    <div id="ledger-archive"></div>
-  </div>
 
 
-  <!-- LIVE MATCHUPS -->
-  <div class="sec-head">
-    <div class="sec-title">This Week's Matchups</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag" id="matchup-status">LOADING FROM SLEEPER…</div>
-  </div>
-  <div class="g2" id="matchup-grid" style="grid-template-columns: repeat(2, 1fr);"></div>
 
   <!-- CURRENT STANDINGS + POWER RANKINGS -->
   <div class="sec-head">
@@ -126,6 +103,33 @@
   </div>
 
 
+
+  <!-- PROJECTED DRAFT ORDER — replaces the old Traded Pick Ownership table -->
+  <div class="sec-head">
+    <div class="sec-title">Projected 2027 Draft Order</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="draft-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="card g1">
+    <div class="draft-note">
+      Order is set by <strong>maximum points for</strong> &mdash; every point a roster could have scored
+      with its optimal lineup &mdash; not points actually scored. Losing on purpose does not move a desk
+      up this board. Lowest max PF drafts first; linear order, four rounds. A pick in gold has changed
+      hands, and <em>via</em> names the desk whose slot it is.
+    </div>
+    <div class="draft-order-strip" id="draft-order-strip"></div>
+    <div class="pick-rounds" id="draft-rounds"></div>
+    <div class="draft-holdings" id="draft-holdings"></div>
+  </div>
+
+  <!-- LIVE MATCHUPS -->
+  <div class="sec-head">
+    <div class="sec-title">This Week's Matchups</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="matchup-status">LOADING FROM SLEEPER…</div>
+  </div>
+  <div class="g2" id="matchup-grid" style="grid-template-columns: repeat(2, 1fr);"></div>
+
 </div>
 
 <footer>
@@ -144,37 +148,7 @@
 <script src="common.js"></script>
 <script>
 
-function renderNewsletter() {
-  if (typeof NEWSLETTER === 'undefined' || !NEWSLETTER) return;
-  const nar = MEDIA.find(m => m.key === NEWSLETTER.narrator) || {};
-  document.getElementById('day-tag').textContent = `WEEK ${NEWSLETTER.week} \u00B7 ${NEWSLETTER.kind}`;
-  document.getElementById('ledger-mount').innerHTML = `
-    <div class="nl-frame">
-      <div class="nl-masthead">
-        <div class="nl-brand">The Weekly Ledger \u00B7 A LIV Network Publication</div>
-        <div class="nl-issue">WEEK ${NEWSLETTER.week} \u00B7 ${NEWSLETTER.date}</div>
-      </div>
-      <div class="nl-title">${NEWSLETTER.title}</div>
-      <div class="nl-byline">
-        <img src="${nar.photo || 'avatars/' + NEWSLETTER.narrator + '.jpg'}" alt="${nar.name || ''}">
-        <div>
-          <div class="nl-byline-name">${nar.name || NEWSLETTER.narrator}</div>
-          <div class="nl-byline-sub">Lead Desk \u00B7 LIV Network</div>
-        </div>
-      </div>
-      ${NEWSLETTER.paragraphs.map(p => {
-        if (p.who) {
-          const m = MEDIA.find(x => x.key === p.who) || {};
-          return `<div class="nl-quote">
-            <img src="${m.photo || 'avatars/' + p.who + '.jpg'}" alt="${m.name || p.who}">
-            <div><div class="nl-quote-name">${m.name || p.who}</div>
-            <div class="nl-quote-text">${p.quote}</div></div>
-          </div>`;
-        }
-        return `<div class="nl-p">${p.text}</div>`;
-      }).join('')}
-    </div>`;
-}
+
 
 async function buildPickemStandings() {
   const el = document.getElementById('pickem-standings');
@@ -322,45 +296,89 @@ async function buildMatchups() {
   }
 }
 
-function buildLedgerArchive() {
-  const issues = [];
-  if (typeof NEWSLETTER !== 'undefined' && NEWSLETTER) issues.push({ ...NEWSLETTER, current: true });
-  if (typeof NEWSLETTER_ARCHIVE !== 'undefined') issues.push(...NEWSLETTER_ARCHIVE);
-  document.getElementById('archive-tag').textContent = issues.length + (issues.length === 1 ? ' ISSUE' : ' ISSUES');
-  document.getElementById('ledger-archive').innerHTML = issues.length ? issues.map(iss => {
-    const nar = MEDIA.find(x => x.key === iss.narrator) || {};
-    return `
-    <details ${iss.current ? 'open' : ''} style="border-bottom:1px solid rgba(255,255,255,.05); padding:10px 0;">
-      <summary style="cursor:pointer; display:flex; align-items:center; gap:12px; list-style:none;">
-        <span style="font-family:var(--mono); font-size:10px; letter-spacing:1px; color:var(--gold); border:1px solid var(--gold-dim); border-radius:3px; padding:3px 8px; white-space:nowrap;">WK ${iss.week}</span>
-        <span style="flex:1; font-weight:700; font-size:13px; text-transform:uppercase;">${iss.title}</span>
-        <span style="font-family:var(--mono); font-size:10px; color:var(--muted); white-space:nowrap;">${iss.date}${iss.current ? ' \u00B7 CURRENT' : ''}</span>
-      </summary>
-      <div style="padding:16px 4px 6px;">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-          <img src="${nar.photo || 'avatars/' + iss.narrator + '.jpg'}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-dim);">
-          <span style="font-size:11px; color:var(--muted);">${nar.name || iss.narrator} \u00B7 ${iss.kind}</span>
-        </div>
-        ${iss.paragraphs.map(p => {
-          if (p.who) {
-            const pm = MEDIA.find(x => x.key === p.who) || {};
-            return `<div style="display:flex; gap:10px; background:var(--card2); border:1px solid var(--border); border-left:3px solid var(--gold-dim); border-radius:4px; padding:11px 13px; margin-bottom:13px;">
-              <img src="${pm.photo || 'avatars/' + p.who + '.jpg'}" style="width:32px; height:32px; border-radius:50%; object-fit:cover; flex-shrink:0;">
-              <div><div style="font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--gold); text-transform:uppercase; margin-bottom:3px;">${pm.name || p.who}</div>
-              <div style="font-size:12px; line-height:1.6; font-style:italic;">${p.quote}</div></div>
-            </div>`;
-          }
-          return `<div style="font-size:13px; line-height:1.7; margin-bottom:13px;">${p.text}</div>`;
+
+
+const DRAFT_SEASON = '2027';
+const DRAFT_ROUNDS = 4;
+
+async function buildDraftBoard() {
+  const statusEl = document.getElementById('draft-status');
+  const wrapEl   = document.getElementById('draft-rounds');
+  try {
+    const [rosters, picks] = await Promise.all([getRosters(), getTradedPicks()]);
+    if (!rosters || !rosters.length) throw new Error('no rosters returned');
+
+    const dec = (a, b) => (a || 0) + ((b || 0) / 100);
+    // Draft order = max points for, ascending. `ppts` is Sleeper's "points possible":
+    // what the roster would have scored with its optimal lineup every week.
+    const order = rosters.map(r => ({
+      rid:   r.roster_id,
+      owner: ROSTER_TO_OWNER[r.roster_id] || ('Roster ' + r.roster_id),
+      rec:   `${r.settings.wins}-${r.settings.losses}`,
+      max:   +dec(r.settings.ppts, r.settings.ppts_decimal).toFixed(2)
+    })).sort((a, b) => a.max - b.max);
+
+    // roster_id + round -> who owns that pick now (absent = still with the original desk)
+    const moved = {};
+    (picks || []).filter(p => String(p.season) === DRAFT_SEASON)
+      .forEach(p => { moved[`${p.roster_id}-${p.round}`] = ROSTER_TO_OWNER[p.owner_id]; });
+    const ownerOf = (rid, rd) => moved[`${rid}-${rd}`] || ROSTER_TO_OWNER[rid];
+
+    const rounds = Array.from({ length: DRAFT_ROUNDS }, (_, i) => i + 1);
+
+    // slim legend: the order and the number that set it
+    document.getElementById('draft-order-strip').innerHTML =
+      order.map((t, i) => `<span class="draft-chip"><b>${i + 1}</b>${t.owner}<i>${t.max.toFixed(2)}</i></span>`).join('');
+
+    // the board itself — one column per round, picks as 1.01, 1.02, …
+    wrapEl.innerHTML = rounds.map(rd => `
+      <div class="pick-round">
+        <div class="pick-round-head">Round ${rd}</div>
+        ${order.map((t, i) => {
+          const who  = ownerOf(t.rid, rd);
+          const home = who === t.owner;
+          return `<div class="pick-row${home ? '' : ' traded'}">
+            <span class="pick-no">${rd}.${String(i + 1).padStart(2, '0')}</span>
+            <span class="pick-team">${who}</span>
+            ${home ? '' : `<span class="pick-via">via ${t.owner}</span>`}
+          </div>`;
         }).join('')}
-      </div>
-    </details>`;
-  }).join('') : '<div style="color:var(--muted); font-size:12px;">First issue drops with the season.</div>';
+      </div>`).join('');
+
+    // holdings — how many of the 48 picks each desk controls
+    const held = {};
+    order.forEach(t => { held[t.owner] = { total: 0, byRound: {} }; });   // seed, so a desk at zero still shows
+    order.forEach(t => rounds.forEach(rd => {
+      const w = ownerOf(t.rid, rd);
+      held[w] = held[w] || { total: 0, byRound: {} };
+      held[w].total++; held[w].byRound[rd] = (held[w].byRound[rd] || 0) + 1;
+    }));
+    const sortedHold = Object.entries(held).sort((a, b) =>
+      b[1].total - a[1].total || (b[1].byRound[1] || 0) - (a[1].byRound[1] || 0));
+    document.getElementById('draft-holdings').innerHTML =
+      `<div class="draft-holdings-title">${DRAFT_SEASON} holdings · ${order.length * DRAFT_ROUNDS} picks</div>` +
+      sortedHold.map(([o, h]) => {
+        const firsts = h.byRound[1] || 0;
+        return `<div class="draft-hold${firsts > 1 ? ' stacked' : h.total === 0 ? ' none' : ''}">
+          <span class="draft-hold-owner">${o}</span>
+          <span class="draft-hold-count">${h.total}</span>
+          <span class="draft-hold-detail">${rounds.map(rd => (h.byRound[rd] || 0) + '× R' + rd).join(' · ')}</span>
+        </div>`;
+      }).join('');
+
+    statusEl.textContent = 'LIVE · MAX PF';
+    statusEl.style.color = 'var(--green)';
+    statusEl.style.borderColor = 'var(--green-dim)';
+  } catch (e) {
+    statusEl.textContent = 'SLEEPER UNAVAILABLE';
+    statusEl.style.color = 'var(--red)';
+    wrapEl.innerHTML = `<div style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</div>`;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
-  renderNewsletter();
-  buildLedgerArchive();
+  buildDraftBoard();
   buildMatchups();
   buildPickemStandings();
   buildRankings();

@@ -29,6 +29,7 @@
   </div>
   <div class="header-right">
     <a class="nav-btn" href="index.html">Overview</a>
+    <a class="nav-btn" href="writeup.html">Weekly Write-up</a>
     <a class="nav-btn" href="feed.html">League Feed</a>
     <a class="nav-btn active" href="stocks.html">Stocks</a>
     <a class="nav-btn" href="standings.html">History</a>
@@ -271,8 +272,15 @@ function buildQuadrant() {
                  'font-family':MONO, 'text-anchor':c.anchor }, z.tag);
   });
 
+  // two desks can land on identical coordinates (Kevin and Adam both 252/316 this week).
+  // Nudge coincident marks apart so one does not sit on top of the other.
+  const seen = {};
+  rows.forEach(r => { const k = r.dyn + '|' + r.con; (seen[k] = seen[k] || []).push(r); });
+  Object.values(seen).forEach(g => g.forEach((r, i) =>
+    { r.nudge = g.length > 1 ? (i - (g.length - 1) / 2) * 15 : 0; }));
+
   rows.forEach(r => {
-    const px = sx(r.dyn), py = sy(r.con);
+    const px = sx(r.dyn), py = sy(r.con) + (r.nudge || 0);
     const right = r.side !== 'left';
     const g = el('g', { class:'quad-dot', style:'cursor:pointer' });
     g.addEventListener('click', () => { location.href = 'team.html?owner=' + encodeURIComponent(r.owner); });
