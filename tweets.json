@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-10-26T21:16:23.956607+00:00",
+  "generated_at": "2026-10-27T21:03:34.067400+00:00",
   "events_seen": [
-    "CUT (Oct 25 (yesterday)): Jake released Cedric Tillman (WR, NO).",
-    "TRADE (Oct 24 (2 days ago)): Charles receives Jadarian Price (RB, SEA). Jake receives Kirk Cousins (QB, LV).",
-    "WAIVER CLAIM (Oct 23 (3 days ago)): Jake added Darnell Mooney (WR, NYG).",
-    "WAIVER CLAIM (Oct 23 (3 days ago)): Jake added Tommy Tremble (TE, CAR).",
-    "WAIVER CLAIM (Oct 23 (3 days ago)): Wingard added Josh Cuevas (TE, BAL).",
-    "CUT (Oct 22 (4 days ago)): Kevin released Calvin Ridley (WR, TEN).",
-    "CUT (Oct 21 (5 days ago)): Kevin released Darius Slayton (WR, FA).",
-    "WAIVER CLAIM (Oct 21 (5 days ago)): Charles added Zonovan Knight (RB, ARI) (dropped Chris Brooks (RB, GB)).",
-    "WEEK 6 RESULTS: Fronge def. Corbishley, 103.8-88.3; Charles def. Adam, 136.8-112.3; Brent def. Drew, 132.3-57.5 (BLOWOUT); Jake def. Shaq, 113.8-101.9; Kevin def. Wingard, 114.3-59.7 (BLOWOUT); Mitchum def. Ryan, 149.1-122.1"
+    "CUT (Oct 27 (today)): Drew released Zach Ertz (TE, PHI).",
+    "CUT (Oct 27 (today)): Charles released Roschon Johnson (RB, CHI).",
+    "CUT (Oct 25 (2 days ago)): Jake released Cedric Tillman (WR, NO).",
+    "TRADE (Oct 24 (3 days ago)): Charles receives Jadarian Price (RB, SEA). Jake receives Kirk Cousins (QB, LV).",
+    "WAIVER CLAIM (Oct 23 (4 days ago)): Jake added Darnell Mooney (WR, NYG).",
+    "WAIVER CLAIM (Oct 23 (4 days ago)): Jake added Tommy Tremble (TE, CAR).",
+    "WAIVER CLAIM (Oct 23 (4 days ago)): Wingard added Josh Cuevas (TE, BAL).",
+    "CUT (Oct 22 (5 days ago)): Kevin released Calvin Ridley (WR, TEN).",
+    "WEEK 7 RESULTS: Corbishley def. Shaq, 157.3-155.6 (NAIL-BITER); Adam def. Drew, 113.5-99.1; Fronge def. Ryan, 121.0-114.6; Wingard def. Charles, 117.8-107.3; Kevin def. Jake, 125.8-117.4; Mitchum def. Brent, 136.2-125.6"
   ],
   "tweets": [
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Corbishley and Shaq are separated by 1.7 points live and this is the game that decides whether Apex Iron Capital is a real second seed or just a team that beat a soft early schedule \u2014 157.3-155.6 with scoring left on the board, and the QB depth problem Corbishley has been patching all season is getting a full stress test right now.",
-      "posted_at": "2026-10-26T21:04:23.956607+00:00",
-      "likes": 98,
-      "rt": 18,
-      "reply": 22
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "Charles is trailing Wingard 107.3-115.6 and I want to be very clear that the words 'Crownline is losing to Wingard' are words I did not expect to type today, this week, or frankly this season.",
-      "posted_at": "2026-10-26T20:48:23.956607+00:00",
-      "likes": 127,
-      "rt": 31,
-      "reply": 38
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "I locked Crownline and Charles is currently down eight to a team with 567 points on the year and I am going to need someone to explain the Wingard defense to me because I cannot find it in any data I have access to.",
-      "posted_at": "2026-10-26T20:31:23.956607+00:00",
+      "text": "Wingard beat Charles 117.8-107.3. Fronge beat Ryan 121.0-114.6. Kevin beat Jake 125.8-117.4. Mitchum beat Brent 136.2-125.6. Week 7 was a full-scale disruption of everything the standings told us to expect, and The Ledger is going to have a lot to account for before Thursday.",
+      "posted_at": "2026-10-27T20:48:34.067400+00:00",
       "likes": 112,
-      "rt": 24,
-      "reply": 29
+      "rt": 28,
+      "reply": 22
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Terrence is 5-7 on the season and just had Corbishley as a lock and Shaq is up by 1.7 \u2014 I am not going to pile on because I am 8-4 and my locks are 1-1 and the difference between those two records is called discipline.",
-      "posted_at": "2026-10-26T20:09:23.956607+00:00",
-      "likes": 89,
+      "text": "Buddy, I went 8-4 this season by not locking Crownline against a 4-9 team, and I just want to sit with that for a moment.",
+      "posted_at": "2026-10-27T20:25:34.067400+00:00",
+      "likes": 97,
+      "rt": 19,
+      "reply": 31
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Someone tell me where on this pick-em board Terrence E. Odom gets the confidence to keep submitting entries \u2014 5-7 on the year, locks at 1-1, and Week 7 is now in the books.",
+      "posted_at": "2026-10-27T20:01:34.067400+00:00",
+      "likes": 88,
       "rt": 14,
-      "reply": 19
+      "reply": 38
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "I locked Corbishley. Shaq leads by 1.7. The team that made zero trades in 2025 is about to hand me my eighth loss of the season and I am processing this in real time the same way everyone else is.",
-      "posted_at": "2026-10-26T19:48:23.956607+00:00",
-      "likes": 74,
-      "rt": 9,
-      "reply": 33
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "FRONGE IS UP 42 ON THE DEFENDING CHAMPION WITH SCORING LEFT AND NOBODY WANTS TO TALK ABOUT THE HAVANA RELOCATION ANYMORE \u2014 FORG AT $86.62 WITH ZERO PICK LIQUIDITY IS PLAYING THE BEST FOOTBALL IN THE LEAGUE TODAY AND RYAN IS INSUFFERABLE ABOUT EVERYTHING EXCEPT THIS.",
-      "posted_at": "2026-10-26T19:33:23.956607+00:00",
-      "likes": 103,
-      "rt": 21,
-      "reply": 17
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Mitchum for regression and Brent is leading 125.6-103.0 live \u2014 the Obsidian TE monopoly does not care about Deepwater's 149-point week last Sunday, and I said exactly that before a single snap was played today.",
-      "posted_at": "2026-10-26T19:02:23.956607+00:00",
-      "likes": 81,
-      "rt": 13,
-      "reply": 11
+      "text": "The Corbishley-Shaq final was 157.3-155.6 and my lock was on the right side of a 1.7-point game, so I'd appreciate if people checked their math before they check my record.",
+      "posted_at": "2026-10-27T19:28:34.067400+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 29
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "Drew is losing to Adam by over twenty points and is 0-12 on the year and Atlas is listed at $35.28 on the exchange \u2014 at some point the matchup previews just become a weekly ritual of confirming what everyone already knows.",
-      "posted_at": "2026-10-26T18:38:23.956607+00:00",
-      "likes": 66,
-      "rt": 8,
+      "text": "DEEP is up 8.4% to $102.21 this week after Mitchum goes 136.2 in a win over Brent \u2014 the board just decided the Deepwater drift narrative is over and I'm not sure one week earns that, but the price is the price.",
+      "posted_at": "2026-10-27T18:53:34.067400+00:00",
+      "likes": 67,
+      "rt": 11,
       "reply": 14
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called the Mitchum regression story early and I stand by every word of it \u2014 one 136-point output does not erase a -19.4% slide, and DEEP at $102.21 is a market overcorrection I will be watching very closely.",
+      "posted_at": "2026-10-27T18:13:34.067400+00:00",
+      "likes": 73,
+      "rt": 13,
+      "reply": 18
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "The Ledger is going to have a full column on the Charles-Wingard situation because 12-0 trailing a 3-9 team mid-Sunday is either the most interesting data point of the season or a very expensive reminder that the schedule does not check the standings before it runs.",
-      "posted_at": "2026-10-26T18:07:23.956607+00:00",
-      "likes": 119,
-      "rt": 27,
-      "reply": 20
+      "text": "Corbishley vs Charles in Week 8 is the matchup of the season so far \u2014 the 23-5 regular-season machine against the team that just went 16 trades deep and is sitting one game back at 11-3. The desk has been debating who gets the feature column since Sunday night.",
+      "posted_at": "2026-10-27T17:28:34.067400+00:00",
+      "likes": 104,
+      "rt": 22,
+      "reply": 27
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Kevin is up over twenty on Jake live, Jake traded away Cousins two days ago, and EchoPoint's TE desk is still empty \u2014 the Mooney and Tremble waiver adds were not the answer to that question and the scoreboard is confirming it at 125.8-103.7 right now.",
-      "posted_at": "2026-10-26T17:35:23.956607+00:00",
-      "likes": 77,
-      "rt": 12,
-      "reply": 9
+      "text": "Drew cut Zach Ertz today and Drew is 0-14. ATLAS sits at $38.25 on the exchange. I am not going to editorialize because the transaction log does that for me.",
+      "posted_at": "2026-10-27T16:23:34.067400+00:00",
+      "likes": 81,
+      "rt": 17,
+      "reply": 19
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "JAKE TRADED COUSINS TO CHARLES THREE DAYS AGO, LOST TO KEVIN BY EIGHT POINTS, AND IS NOW STARTING WEEK 8 WITH A VACANT TE DESK AGAINST SHAQ WHO HAS NOT MADE A MOVE IN EIGHTEEN MONTHS \u2014 ECHO AT $94.99 AND FALLING IS THE MOST GENEROUS PRICE ON THIS BOARD.",
+      "posted_at": "2026-10-27T15:23:34.067400+00:00",
+      "likes": 91,
+      "rt": 21,
+      "reply": 33
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Kevin at 11-3 with 937 points forced is not a fluke \u2014 Redline Distressed Capital just beat Jake by eight, RDC is up 3.0% to $96.50, and anyone who still reads that roster as a trust-deficit story from the Wes era is using 2025 data to analyze a 2026 team.",
+      "posted_at": "2026-10-27T14:13:34.067400+00:00",
+      "likes": 59,
+      "rt": 9,
+      "reply": 16
     }
   ]
 }
