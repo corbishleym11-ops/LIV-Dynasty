@@ -79,17 +79,13 @@
 
 
 
-  <!-- CURRENT STANDINGS + POWER RANKINGS -->
+  <!-- POWER RANKINGS -->
   <div class="sec-head">
-    <div class="sec-title">Pick-Em Standings & Power Rankings</div>
+    <div class="sec-title">Matteo’s Power Rankings</div>
     <div class="sec-line"></div>
-    <div class="sec-tag">WEEK 1</div>
+    <div class="sec-tag">LOVE / HATE</div>
   </div>
-  <div class="g2">
-    <div class="card">
-      <div class="card-title" style="margin-bottom:12px">Analyst Pick-Em Standings</div>
-      <div id="pickem-standings"></div>
-    </div>
+  <div class="g1">
     <div class="card">
       <div class="rankings-header">
         <img class="rankings-avatar" id="matteo-avatar" src="avatars/matteo-honeydew.jpg" alt="Matteo Honeydew">
@@ -150,49 +146,7 @@
 
 
 
-async function buildPickemStandings() {
-  const el = document.getElementById('pickem-standings');
-  const recs = {};
-  PUNDIT_PICKERS.forEach(k => recs[k] = { w: 0, l: 0, lw: 0, ll: 0 });
-  try {
-    if (PICKS_HISTORY.length) {
-      const state = await getNFLState();
-      const doneThrough = (state.season_type === 'regular') ? Math.max(0, (state.week || 1) - 1)
-                        : (state.season_type === 'post' ? 18 : 0);
-      for (const entry of PICKS_HISTORY) {
-        if (entry.week > doneThrough) continue;
-        const ms = await getMatchups(entry.week);
-        const byId = {};
-        (ms || []).forEach(m => { if (m.matchup_id != null) (byId[m.matchup_id] = byId[m.matchup_id] || []).push(m); });
-        const winners = new Set();
-        Object.values(byId).forEach(pair => {
-          if (pair.length !== 2) return;
-          const [a, b] = pair;
-          if (!(a.points > 0 || b.points > 0) || a.points === b.points) return;
-          winners.add(ROSTER_TO_OWNER[(a.points > b.points ? a : b).roster_id]);
-        });
-        if (!winners.size) continue;
-        PUNDIT_PICKERS.forEach(k => {
-          const p = entry.picks[k];
-          if (!p) return;
-          p.winners.forEach(o => { winners.has(o) ? recs[k].w++ : recs[k].l++; });
-          if (p.lock) { winners.has(p.lock) ? recs[k].lw++ : recs[k].ll++; }
-        });
-      }
-    }
-  } catch (e) { /* grade with whatever is completed */ }
-  const rows = PUNDIT_PICKERS.map(k => ({ k, m: MEDIA.find(x => x.key === k) || {}, r: recs[k] }))
-    .sort((a, b) => (b.r.w - b.r.l) - (a.r.w - a.r.l) || b.r.lw - a.r.lw);
-  el.innerHTML = rows.map((row, i) => `
-    <div class="pe-row">
-      <span style="font-family:var(--mono); font-size:11px; color:var(--dim); width:16px;">${i + 1}</span>
-      <img src="${row.m.photo || 'avatars/' + row.k + '.jpg'}" alt="${row.m.name || row.k}">
-      <span class="pe-name">${row.m.name || row.k}</span>
-      <span class="pe-lock" title="Lock of the Week record">\uD83D\uDD12 ${row.r.lw}-${row.r.ll}</span>
-      <span class="pe-rec">${row.r.w}-${row.r.l}</span>
-    </div>`).join('') +
-    (PICKS_HISTORY.length ? '' : `<div style="font-size:11px; color:var(--muted); padding-top:10px;">Picks land with the Week 1 Ledger \u2014 records start counting when the games do.</div>`);
-}
+
 
 function buildRankings() {
   document.getElementById('rankings-list').innerHTML = RANKINGS.map(r => {
@@ -380,7 +334,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCommon();
   buildDraftBoard();
   buildMatchups();
-  buildPickemStandings();
   buildRankings();
 });
 </script>
