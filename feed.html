@@ -34,7 +34,6 @@
     <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
-    <a class="nav-btn" href="media.html">Media Center</a>
   </div>
 </header>
 
@@ -53,6 +52,15 @@
   </div>
 
   <!-- RECENT TRANSACTIONS -->
+
+  <!-- THE NEWSROOM — who the handles above and the matchup avatars belong to -->
+  <div class="sec-head">
+    <div class="sec-title">The Newsroom</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="newsroom-tag">PERSONALITIES</div>
+  </div>
+  <div class="card g1" style="margin-bottom:16px;"><div class="newsroom-strip" id="newsroom-strip"></div></div>
+
   <div class="sec-head">
     <div class="sec-title">Recent Transactions</div>
     <div class="sec-line"></div>
@@ -62,14 +70,22 @@
     <div id="txn-list" style="display:flex; flex-direction:column; gap:10px;"></div>
   </div>
 
-  <!-- TRADED PICK OWNERSHIP -->
+  <!-- PROJECTED DRAFT ORDER — replaces the old Traded Pick Ownership table -->
   <div class="sec-head">
-    <div class="sec-title">Traded Pick Ownership</div>
+    <div class="sec-title">Projected 2027 Draft Order</div>
     <div class="sec-line"></div>
-    <div class="sec-tag" id="picks-status">LOADING FROM SLEEPER…</div>
+    <div class="sec-tag" id="draft-status">LOADING FROM SLEEPER…</div>
   </div>
   <div class="card g1">
-    <table class="screener-table" id="picks-table"></table>
+    <div class="draft-note">
+      Order is set by <strong>maximum points for</strong> &mdash; every point a roster could have scored
+      with its optimal lineup &mdash; not points actually scored. Losing on purpose does not move a desk
+      up this board. Lowest max PF drafts first; linear order, four rounds. A pick in gold has changed
+      hands, and <em>via</em> names the desk whose slot it is.
+    </div>
+    <div class="draft-order-strip" id="draft-order-strip"></div>
+    <div class="pick-rounds" id="draft-rounds"></div>
+    <div class="draft-holdings" id="draft-holdings"></div>
   </div>
 
 </div>
@@ -182,44 +198,104 @@ async function buildTransactions() {
   }
 }
 
-async function buildTradedPicks() {
-  const statusEl = document.getElementById('picks-status');
+const DRAFT_SEASON = '2027';
+const DRAFT_ROUNDS = 4;
+
+async function buildDraftBoard() {
+  const statusEl = document.getElementById('draft-status');
+  const wrapEl   = document.getElementById('draft-rounds');
   try {
-    const picks = await getTradedPicks();
-    if (!picks || picks.length === 0) {
-      statusEl.textContent = 'NO PICKS TRADED';
-      document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">No draft picks have changed hands yet.</td></tr></tbody>`;
-      return;
-    }
-    statusEl.textContent = 'LIVE FROM SLEEPER';
+    const [rosters, picks] = await Promise.all([getRosters(), getTradedPicks()]);
+    if (!rosters || !rosters.length) throw new Error('no rosters returned');
+
+    const dec = (a, b) => (a || 0) + ((b || 0) / 100);
+    // Draft order = max points for, ascending. `ppts` is Sleeper's "points possible":
+    // what the roster would have scored with its optimal lineup every week.
+    const order = rosters.map(r => ({
+      rid:   r.roster_id,
+      owner: ROSTER_TO_OWNER[r.roster_id] || ('Roster ' + r.roster_id),
+      rec:   `${r.settings.wins}-${r.settings.losses}`,
+      max:   +dec(r.settings.ppts, r.settings.ppts_decimal).toFixed(2)
+    })).sort((a, b) => a.max - b.max);
+
+    // roster_id + round -> who owns that pick now (absent = still with the original desk)
+    const moved = {};
+    (picks || []).filter(p => String(p.season) === DRAFT_SEASON)
+      .forEach(p => { moved[`${p.roster_id}-${p.round}`] = ROSTER_TO_OWNER[p.owner_id]; });
+    const ownerOf = (rid, rd) => moved[`${rid}-${rd}`] || ROSTER_TO_OWNER[rid];
+
+    const rounds = Array.from({ length: DRAFT_ROUNDS }, (_, i) => i + 1);
+
+    // slim legend: the order and the number that set it
+    document.getElementById('draft-order-strip').innerHTML =
+      order.map((t, i) => `<span class="draft-chip"><b>${i + 1}</b>${t.owner}<i>${t.max.toFixed(2)}</i></span>`).join('');
+
+    // the board itself — one column per round, picks as 1.01, 1.02, …
+    wrapEl.innerHTML = rounds.map(rd => `
+      <div class="pick-round">
+        <div class="pick-round-head">Round ${rd}</div>
+        ${order.map((t, i) => {
+          const who  = ownerOf(t.rid, rd);
+          const home = who === t.owner;
+          return `<div class="pick-row${home ? '' : ' traded'}">
+            <span class="pick-no">${rd}.${String(i + 1).padStart(2, '0')}</span>
+            <span class="pick-team">${who}</span>
+            ${home ? '' : `<span class="pick-via">via ${t.owner}</span>`}
+          </div>`;
+        }).join('')}
+      </div>`).join('');
+
+    // holdings — how many of the 48 picks each desk controls
+    const held = {};
+    order.forEach(t => { held[t.owner] = { total: 0, byRound: {} }; });   // seed, so a desk at zero still shows
+    order.forEach(t => rounds.forEach(rd => {
+      const w = ownerOf(t.rid, rd);
+      held[w] = held[w] || { total: 0, byRound: {} };
+      held[w].total++; held[w].byRound[rd] = (held[w].byRound[rd] || 0) + 1;
+    }));
+    const sortedHold = Object.entries(held).sort((a, b) =>
+      b[1].total - a[1].total || (b[1].byRound[1] || 0) - (a[1].byRound[1] || 0));
+    document.getElementById('draft-holdings').innerHTML =
+      `<div class="draft-holdings-title">${DRAFT_SEASON} holdings · ${order.length * DRAFT_ROUNDS} picks</div>` +
+      sortedHold.map(([o, h]) => {
+        const firsts = h.byRound[1] || 0;
+        return `<div class="draft-hold${firsts > 1 ? ' stacked' : h.total === 0 ? ' none' : ''}">
+          <span class="draft-hold-owner">${o}</span>
+          <span class="draft-hold-count">${h.total}</span>
+          <span class="draft-hold-detail">${rounds.map(rd => (h.byRound[rd] || 0) + '× R' + rd).join(' · ')}</span>
+        </div>`;
+      }).join('');
+
+    statusEl.textContent = 'LIVE · MAX PF';
     statusEl.style.color = 'var(--green)';
     statusEl.style.borderColor = 'var(--green-dim)';
-
-    const sorted = [...picks].sort((a,b) => a.season - b.season || a.round - b.round);
-    document.getElementById('picks-table').innerHTML = `
-      <thead><tr><th>Season</th><th>Round</th><th>Original Team</th><th>Now Owned By</th></tr></thead>
-      <tbody>${sorted.map(p => {
-        const original = ROSTER_TO_OWNER[p.roster_id] || '—';
-        const current = ROSTER_TO_OWNER[p.owner_id] || '—';
-        return `<tr>
-          <td style="font-family:var(--mono);">${p.season}</td>
-          <td style="font-family:var(--mono);">R${p.round}</td>
-          <td class="owner-col">${original}</td>
-          <td class="owner-col" style="color:var(--gold); font-weight:600;">${current}</td>
-        </tr>`;
-      }).join('')}</tbody>`;
   } catch (e) {
     statusEl.textContent = 'SLEEPER UNAVAILABLE';
     statusEl.style.color = 'var(--red)';
-    document.getElementById('picks-table').innerHTML = `<tbody><tr><td style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</td></tr></tbody>`;
+    wrapEl.innerHTML = `<div style="color:var(--muted); font-size:12px; padding:14px;">Couldn't reach the Sleeper API right now (${e.message}).</div>`;
   }
+}
+
+function buildNewsroom() {
+  const el = document.getElementById('newsroom-strip');
+  if (!el || typeof MEDIA === 'undefined') return;
+  document.getElementById('newsroom-tag').textContent = MEDIA.length + ' PERSONALITIES';
+  el.innerHTML = MEDIA.map(m => `
+    <div class="newsroom-person" title="${(m.beat || '').replace(/"/g, '&quot;')}">
+      <img src="${m.photo || 'avatars/' + m.key + '.jpg'}" alt="${m.name}">
+      <div class="newsroom-text">
+        <div class="newsroom-name">${m.name}</div>
+        <div class="newsroom-role">${m.role}</div>
+      </div>
+    </div>`).join('');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
+  buildNewsroom();
   buildFeed();
   buildTransactions();
-  buildTradedPicks();
+  buildDraftBoard();
 });
 </script>
 </body>

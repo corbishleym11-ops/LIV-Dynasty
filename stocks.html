@@ -34,7 +34,6 @@
     <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
-    <a class="nav-btn" href="media.html">Media Center</a>
   </div>
 </header>
 
@@ -54,29 +53,10 @@
     <div class="sec-line"></div>
     <div class="sec-tag">LIVE PRICING</div>
   </div>
-  <div class="g2">
-    <div class="chart-card">
-      <div class="card-title">Stock Price History — All Teams</div>
-      <div class="card-sub">Every listing since the exchange opened · Dec 2025 → present</div>
-      <canvas id="chart-waterfall" height="300"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="card-title">Market Capitalisation Rankings</div>
-      <div class="card-sub">2026 market cap = contender score × dynasty index</div>
-      <canvas id="chart-marketcap" height="300"></canvas>
-    </div>
-  </div>
-  <div class="g2">
-    <div class="chart-card">
-      <div class="card-title">Price Change % Distribution</div>
-      <div class="card-sub">Winners vs losers · sorted by % change</div>
-      <canvas id="chart-pctchange" height="260"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="card-title">2025 Win Total vs Stock Price</div>
-      <div class="card-sub">Does on-field success track asset value?</div>
-      <canvas id="chart-wins-dynasty" height="260"></canvas>
-    </div>
+  <div class="chart-card g1">
+    <div class="card-title">Stock Price History — All Teams</div>
+    <div class="card-sub">Every listing since the exchange opened · Dec 2025 → present</div>
+    <canvas id="chart-waterfall" height="240"></canvas>
   </div>
 
   <div class="sec-head">
@@ -204,43 +184,8 @@ function buildCharts() {
                 y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v}} } }
   });
 
-  const capSorted = [...TEAMS].sort((a,b) => b.cap - a.cap);
-  new Chart(document.getElementById('chart-marketcap').getContext('2d'), {
-    type: 'bar',
-    data: { labels: capSorted.map(t => t.ticker), datasets: [{ data: capSorted.map(t => t.cap),
-      backgroundColor: capSorted.map((t,i) => i===0?'#ffc840': i===1?'#c0c8d8': i===2?'#c08040':'rgba(79,195,247,0.5)'), borderRadius: 5 }] },
-    options: { indexAxis:'y', animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' $'+ctx.raw.toLocaleString()}}},
-      scales: { x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v.toLocaleString()}}, y:{grid:{display:false},ticks:{color:'#e2eaf4',font:{family:'IBM Plex Mono',size:11}}} } }
-  });
 
-  const pctSorted = [...TEAMS].sort((a,b) => b.pct - a.pct);
-  new Chart(document.getElementById('chart-pctchange').getContext('2d'), {
-    type: 'bar',
-    data: { labels: pctSorted.map(t => t.ticker), datasets: [{ data: pctSorted.map(t => t.pct),
-      backgroundColor: pctSorted.map(t => t.pct >= 0 ? 'rgba(0,230,118,0.7)' : 'rgba(255,61,61,0.7)'), borderRadius: 4 }] },
-    options: { animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.raw>=0?'+':''}${ctx.raw.toFixed(2)}%`}}},
-      scales: { x:{grid:{display:false},ticks:{color:'#5a7a96',font:{family:'IBM Plex Mono',size:11}}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>v+'%'}} } }
-  });
 
-  new Chart(document.getElementById('chart-wins-dynasty').getContext('2d'), {
-    type: 'scatter',
-    data: { datasets: SEASON_2025.map(s => {
-      const t = TEAMS.find(x => x.owner === s.owner);
-      return { label: s.owner, data: [{ x: s.wins, y: t ? t.price26 : 0 }], backgroundColor: OWNER_COLORS[s.owner] + 'cc', borderColor: OWNER_COLORS[s.owner], borderWidth: 2, pointRadius: 10, pointHoverRadius: 14 };
-    }) },
-    options: { animation:{duration:700}, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.x}W · $${ctx.parsed.y.toFixed(2)}`}}},
-      scales: { x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96'},title:{display:true,text:'2025 Wins',color:'#5a7a96'}}, y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#5a7a96',callback:v=>'$'+v},title:{display:true,text:'2026 Stock Price',color:'#5a7a96'}} } },
-    plugins: [{ id:'ownerLabels', afterDraw(chart) {
-      const ctx = chart.ctx;
-      chart.data.datasets.forEach(ds => {
-        const pt = ds.data[0];
-        const px = chart.scales.x.getPixelForValue(pt.x);
-        const py = chart.scales.y.getPixelForValue(pt.y);
-        ctx.save(); ctx.font = '600 10px Inter'; ctx.fillStyle = ds.borderColor; ctx.textAlign = 'center';
-        ctx.fillText(ds.label, px, py - 14); ctx.restore();
-      });
-    }}]
-  });
 }
 
 

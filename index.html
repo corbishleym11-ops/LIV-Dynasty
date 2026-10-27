@@ -63,7 +63,6 @@
     <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
-    <a class="nav-btn" href="media.html">Media Center</a>
   </div>
 </header>
 
@@ -83,6 +82,16 @@
     <div class="sec-tag" id="day-tag">—</div>
   </div>
   <div id="ledger-mount"></div>
+
+  <!-- LEDGER ARCHIVE (moved here from the retired Media Center) -->
+  <div class="sec-head">
+    <div class="sec-title">Ledger Archive</div>
+    <div class="sec-line"></div>
+    <div class="sec-tag" id="archive-tag">ISSUES</div>
+  </div>
+  <div class="card g1" style="margin-bottom:16px;">
+    <div id="ledger-archive"></div>
+  </div>
 
 
   <!-- LIVE MATCHUPS -->
@@ -313,9 +322,45 @@ async function buildMatchups() {
   }
 }
 
+function buildLedgerArchive() {
+  const issues = [];
+  if (typeof NEWSLETTER !== 'undefined' && NEWSLETTER) issues.push({ ...NEWSLETTER, current: true });
+  if (typeof NEWSLETTER_ARCHIVE !== 'undefined') issues.push(...NEWSLETTER_ARCHIVE);
+  document.getElementById('archive-tag').textContent = issues.length + (issues.length === 1 ? ' ISSUE' : ' ISSUES');
+  document.getElementById('ledger-archive').innerHTML = issues.length ? issues.map(iss => {
+    const nar = MEDIA.find(x => x.key === iss.narrator) || {};
+    return `
+    <details ${iss.current ? 'open' : ''} style="border-bottom:1px solid rgba(255,255,255,.05); padding:10px 0;">
+      <summary style="cursor:pointer; display:flex; align-items:center; gap:12px; list-style:none;">
+        <span style="font-family:var(--mono); font-size:10px; letter-spacing:1px; color:var(--gold); border:1px solid var(--gold-dim); border-radius:3px; padding:3px 8px; white-space:nowrap;">WK ${iss.week}</span>
+        <span style="flex:1; font-weight:700; font-size:13px; text-transform:uppercase;">${iss.title}</span>
+        <span style="font-family:var(--mono); font-size:10px; color:var(--muted); white-space:nowrap;">${iss.date}${iss.current ? ' \u00B7 CURRENT' : ''}</span>
+      </summary>
+      <div style="padding:16px 4px 6px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <img src="${nar.photo || 'avatars/' + iss.narrator + '.jpg'}" style="width:28px; height:28px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-dim);">
+          <span style="font-size:11px; color:var(--muted);">${nar.name || iss.narrator} \u00B7 ${iss.kind}</span>
+        </div>
+        ${iss.paragraphs.map(p => {
+          if (p.who) {
+            const pm = MEDIA.find(x => x.key === p.who) || {};
+            return `<div style="display:flex; gap:10px; background:var(--card2); border:1px solid var(--border); border-left:3px solid var(--gold-dim); border-radius:4px; padding:11px 13px; margin-bottom:13px;">
+              <img src="${pm.photo || 'avatars/' + p.who + '.jpg'}" style="width:32px; height:32px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-family:var(--mono); font-size:9px; letter-spacing:1px; color:var(--gold); text-transform:uppercase; margin-bottom:3px;">${pm.name || p.who}</div>
+              <div style="font-size:12px; line-height:1.6; font-style:italic;">${p.quote}</div></div>
+            </div>`;
+          }
+          return `<div style="font-size:13px; line-height:1.7; margin-bottom:13px;">${p.text}</div>`;
+        }).join('')}
+      </div>
+    </details>`;
+  }).join('') : '<div style="color:var(--muted); font-size:12px;">First issue drops with the season.</div>';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
   renderNewsletter();
+  buildLedgerArchive();
   buildMatchups();
   buildPickemStandings();
   buildRankings();

@@ -34,7 +34,6 @@
     <a class="nav-btn" href="standings.html">History</a>
     <a class="nav-btn active" href="rosters.html">Rosters</a>
     <a class="nav-btn" href="objectives.html">Objectives</a>
-    <a class="nav-btn" href="media.html">Media Center</a>
   </div>
 </header>
 
@@ -54,13 +53,6 @@
       <div id="pos-heatmap-wrap"></div>
     </div>
   </div>
-
-  <div class="sec-head">
-    <div class="sec-title">Team Radar — Roster Composition</div>
-    <div class="sec-line"></div>
-    <div class="sec-tag">QB · RB · WR · TE · PICK</div>
-  </div>
-  <div class="radar-grid" id="radar-grid"></div>
 
   <div class="sec-head" id="sec-live-rosters">
     <div class="sec-title">Live Rosters</div>
@@ -119,25 +111,6 @@ function buildPosHeatmap() {
     </table>`;
 }
 
-function buildRadars() {
-  document.getElementById('radar-grid').innerHTML = TEAMS.map(t => `
-    <div class="radar-card">
-      <div class="radar-name">${t.ticker}</div>
-      <div class="radar-team">${ownerLink(t.owner)} · ${t.team}</div>
-      <canvas id="radar-${t.ticker}" height="180"></canvas>
-    </div>`).join('');
-
-  TEAMS.forEach(t => {
-    const ctx = document.getElementById(`radar-${t.ticker}`).getContext('2d');
-    new Chart(ctx, {
-      type: 'radar',
-      data: { labels: ['QB','RB','WR','TE','PICK'], datasets: [{ data: [t.qb, t.rb, t.wr, t.te, t.pick],
-        borderColor: OWNER_COLORS[t.owner], backgroundColor: OWNER_COLORS[t.owner] + '20', borderWidth: 2, pointRadius: 3, pointBackgroundColor: OWNER_COLORS[t.owner] }] },
-      options: { animation:{duration:600}, plugins:{legend:{display:false}},
-        scales: { r: { min:0, max:100, grid:{color:'rgba(255,255,255,0.06)'}, angleLines:{color:'rgba(255,255,255,0.06)'}, ticks:{display:false,stepSize:25}, pointLabels:{color:'#5a7a96',font:{size:10,family:'IBM Plex Mono'}} } } }
-    });
-  });
-}
 
 
 async function buildLiveRosters() {
@@ -172,7 +145,6 @@ async function buildLiveRosters() {
 document.addEventListener('DOMContentLoaded', () => {
   initCommon();
   buildPosHeatmap();
-  buildRadars();
   buildLiveRosters();
 });
 </script>
