@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-30T21:14:58.104187+00:00",
+  "generated_at": "2026-10-31T20:21:57.298568+00:00",
   "events_seen": [
-    "TRADE (Oct 30 (today)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
-    "TRADE (Oct 30 (today)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
-    "WAIVER CLAIM (Oct 28 (2 days ago)): Jake added Reggie Virgil (WR, ARI).",
-    "WAIVER CLAIM (Oct 28 (2 days ago)): Fronge added Elijah Mitchell (RB, PHI) for $12 FAAB.",
-    "CUT (Oct 28 (2 days ago)): Fronge released Athan Kaliakmanis (QB, WAS).",
-    "WAIVER CLAIM (Oct 27 (3 days ago)): Drew added CJ Daniels (WR, LAR) (dropped Pierre Strong Jr. (RB, GB)).",
-    "WAIVER CLAIM (Oct 27 (3 days ago)): Drew added Sam Roush (TE, CHI).",
-    "CUT (Oct 27 (3 days ago)): Drew released Zach Ertz (TE, PHI).",
+    "FREE AGENT ADD (Oct 31 (today)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
+    "WAIVER CLAIM (Oct 30 (yesterday)): Drew added Michael Trigg (TE, DAL).",
+    "WAIVER CLAIM (Oct 30 (yesterday)): Drew added Deion Burks (WR, IND).",
+    "TRADE (Oct 30 (yesterday)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
+    "TRADE (Oct 30 (yesterday)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
+    "WAIVER CLAIM (Oct 28 (3 days ago)): Jake added Reggie Virgil (WR, ARI).",
+    "WAIVER CLAIM (Oct 28 (3 days ago)): Fronge added Elijah Mitchell (RB, PHI) for $12 FAAB.",
+    "CUT (Oct 28 (3 days ago)): Fronge released Athan Kaliakmanis (QB, WAS).",
     "WEEK 7 RESULTS: Corbishley def. Shaq, 157.3-155.6 (NAIL-BITER); Adam def. Drew, 113.5-99.1; Fronge def. Ryan, 121.0-114.6; Wingard def. Charles, 117.7-107.3; Kevin def. Jake, 125.8-117.4; Mitchum def. Brent, 136.2-125.6"
   ],
   "tweets": [
@@ -16,91 +16,101 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "BREAKING: Corbishley and Drew completed a trade today. Corbishley receives A.J. Brown, Jordan Mason, and a 2028 R2 pick. Drew receives Breece Hall and a 2027 R2 pick. Separate deal: Drew ships Christian McCaffrey to Kevin for a 2027 R1 pick and a 2028 R2 pick. Two trades, same seller, same morning.",
-      "posted_at": "2026-10-30T20:59:58.104187+00:00",
-      "likes": 118,
-      "rt": 31,
-      "reply": 38
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "Drew has now traded Breece Hall and Christian McCaffrey in the same day. ATLAS is sitting at $38.25 and 0-14 and the desk is going to need a minute to process what kind of rebuild philosophy produces that sequence of decisions before the season is even over.",
-      "posted_at": "2026-10-30T20:46:58.104187+00:00",
-      "likes": 97,
+      "text": "BREAKING: Kevin vs Mitchum is live and RDC is out to a 34.0-0.0 lead. The team that just added Christian McCaffrey is not wasting time making a statement.",
+      "posted_at": "2026-10-31T20:06:57.298568+00:00",
+      "likes": 98,
       "rt": 22,
-      "reply": 29
+      "reply": 18
     },
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Corbishley walks into the Week 8 opener against Charles \u2014 live score 0.0 to 30.2 \u2014 and within hours of kickoff the APEX desk has already added A.J. Brown and Jordan Mason. Sixteen trades this offseason, two more today, and somehow this team just keeps acquiring ammunition while actively in a game.",
-      "posted_at": "2026-10-30T20:29:58.104187+00:00",
-      "likes": 104,
-      "rt": 26,
-      "reply": 33
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "34-0 KEVIN. MITCHUM. ZERO. The board gave DEEP an 8.4% surge and $102.21 and they are currently putting up a goose egg against the hottest team in the league. SOMEBODY EXPLAIN THE VALUATION TO ME.",
+      "posted_at": "2026-10-31T19:53:57.298568+00:00",
+      "likes": 112,
+      "rt": 27,
+      "reply": 31
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Charles is up 30.2-0.0 on Corbishley right now AND Corbishley just added A.J. Brown to his roster today. I don't know whether to be impressed by the aggression or concerned that APEX is shopping while the first quarter is still happening.",
-      "posted_at": "2026-10-30T20:12:58.104187+00:00",
-      "likes": 88,
-      "rt": 19,
-      "reply": 24
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Kevin receiving McCaffrey while sitting at 11-3 and $96.50 on the exchange \u2014 up 3.0% \u2014 is the exact kind of move that separates a team managing a good record from a team actually trying to win the championship. I called the Kevin ascent early in this window and that trade is why the thesis holds.",
-      "posted_at": "2026-10-30T19:49:58.104187+00:00",
-      "likes": 76,
+      "text": "Buddy, I had Mitchum on my card this week and I am watching that 34.0-0.0 score in real time wondering what exactly I saw in DEEP that justified the confidence. The $102.21 price tag looked like a signal. It was not a signal.",
+      "posted_at": "2026-10-31T19:36:57.298568+00:00",
+      "likes": 87,
       "rt": 14,
-      "reply": 18
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "I want a segment specifically on what Drew is doing. McCaffrey gone. Breece Hall gone. CJ Daniels added off waivers three days ago. ATLAS at $38.25 and 0-14 is one thing \u2014 but moving two franchise-caliber RBs in a single morning while picking up waiver wire receivers is a philosophy and someone needs to explain it to me on air.",
-      "posted_at": "2026-10-30T19:24:58.104187+00:00",
-      "likes": 93,
-      "rt": 21,
-      "reply": 27
+      "reply": 22
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "Kevin is 11-3, just acquired Christian McCaffrey, and faces Mitchum this week \u2014 who is 10-4 and sitting at $102.21 after an 8.4% surge. I had Kevin losing this one on my card but I am looking at that trade and genuinely reconsidering whether I put enough respect on RDC all season.",
-      "posted_at": "2026-10-30T18:54:58.104187+00:00",
-      "likes": 61,
+      "text": "Wingard is up 17.4-0.0 on Fronge and I just need everyone to remember I picked Wingard this week. That's going on my record. The Havana headquarters did not help ForgeHammer one bit today.",
+      "posted_at": "2026-10-31T19:19:57.298568+00:00",
+      "likes": 54,
+      "rt": 8,
+      "reply": 19
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called the Kevin ascent before anyone else on this panel was willing to say it out loud, and right now RDC is up 34-0 on a 10-4 team. The McCaffrey acquisition was not a flex \u2014 it was a closing argument.",
+      "posted_at": "2026-10-31T19:01:57.298568+00:00",
+      "likes": 76,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Drew is 0-14, added Michael Trigg and Deion Burks off waivers yesterday, and just scored 33.6 points in the first quarter against Brent. I want a segment on whether ATLAS is actually better than their record or whether Brent is just that cooperative.",
+      "posted_at": "2026-10-31T18:36:57.298568+00:00",
+      "likes": 93,
+      "rt": 19,
+      "reply": 28
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Three games live, three games with one team already on zero, and the most chaotic roster in the league quietly hanging 33 on Obsidian. The Ledger is going to have a lot to say about Week 8 before Thursday.",
+      "posted_at": "2026-10-31T18:11:57.298568+00:00",
+      "likes": 67,
       "rt": 9,
-      "reply": 16
+      "reply": 11
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "The Corbishley trade haul is real but let's not lose the thread: Charles leads that game 30.2-0.0 live, is 12-2, and CROWN at $145.21 is still the market-cap leader for a reason. A.J. Brown on the other sideline's roster does not change what is happening on the scoreboard right now.",
-      "posted_at": "2026-10-30T18:19:58.104187+00:00",
-      "likes": 82,
-      "rt": 17,
-      "reply": 22
+      "text": "Shaq is up 17.3-0.0 on Jake and Monarch Wideout Bank at $88.36 \u2014 down 9.5% on the exchange \u2014 might be telling a different story on the scoreboard than the market expected. MWB sitting at 7-7 with WR depth playing like this is genuinely dangerous in a seven-team playoff.",
+      "posted_at": "2026-10-31T17:46:57.298568+00:00",
+      "likes": 71,
+      "rt": 12,
+      "reply": 16
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Two trades filed today, both involving Drew, both processed before noon. The Ledger will have full accounting of what ATLAS sent out and what came back \u2014 but the short version is that Drew is now completely restructured at RB and the 2027 R1 pick is sitting in Kevin's war chest.",
-      "posted_at": "2026-10-30T17:44:58.104187+00:00",
-      "likes": 71,
-      "rt": 13,
-      "reply": 19
+      "text": "Terrence is 5-7 on the season and just announced he picked Wingard like it earns him something. Terrence, you are one game above the pace that gets you removed from the panel. Win first, gloat second.",
+      "posted_at": "2026-10-31T17:23:57.298568+00:00",
+      "likes": 119,
+      "rt": 31,
+      "reply": 37
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Ryan adds Michael Carter off the free agent wire on the same morning his team is sitting in Week 8 with a 7-7 record. AEGIS is at $124.07 flat \u2014 not a penny of movement \u2014 and the defending champions are three games out of first. Carter is fine. The situation is not fine.",
+      "posted_at": "2026-10-31T16:51:57.298568+00:00",
+      "likes": 84,
+      "rt": 16,
+      "reply": 20
     }
   ]
 }
