@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-31T20:21:57.298568+00:00",
+  "generated_at": "2026-11-01T20:54:36.938494+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Oct 31 (today)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
-    "WAIVER CLAIM (Oct 30 (yesterday)): Drew added Michael Trigg (TE, DAL).",
-    "WAIVER CLAIM (Oct 30 (yesterday)): Drew added Deion Burks (WR, IND).",
-    "TRADE (Oct 30 (yesterday)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
-    "TRADE (Oct 30 (yesterday)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
-    "WAIVER CLAIM (Oct 28 (3 days ago)): Jake added Reggie Virgil (WR, ARI).",
-    "WAIVER CLAIM (Oct 28 (3 days ago)): Fronge added Elijah Mitchell (RB, PHI) for $12 FAAB.",
-    "CUT (Oct 28 (3 days ago)): Fronge released Athan Kaliakmanis (QB, WAS).",
+    "FREE AGENT ADD (Oct 31 (yesterday)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
+    "WAIVER CLAIM (Oct 30 (2 days ago)): Drew added Michael Trigg (TE, DAL).",
+    "WAIVER CLAIM (Oct 30 (2 days ago)): Drew added Deion Burks (WR, IND).",
+    "TRADE (Oct 30 (2 days ago)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
+    "TRADE (Oct 30 (2 days ago)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
+    "WAIVER CLAIM (Oct 28 (4 days ago)): Jake added Reggie Virgil (WR, ARI).",
+    "WAIVER CLAIM (Oct 28 (4 days ago)): Fronge added Elijah Mitchell (RB, PHI) for $12 FAAB.",
+    "CUT (Oct 28 (4 days ago)): Fronge released Athan Kaliakmanis (QB, WAS).",
     "WEEK 7 RESULTS: Corbishley def. Shaq, 157.3-155.6 (NAIL-BITER); Adam def. Drew, 113.5-99.1; Fronge def. Ryan, 121.0-114.6; Wingard def. Charles, 117.7-107.3; Kevin def. Jake, 125.8-117.4; Mitchum def. Brent, 136.2-125.6"
   ],
   "tweets": [
@@ -16,101 +16,101 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "BREAKING: Kevin vs Mitchum is live and RDC is out to a 34.0-0.0 lead. The team that just added Christian McCaffrey is not wasting time making a statement.",
-      "posted_at": "2026-10-31T20:06:57.298568+00:00",
-      "likes": 98,
-      "rt": 22,
-      "reply": 18
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "34-0 KEVIN. MITCHUM. ZERO. The board gave DEEP an 8.4% surge and $102.21 and they are currently putting up a goose egg against the hottest team in the league. SOMEBODY EXPLAIN THE VALUATION TO ME.",
-      "posted_at": "2026-10-31T19:53:57.298568+00:00",
-      "likes": 112,
-      "rt": 27,
-      "reply": 31
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, I had Mitchum on my card this week and I am watching that 34.0-0.0 score in real time wondering what exactly I saw in DEEP that justified the confidence. The $102.21 price tag looked like a signal. It was not a signal.",
-      "posted_at": "2026-10-31T19:36:57.298568+00:00",
-      "likes": 87,
-      "rt": 14,
+      "text": "FINAL: Corbishley def. Charles, 157.3-120.2 \u2014 wait, that score is still live. Let me rephrase. Corbishley is up 100.7-120.2 with games still going and CROWN is holding the lead but APEX just acquired A.J. Brown two days ago and this roster is not the same roster Charles has film on.",
+      "posted_at": "2026-11-01T20:42:36.938494+00:00",
+      "likes": 88,
+      "rt": 18,
       "reply": 22
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Wingard is up 17.4-0.0 on Fronge and I just need everyone to remember I picked Wingard this week. That's going on my record. The Havana headquarters did not help ForgeHammer one bit today.",
-      "posted_at": "2026-10-31T19:19:57.298568+00:00",
-      "likes": 54,
-      "rt": 8,
-      "reply": 19
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called the Kevin ascent before anyone else on this panel was willing to say it out loud, and right now RDC is up 34-0 on a 10-4 team. The McCaffrey acquisition was not a flex \u2014 it was a closing argument.",
-      "posted_at": "2026-10-31T19:01:57.298568+00:00",
-      "likes": 76,
-      "rt": 11,
-      "reply": 14
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Drew is 0-14, added Michael Trigg and Deion Burks off waivers yesterday, and just scored 33.6 points in the first quarter against Brent. I want a segment on whether ATLAS is actually better than their record or whether Brent is just that cooperative.",
-      "posted_at": "2026-10-31T18:36:57.298568+00:00",
-      "likes": 93,
-      "rt": 19,
-      "reply": 28
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Three games live, three games with one team already on zero, and the most chaotic roster in the league quietly hanging 33 on Obsidian. The Ledger is going to have a lot to say about Week 8 before Thursday.",
-      "posted_at": "2026-10-31T18:11:57.298568+00:00",
-      "likes": 67,
-      "rt": 9,
-      "reply": 11
+      "text": "Charles is 12-2, leads the league in points, and is currently down to the one team that just restructured its entire WR corps before the whistle. If Crownline loses this one the board-reckoning conversation starts before the season is even over.",
+      "posted_at": "2026-11-01T20:26:36.938494+00:00",
+      "likes": 104,
+      "rt": 24,
+      "reply": 31
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called the Corbishley ascent the moment that A.J. Brown trade cleared \u2014 sixteen acquisitions in 2025, now Brown and Mason through the wire, and APEX is somehow still not priced like a championship contender at $123.64. The market is sleeping.",
+      "posted_at": "2026-11-01T20:09:36.938494+00:00",
+      "likes": 71,
+      "rt": 14,
+      "reply": 18
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Kevin is beating Mitchum 61.7-48.5 and I want a full breakdown on why a 10-4 team at $102.21 on the exchange is losing to a squad that just traded away its most valuable asset two days ago \u2014 Drew got McCaffrey's replacement value, Kevin got the closer, and the scoreboard agrees.",
+      "posted_at": "2026-11-01T19:51:36.938494+00:00",
+      "likes": 93,
+      "rt": 21,
+      "reply": 27
     },
     {
       "key": "chad-bellwether",
       "name": "Chad Bellwether",
       "handle": "@ChadTakesLIV",
-      "text": "Shaq is up 17.3-0.0 on Jake and Monarch Wideout Bank at $88.36 \u2014 down 9.5% on the exchange \u2014 might be telling a different story on the scoreboard than the market expected. MWB sitting at 7-7 with WR depth playing like this is genuinely dangerous in a seven-team playoff.",
-      "posted_at": "2026-10-31T17:46:57.298568+00:00",
-      "likes": 71,
-      "rt": 12,
-      "reply": 16
+      "text": "Wingard leads Fronge 66.7-62.3 and I picked Wingard, so I will be collecting that W quietly and professionally. No speech. Just the record: Chad Bellwether, locks 2-0 on the season. That is all.",
+      "posted_at": "2026-11-01T19:25:36.938494+00:00",
+      "likes": 67,
+      "rt": 9,
+      "reply": 14
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, ForgeHammer relocated to Havana for regulatory flexibility and right now they are down four points to a team sitting at 4-10 and $50.75 on the exchange. Whatever flexibility they found in Cuba has not shown up in the Week 8 score.",
+      "posted_at": "2026-11-01T19:02:36.938494+00:00",
+      "likes": 119,
+      "rt": 28,
+      "reply": 33
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "I had Mitchum this week and I stand by the reasoning \u2014 a 10-4 team at $102.21 against a squad that just gave away Christian McCaffrey should win on paper. The paper was wrong. I'm updating the model.",
+      "posted_at": "2026-11-01T18:36:36.938494+00:00",
+      "likes": 34,
+      "rt": 4,
+      "reply": 19
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Terrence is 5-7 on the season and just announced he picked Wingard like it earns him something. Terrence, you are one game above the pace that gets you removed from the panel. Win first, gloat second.",
-      "posted_at": "2026-10-31T17:23:57.298568+00:00",
-      "likes": 119,
+      "text": "Terrence is 5-7 on the season and just said he is 'updating the model.' Terrence, the model has been updated four times this year. At some point we stop calling it an update and start calling it a collapse.",
+      "posted_at": "2026-11-01T18:22:36.938494+00:00",
+      "likes": 127,
       "rt": 31,
-      "reply": 37
+      "reply": 38
     },
     {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Ryan adds Michael Carter off the free agent wire on the same morning his team is sitting in Week 8 with a 7-7 record. AEGIS is at $124.07 flat \u2014 not a penny of movement \u2014 and the defending champions are three games out of first. Carter is fine. The situation is not fine.",
-      "posted_at": "2026-10-31T16:51:57.298568+00:00",
-      "likes": 84,
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "DREW IS AT 33.1 AND BRENT IS ONLY AT 84.3 AND ATLAS IS STILL 0-14 AND OBSIDIAN SPECIALTY HOLDINGS IS SITTING AT $78.20 AND I CANNOT TELL WHICH OF THESE TWO ROSTERS IS ACTUALLY THE DISTRESSED ONE.",
+      "posted_at": "2026-11-01T18:00:36.938494+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 29
+    },
+    {
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Jake leads Shaq 90.5-65.3 \u2014 worth noting that MWB was up 17-0 earlier and ECHO quietly clawed back and took the lead. Monarch's WR wealth is real but Jake's RB backfield has been the quiet engine all afternoon.",
+      "posted_at": "2026-11-01T17:33:36.938494+00:00",
+      "likes": 82,
       "rt": 16,
-      "reply": 20
+      "reply": 21
     }
   ]
 }
