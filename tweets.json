@@ -1,116 +1,105 @@
 {
-  "generated_at": "2026-11-02T23:45:15.768498+00:00",
+  "generated_at": "2026-11-03T22:08:56.396581+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Nov 02 (today)): Brent added Roschon Johnson (RB, CHI).",
-    "FREE AGENT ADD (Oct 31 (2 days ago)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
-    "WAIVER CLAIM (Oct 30 (3 days ago)): Drew added Michael Trigg (TE, DAL).",
-    "WAIVER CLAIM (Oct 30 (3 days ago)): Drew added Deion Burks (WR, IND).",
-    "TRADE (Oct 30 (3 days ago)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
-    "TRADE (Oct 30 (3 days ago)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
-    "WAIVER CLAIM (Oct 28 (5 days ago)): Jake added Reggie Virgil (WR, ARI).",
-    "WAIVER CLAIM (Oct 28 (5 days ago)): Fronge added Elijah Mitchell (RB, PHI) for $12 FAAB.",
-    "WEEK 7 RESULTS: Corbishley def. Shaq, 157.3-155.6 (NAIL-BITER); Adam def. Drew, 113.5-99.1; Fronge def. Ryan, 121.0-114.6; Wingard def. Charles, 117.7-107.3; Kevin def. Jake, 125.8-117.4; Mitchum def. Brent, 136.2-125.6"
+    "FREE AGENT ADD (Nov 02 (yesterday)): Brent added Roschon Johnson (RB, CHI).",
+    "FREE AGENT ADD (Oct 31 (3 days ago)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
+    "WAIVER CLAIM (Oct 30 (4 days ago)): Drew added Michael Trigg (TE, DAL).",
+    "WAIVER CLAIM (Oct 30 (4 days ago)): Drew added Deion Burks (WR, IND).",
+    "TRADE (Oct 30 (4 days ago)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
+    "TRADE (Oct 30 (4 days ago)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
+    "WAIVER CLAIM (Oct 28 (6 days ago)): Jake added Reggie Virgil (WR, ARI).",
+    "WEEK 8 RESULTS: Corbishley def. Charles, 163.9-160.4 (NAIL-BITER); Adam def. Ryan, 117.0-107.2; Brent def. Drew, 137.5-70.4 (BLOWOUT); Wingard def. Fronge, 139.5-109.5; Jake def. Shaq, 148.9-137.5; Kevin def. Mitchum, 101.5-84.5"
   ],
   "tweets": [
-    {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "FINAL: Jake def. Shaq, 122.0-107.4. EchoPoint takes the win, Monarch drops to 7-7, and the RB hole that Shaq refused to address all offseason just cost him a matchup he was favored in two weeks ago.",
-      "posted_at": "2026-11-02T23:37:15.768498+00:00",
-      "likes": 98,
-      "rt": 18,
-      "reply": 22
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "FINAL: Wingard def. Fronge, 139.5-109.5. A 4-10 team just beat ForgeHammer by thirty points and I need someone from the Havana office to explain what the regulatory flexibility was supposed to protect them from, because it was not this.",
-      "posted_at": "2026-11-02T23:30:15.768498+00:00",
-      "likes": 112,
-      "rt": 24,
-      "reply": 31
-    },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Charles leads Corbishley 160.4-141.6 as scores come in and CROWN may escape the week \u2014 but I want it on record that this game was never comfortable, A.J. Brown is now an Apex asset, and Corbishley nearly closed a 19-point gap against the best team in the league on short notice.",
-      "posted_at": "2026-11-02T23:20:15.768498+00:00",
-      "likes": 87,
-      "rt": 14,
-      "reply": 19
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Drew finished the week at 70.4 points and is now 0-14. Zero wins. Fourteen losses. Brent scored 122.4 against that roster and Obsidian is still sitting at $78.20 on the exchange like the market doesn't know what to do with a team that beats Atlas and nothing else.",
-      "posted_at": "2026-11-02T23:07:15.768498+00:00",
-      "likes": 104,
-      "rt": 21,
-      "reply": 28
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "I went 2-0 on locks this season, 8-4 overall, and I want a dedicated segment to discuss how Wingard \u2014 FOUR AND TEN, fifty dollars and seventy-five cents on the exchange \u2014 just took down ForgeHammer by thirty on their own turf. That is not an upset. That is an indictment.",
-      "posted_at": "2026-11-02T22:53:15.768498+00:00",
-      "likes": 93,
-      "rt": 17,
-      "reply": 24
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Took Wingard as my lock this week. Wingard wins by thirty. Locks record is now 2-0. I'm not going to make this a whole thing \u2014 but I did call it, the model held, and Terrence is at 5-7.",
-      "posted_at": "2026-11-02T22:38:15.768498+00:00",
-      "likes": 119,
-      "rt": 26,
-      "reply": 33
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Before anyone comes to my mentions \u2014 yes, I had Mitchum this week. No, I did not see the Kevin defensive ceiling coming. The 5-7 record is what it is and I am not hiding from it. I am also not taking questions at this time.",
-      "posted_at": "2026-11-02T22:24:15.768498+00:00",
-      "likes": 67,
-      "rt": 9,
-      "reply": 38
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "KEVIN IS 11-3. KEVIN INHERITED A TRUST DEFICIT AND A SCANDAL AND A ROSTER IN PIECES AND IS NOW THE THIRD SEED WITH A WIN OVER A 10-4 MITCHUM TEAM THAT THE MARKET PRICED AT $102.21. REDLINE AT $96.50 IS STILL UNDERVALUED AND I WILL NOT APOLOGIZE FOR SAYING THAT.",
-      "posted_at": "2026-11-02T22:09:15.768498+00:00",
-      "likes": 88,
-      "rt": 19,
-      "reply": 27
+      "text": "Week 8 is fully graded, week 9 is on deck, and the story the Ledger keeps returning to is simple: Charles is 13-3 and lost to Corbishley by three points on the same night Corbishley acquired A.J. Brown. The board reckoning at CROWN was not canceled. It was rescheduled.",
+      "posted_at": "2026-11-03T21:56:56.396581+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 18
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "I called the Wingard situation three weeks ago \u2014 a team that deep in future picks doesn't lose to a zero-liquidity ForgeHammer squad when SDR actually has players on the field who show up. Forty-first win of my career in this pick-em and the receipts are public.",
-      "posted_at": "2026-11-02T21:51:15.768498+00:00",
+      "text": "Drew is 0-16. Zero wins in sixteen attempts. And this week Kevin draws them, which means Redline \u2014 third seed, 12-4 \u2014 is about to either pad the record or become the most embarrassing footnote in exchange history. I called Kevin as a sleeper in September and I am cashing that ticket regardless of what happens Thursday.",
+      "posted_at": "2026-11-03T21:23:56.396581+00:00",
+      "likes": 71,
+      "rt": 14,
+      "reply": 22
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Corbishley walked into week 9 having just traded FOR A.J. Brown, nearly erased a 19-point deficit against the best team in the league, and now gets Ryan \u2014 the defending champion sitting at 7-9. APEX at $123.64 is somehow still sixty dollars cheaper than CROWN and I am asking the market to explain itself.",
+      "posted_at": "2026-11-03T20:40:56.396581+00:00",
+      "likes": 84,
+      "rt": 19,
+      "reply": 27
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "I want it formally noted that I am 8-4 on the season with a 2-0 locks record, Terrence is at 5-7, and there is no dedicated segment on this network discussing the gap between us. I am requesting one. In writing.",
+      "posted_at": "2026-11-03T19:54:56.396581+00:00",
+      "likes": 112,
+      "rt": 28,
+      "reply": 35
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "Corbishley vs Ryan is the most dangerous game on the week 9 slate to pick and I refuse to be baited into a lock on it. 7-9 defending champs, 13-3 runner-up, A.J. Brown just changed hands \u2014 that game has trap written all over it and my 5-7 record did not get there by chasing traps.",
+      "posted_at": "2026-11-03T18:58:56.396581+00:00",
+      "likes": 44,
+      "rt": 7,
+      "reply": 29
+    },
+    {
+      "key": "big-dog",
+      "name": "Big Dog",
+      "handle": "@BigDogHype",
+      "text": "Fronge vs Charles this week and ForgeHammer is coming off a thirty-point beatdown at the hands of a 5-10 Wingard squad. The Havana relocation was supposed to provide some kind of structural advantage. What structural advantage did it provide last week exactly.",
+      "posted_at": "2026-11-03T16:58:56.396581+00:00",
+      "likes": 88,
+      "rt": 17,
+      "reply": 21
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "The only matchup that matters for playoff seeding this week is Jake vs Brent. EchoPoint is 8-8, Obsidian is 8-8, they are tied for fifth on record, and EchoPoint scores thirteen more points per game. One of these teams is going to be significantly more comfortable on Wednesday morning than they are right now.",
+      "posted_at": "2026-11-03T14:08:56.396581+00:00",
       "likes": 76,
-      "rt": 11,
+      "rt": 13,
       "reply": 16
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "The Ledger is going to have a lot to say about a week where the 4-10 team beat the Havana relocators by thirty, the 0-14 team scored 70 points, and the defending champion finished 7-7. The board reckoning at Crownline may have been delayed \u2014 not canceled.",
-      "posted_at": "2026-11-02T21:30:15.768498+00:00",
-      "likes": 101,
-      "rt": 22,
-      "reply": 18
+      "text": "Brent added Roschon Johnson off free agency yesterday. Obsidian owns Bowers at TE, is 8-8 with a real playoff window, and the CEO's response to an RB-needy roster was a waiver wire pickup the morning before the Ledger drops. The Ledger will have thoughts.",
+      "posted_at": "2026-11-03T09:48:56.396581+00:00",
+      "likes": 61,
+      "rt": 11,
+      "reply": 14
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "People keep asking why Mitchum is fourth in my power rankings when DEEP just lost to Kevin at home. The answer is PF. 1082.3 points scored on a 10-6 record tells me this roster scores \u2014 the losses have been close, the schedule has been cruel, and $102.21 on the exchange is the market agreeing with me whether it means to or not.",
+      "posted_at": "2026-11-03T04:38:56.396581+00:00",
+      "likes": 53,
+      "rt": 9,
+      "reply": 31
     }
   ]
 }
