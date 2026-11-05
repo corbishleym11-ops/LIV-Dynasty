@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-11-04T22:17:50.821337+00:00",
+  "generated_at": "2026-11-05T22:27:44.094521+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Nov 04 (today)): Adam added Audric Estime (RB, NO) (dropped Tyler Higbee (TE, LAR)).",
-    "WAIVER CLAIM (Nov 03 (yesterday)): Kevin added Gardner Minshew II (QB, ARI) for $98 FAAB (dropped Jaleel McLaughlin (RB, CLE)).",
-    "FREE AGENT ADD (Nov 02 (2 days ago)): Brent added Roschon Johnson (RB, CHI).",
-    "FREE AGENT ADD (Oct 31 (4 days ago)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
-    "WAIVER CLAIM (Oct 30 (5 days ago)): Drew added Michael Trigg (TE, DAL).",
-    "WAIVER CLAIM (Oct 30 (5 days ago)): Drew added Deion Burks (WR, IND).",
-    "TRADE (Oct 30 (5 days ago)): Corbishley receives A.J. Brown (WR, NE), Jordan Mason (RB, MIN), 2028 R2 pick. Drew receives Breece Hall (RB, NYJ), 2027 R2 pick.",
-    "TRADE (Oct 30 (5 days ago)): Drew receives 2027 R1 pick, 2028 R2 pick. Kevin receives Christian McCaffrey (RB, SF), 2028 R3 pick.",
+    "CUT (Nov 05 (today)): Jake released Najee Harris (RB, FA).",
+    "WAIVER CLAIM (Nov 04 (yesterday)): Adam added Carson Wentz (QB, MIN) for $7 FAAB (dropped George Holani (RB, SEA)).",
+    "WAIVER CLAIM (Nov 04 (yesterday)): Adam added Audric Estime (RB, NO) (dropped Tyler Higbee (TE, LAR)).",
+    "WAIVER CLAIM (Nov 03 (2 days ago)): Kevin added Gardner Minshew II (QB, ARI) for $98 FAAB (dropped Jaleel McLaughlin (RB, CLE)).",
+    "FREE AGENT ADD (Nov 02 (3 days ago)): Brent added Roschon Johnson (RB, CHI).",
+    "FREE AGENT ADD (Oct 31 (5 days ago)): Ryan added Michael Carter (RB, TEN) (dropped Julian Hill (TE, NE)).",
+    "WAIVER CLAIM (Oct 30 (6 days ago)): Drew added Michael Trigg (TE, DAL).",
+    "WAIVER CLAIM (Oct 30 (6 days ago)): Drew added Deion Burks (WR, IND).",
     "WEEK 8 RESULTS: Corbishley def. Charles, 163.9-160.4 (NAIL-BITER); Adam def. Ryan, 117.0-107.2; Brent def. Drew, 137.5-70.4 (BLOWOUT); Wingard def. Fronge, 139.5-109.5; Jake def. Shaq, 148.9-137.5; Kevin def. Mitchum, 101.5-84.5"
   ],
   "tweets": [
     {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "The Weekly Ledger drops tonight and I will tell you this much: the Corbishley-Charles game is not getting one paragraph. It is getting its own section. 163.9-160.4, A.J. Brown in an APEX uniform, and the CROWN board reckoning is now a live conversation. We will be there for all of it.",
-      "posted_at": "2026-11-04T21:52:50.821337+00:00",
-      "likes": 118,
-      "rt": 28,
-      "reply": 19
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "8-4, locks 2-0, and Terrence is at 5-7. I don't want to make this about me. I am making it about me. The gap is six games. Six. Someone on this network should find that interesting.",
-      "posted_at": "2026-11-04T21:22:50.821337+00:00",
-      "likes": 97,
-      "rt": 21,
-      "reply": 33
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "Before anyone says a word \u2014 yes, I am 5-7. The schedule has been historically difficult for my methodology. I stand by every call and I will be at 7-7 by next Wednesday.",
-      "posted_at": "2026-11-04T21:05:50.821337+00:00",
-      "likes": 44,
-      "rt": 6,
-      "reply": 38
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Terrence just said his methodology has been punished by the schedule. His methodology is picking games. There is no schedule difficulty in picking games. You just pick them and you are either right or you are 5-7.",
-      "posted_at": "2026-11-04T20:56:50.821337+00:00",
-      "likes": 109,
-      "rt": 24,
-      "reply": 27
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Kevin third seed before the season and his 12-4 record is now being rewarded with a date against 0-16 Drew. The matchup gods occasionally cooperate. Kevin adds Gardner Minshew for $98 FAAB yesterday, which is a lot of money, but Redline has been building carefully and that QB depth makes sense at this stage of the window.",
-      "posted_at": "2026-11-04T20:27:50.821337+00:00",
-      "likes": 72,
-      "rt": 13,
-      "reply": 11
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Ryan down four in the power rankings is the number that is generating mail, so let me be direct: 1-5 over three weeks, 107 points against Adam in a game Aegis was supposed to win, and the worst receiving corps in the league by eight full grade points. The quarterback room is real. The title is real. The receiving corps problem is also real, and right now it is the loudest signal on the roster.",
-      "posted_at": "2026-11-04T19:49:50.821337+00:00",
-      "likes": 86,
-      "rt": 17,
-      "reply": 29
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "AEGIS sitting at $116.80 after a -5.9% slide is the exchange telling you exactly what Matteo's rankings told you \u2014 the champion's floor is eroding. Ryan won a title with that receiving room in January. It is November and that same receiving room just gave up a loss to a 4-12 Adam squad. The market has memory.",
-      "posted_at": "2026-11-04T19:04:50.821337+00:00",
-      "likes": 91,
-      "rt": 19,
-      "reply": 14
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Jake released Najee Harris today and I want to know what that means for the EchoPoint backfield heading into a must-win bubble game against Brent tonight. The RB room was already the question mark. Now it is a louder one.",
+      "posted_at": "2026-11-05T22:02:44.094521+00:00",
+      "likes": 87,
+      "rt": 14,
+      "reply": 22
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "JAKE VS BRENT IS THE GAME THIS WEEK. ECHO and OBS are both 8-8, both staring at the same playoff bubble, and EchoPoint scores thirteen more points per game. Brent added Roschon Johnson off free agency to fix an RB room that needed a lot more than Roschon Johnson. I am picking Jake and I am not hiding it.",
-      "posted_at": "2026-11-04T18:10:50.821337+00:00",
-      "likes": 103,
-      "rt": 22,
-      "reply": 18
+      "text": "DREW IS 0-16 AND KEVIN JUST ADDED MINSHEW FOR $98 FAAB AND NOW GETS DREW IN WEEK 9. THE MATCHUP GODS DID NOT GIVE KEVIN A GAME. THEY GAVE HIM A BYE WITH EXTRA STEPS.",
+      "posted_at": "2026-11-05T21:32:44.094521+00:00",
+      "likes": 112,
+      "rt": 28,
+      "reply": 31
     },
     {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "The Ledger has a full section on the Corbishley-Drew trade and what it means for APEX's championship timeline versus what it means for ATLAS's already-negative exchange price. $30.71. That number is in the Ledger and it does not get easier to read the second time.",
-      "posted_at": "2026-11-04T16:59:50.821337+00:00",
-      "likes": 76,
-      "rt": 15,
-      "reply": 9
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, I am 8-4 with a 1-1 lock record and I have exactly zero interest in pretending this is a close race at the top. Bo is also 8-4 and his locks are 2-0, which I respect, but I am watching Terrence prepare his schedule-difficulty speech for the third week in a row and I am not going to be the one to stop him.",
+      "posted_at": "2026-11-05T20:37:44.094521+00:00",
+      "likes": 94,
+      "rt": 17,
+      "reply": 38
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "5-7 is the number and I am not going to pretend it is not the number. What I will say is that Adam covering against Ryan was a pick that required reading four levels of roster signal correctly, and everyone in this building faded it. I did not. The record does not reflect the work.",
+      "posted_at": "2026-11-05T19:22:44.094521+00:00",
+      "likes": 41,
+      "rt": 5,
+      "reply": 29
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "ForgeHammer lost by thirty to Wingard \u2014 a team sitting at 6-10 \u2014 relocated to Havana for regulatory flexibility, and now gets Charles in week 9. If the flexibility was structural it has not shown up in the results. FORG at $85.54 is down 3.2% and I am not finding a reason to argue with the direction.",
-      "posted_at": "2026-11-04T15:25:50.821337+00:00",
-      "likes": 68,
+      "text": "Terrence just said 'the record does not reflect the work.' Terrence. The record IS the work. Locks are 2-0 this season, sitting at 7-5 overall, and I will simply allow the numbers to continue making my argument on my behalf.",
+      "posted_at": "2026-11-05T18:47:44.094521+00:00",
+      "likes": 118,
+      "rt": 24,
+      "reply": 19
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "I am getting mail about putting Ryan ninth. Here is my answer: 7-9, 1-5 over the last three weeks, worst receiving corps in the league by grade, and $116.80 on the exchange after a 5.9% slide. I did not put him ninth to be provocative. The data put him ninth and I transcribed it accurately.",
+      "posted_at": "2026-11-05T17:17:44.094521+00:00",
+      "likes": 103,
+      "rt": 21,
+      "reply": 44
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Corbishley-Charles at 163.9-160.4 is the kind of game that deserves a full post-mortem segment, and I want that segment. 13-3 CROWN, A.J. Brown in an APEX uniform, and the board reckoning is now a live conversation. Someone put me on a panel and let me talk about this for twenty minutes.",
+      "posted_at": "2026-11-05T15:07:44.094521+00:00",
+      "likes": 76,
       "rt": 11,
-      "reply": 16
+      "reply": 17
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "The Weekly Ledger has a full accounting of what CROWN at $158.82 means the morning after a loss to Corbishley \u2014 that is a +9.4% valuation on a team whose board is now actively asking whether the regular season dominance converts. The market priced the ceiling. The question is the floor.",
+      "posted_at": "2026-11-05T12:47:44.094521+00:00",
+      "likes": 99,
+      "rt": 18,
+      "reply": 13
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Wingard over Fronge and I want it on record that a 139.5-109.5 result is not a close call \u2014 that is a statement. ForgeHammer flew to Havana for regulatory flexibility and is currently 7-9 with no 2027 picks and a week 9 date against Charles. The flexibility has not been visible in the standings.",
+      "posted_at": "2026-11-05T09:17:44.094521+00:00",
+      "likes": 68,
+      "rt": 9,
+      "reply": 11
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Adam adding Carson Wentz yesterday and Audric Estime on the same waiver wire is an interesting two-move window for a team at 4-12. The Helix turnaround story was the market's favorite redemption arc coming into the season. HLX is at $71.63 and down 6.1%. The arc has stalled in a specific and painful way.",
+      "posted_at": "2026-11-05T04:57:44.094521+00:00",
+      "likes": 84,
+      "rt": 13,
+      "reply": 20
     }
   ]
 }
