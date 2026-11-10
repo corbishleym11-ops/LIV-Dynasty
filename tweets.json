@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-11-10T00:30:25.676301+00:00",
+  "generated_at": "2026-11-10T22:03:37.352752+00:00",
   "events_seen": [
+    "CUT (Nov 10 (today)): Fronge released Emari Demercado (RB, HOU).",
     "WAIVER CLAIM (Nov 07 (3 days ago)): Shaq added Audric Estime (RB, NO) for $6 FAAB (dropped AJ Dillon (RB, CAR)).",
     "FREE AGENT ADD (Nov 07 (3 days ago)): Mitchum added Demarcus Robinson (WR, SF) (dropped John Metchie III (WR, CAR)).",
     "FREE AGENT ADD (Nov 07 (3 days ago)): Adam added Gregory Desrosiers (RB, NYG) (dropped Kendre Miller (RB, FA)).",
@@ -8,109 +9,98 @@
     "WAIVER CLAIM (Nov 05 (5 days ago)): Fronge added Emari Demercado (RB, HOU) for $1 FAAB.",
     "CUT (Nov 05 (5 days ago)): Jake released Najee Harris (RB, FA).",
     "WAIVER CLAIM (Nov 04 (6 days ago)): Adam added Carson Wentz (QB, MIN) for $7 FAAB (dropped George Holani (RB, SEA)).",
-    "WAIVER CLAIM (Nov 04 (6 days ago)): Adam added Audric Estime (RB, NO) (dropped Tyler Higbee (TE, LAR)).",
-    "WEEK 8 RESULTS: Corbishley def. Charles, 163.9-160.4 (NAIL-BITER); Adam def. Ryan, 117.0-107.2; Brent def. Drew, 137.5-70.4 (BLOWOUT); Wingard def. Fronge, 139.5-109.5; Jake def. Shaq, 148.9-137.5; Kevin def. Mitchum, 101.5-84.5"
+    "WEEK 9 RESULTS: Ryan def. Corbishley, 115.7-90.9; Wingard def. Adam, 108.5-72.8; Kevin def. Drew, 104.2-47.4 (BLOWOUT); Fronge def. Charles, 137.6-133.7 (NAIL-BITER); Brent def. Jake, 165.5-113.3 (BLOWOUT); Mitchum def. Shaq, 153.9-138.5"
   ],
   "tweets": [
+    {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "TRANSACTION: Fronge releases Emari Demercado (RB, HOU) today \u2014 the same player they spent $1 FAAB on five days ago. ForgeHammer's RB desk is a revolving door and there is not a single 2027 pick backing it up.",
+      "posted_at": "2026-11-10T21:51:37.352752+00:00",
+      "likes": 48,
+      "rt": 9,
+      "reply": 14
+    },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Fronge 131.8, Charles 103.1. The number-one franchise in the league is losing to a team headquartered in Havana with zero 2027 picks. The Ledger is going to need a full section just for this result.",
-      "posted_at": "2026-11-10T00:12:25.676301+00:00",
-      "likes": 118,
-      "rt": 28,
-      "reply": 34
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "I had Charles as my lock and I am watching ForgeHammer hang 131.8 on the top seed in week nine. Season record 7-5, locks 2-0, and I want it on record that I still believe in Crownline structurally \u2014 this is one result, not a thesis.",
-      "posted_at": "2026-11-09T23:48:25.676301+00:00",
-      "likes": 61,
-      "rt": 9,
-      "reply": 19
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Brent is up 165.5 on Jake right now. I had Jake. That is a 59-point deficit in a game I called as a clean EchoPoint win and my lock record is now a conversation I would like to table until the full week is graded.",
-      "posted_at": "2026-11-09T23:23:25.676301+00:00",
-      "likes": 74,
-      "rt": 11,
-      "reply": 27
+      "text": "Week nine is fully graded. Drew is 0-18. The Ledger is not going to dress that up \u2014 there is no precedent for a winless record at this stage of a dynasty season, and the Atlas rebuild has no visible bottom. The board agrees: $30.71 as of November fourth.",
+      "posted_at": "2026-11-10T21:25:37.352752+00:00",
+      "likes": 71,
+      "rt": 14,
+      "reply": 22
     },
     {
       "key": "dexter-vail",
       "name": "Dexter Vail",
       "handle": "@DexterCalledIt",
-      "text": "Called Kevin over Drew, called Mitchum over Shaq, and I am watching both of those hold up in real time. The process works. The process has always worked.",
-      "posted_at": "2026-11-09T22:55:25.676301+00:00",
-      "likes": 88,
-      "rt": 14,
-      "reply": 22
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Corbishley is trailing Ryan 81.9-115.7 and someone at this network needs to explain to me how the second-place franchise is getting outscored by a team Matteo ranked ninth with the worst receiving corps grade in the league. I want a segment. A full segment.",
-      "posted_at": "2026-11-09T22:20:25.676301+00:00",
-      "likes": 102,
-      "rt": 21,
-      "reply": 38
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Ryan leading Corbishley 115.7-81.9 is a week-nine live score, not a power ranking. The structural argument I published November fourth is about receiver grades, pick depth, and trajectory \u2014 none of which a single Tuesday night score has touched. Nine stays nine.",
-      "posted_at": "2026-11-09T21:55:25.676301+00:00",
-      "likes": 93,
-      "rt": 17,
-      "reply": 41
+      "text": "I called Kevin over Drew and Mitchum over Shaq and both came through clean, so my week nine card read 2-0 on those. I would also like the record to show that my season is 7-5 and I have no complaints about where I sit relative to Terrence, who is at 5-7 and still filing takes as though the standings are negotiable.",
+      "posted_at": "2026-11-10T20:58:37.352752+00:00",
+      "likes": 59,
+      "rt": 11,
+      "reply": 19
     },
     {
       "key": "terrence-odom",
       "name": "Terrence E. Odom",
       "handle": "@TerrenceVerdict",
-      "text": "Wingard is beating Adam 108.5-60.5 and I had Adam. Season record 5-7. I am aware. I am also aware that Wingard at $53.08 just put up 108 points and nobody on this feed saw that coming either, so let's distribute the surprise evenly.",
-      "posted_at": "2026-11-09T21:12:25.676301+00:00",
-      "likes": 47,
-      "rt": 6,
-      "reply": 29
+      "text": "The Wingard-Adam pick cost me and I accept that. What I will not accept is Dexter treating a 7-5 record like it is a mandate when four of those wins came in weeks where every pundit on this network picked the same side. Season's not over.",
+      "posted_at": "2026-11-10T20:35:37.352752+00:00",
+      "likes": 34,
+      "rt": 5,
+      "reply": 28
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Corbishley at $136.58 walks into this week facing Wingard at $53.08. Wingard just beat Adam by 35 points and nobody saw it coming. I am previewing Apex as the favorite but I am doing it with both eyes open after what this league produced in week nine.",
+      "posted_at": "2026-11-10T20:08:37.352752+00:00",
+      "likes": 52,
+      "rt": 8,
+      "reply": 17
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Kevin versus Ryan in week ten is the game I want a full segment on. Kevin is 13-5, sitting third. Ryan is 9-9, defending champion, ranked ninth by Matteo, just beat the second-place franchise by 25 points. That matchup does not resolve cleanly and I need someone at this network to treat it like it doesn't.",
+      "posted_at": "2026-11-10T19:41:37.352752+00:00",
+      "likes": 88,
+      "rt": 17,
+      "reply": 31
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Ryan beat Corbishley 115.7-90.9 and my mentions have been unreadable since Tuesday night. The ranking is about receiver grade, pick depth, and roster trajectory over a trailing window \u2014 not one result against a team that also had a bad week. Nine is nine until the structure changes.",
+      "posted_at": "2026-11-10T18:45:37.352752+00:00",
+      "likes": 66,
+      "rt": 12,
+      "reply": 41
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Shaq versus Brent in week ten is the matchup that actually shapes the bubble. Shaq is 9-9, Brent is 10-8, and OBS put up 165 points last week. Monarch added Estime, still have the WR wealth, still have the RB hole. This one is live and I am not confident in either direction.",
+      "posted_at": "2026-11-10T17:49:37.352752+00:00",
+      "likes": 45,
+      "rt": 7,
+      "reply": 13
     },
     {
       "key": "clara-hopkins",
       "name": "Clara Hopkins",
       "handle": "@ClaraAnchors",
-      "text": "Drew has 44.8 points on the board tonight. Kevin has 104.2. Atlas is 0-16 and still getting outrun by the third-place franchise at every interval. The rebuild narrative does not have a floor yet and the Ledger will not pretend otherwise.",
-      "posted_at": "2026-11-09T20:30:25.676301+00:00",
-      "likes": 83,
-      "rt": 15,
-      "reply": 18
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "BRENT IS AT 165.5 AND JAKE IS AT 106.0 AND JAY KELPEY HAD JAKE AND JAY KELPEY'S LOCK RECORD IS NOW 1-1 AND I JUST WANT EVERYONE TO LOOK AT THE PICK-EM TABLE BEFORE THEY READ ANOTHER WORD JAY WRITES ABOUT ECHOPOINT MANAGEMENT.",
-      "posted_at": "2026-11-09T19:20:25.676301+00:00",
-      "likes": 109,
-      "rt": 24,
-      "reply": 33
-    },
-    {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "Shaq added Audric Estime three days ago for $6 FAAB, dropped AJ Dillon, and is now trailing Mitchum 138.5-146.0 in a game that could swing the bubble picture. The RB desk moved. It did not move enough \u2014 not tonight.",
-      "posted_at": "2026-11-09T18:00:25.676301+00:00",
-      "likes": 56,
-      "rt": 8,
-      "reply": 14
+      "text": "ForgeHammer beat the number-one seed in a nail-biter, then cut the RB they claimed on waivers five days ago, and their headquarters is in Havana. The Ledger is going to need a geography section at this rate.",
+      "posted_at": "2026-11-10T16:53:37.352752+00:00",
+      "likes": 93,
+      "rt": 21,
+      "reply": 26
     }
   ]
 }
