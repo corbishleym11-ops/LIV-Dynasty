@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-11T23:14:01.567115+00:00",
+  "generated_at": "2026-11-12T22:30:01.015028+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Nov 11 (today)): Charles added Kyle McCord (QB, MIA) for $101 FAAB.",
-    "CUT (Nov 11 (today)): Wingard released Case Keenum (QB, CHI).",
-    "TRADE (Nov 11 (today)): Charles receives future considerations. Wingard receives Jarrett Stidham (QB, DEN).",
-    "WAIVER CLAIM (Nov 11 (today)): Shaq added Tutu Atwell (WR, LAR).",
-    "WAIVER CLAIM (Nov 11 (today)): Adam added DJ Uiagalelei (QB, LAC) (dropped Gregory Desrosiers (RB, NYG)).",
-    "TRADE (Nov 11 (today)): Corbishley receives Nicholas Singleton (RB, TEN), 2027 R2 pick. Brent receives Braelon Allen (RB, NYJ), 2028 R3 pick.",
-    "WAIVER CLAIM (Nov 10 (yesterday)): Kevin added Tyler Higbee (TE, LAR).",
-    "CUT (Nov 10 (yesterday)): Fronge released Emari Demercado (RB, HOU).",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Fronge added Laquon Treadwell (WR, IND) (dropped Elijah Mitchell (RB, PHI)).",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Fronge added Austin Ekeler (RB, WAS) for $5 FAAB.",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Drew added Ashton Dulin (WR, IND) (dropped Brandin Cooks (WR, SF)).",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Charles added Kyle McCord (QB, MIA) for $101 FAAB.",
+    "CUT (Nov 11 (yesterday)): Wingard released Case Keenum (QB, CHI).",
+    "TRADE (Nov 11 (yesterday)): Charles receives future considerations. Wingard receives Jarrett Stidham (QB, DEN).",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Shaq added Tutu Atwell (WR, LAR).",
+    "WAIVER CLAIM (Nov 11 (yesterday)): Adam added DJ Uiagalelei (QB, LAC) (dropped Gregory Desrosiers (RB, NYG)).",
     "WEEK 9 RESULTS: Ryan def. Corbishley, 115.7-90.9; Wingard def. Adam, 108.5-72.8; Kevin def. Drew, 104.2-47.4 (BLOWOUT); Fronge def. Charles, 137.6-133.7 (NAIL-BITER); Brent def. Jake, 165.5-113.3 (BLOWOUT); Mitchum def. Shaq, 153.9-138.5"
   ],
   "tweets": [
@@ -16,101 +16,101 @@
       "key": "marty-volkman",
       "name": "Marty Volkman",
       "handle": "@MartyBreaks",
-      "text": "BREAKING: Corbishley sends Nicholas Singleton and a 2027 second to Apex. Brent ships Braelon Allen and a 2028 third back. Apex just addressed the one position Matteo spent three paragraphs burying this morning.",
-      "posted_at": "2026-11-11T22:56:01.567115+00:00",
-      "likes": 112,
-      "rt": 28,
-      "reply": 34
-    },
-    {
-      "key": "dina-ravioli",
-      "name": "Dina Ravioli",
-      "handle": "@DinaOnTheLine",
-      "text": "Charles dropped $101 FAAB on Kyle McCord this morning and also swapped Jarrett Stidham to Wingard for future considerations. Two moves before noon. Crownline's desk does not idle.",
-      "posted_at": "2026-11-11T22:32:01.567115+00:00",
-      "likes": 87,
-      "rt": 19,
-      "reply": 22
+      "text": "Fronge dropped $5 FAAB on Austin Ekeler AND claimed Treadwell off waivers yesterday, all while sitting at 9-9 and hosting Adam this week. Havana's regulatory flexibility apparently extends to the waiver wire.",
+      "posted_at": "2026-11-12T22:12:01.015028+00:00",
+      "likes": 72,
+      "rt": 14,
+      "reply": 11
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Corbishley goes out and acquires a running back the same morning Matteo publishes a power ranking that says his backfield grades twelfth in the league. I am not saying the ranking caused the trade. I am saying the timing is not subtle.",
-      "posted_at": "2026-11-11T22:09:01.567115+00:00",
-      "likes": 104,
-      "rt": 24,
-      "reply": 31
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Brent just gave up Braelon Allen and a 2028 third to get back a 2027 second and Singleton, and he is 10-8 with five weeks left. That is a sell move dressed as a neutral one, and the market already knows it \u2014 OBS is at $81.62 and sliding.",
-      "posted_at": "2026-11-11T21:46:01.567115+00:00",
-      "likes": 93,
+      "text": "Charles spent $101 on a quarterback, dealt Stidham to Wingard for future considerations, and is still somehow the most composed desk in the league. Crownline at $158.59 and the gap between first and second place is not a gap, it is a canyon.",
+      "posted_at": "2026-11-12T21:46:01.015028+00:00",
+      "likes": 98,
       "rt": 21,
-      "reply": 27
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "On the Corbishley trade: Singleton addresses the grade, not the depth. I ranked the receiving corps first in the league and the backfield twelfth \u2014 one acquisition moves the needle, it does not change the ceiling argument. He is still 13-5 and still has no tiebreaker over the teams that matter.",
-      "posted_at": "2026-11-11T21:24:01.567115+00:00",
-      "likes": 78,
-      "rt": 14,
-      "reply": 38
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "DREW IS 0-18. ATLAS IS LISTED AT $28.15. WINGARD JUST RECEIVED A QUARTERBACK FOR FUTURE CONSIDERATIONS AND THOSE CONSIDERATIONS ARE WORTH MORE THAN DREW'S ENTIRE ROSTER PROJECTION. I am fine. The league is fine.",
-      "posted_at": "2026-11-11T20:39:01.567115+00:00",
-      "likes": 118,
-      "rt": 31,
-      "reply": 29
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Mitchum over Shaq last week and that result landed 153.9-138.5. Deepwater is now at $104.54, up 3.5%, and nobody on this network wants to admit they had Monarch as the safer side of that game.",
-      "posted_at": "2026-11-11T19:44:01.567115+00:00",
-      "likes": 69,
-      "rt": 11,
-      "reply": 18
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Terrence E. Odom is 5-7 on the season and has opinions about Corbishley's trade value. The Ledger will file those opinions next to his lock record and let the audience decide how much weight to assign them.",
-      "posted_at": "2026-11-11T18:29:01.567115+00:00",
-      "likes": 96,
-      "rt": 22,
-      "reply": 41
+      "reply": 17
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "Kevin is 13-5, sold his 2027 capital to get here, and now faces Ryan on the other side of a 25-point upset win. I need a full segment on what happens to Redline at $92.21 if Ryan beats them twice in the same window and the quarterback room stays eighth on the contender board.",
-      "posted_at": "2026-11-11T17:04:01.567115+00:00",
-      "likes": 85,
-      "rt": 17,
-      "reply": 23
+      "text": "Terrence E. Odom is 5-7 on the season and I need someone to explain to me why he is still allowed to submit locks. Five and seven. I want a formal review. I want it on the air. I want it this week.",
+      "posted_at": "2026-11-12T21:19:01.015028+00:00",
+      "likes": 118,
+      "rt": 28,
+      "reply": 33
     },
     {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Adam added a third quarterback this week. DJ Uiagalelei is now on the Helix roster. Helix Quant Strategies, the model-driven turnaround story, is 4-14 and stockpiling signal callers. The model is running something the rest of us cannot see, and I genuinely cannot tell if that is visionary or desperate.",
-      "posted_at": "2026-11-11T15:34:01.567115+00:00",
-      "likes": 74,
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "The 5-7 record is a product of variance in a small sample against an unusually unpredictable slate. The underlying model is sound. I will not be taking further questions from Bo Ruckman, who has somehow made pick-em into a personality.",
+      "posted_at": "2026-11-12T21:01:01.015028+00:00",
+      "likes": 41,
+      "rt": 6,
+      "reply": 29
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Terrence just said \"underlying model\" about a pick-em sheet. He is 5-7. There is no model. There is a coin and it is bent.",
+      "posted_at": "2026-11-12T20:47:01.015028+00:00",
+      "likes": 134,
+      "rt": 32,
+      "reply": 38
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "The question I keep getting about this week's rankings is why Brent is sixth when he just posted 165.46, the highest single-game score in Week 9. The answer is in the third sentence of the write-up. He is 10-8. His running backs grade eleventh. Points scored do not change positional architecture.",
+      "posted_at": "2026-11-12T20:22:01.015028+00:00",
+      "likes": 86,
+      "rt": 17,
+      "reply": 24
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Fronge over Charles last week before anyone on this network was willing to say it, and 137.6-133.7 is what happened. Crownline's one-loss in the last six weeks and it came from a team that relocated to Cuba and runs zero pick liquidity. That result deserves more than a footnote.",
+      "posted_at": "2026-11-12T19:53:01.015028+00:00",
+      "likes": 77,
       "rt": 15,
-      "reply": 20
+      "reply": 19
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Kevin vs Ryan this week is the matchup nobody is talking about and everyone should be. Kevin is the most fragile 13-5 in the league \u2014 Matteo's words, not mine \u2014 and Ryan just beat Corbishley by 25. RDC at $92.21 is already down ten percent. Another loss and that number moves again.",
+      "posted_at": "2026-11-12T19:12:01.015028+00:00",
+      "likes": 93,
+      "rt": 19,
+      "reply": 22
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "DREW IS PLAYING MITCHUM THIS WEEK. DEEPWATER IS UP 3.5% AND POSTING 153.9 POINTS. ATLAS IS 0-18 AND LISTED AT $28.15. I REFUSE TO PREVIEW THIS MATCHUP WITH A STRAIGHT FACE.",
+      "posted_at": "2026-11-12T18:36:01.015028+00:00",
+      "likes": 109,
+      "rt": 24,
+      "reply": 31
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "The Weekly Ledger is tracking something interesting heading into Week 10: Wingard just received a quarterback from Charles and cut Case Keenum on the same day, SDR is up 11.4% to $59.14, and the pick-em board has Bo and Jay tied at 8-4 with six weeks of games left to separate them. Worth watching all three threads.",
+      "posted_at": "2026-11-12T17:18:01.015028+00:00",
+      "likes": 64,
+      "rt": 11,
+      "reply": 8
     }
   ]
 }
