@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-11-14T21:00:45.980567+00:00",
+  "generated_at": "2026-11-15T21:24:59.209376+00:00",
   "events_seen": [
-    "WAIVER CLAIM (Nov 13 (yesterday)): Adam added Charlie Kolar (TE, LAC) (dropped DJ Uiagalelei (QB, LAC)).",
-    "WAIVER CLAIM (Nov 13 (yesterday)): Shaq added Lan Larison (RB, NE).",
-    "WAIVER CLAIM (Nov 11 (3 days ago)): Fronge added Laquon Treadwell (WR, IND) (dropped Elijah Mitchell (RB, PHI)).",
-    "WAIVER CLAIM (Nov 11 (3 days ago)): Fronge added Austin Ekeler (RB, WAS) for $5 FAAB.",
-    "WAIVER CLAIM (Nov 11 (3 days ago)): Drew added Ashton Dulin (WR, IND) (dropped Brandin Cooks (WR, SF)).",
-    "WAIVER CLAIM (Nov 11 (3 days ago)): Charles added Kyle McCord (QB, MIA) for $101 FAAB.",
-    "CUT (Nov 11 (3 days ago)): Wingard released Case Keenum (QB, CHI).",
-    "TRADE (Nov 11 (3 days ago)): Charles receives future considerations. Wingard receives Jarrett Stidham (QB, DEN).",
+    "FREE AGENT ADD (Nov 15 (today)): Fronge added Brevyn Spann-Ford (TE, DAL).",
+    "CUT (Nov 15 (today)): Shaq released Lan Larison (RB, NE).",
+    "WAIVER CLAIM (Nov 13 (2 days ago)): Adam added Charlie Kolar (TE, LAC) (dropped DJ Uiagalelei (QB, LAC)).",
+    "WAIVER CLAIM (Nov 13 (2 days ago)): Shaq added Lan Larison (RB, NE).",
+    "WAIVER CLAIM (Nov 11 (4 days ago)): Fronge added Laquon Treadwell (WR, IND) (dropped Elijah Mitchell (RB, PHI)).",
+    "WAIVER CLAIM (Nov 11 (4 days ago)): Fronge added Austin Ekeler (RB, WAS) for $5 FAAB.",
+    "WAIVER CLAIM (Nov 11 (4 days ago)): Drew added Ashton Dulin (WR, IND) (dropped Brandin Cooks (WR, SF)).",
+    "WAIVER CLAIM (Nov 11 (4 days ago)): Charles added Kyle McCord (QB, MIA) for $101 FAAB.",
     "WEEK 9 RESULTS: Ryan def. Corbishley, 115.7-90.9; Wingard def. Adam, 108.5-72.8; Kevin def. Drew, 104.2-47.4 (BLOWOUT); Fronge def. Charles, 137.6-133.7 (NAIL-BITER); Brent def. Jake, 165.5-113.3 (BLOWOUT); Mitchum def. Shaq, 153.9-138.5"
   ],
   "tweets": [
     {
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Adam leads Fronge 117.8-110.3 with games still live. Helix is 4-14 on the season. If this holds, it is the biggest upset of the week and complicates the entire bottom of the playoff race.",
+      "posted_at": "2026-11-15T21:12:59.209376+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 18
+    },
+    {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "BRENT POSTED 165 LAST WEEK AND IS LOSING TO SHAQ 4.9-25.7 THIS WEEK. OBS AT $81.62. THE TE PREMIUM IS REAL AND IT IS NOT SAVING HIM TODAY.",
-      "posted_at": "2026-11-14T20:42:45.980567+00:00",
-      "likes": 97,
-      "rt": 22,
-      "reply": 19
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "Charles dropped $101 FAAB on Kyle McCord three days ago, enters this matchup at 0.0, and Jake is somehow only up 11.2. I called the TE void as EchoPoint's ceiling-killer in September. The score is making my point for me in real time.",
-      "posted_at": "2026-11-14T20:26:45.980567+00:00",
-      "likes": 83,
-      "rt": 17,
-      "reply": 24
+      "text": "WINGARD IS BEATING CORBISHLEY 79.7-60.9. I DO NOT CARE WHAT THE RECORDS SAY. APEX AT $125.49 AND DROPPING, SDR AT $59.14 AND CLIMBING, AND THE SCOREBOARD IS DOING EXACTLY WHAT IT SHOULD BE DOING RIGHT NOW.",
+      "posted_at": "2026-11-15T20:56:59.209376+00:00",
+      "likes": 112,
+      "rt": 27,
+      "reply": 31
     },
     {
       "key": "jay-kelpey",
       "name": "Jay Kelpey",
       "handle": "@JayInTheTrenches",
-      "text": "Buddy, Wingard sent away Stidham three days ago, cut Keenum the same afternoon, and is now walking into Corbishley's house this week. SDR at $59.14 up eleven percent, Apex coming off a 90-point embarrassment. I am not saying upset. I am saying keep your eyes open.",
-      "posted_at": "2026-11-14T20:08:45.980567+00:00",
-      "likes": 71,
-      "rt": 14,
-      "reply": 18
+      "text": "Buddy, Corbishley was the most expensive loss of the week \u2014 both results, 90 points against Ryan, and now Wingard is up nearly twenty on him with games still going. That running back room is not a soft spot anymore. It is a structural collapse.",
+      "posted_at": "2026-11-15T20:39:59.209376+00:00",
+      "likes": 88,
+      "rt": 19,
+      "reply": 22
     },
     {
       "key": "matteo-honeydew",
       "name": "Matteo Honeydew",
       "handle": "@MatteoRanksIt",
-      "text": "For the record, I dropped Jake three spots in the last rankings and his live score right now is 11.2 against the first-place team. Eleven. Two. The dynasty grade has had him at eleven in the TE column for eleven straight weeks. At some point the data stops being a warning and becomes a verdict.",
-      "posted_at": "2026-11-14T19:53:45.980567+00:00",
-      "likes": 109,
-      "rt": 28,
-      "reply": 31
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "5-7 on the season and I want everyone to know I am extremely comfortable with where my model is pointing this week. No notes.",
-      "posted_at": "2026-11-14T19:32:45.980567+00:00",
-      "likes": 34,
-      "rt": 5,
-      "reply": 41
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Terrence you are three games under .500 on locks. You do not have a model. You have a coin.",
-      "posted_at": "2026-11-14T19:29:45.980567+00:00",
-      "likes": 118,
-      "rt": 30,
-      "reply": 22
+      "text": "I had Corbishley third this week and noted the backfield grades twelfth in the league \u2014 and right now Wingard is proving every word of it. My rankings are not punditry. They are the receipts.",
+      "posted_at": "2026-11-15T20:29:59.209376+00:00",
+      "likes": 76,
+      "rt": 14,
+      "reply": 29
     },
     {
       "key": "bo-ruckman",
       "name": "Bo Ruckman",
       "handle": "@BoRuckmanLIVE",
-      "text": "8-4 on the season, 2-0 on locks, and I want a segment on what Atlas at $28.15 actually means for the long-term structure of this exchange \u2014 because Drew is at 0.0 live right now and Mitchum is barely ahead at 5.7, and even a close loss here pushes the 0-19 conversation from hypothetical to scheduled.",
-      "posted_at": "2026-11-14T19:05:45.980567+00:00",
-      "likes": 88,
-      "rt": 19,
-      "reply": 27
+      "text": "8-4 on the season, Wingard-Apex was the game I told you to watch, and I want a segment on what a Corbishley loss does to the second seed \u2014 because Kevin is 13-5 and that tiebreaker conversation just got a lot louder.",
+      "posted_at": "2026-11-15T20:14:59.209376+00:00",
+      "likes": 104,
+      "rt": 25,
+      "reply": 20
     },
     {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "The Ledger has a full Adam-Fronge breakdown queued and all I will say before it drops is that Havana added two players and five FAAB dollars this week and is leading 48.3-21.6. Zero pick liquidity, still alive at 9-9, still somehow the most entertaining front office in the league.",
-      "posted_at": "2026-11-14T18:37:45.980567+00:00",
-      "likes": 76,
-      "rt": 16,
-      "reply": 13
-    },
-    {
-      "key": "big-dog",
-      "name": "Big Dog",
-      "handle": "@BigDogHype",
-      "text": "Ryan up 31.2-0.3 on Kevin and the Kevin situation is now a demolition, not a game. 7-5 on the year, two locks correct, and I had Aegis in a bounce-back spot all week. The defending champ does not care about your contention window, RDC.",
-      "posted_at": "2026-11-14T18:09:45.980567+00:00",
-      "likes": 94,
-      "rt": 21,
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Helix as the turnaround story of the offseason at +34.9% and right now Adam is leading Fronge by seven with the game still live. The model is not broken. The model was early.",
+      "posted_at": "2026-11-15T19:49:59.209376+00:00",
+      "likes": 67,
+      "rt": 11,
       "reply": 16
     },
     {
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Three games are live right now and the one nobody is watching \u2014 Adam-Fronge at 21.6-48.3 \u2014 might be the most consequential for the playoff picture. ForgeHammer wins this, they're 10-9 and the race for that seventh seed gets genuinely uncomfortable for everyone sitting between eight and ten.",
-      "posted_at": "2026-11-14T17:42:45.980567+00:00",
-      "likes": 102,
-      "rt": 24,
-      "reply": 20
+      "text": "Shaq cut Lan Larison today \u2014 the same Lan Larison he claimed off waivers two days ago \u2014 and his live score against Brent is 71.1-69.4. The RB hole is not unaddressed. The RB hole is now a revolving door.",
+      "posted_at": "2026-11-15T19:26:59.209376+00:00",
+      "likes": 93,
+      "rt": 21,
+      "reply": 27
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "5-7 on the year and I had Wingard this week. Let the record reflect that.",
+      "posted_at": "2026-11-15T19:04:59.209376+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 33
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Terrence you had Wingard because you flip a coin and it landed right once. 7-5 on the season, two locks correct, and I am not taking moral victories from a man who is statistically worse than chance.",
+      "posted_at": "2026-11-15T18:49:59.209376+00:00",
+      "likes": 119,
+      "rt": 28,
+      "reply": 38
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Charles is up 153.3-123.5 on Jake, Fronge added Brevyn Spann-Ford out of Dallas today and is in a dogfight with Adam, and the Ledger's Week 10 edition is going to have more moving parts than any issue we have published. Stay close.",
+      "posted_at": "2026-11-15T18:24:59.209376+00:00",
+      "likes": 85,
+      "rt": 17,
+      "reply": 12
     }
   ]
 }
