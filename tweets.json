@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-17T23:41:48.434336+00:00",
+  "generated_at": "2026-11-18T23:13:26.652478+00:00",
   "events_seen": [
-    "FREE AGENT ADD (Nov 15 (2 days ago)): Fronge added Brevyn Spann-Ford (TE, DAL).",
-    "CUT (Nov 15 (2 days ago)): Shaq released Lan Larison (RB, NE).",
-    "WAIVER CLAIM (Nov 13 (4 days ago)): Adam added Charlie Kolar (TE, LAC) (dropped DJ Uiagalelei (QB, LAC)).",
-    "WAIVER CLAIM (Nov 13 (4 days ago)): Shaq added Lan Larison (RB, NE).",
-    "WAIVER CLAIM (Nov 11 (6 days ago)): Fronge added Laquon Treadwell (WR, IND) (dropped Elijah Mitchell (RB, PHI)).",
-    "WAIVER CLAIM (Nov 11 (6 days ago)): Fronge added Austin Ekeler (RB, WAS) for $5 FAAB.",
-    "WAIVER CLAIM (Nov 11 (6 days ago)): Drew added Ashton Dulin (WR, IND) (dropped Brandin Cooks (WR, SF)).",
-    "WAIVER CLAIM (Nov 11 (6 days ago)): Charles added Kyle McCord (QB, MIA) for $101 FAAB.",
+    "CUT (Nov 18 (today)): Mitchum released Dameon Pierce (RB, FA).",
+    "WAIVER CLAIM (Nov 18 (today)): Shaq added Emari Demercado (RB, HOU) for $7 FAAB.",
+    "WAIVER CLAIM (Nov 17 (yesterday)): Adam added Tommy DeVito (QB, NE) (dropped Carson Wentz (QB, MIN)).",
+    "WAIVER CLAIM (Nov 17 (yesterday)): Jake added Gavin Bartholomew (TE, MIN) for $5 FAAB.",
+    "WAIVER CLAIM (Nov 16 (2 days ago)): Charles added Jimmy Garoppolo (QB, FA) for $8 FAAB (dropped Zonovan Knight (RB, ARI)).",
+    "FREE AGENT ADD (Nov 15 (3 days ago)): Fronge added Brevyn Spann-Ford (TE, DAL).",
+    "CUT (Nov 15 (3 days ago)): Shaq released Lan Larison (RB, NE).",
+    "WAIVER CLAIM (Nov 13 (5 days ago)): Adam added Charlie Kolar (TE, LAC) (dropped DJ Uiagalelei (QB, LAC)).",
     "WEEK 10 RESULTS: Corbishley def. Wingard, 141.2-105.7; Adam def. Fronge, 162.0-125.3; Mitchum def. Drew, 134.0-69.0 (BLOWOUT); Jake def. Charles, 180.5-176.4 (NAIL-BITER); Kevin def. Ryan, 137.6-133.8 (NAIL-BITER); Shaq def. Brent, 107.0-76.5"
   ],
   "tweets": [
@@ -16,101 +16,121 @@
       "key": "vivienne-ashcroft",
       "name": "Vivienne Ashcroft",
       "handle": "@VivienneOnAir",
-      "text": "Week 10 is fully graded and the standings page looks like a crime scene. Three teams at 15-5. One team at 0-20. The Ledger opens Thursday and I promise you it will not be gentle about any of this.",
-      "posted_at": "2026-11-17T23:16:48.434336+00:00",
+      "text": "Three teams tied at 15-5. One team at 0-20. A nail-biter that ended 180.5-176.4. Week 10 handed the Ledger more material than it can responsibly print, and we are going to try anyway. Thursday.",
+      "posted_at": "2026-11-18T22:48:26.652478+00:00",
       "likes": 118,
       "rt": 28,
       "reply": 19
     },
     {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "Terrence E. Odom is 5-7 on the season and I need someone to give me a segment where we just read his picks back to him, slowly, one by one.",
-      "posted_at": "2026-11-17T22:46:48.434336+00:00",
-      "likes": 134,
-      "rt": 31,
-      "reply": 38
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "5-7 and I am still standing, which is more than I can say for Drew's win column. At some point the conversation has to be about the 0-20 record and not my pick-em sheet.",
-      "posted_at": "2026-11-17T22:29:48.434336+00:00",
-      "likes": 47,
-      "rt": 6,
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "BREAKING: Mitchum has released Dameon Pierce. Deepwater Supply Co. cutting roster without any visible replacement move in a week where they face Wingard and are still chasing a top-four seed.",
+      "posted_at": "2026-11-18T22:18:26.652478+00:00",
+      "likes": 72,
+      "rt": 14,
       "reply": 22
     },
     {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Kevin is 15-5, owns the Week 10 result over Ryan, and is sitting third on points. The \"fragile 15-5\" conversation Matteo started is now a three-way traffic jam at the top of the standings and none of those three teams gets a first-round bye unless the gap opens up fast.",
-      "posted_at": "2026-11-17T21:51:48.434336+00:00",
-      "likes": 89,
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "To add to Marty's item \u2014 Shaq just claimed Emari Demercado for $7 FAAB, same day Mitchum drops Pierce. Monarch Wideout Bank is spending money on a Houston running back during a playoff push, and I am not saying that is the solution to the RB hole, I am just noting it is a louder answer than releasing Lan Larison was.",
+      "posted_at": "2026-11-18T22:01:26.652478+00:00",
+      "likes": 84,
       "rt": 17,
-      "reply": 24
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "Kevin at 15-5 is correct and I already wrote the fragility in. Dynasty grade of 180, dead last by 28 points \u2014 the record is real, the roster construction underneath it is a philosophical disagreement with January, and those two things can both be true at the same time.",
-      "posted_at": "2026-11-17T21:21:48.434336+00:00",
-      "likes": 76,
-      "rt": 12,
-      "reply": 29
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called EchoPoint's tight end room a structural drain eleven weeks running and Jake just beat Charles 180.5-176.4 anyway, which means the win happened in spite of the TE desk and not because of anything changing at the TE desk. Those are very different sentences.",
-      "posted_at": "2026-11-17T20:23:48.434336+00:00",
-      "likes": 93,
-      "rt": 19,
-      "reply": 16
-    },
-    {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Charles dropping a 176-point week and still losing is the kind of result that gets framed and hung in the Crownline war room as a warning. Championship-or-bust teams cannot afford the Jake Fridays.",
-      "posted_at": "2026-11-17T18:31:48.434336+00:00",
-      "likes": 102,
-      "rt": 22,
-      "reply": 18
-    },
-    {
-      "key": "vance-hollis",
-      "name": "Vance Hollis",
-      "handle": "@VanceScreamsLIV",
-      "text": "SHAQ RELEASED LAN LARISON TWO DAYS AFTER CLAIMING HIM. MONARCH WIDEOUT BANK ADDED AND DROPPED THE SAME RUNNING BACK IN ONE WEEK. THE RB HOLE IS NOT BEING ADDRESSED. THE RB HOLE IS BEING STIRRED.",
-      "posted_at": "2026-11-17T16:31:48.434336+00:00",
-      "likes": 127,
-      "rt": 33,
-      "reply": 41
-    },
-    {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Week 11 preview coming Thursday in the Ledger, but I will give you this much now: Corbishley against Adam is not a gift game. Adam just posted 162 and Corbishley's backfield graded twelfth. The price at $125.49 is already doing the math on what happens if that continues.",
-      "posted_at": "2026-11-17T13:21:48.434336+00:00",
-      "likes": 85,
-      "rt": 16,
-      "reply": 13
+      "reply": 31
     },
     {
       "key": "big-dog",
       "name": "Big Dog",
       "handle": "@BigDogHype",
-      "text": "Ryan versus Brent this week and the defending champion is 9-11, one game outside the playoff line, against the guy who cannot solve a single roster position below the tight end room. Neither of them can afford a slip. That matchup is going to be uncomfortable for somebody.",
-      "posted_at": "2026-11-17T08:51:48.434336+00:00",
-      "likes": 71,
+      "text": "Drew put up 69 points against Mitchum. Sixty-nine. The blowout loss does not even register as surprising anymore, which is somehow the most damning thing I can say about the 0-20 record.",
+      "posted_at": "2026-11-18T21:23:26.652478+00:00",
+      "likes": 97,
+      "rt": 21,
+      "reply": 14
+    },
+    {
+      "key": "chad-bellwether",
+      "name": "Chad Bellwether",
+      "handle": "@ChadTakesLIV",
+      "text": "Charles faces Shaq this week and I want everybody to remember that Monarch went from $91.72 to $97.99 on the back of a 10-10 record and is a team that has never once addressed the running back room. Crownline is championship-or-bust and Shaq is a banana peel on the sidewalk. This is not a comfortable matchup for Charles.",
+      "posted_at": "2026-11-18T20:38:26.652478+00:00",
+      "likes": 88,
+      "rt": 19,
+      "reply": 27
+    },
+    {
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Adam dropped 162 points last week and Corbishley's backfield graded twelfth in the league, and we are all supposed to look at the Apex price sitting at $125.49 and feel calm about Week 11? That matchup has correction written all over it.",
+      "posted_at": "2026-11-18T19:38:26.652478+00:00",
+      "likes": 76,
+      "rt": 13,
+      "reply": 18
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "Every week someone asks why I have Kevin ranked fourth when he is 15-5. The dynasty grade is 180. Dead last by 28 points. The record and the roster can both be true simultaneously \u2014 that is not a contradiction, that is the entire point of the ranking.",
+      "posted_at": "2026-11-18T18:23:26.652478+00:00",
+      "likes": 103,
+      "rt": 24,
+      "reply": 38
+    },
+    {
+      "key": "vance-hollis",
+      "name": "Vance Hollis",
+      "handle": "@VanceScreamsLIV",
+      "text": "JAKE ADDED A TIGHT END FROM MINNESOTA FOR FIVE DOLLARS AND I NEED EVERYONE TO UNDERSTAND THAT GAVIN BARTHOLOMEW IS NOT THE ANSWER TO AN ELEVEN-WEEK STRUCTURAL PROBLEM. HE BEAT CHARLES BY FOUR TENTHS OF A POINT. THE TIGHT END ROOM IS STILL RANKED ELEVENTH.",
+      "posted_at": "2026-11-18T17:03:26.652478+00:00",
+      "likes": 109,
+      "rt": 26,
+      "reply": 33
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Terrence is 5-7 and I am 8-4 and someone at this network needs to give me the segment where I read his Week 10 picks back to him in real time while he sits across the desk from me. I am available every day this week.",
+      "posted_at": "2026-11-18T15:33:26.652478+00:00",
+      "likes": 121,
+      "rt": 29,
+      "reply": 41
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "5-7 on the season and I picked Adam over Fronge correctly last week, so the trajectory is improving and I refuse to let Bo Ruckman have any kind of segment about this until the sample size is larger.",
+      "posted_at": "2026-11-18T14:13:26.652478+00:00",
+      "likes": 44,
+      "rt": 6,
+      "reply": 35
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "Called the Kevin-Ryan nail-biter as a Kevin win, called Adam over Fronge \u2014 the desk is operating cleanly this month. Meanwhile the ForgeHammer price jumped 7.2% to $91.71 off a 125-point loss in Havana's favorite dynasty league, and I genuinely cannot explain that one.",
+      "posted_at": "2026-11-18T11:53:26.652478+00:00",
+      "likes": 67,
       "rt": 11,
-      "reply": 9
+      "reply": 16
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Ryan versus Brent on Week 11 is quietly the most watchable matchup on the board \u2014 the defending champion at 9-11 on the bubble, the TE monopoly owner who keeps winning games without fixing anything below Bowers. One of them is going to be very relieved on Saturday and neither one has earned the right to be comfortable going in.",
+      "posted_at": "2026-11-18T09:43:26.652478+00:00",
+      "likes": 93,
+      "rt": 20,
+      "reply": 22
     }
   ]
 }
