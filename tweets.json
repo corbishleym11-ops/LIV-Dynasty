@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-11-21T21:57:43.629705+00:00",
+  "generated_at": "2026-11-22T22:14:24.134594+00:00",
   "events_seen": [
-    "CUT (Nov 20 (yesterday)): Mitchum released Demarcus Robinson (WR, SF).",
-    "CUT (Nov 19 (2 days ago)): Fronge released Brevyn Spann-Ford (TE, DAL).",
-    "WAIVER CLAIM (Nov 18 (3 days ago)): Adam added Xavier Restrepo (WR, TEN) (dropped Stetson Bennett IV (QB, LAR)).",
-    "WAIVER CLAIM (Nov 18 (3 days ago)): Ryan added Zonovan Knight (RB, ARI) for $1 FAAB (dropped Michael Carter (RB, TEN)).",
-    "CUT (Nov 18 (3 days ago)): Mitchum released Dameon Pierce (RB, FA).",
-    "WAIVER CLAIM (Nov 18 (3 days ago)): Shaq added Emari Demercado (RB, HOU) for $7 FAAB.",
-    "WAIVER CLAIM (Nov 17 (4 days ago)): Adam added Tommy DeVito (QB, NE) (dropped Carson Wentz (QB, MIN)).",
-    "WAIVER CLAIM (Nov 17 (4 days ago)): Jake added Gavin Bartholomew (TE, MIN) for $5 FAAB.",
+    "FREE AGENT ADD (Nov 22 (today)): Adam added Phil Mafah (RB, NYG) (dropped Charlie Kolar (TE, LAC)).",
+    "FREE AGENT ADD (Nov 22 (today)): Mitchum added Jaydn Ott (RB, KC) (dropped Sean Tucker (RB, TB)).",
+    "FREE AGENT ADD (Nov 22 (today)): Drew added Josh Johnson (QB, ARI) (dropped Tyler Goodson (RB, DAL)).",
+    "CUT (Nov 20 (2 days ago)): Mitchum released Demarcus Robinson (WR, SF).",
+    "CUT (Nov 19 (3 days ago)): Fronge released Brevyn Spann-Ford (TE, DAL).",
+    "WAIVER CLAIM (Nov 18 (4 days ago)): Adam added Xavier Restrepo (WR, TEN) (dropped Stetson Bennett IV (QB, LAR)).",
+    "WAIVER CLAIM (Nov 18 (4 days ago)): Ryan added Zonovan Knight (RB, ARI) for $1 FAAB (dropped Michael Carter (RB, TEN)).",
+    "CUT (Nov 18 (4 days ago)): Mitchum released Dameon Pierce (RB, FA).",
     "WEEK 10 RESULTS: Corbishley def. Wingard, 141.2-105.7; Adam def. Fronge, 162.0-125.3; Mitchum def. Drew, 134.0-69.0 (BLOWOUT); Jake def. Charles, 180.5-176.4 (NAIL-BITER); Kevin def. Ryan, 137.6-133.8 (NAIL-BITER); Shaq def. Brent, 107.0-76.5"
   ],
   "tweets": [
     {
-      "key": "clara-hopkins",
-      "name": "Clara Hopkins",
-      "handle": "@ClaraAnchors",
-      "text": "Adam is 13.9-0.0 on Corbishley early. Helix is a $70.25 stock. Apex is a $125.49 stock. Early scores are early scores \u2014 but the Ledger remembers every single one of them.",
-      "posted_at": "2026-11-21T21:45:43.629705+00:00",
-      "likes": 102,
-      "rt": 23,
-      "reply": 27
+      "key": "marty-volkman",
+      "name": "Marty Volkman",
+      "handle": "@MartyBreaks",
+      "text": "FINAL: Charles def. Shaq 165.8-61.5. Crownline was trailing Monarch early and then absolutely obliterated them. 16-5 for Charles. The championship-or-bust clock is ticking louder.",
+      "posted_at": "2026-11-22T22:06:24.134594+00:00",
+      "likes": 98,
+      "rt": 22,
+      "reply": 19
     },
     {
-      "key": "chad-bellwether",
-      "name": "Chad Bellwether",
-      "handle": "@ChadTakesLIV",
-      "text": "Ryan at $124.14 on the exchange, 9-11 in the standings, and currently edging Brent 3.2-0.0 in a game that means almost nothing for the top of the bracket \u2014 the defending champion is playing for seeding survival while the market prices him like a contender.",
-      "posted_at": "2026-11-21T21:32:43.629705+00:00",
-      "likes": 78,
-      "rt": 16,
-      "reply": 18
-    },
-    {
-      "key": "vivienne-ashcroft",
-      "name": "Vivienne Ashcroft",
-      "handle": "@VivienneOnAir",
-      "text": "Three teams knotted at 15-5, one of them trailing a 10-10 Monarch squad, another getting run off the field by a team that relocated to Havana \u2014 the Ledger is going to have a lot of material this week and we have not even hit the first full quarter.",
-      "posted_at": "2026-11-21T21:19:43.629705+00:00",
-      "likes": 93,
-      "rt": 20,
-      "reply": 15
-    },
-    {
-      "key": "dexter-vail",
-      "name": "Dexter Vail",
-      "handle": "@DexterCalledIt",
-      "text": "I called Jake over Drew before the week started and Drew is currently at 4.0 to Jake's 0.0, which means the roster is doing exactly what I said it would do \u2014 it just happens to be doing it from behind, which is on brand for this matchup and not a problem for my thesis.",
-      "posted_at": "2026-11-21T21:09:43.629705+00:00",
-      "likes": 61,
-      "rt": 9,
-      "reply": 24
-    },
-    {
-      "key": "terrence-odom",
-      "name": "Terrence E. Odom",
-      "handle": "@TerrenceVerdict",
-      "text": "5-7 is a number that does not fully capture the context of the situations I was working with, and I think a fair-minded person would acknowledge that before simply reading the record aloud.",
-      "posted_at": "2026-11-21T21:02:43.629705+00:00",
-      "likes": 32,
-      "rt": 4,
-      "reply": 41
-    },
-    {
-      "key": "bo-ruckman",
-      "name": "Bo Ruckman",
-      "handle": "@BoRuckmanLIVE",
-      "text": "8-4 on the season and I am watching Terrence sitting at 5-7 like it is a normal outcome and not a catastrophe that deserves its own postmortem segment \u2014 give me twenty minutes and a whiteboard and I will walk through every single one of those seven misses.",
-      "posted_at": "2026-11-21T20:57:43.629705+00:00",
-      "likes": 86,
-      "rt": 17,
-      "reply": 29
-    },
-    {
-      "key": "matteo-honeydew",
-      "name": "Matteo Honeydew",
-      "handle": "@MatteoRanksIt",
-      "text": "I ranked Kevin fourth and called him the most fragile 13-5 in the league. I ranked Jake ninth and said the TE room would be the ceiling. Both of those theses are currently live on a Saturday morning and I will not be taking questions from anyone who had Kevin top-three two weeks ago.",
-      "posted_at": "2026-11-21T20:46:43.629705+00:00",
-      "likes": 109,
-      "rt": 25,
-      "reply": 38
-    },
-    {
-      "key": "jay-kelpey",
-      "name": "Jay Kelpey",
-      "handle": "@JayInTheTrenches",
-      "text": "Buddy, Wingard is somehow up 0.0-6.5 on Mitchum right now, and I need everyone who called that matchup a formality to sit with it for a second.",
-      "posted_at": "2026-11-21T20:35:43.629705+00:00",
+      "key": "dina-ravioli",
+      "name": "Dina Ravioli",
+      "handle": "@DinaOnTheLine",
+      "text": "Also going final: Ryan def. Brent 130.9-52.2. Aegis gets back to .500 at 10-11. Obsidian drops to 10-11 as well. The TE premium did not show up for Brent today and that is a sentence Matteo has been waiting to type for nine weeks.",
+      "posted_at": "2026-11-22T22:00:24.134594+00:00",
       "likes": 74,
-      "rt": 14,
-      "reply": 21
+      "rt": 11,
+      "reply": 13
     },
     {
       "key": "vance-hollis",
       "name": "Vance Hollis",
       "handle": "@VanceScreamsLIV",
-      "text": "CHARLES IS TRAILING SHAQ 0.0-3.9 AND THE THREE-WAY TIE AT 15-5 IS ALREADY DOING THINGS. CROWNLINE. CHAMPIONSHIP OR BUST. TRAILING MONARCH. EARLY.",
-      "posted_at": "2026-11-21T20:29:43.629705+00:00",
-      "likes": 97,
-      "rt": 22,
-      "reply": 19
+      "text": "DREW. ZERO. AND TWENTY. ATLAS REBUILD WORKS IS ZERO AND TWENTY. I DO NOT HAVE WORDS. I HAVE ONLY THE NUMBER ZERO.",
+      "posted_at": "2026-11-22T21:49:24.134594+00:00",
+      "likes": 131,
+      "rt": 34,
+      "reply": 41
     },
     {
-      "key": "marty-volkman",
-      "name": "Marty Volkman",
-      "handle": "@MartyBreaks",
-      "text": "BREAKING: Fronge leads Kevin 39.8-8.8 in the early going of week 11. Redline sold 2027 capital to win now. The scoreboard is currently offering a dissenting opinion.",
-      "posted_at": "2026-11-21T20:22:43.629705+00:00",
+      "key": "jay-kelpey",
+      "name": "Jay Kelpey",
+      "handle": "@JayInTheTrenches",
+      "text": "Buddy, Fronge leads Kevin 82.1-21.2 with time winding down and I need someone to explain to me how Redline sold 2027 first-round capital for a quarterback room that is currently being outscored by a team operating out of Havana.",
+      "posted_at": "2026-11-22T21:32:24.134594+00:00",
+      "likes": 109,
+      "rt": 27,
+      "reply": 33
+    },
+    {
+      "key": "matteo-honeydew",
+      "name": "Matteo Honeydew",
+      "handle": "@MatteoRanksIt",
+      "text": "I called Kevin the most fragile 13-5 in the league and said the dynasty grade was dead last by twenty-eight points. He is currently losing by sixty to ForgeHammer. The power rankings are not a feelings exercise. They are a document.",
+      "posted_at": "2026-11-22T21:13:24.134594+00:00",
       "likes": 118,
-      "rt": 28,
-      "reply": 34
+      "rt": 29,
+      "reply": 38
+    },
+    {
+      "key": "bo-ruckman",
+      "name": "Bo Ruckman",
+      "handle": "@BoRuckmanLIVE",
+      "text": "Charles goes into week 11 trailing Shaq and finishes with a hundred-point margin. I took Crownline before the first score posted and I am 8-4 on the season, which is the top of this board, and I would like someone to give me a segment where I can explain the difference between a wobble and a collapse because apparently that distinction is lost on this network.",
+      "posted_at": "2026-11-22T20:46:24.134594+00:00",
+      "likes": 86,
+      "rt": 15,
+      "reply": 22
+    },
+    {
+      "key": "clara-hopkins",
+      "name": "Clara Hopkins",
+      "handle": "@ClaraAnchors",
+      "text": "Three teams entered week 11 knotted at 15-5. By Sunday evening, Charles is 16-5, Corbishley and Kevin are still live, and the tiebreaker math is about to become the most important spreadsheet in the league. The Ledger is going to need a second page.",
+      "posted_at": "2026-11-22T20:24:24.134594+00:00",
+      "likes": 93,
+      "rt": 18,
+      "reply": 14
+    },
+    {
+      "key": "dexter-vail",
+      "name": "Dexter Vail",
+      "handle": "@DexterCalledIt",
+      "text": "I called Corbishley over Adam in this matchup and Corbishley leads 83.3-49.5 going to the finish \u2014 the thesis held, the board confirmed it, and I am 7-5 on a season where the variance has not been kind to anyone not named Bo Ruckman.",
+      "posted_at": "2026-11-22T19:59:24.134594+00:00",
+      "likes": 61,
+      "rt": 8,
+      "reply": 17
+    },
+    {
+      "key": "terrence-odom",
+      "name": "Terrence E. Odom",
+      "handle": "@TerrenceVerdict",
+      "text": "The 5-7 record does not reflect how many of those games came down to a single asset outperforming by twelve points in the final hour. I am tracking it. The regression is coming.",
+      "posted_at": "2026-11-22T19:16:24.134594+00:00",
+      "likes": 29,
+      "rt": 3,
+      "reply": 24
+    },
+    {
+      "key": "vivienne-ashcroft",
+      "name": "Vivienne Ashcroft",
+      "handle": "@VivienneOnAir",
+      "text": "Ryan adds Zonovan Knight from Arizona, Drew adds Josh Johnson at quarterback, and Mitchum picks up Jaydn Ott out of Kansas City \u2014 all three moves happening on a Sunday when their respective owners are either fighting for playoff position or simply fighting to stay off the exchange's discontinued-listings page.",
+      "posted_at": "2026-11-22T18:39:24.134594+00:00",
+      "likes": 72,
+      "rt": 12,
+      "reply": 9
     }
   ]
 }
